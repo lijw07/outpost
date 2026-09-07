@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/mode_select_panel.gd" id="1_mode"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[node name="ModeSelectPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mode")
+
+[node name="ChainRig" parent="." instance=ExtResource("9_rig")]
+unique_name_in_owner = true
+layout_mode = 1
+heading_text = "CHOOSE A MODE"
+subtitle_text = ""
+use_title_font = false
+plate_width = 840.0
+body_height = 0.0
+top_margin = 60.0
+
+[node name="Content" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_constants/separation = 14
+
+[node name="SinglePlayerButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+text = "SINGLE PLAYER"
+
+[node name="CoopButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+text = "CO-OP"
+
+[node name="BackButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "BACK"

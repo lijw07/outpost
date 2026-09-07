@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/save_select_panel.gd" id="1_save"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[node name="SaveSelectPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_save")
+
+[node name="ChainRig" parent="." instance=ExtResource("9_rig")]
+unique_name_in_owner = true
+layout_mode = 1
+heading_text = "SELECT A SURVIVOR"
+use_title_font = false
+plate_width = 1040.0
+body_height = 620.0
+top_margin = 60.0
+
+[node name="Content" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_constants/separation = 16
+
+[node name="Scroll" type="ScrollContainer" parent="Content"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Inner" type="VBoxContainer" parent="Content/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="EmptyHint" type="Label" parent="Content/Scroll/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NO SURVIVORS YET - START A NEW GAME"
+
+[node name="SlotList" type="VBoxContainer" parent="Content/Scroll/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="NameRow" type="HBoxContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="NameField" type="LineEdit" parent="Content/NameRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+max_length = 14
+placeholder_text = "CHARACTER NAME"
+
+[node name="CreateButton" type="Button" parent="Content/NameRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 76)
+layout_mode = 2
+text = "CREATE"
+
+[node name="NewGameButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "NEW GAME"
+
+[node name="BackButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "BACK"

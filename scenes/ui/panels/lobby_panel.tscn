@@ -1,0 +1,181 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/lobby_panel.gd" id="1_lobby"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_tabs"]
+
+[node name="LobbyPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lobby")
+
+[node name="ChainRig" parent="." instance=ExtResource("9_rig")]
+unique_name_in_owner = true
+layout_mode = 1
+heading_text = "CO-OP LOBBY"
+use_title_font = false
+plate_width = 1180.0
+body_height = 820.0
+top_margin = 60.0
+
+[node name="Content" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_constants/separation = 18
+
+[node name="Tabs" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HostTab" type="Button" parent="Content/Tabs"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 64)
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_tabs")
+text = "HOST"
+
+[node name="JoinTab" type="Button" parent="Content/Tabs"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 64)
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_tabs")
+text = "JOIN"
+
+[node name="HostForm" type="VBoxContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Grid" type="GridContainer" parent="Content/HostForm"]
+layout_mode = 2
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="ServerLabel" type="Label" parent="Content/HostForm/Grid"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "SERVER NAME"
+
+[node name="ServerField" type="LineEdit" parent="Content/HostForm/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 64)
+layout_mode = 2
+
+[node name="HostPortLabel" type="Label" parent="Content/HostForm/Grid"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "PORT"
+
+[node name="HostPortField" type="LineEdit" parent="Content/HostForm/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 64)
+layout_mode = 2
+
+[node name="CodeLabel" type="Label" parent="Content/HostForm/Grid"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "INVITE CODE"
+
+[node name="CodeRow" type="HBoxContainer" parent="Content/HostForm/Grid"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CodeValue" type="Label" parent="Content/HostForm/Grid/CodeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 64)
+layout_mode = 2
+vertical_alignment = 1
+text = "-"
+
+[node name="CopyButton" type="Button" parent="Content/HostForm/Grid/CodeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 64)
+layout_mode = 2
+text = "COPY"
+
+[node name="OpenButton" type="Button" parent="Content/HostForm"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+text = "OPEN SERVER"
+
+[node name="JoinForm" type="VBoxContainer" parent="Content"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Grid" type="GridContainer" parent="Content/JoinForm"]
+layout_mode = 2
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="AddressLabel" type="Label" parent="Content/JoinForm/Grid"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "ADDRESS"
+
+[node name="AddressField" type="LineEdit" parent="Content/JoinForm/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 64)
+layout_mode = 2
+placeholder_text = "127.0.0.1"
+
+[node name="JoinPortLabel" type="Label" parent="Content/JoinForm/Grid"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "PORT"
+
+[node name="JoinPortField" type="LineEdit" parent="Content/JoinForm/Grid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 64)
+layout_mode = 2
+
+[node name="ConnectButton" type="Button" parent="Content/JoinForm"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+text = "CONNECT"
+
+[node name="PlayersLabel" type="Label" parent="Content"]
+layout_mode = 2
+text = "PLAYERS"
+
+[node name="SlotList" type="VBoxContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="StatusLabel" type="Label" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="StartButton" type="Button" parent="Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "START RUN"
+
+[node name="BackButton" type="Button" parent="Content/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BACK"

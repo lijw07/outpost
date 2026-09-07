@@ -1,0 +1,145 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/chain_rig.gd" id="1_rig"]
+[ext_resource type="Texture2D" path="res://assets/ui/props/chains/chain_tile.png" id="2_chain"]
+[ext_resource type="Texture2D" path="res://assets/ui/props/chains/mount_plate_wide.png" id="3_mount"]
+[ext_resource type="SpriteFrames" path="res://assets/vfx/blood_drip/blood_drips.tres" id="4_drips"]
+[ext_resource type="Texture2D" path="res://assets/vfx/blood_drip/blood_bead.png" id="5_bead"]
+
+[node name="ChainRig" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_rig")
+
+[node name="Rig" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="ChainLeft" type="TextureRect" parent="Rig"]
+unique_name_in_owner = true
+texture_repeat = 2
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("2_chain")
+stretch_mode = 1
+
+[node name="ChainRight" type="TextureRect" parent="Rig"]
+unique_name_in_owner = true
+texture_repeat = 2
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("2_chain")
+stretch_mode = 1
+
+[node name="BeadLeft" type="Sprite2D" parent="Rig"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("5_bead")
+
+[node name="BeadRight" type="Sprite2D" parent="Rig"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("5_bead")
+
+[node name="MountLeft" type="TextureRect" parent="Rig"]
+unique_name_in_owner = true
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("3_mount")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MountRight" type="TextureRect" parent="Rig"]
+unique_name_in_owner = true
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("3_mount")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Plate" type="PanelContainer" parent="Rig" groups=["ui_plate"]]
+unique_name_in_owner = true
+layout_mode = 0
+theme_type_variation = &"MenuPlate"
+
+[node name="Inner" type="VBoxContainer" parent="Rig/Plate"]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="HeadingLabel" type="Label" parent="Rig/Plate/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "OUTPOST"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Rig/Plate/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Content" type="VBoxContainer" parent="Rig/Plate/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="DripChainA" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("4_drips")
+animation = &"small"
+
+[node name="DripChainB" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("4_drips")
+animation = &"small"
+
+[node name="DripA" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+scale = Vector2(0.52, 0.52)
+sprite_frames = ExtResource("4_drips")
+animation = &"small"
+autoplay = "small"
+
+[node name="DripB" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+scale = Vector2(0.44, 0.44)
+sprite_frames = ExtResource("4_drips")
+animation = &"double"
+autoplay = "double"
+
+[node name="DripC" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+scale = Vector2(0.62, 0.62)
+sprite_frames = ExtResource("4_drips")
+animation = &"large"
+autoplay = "large"
+
+[node name="DripD" type="AnimatedSprite2D" parent="Rig"]
+unique_name_in_owner = true
+scale = Vector2(0.4, 0.4)
+sprite_frames = ExtResource("4_drips")
+animation = &"large"
+autoplay = "large"
+
+[node name="Overlay" type="Control" parent="Rig" groups=["ui_overlay"]]
+unique_name_in_owner = true
+z_index = 100
+layout_mode = 0
+mouse_filter = 2

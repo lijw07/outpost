@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/title_panel.gd" id="1_title"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[node name="TitlePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_title")
+
+[node name="ChainRig" parent="." instance=ExtResource("9_rig")]
+unique_name_in_owner = true
+layout_mode = 1
+heading_text = "OUTPOST"
+subtitle_text = "BUILD. HOLD. SURVIVE."
+use_title_font = true
+plate_width = 840.0
+body_height = 0.0
+top_margin = 60.0
+
+[node name="Content" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_constants/separation = 14
+
+[node name="PlayButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "PLAY"
+
+[node name="SettingsButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="ExtrasButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "EXTRAS"
+
+[node name="QuitButton" type="Button" parent="Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+text = "QUIT"

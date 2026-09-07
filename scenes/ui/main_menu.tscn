@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" path="res://assets/loading/loading_forest_camp.png" id="3_bg"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/title_panel.tscn" id="4_title"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/mode_select_panel.tscn" id="5_mode"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/settings_panel.tscn" id="6_settings"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/extras_panel.tscn" id="7_extras"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/save_select_panel.tscn" id="8_save"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/lobby_panel.tscn" id="10_lobby"]
+
+[node name="MainMenu" type="Control"]
+texture_filter = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_menu")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vignette" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0392157, 0.0431373, 0.0509804, 0.62)
+
+[node name="Screens" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TitlePanel" parent="Screens" instance=ExtResource("4_title")]
+layout_mode = 1
+
+[node name="ModeSelectPanel" parent="Screens" instance=ExtResource("5_mode")]
+visible = false
+layout_mode = 1
+
+[node name="SettingsPanel" parent="Screens" instance=ExtResource("6_settings")]
+visible = false
+layout_mode = 1
+
+[node name="ExtrasPanel" parent="Screens" instance=ExtResource("7_extras")]
+visible = false
+layout_mode = 1
+
+[node name="SaveSelectPanel" parent="Screens" instance=ExtResource("8_save")]
+visible = false
+layout_mode = 1
+
+[node name="LobbyPanel" parent="Screens" instance=ExtResource("10_lobby")]
+visible = false
+layout_mode = 1

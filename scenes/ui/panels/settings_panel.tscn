@@ -1,0 +1,265 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/settings_panel.gd" id="1_settings"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/dropdown.tscn" id="10_drop"]
+
+[node name="SettingsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_settings")
+
+[node name="ChainRig" parent="." instance=ExtResource("9_rig")]
+unique_name_in_owner = true
+layout_mode = 1
+heading_text = "SETTINGS"
+use_title_font = false
+plate_width = 1660.0
+body_height = 960.0
+top_margin = 60.0
+
+[node name="Content" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_constants/separation = 20
+
+[node name="Scroll" type="ScrollContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Sections" type="VBoxContainer" parent="Content/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 22
+
+[node name="DisplayHeading" type="Label" parent="Content/Scroll/Sections"]
+layout_mode = 2
+theme_type_variation = &"SectionLabel"
+text = "DISPLAY"
+
+[node name="DisplayGrid" type="GridContainer" parent="Content/Scroll/Sections"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 18
+columns = 2
+
+[node name="WindowModeLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "WINDOW MODE"
+
+[node name="WindowModeOption" parent="Content/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(520, 64)
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "RESOLUTION"
+
+[node name="ResolutionOption" parent="Content/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(520, 64)
+layout_mode = 2
+
+[node name="VsyncLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "V-SYNC"
+
+[node name="VsyncCheck" type="CheckBox" parent="Content/Scroll/Sections/DisplayGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="AudioHeading" type="Label" parent="Content/Scroll/Sections"]
+layout_mode = 2
+theme_type_variation = &"SectionLabel"
+text = "AUDIO"
+
+[node name="AudioGrid" type="GridContainer" parent="Content/Scroll/Sections"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 22
+columns = 3
+
+[node name="MasterLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "MASTER"
+
+[node name="MasterSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(520, 44)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 100.0
+value = 80.0
+
+[node name="MasterValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "80%"
+horizontal_alignment = 2
+
+[node name="MusicLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "MUSIC"
+
+[node name="MusicSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(520, 44)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 100.0
+value = 70.0
+
+[node name="MusicValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "70%"
+horizontal_alignment = 2
+
+[node name="SfxLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "SOUND EFFECTS"
+
+[node name="SfxSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(520, 44)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 100.0
+value = 80.0
+
+[node name="SfxValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "80%"
+horizontal_alignment = 2
+
+[node name="ControlsHeading" type="Label" parent="Content/Scroll/Sections"]
+layout_mode = 2
+theme_type_variation = &"SectionLabel"
+text = "CONTROLS"
+
+[node name="Hint" type="Label" parent="Content/Scroll/Sections"]
+layout_mode = 2
+text = "CLICK A BINDING THEN PRESS A KEY - ESC CANCELS"
+
+[node name="BindList" type="VBoxContainer" parent="Content/Scroll/Sections"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Footer" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ResetAllButton" type="Button" parent="Content/Footer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+text = "RESET ALL"
+
+[node name="Spacer" type="Control" parent="Content/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackButton" type="Button" parent="Content/Footer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 72)
+layout_mode = 2
+text = "BACK"
+
+[node name="DisplayConfirm" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 200
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="DisplayConfirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0392157, 0.0431373, 0.0509804, 0.78)
+
+[node name="Box" type="PanelContainer" parent="DisplayConfirm"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"MenuPlate"
+
+[node name="Inner" type="VBoxContainer" parent="DisplayConfirm/Box"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Question" type="Label" parent="DisplayConfirm/Box/Inner"]
+layout_mode = 2
+theme_type_variation = &"SectionLabel"
+text = "KEEP THESE DISPLAY SETTINGS?"
+horizontal_alignment = 1
+
+[node name="Countdown" type="Label" parent="DisplayConfirm/Box/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "REVERTING IN 10"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="DisplayConfirm/Box/Inner"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="KeepButton" type="Button" parent="DisplayConfirm/Box/Inner/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEEP"
+
+[node name="RevertButton" type="Button" parent="DisplayConfirm/Box/Inner/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "REVERT"
+
+[node name="CountdownTimer" type="Timer" parent="DisplayConfirm"]
+unique_name_in_owner = true
+wait_time = 1.0

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/key_bind_row.gd" id="1_bind"]
+
+[node name="KeyBindRow" type="HBoxContainer"]
+anchors_preset = 0
+custom_minimum_size = Vector2(760, 64)
+offset_right = 760.0
+offset_bottom = 64.0
+size_flags_horizontal = 0
+theme_override_constants/separation = 24
+script = ExtResource("1_bind")
+
+[node name="ActionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "ACTION"
+
+[node name="BindButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 60)
+layout_mode = 2
+text = "UNBOUND"
