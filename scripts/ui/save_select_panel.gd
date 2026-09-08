@@ -1,5 +1,8 @@
 extends Control
 
+const TRASH_ICON := preload("res://assets/ui/icons/icon_trash.png")
+const SLOT_ROW := preload("res://scripts/ui/slot_row.gd")
+
 signal save_chosen
 signal back_requested
 
@@ -9,6 +12,11 @@ signal back_requested
 @onready var _name_row: HBoxContainer = %NameRow
 @onready var _name_field: LineEdit = %NameField
 @onready var _create_button: Button = %CreateButton
+@onready var _cancel_button: Button = %CancelButton
+@onready var _delete_confirm: Control = %DeleteConfirm
+@onready var _delete_question: Label = %DeleteQuestion
+
+var _pending_delete := {}
 
 func _ready() -> void:
 	var back_button: Button = %BackButton
@@ -17,7 +25,13 @@ func _ready() -> void:
 	_name_field.text_submitted.connect(_on_name_submitted)
 	_name_field.text_changed.connect(_on_name_changed)
 	back_button.pressed.connect(back_requested.emit)
+	var confirm_button: Button = %ConfirmDeleteButton
+	var cancel_button: Button = %CancelDeleteButton
+	confirm_button.pressed.connect(_confirm_delete)
+	cancel_button.pressed.connect(_cancel_delete)
+	_cancel_button.pressed.connect(_cancel_name_entry)
 	visibility_changed.connect(_on_visibility_changed)
+	_delete_confirm.hide()
 	_name_row.hide()
 	refresh()
 	var rig: Control = %ChainRig
@@ -25,10 +39,9 @@ func _ready() -> void:
 
 func focus_first() -> void:
 	if _slot_list.get_child_count() > 0:
-		var first := _slot_list.get_child(0) as Button
-		if first != null:
-			first.grab_focus()
-			return
+		var first: Button = _slot_list.get_child(0).get_node("Select")
+		first.grab_focus()
+		return
 	_new_game_button.grab_focus()
 
 func refresh() -> void:
@@ -40,24 +53,47 @@ func refresh() -> void:
 		_slot_list.add_child(_build_slot(save))
 	_new_game_button.disabled = not SaveManager.can_create()
 
-func _build_slot(save: Dictionary) -> Button:
-	var button := Button.new()
-	button.custom_minimum_size = Vector2(760, 76)
-	button.text = "%s      LAST PLAYED %s" % [save["character_name"],
-		SaveManager.format_timestamp(save["last_played"])]
-	button.pressed.connect(_on_slot_pressed.bind(save))
-	return button
+func _build_slot(save: Dictionary) -> HBoxContainer:
+	var row := SLOT_ROW.build(save["character_name"],
+		"LAST PLAYED %s" % SaveManager.format_timestamp(save["last_played"]),
+		SLOT_ROW.name_column(self, _name_field.max_length), TRASH_ICON, "DELETE SURVIVOR")
+	row.get_node("Select").pressed.connect(_on_slot_pressed.bind(save))
+	row.get_node("Delete").pressed.connect(_ask_delete.bind(save))
+	return row
 
 func _on_visibility_changed() -> void:
 	if visible:
 		_name_row.hide()
+		_delete_confirm.hide()
 		refresh()
+
+func _ask_delete(save: Dictionary) -> void:
+	_pending_delete = save
+	_delete_question.text = "DELETE %s?" % save["character_name"]
+	_delete_confirm.show()
+	%CancelDeleteButton.grab_focus()
+
+func _cancel_delete() -> void:
+	_pending_delete = {}
+	_delete_confirm.hide()
+
+func _confirm_delete() -> void:
+	if not _pending_delete.is_empty():
+		SaveManager.delete_save(_pending_delete["id"])
+	_pending_delete = {}
+	_delete_confirm.hide()
+	refresh()
 
 func _show_name_entry() -> void:
 	_name_row.show()
 	_name_field.text = ""
 	_create_button.disabled = true
 	_name_field.grab_focus()
+
+func _cancel_name_entry() -> void:
+	_name_row.hide()
+	_name_field.text = ""
+	_new_game_button.grab_focus()
 
 func _on_name_changed(new_text: String) -> void:
 	var clean := SaveManager.sanitize_name(new_text)

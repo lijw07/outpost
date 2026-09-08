@@ -86,11 +86,11 @@ func _on_window_mode_selected(index: int) -> void:
 func _on_resolution_selected(index: int) -> void:
 	_try_display(int(Settings.window_mode), Settings.resolutions[index])
 
-func _try_display(mode: int, size: Vector2i) -> void:
+func _try_display(mode: int, resolution: Vector2i) -> void:
 	if not _confirm.visible:
 		_restore_window_mode = int(Settings.window_mode)
 		_restore_resolution = Settings.resolution
-	Settings.preview_display(mode, size)
+	Settings.preview_display(mode, resolution)
 	_refresh()
 	_start_countdown()
 

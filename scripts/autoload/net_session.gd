@@ -16,21 +16,27 @@ var server_name := ""
 var port := DEFAULT_PORT
 var roster: Array[Dictionary] = []
 
+func seat_local_player() -> void:
+	if not roster.is_empty():
+		return
+	roster = [_slot(GameSession.character_name, true, true)]
+	roster_changed.emit()
+
 func host(chosen_name: String, chosen_port: int) -> void:
 	server_name = chosen_name
 	port = chosen_port
 	invite_code = _new_code()
 	role = Role.HOSTING
-	roster = [_slot(GameSession.character_name, true, true)]
+	seat_local_player()
 	roster_changed.emit()
-	status_changed.emit("HOSTING ON PORT %d" % port)
+	status_changed.emit("")
 
 func join(address: String, chosen_port: int) -> void:
 	port = chosen_port
 	role = Role.JOINING
 	roster = []
 	roster_changed.emit()
-	status_changed.emit("NO TRANSPORT CONFIGURED - CANNOT REACH %s:%d" % [address, chosen_port])
+	status_changed.emit("CANNOT REACH %s:%d" % [address, chosen_port])
 
 func leave() -> void:
 	role = Role.OFFLINE

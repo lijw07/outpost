@@ -4,6 +4,7 @@ const HOVER_PATH := "res://assets/audio/ui/ui_chain_tap.wav"
 const CLICK_PATH := "res://assets/audio/ui/ui_chain_clank.wav"
 const BACK_PATH := "res://assets/audio/ui/ui_chain_drop.wav"
 const RATTLE_PATH := "res://assets/audio/ui/ui_chain_rattle.wav"
+const HOIST_PATH := "res://assets/audio/ui/ui_chain_hoist.wav"
 
 const BACK_LABELS: Array[String] = ["BACK", "QUIT"]
 
@@ -11,12 +12,14 @@ var _hover_player: AudioStreamPlayer
 var _click_player: AudioStreamPlayer
 var _back_player: AudioStreamPlayer
 var _rattle_player: AudioStreamPlayer
+var _hoist_player: AudioStreamPlayer
 
 func _ready() -> void:
 	_hover_player = _create_player(HOVER_PATH, -11.0)
 	_click_player = _create_player(CLICK_PATH, -5.0)
 	_back_player = _create_player(BACK_PATH, -5.0)
 	_rattle_player = _create_player(RATTLE_PATH, -8.0)
+	_hoist_player = _create_player(HOIST_PATH, -9.0)
 	get_tree().node_added.connect(_wire)
 	_wire_existing_tree.call_deferred()
 
@@ -31,6 +34,9 @@ func play_back() -> void:
 
 func play_rattle(pitch := 1.0) -> void:
 	_play(_rattle_player, pitch)
+
+func play_hoist() -> void:
+	_play(_hoist_player, randf_range(0.97, 1.05))
 
 func _play(player: AudioStreamPlayer, pitch: float) -> void:
 	if player.stream == null:

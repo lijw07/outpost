@@ -42,12 +42,22 @@ resolution pass. Autoloads load resources with `ResourceLoader.load()` in
 
 Every menu screen is one `ChainRig` (`scenes/ui/components/chain_rig.tscn`): a
 single plate hung from two chains that drops in from off screen, rocks, and
-settles to a stop. Panels feed it a heading, a plate width and a minimum height,
-then hand it their content with `adopt()`.
+settles to a stop. Panels feed it a heading, a plate width and a height, then hand it their content
+with `adopt()`. A non-zero `body_height` is the plate's exact height, so a screen
+does not grow or shrink with how much is inside it; set it to zero to size to
+content.
 
 The plate is one rigid body — a damped pendulum for the swing plus a pull-only
 chain spring for the drop. Interacting with the UI does not disturb it, and the
 motion decays to exactly zero rather than swaying forever.
+
+The chains hang from fixed ceiling points off the top of the screen rather than
+rotating with the sign, so they lean as it swings and bow with its angular
+velocity.
+
+Blood is seeded from each panel's heading, so every screen gets its own stable
+arrangement of splatter decals and drip positions. Splatters stay in a band
+around the frame so they never land on the text.
 
 Dropdowns (`scripts/ui/dropdown.gd`) are in-tree controls rather than Godot
 popups, so the open list rotates and translates with the sign instead of sitting
@@ -103,6 +113,7 @@ godot --path . tests/dropdown_test.tscn    # lists stay tied to the UI and fit t
 godot --path . tests/save_test.tscn        # save slots round-trip and respect the cap
 godot --path . tests/lobby_test.tscn       # hosting seats a player, ports validate, leaving resets
 godot --path . tests/confirm_test.tscn     # display changes preview, then keep, revert or time out
+godot --path . tests/pick_test.tscn        # an open dropdown receives hover and clicks over the content
 ```
 
 Before shipping a change, wipe `.godot`, run `--headless --path . --import`,

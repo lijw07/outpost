@@ -214,7 +214,10 @@ func save_settings() -> void:
 	for bus_name: String in AUDIO_BUSES:
 		config.set_value("audio", bus_name, get_bus_volume(bus_name))
 	for action: String in REMAPPABLE_ACTIONS:
-		config.set_value("input", action, serialize_event(get_binding(action)))
+		if _is_project_default(action):
+			continue
+		config.set_value("input", action, "%s>%s" % [
+			_default_binding_text(action), serialize_event(get_binding(action))])
 	config.save(CONFIG_PATH)
 
 func load_settings() -> void:
@@ -227,11 +230,11 @@ func load_settings() -> void:
 	for bus_name: String in AUDIO_BUSES:
 		bus_volumes[bus_name] = config.get_value("audio", bus_name, get_bus_volume(bus_name))
 	for action: String in REMAPPABLE_ACTIONS:
-		var encoded: String = config.get_value("input", action, "")
-		var event := deserialize_event(encoded)
-		if event != null and InputMap.has_action(action):
-			InputMap.action_erase_events(action)
-			InputMap.action_add_event(action, event)
+		var event := _remapped_event(action, config.get_value("input", action, ""))
+		if event == null or not InputMap.has_action(action):
+			continue
+		InputMap.action_erase_events(action)
+		InputMap.action_add_event(action, event)
 
 func resolution_label(size: Vector2i) -> String:
 	return "%d X %d  (%s)" % [size.x, size.y, aspect_label(size)]
@@ -318,6 +321,19 @@ func _apply_resolution() -> void:
 	var margin := DisplayServer.screen_get_size(screen) - resolution
 	window.position = DisplayServer.screen_get_position(screen) \
 		+ Vector2i(roundi(margin.x * 0.5), roundi(margin.y * 0.5))
+
+func _remapped_event(action: String, encoded: String) -> InputEvent:
+	var parts := encoded.split(">")
+	if parts.size() != 2 or parts[0] != _default_binding_text(action):
+		return null
+	return deserialize_event(parts[1])
+
+func _default_binding_text(action: String) -> String:
+	var events: Array = _default_events.get(action, [])
+	return serialize_event(events[0]) if not events.is_empty() else ""
+
+func _is_project_default(action: String) -> bool:
+	return serialize_event(get_binding(action)) == _default_binding_text(action)
 
 func _capture_default_events() -> void:
 	for action: String in REMAPPABLE_ACTIONS:

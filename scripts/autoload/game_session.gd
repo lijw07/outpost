@@ -9,6 +9,9 @@ const GAME_SCENE := "res://scenes/world/game.tscn"
 var is_coop := false
 var character_name := ""
 var save_id := ""
+var world_id := ""
+var world_name := ""
+var world_seed := 0
 var pending_scene := ""
 
 func start_game() -> void:

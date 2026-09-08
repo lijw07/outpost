@@ -6,6 +6,7 @@ extends Control
 @onready var _extras_panel: Control = $Screens/ExtrasPanel
 @onready var _save_select_panel: Control = $Screens/SaveSelectPanel
 @onready var _lobby_panel: Control = $Screens/LobbyPanel
+@onready var _world_select_panel: Control = $Screens/WorldSelectPanel
 
 var _history: Array[Control] = []
 var _current: Control
@@ -21,11 +22,14 @@ func _ready() -> void:
 	_mode_select_panel.back_requested.connect(_go_back)
 	_settings_panel.back_requested.connect(_go_back)
 	_extras_panel.back_requested.connect(_go_back)
-	_save_select_panel.save_chosen.connect(_launch)
+	_save_select_panel.save_chosen.connect(_on_save_chosen)
 	_save_select_panel.back_requested.connect(_go_back)
 	_lobby_panel.run_started.connect(_launch)
 	_lobby_panel.back_requested.connect(_go_back)
-	for panel: Control in [_title_panel, _mode_select_panel, _settings_panel, _extras_panel, _save_select_panel, _lobby_panel]:
+	_lobby_panel.map_change_requested.connect(_show_panel.bind(_world_select_panel))
+	_world_select_panel.world_chosen.connect(_on_world_chosen)
+	_world_select_panel.back_requested.connect(_go_back)
+	for panel: Control in [_title_panel, _mode_select_panel, _settings_panel, _extras_panel, _save_select_panel, _lobby_panel, _world_select_panel]:
 		panel.hide()
 	_current = _title_panel
 	_title_panel.show()
@@ -49,10 +53,7 @@ func _release_idle_focus() -> void:
 	if Input.get_mouse_button_mask() != 0:
 		return
 	var focused := get_viewport().gui_get_focus_owner()
-	if focused == null:
-		return
-	var option := focused as OptionButton
-	if option != null and option.get_popup().visible:
+	if focused == null or focused is LineEdit:
 		return
 	focused.release_focus()
 
@@ -92,7 +93,16 @@ func _start_game(coop: bool) -> void:
 	if _busy:
 		return
 	GameSession.is_coop = coop
-	_show_panel(_lobby_panel if coop else _save_select_panel)
+	_show_panel(_save_select_panel)
+
+func _on_save_chosen() -> void:
+	_show_panel(_world_select_panel)
+
+func _on_world_chosen() -> void:
+	if GameSession.is_coop:
+		_show_panel(_lobby_panel)
+		return
+	_launch()
 
 func _launch() -> void:
 	if _busy:

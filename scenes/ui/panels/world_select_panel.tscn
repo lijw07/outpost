@@ -1,23 +1,23 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/ui/save_select_panel.gd" id="1_save"]
+[ext_resource type="Script" path="res://scripts/ui/world_select_panel.gd" id="1_world"]
 [ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
 
-[node name="SaveSelectPanel" type="Control"]
+[node name="WorldSelectPanel" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_save")
+script = ExtResource("1_world")
 
 [node name="ChainRig" parent="." instance=ExtResource("9_rig")]
 unique_name_in_owner = true
 layout_mode = 1
-heading_text = "SELECT A SURVIVOR"
+heading_text = "SELECT A WORLD"
 use_title_font = false
-plate_width = 1400.0
+plate_width = 1180.0
 body_height = 660.0
 top_margin = 60.0
 
@@ -41,11 +41,11 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "NO SURVIVORS YET - START A NEW GAME"
+text = "NO WORLDS YET - CREATE ONE TO BEGIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SlotList" type="VBoxContainer" parent="Content/Scroll/Inner"]
+[node name="WorldList" type="VBoxContainer" parent="Content/Scroll/Inner"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -61,8 +61,8 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 size_flags_horizontal = 3
-max_length = 14
-placeholder_text = "CHARACTER NAME"
+max_length = 16
+placeholder_text = "WORLD NAME"
 
 [node name="CreateButton" type="Button" parent="Content/NameRow"]
 unique_name_in_owner = true
@@ -76,11 +76,11 @@ custom_minimum_size = Vector2(220, 76)
 layout_mode = 2
 text = "CANCEL"
 
-[node name="NewGameButton" type="Button" parent="Content"]
+[node name="NewWorldButton" type="Button" parent="Content"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
-text = "NEW GAME"
+text = "NEW WORLD"
 
 [node name="BackButton" type="Button" parent="Content"]
 unique_name_in_owner = true
@@ -128,7 +128,7 @@ theme_override_constants/separation = 22
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"SectionLabel"
-text = "DELETE SURVIVOR?"
+text = "DELETE WORLD?"
 horizontal_alignment = 1
 
 [node name="Warning" type="Label" parent="DeleteConfirm/Box/Inner"]

@@ -2,6 +2,7 @@ extends Control
 
 signal back_requested
 signal run_started
+signal map_change_requested
 
 @onready var _host_tab: Button = %HostTab
 @onready var _join_tab: Button = %JoinTab
@@ -13,6 +14,7 @@ signal run_started
 @onready var _address_field: LineEdit = %AddressField
 @onready var _join_port_field: LineEdit = %JoinPortField
 @onready var _slot_list: VBoxContainer = %SlotList
+@onready var _map_value: Label = %MapValue
 @onready var _status_label: Label = %StatusLabel
 @onready var _start_button: Button = %StartButton
 
@@ -22,6 +24,7 @@ func _ready() -> void:
 	var connect_button: Button = %ConnectButton
 	var copy_button: Button = %CopyButton
 	var back_button: Button = %BackButton
+	var change_map: Button = %ChangeMapButton
 	_host_tab.toggled.connect(_show_host)
 	_join_tab.toggled.connect(func(on: bool) -> void: _show_host(not on))
 	open_button.pressed.connect(_on_open_pressed)
@@ -29,6 +32,7 @@ func _ready() -> void:
 	copy_button.pressed.connect(_on_copy_pressed)
 	_start_button.pressed.connect(run_started.emit)
 	back_button.pressed.connect(_on_back_pressed)
+	change_map.pressed.connect(map_change_requested.emit)
 	NetSession.roster_changed.connect(_refresh)
 	NetSession.status_changed.connect(_on_status)
 	visibility_changed.connect(_on_visibility_changed)
@@ -46,6 +50,7 @@ func _on_visibility_changed() -> void:
 		return
 	if _server_field.text.is_empty():
 		_server_field.text = _default_server_name()
+	NetSession.seat_local_player()
 	_refresh()
 
 func _default_server_name() -> String:
@@ -82,6 +87,7 @@ func _port_from(field: LineEdit) -> int:
 	return value if value > 0 and value < 65536 else NetSession.DEFAULT_PORT
 
 func _refresh() -> void:
+	_map_value.text = GameSession.world_name if not GameSession.world_name.is_empty() else "NO MAP SELECTED"
 	_code_value.text = NetSession.invite_code if not NetSession.invite_code.is_empty() else "-"
 	_start_button.disabled = not NetSession.can_start()
 	for child in _slot_list.get_children():

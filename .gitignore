@@ -22,6 +22,7 @@ CLAUDE.md
 AGENTS.md
 .mcp.json
 Claude outputs/
+_to_delete/
 .cursor/
 .cursorrules
 .cursorignore

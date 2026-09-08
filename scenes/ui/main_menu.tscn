@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
 [ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/extras_panel.tscn" id="7_extras"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/save_select_panel.tscn" id="8_save"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/lobby_panel.tscn" id="10_lobby"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/world_select_panel.tscn" id="11_world"]
 
 [node name="MainMenu" type="Control"]
 texture_filter = 2
@@ -73,5 +74,9 @@ visible = false
 layout_mode = 1
 
 [node name="LobbyPanel" parent="Screens" instance=ExtResource("10_lobby")]
+visible = false
+layout_mode = 1
+
+[node name="WorldSelectPanel" parent="Screens" instance=ExtResource("11_world")]
 visible = false
 layout_mode = 1
