@@ -2,10 +2,6 @@ extends Control
 
 const FADE_SECONDS := 0.9
 const MUSIC_VOLUME_DB := -8.0
-const NAVIGATION_ACTIONS: Array[String] = ["ui_up", "ui_down", "ui_left", "ui_right",
-	"ui_focus_next", "ui_focus_prev"]
-const KEYBOARD_CONTROLS: Array[String] = ["LineEdit", "Range", "CheckBox", "CheckButton"]
-
 @onready var _title_panel: Control = $Screens/TitlePanel
 @onready var _mode_select_panel: Control = $Screens/ModeSelectPanel
 @onready var _settings_panel: Control = $Screens/SettingsPanel
@@ -17,12 +13,12 @@ const KEYBOARD_CONTROLS: Array[String] = ["LineEdit", "Range", "CheckBox", "Chec
 
 var _history: Array[Control] = []
 var _current: Control
-var _navigating_by_keyboard := false
 var _busy := false
 var _choosing_lobby_world := false
 var _music_fade: Tween
 
 func _ready() -> void:
+	UiFocus.navigation_started.connect(_focus_current)
 	_music.stream.loop = true
 	_music.play()
 	_fade_music(MUSIC_VOLUME_DB, 2.0)
@@ -48,18 +44,7 @@ func _ready() -> void:
 	_title_panel.show()
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		_navigating_by_keyboard = false
-		_release_idle_focus()
-	elif _is_navigation(event) and not _navigating_by_keyboard:
-		_navigating_by_keyboard = true
-		_focus_current()
-
-func _is_navigation(event: InputEvent) -> bool:
-	for action in NAVIGATION_ACTIONS:
-		if event.is_action_pressed(action):
-			return true
-	return false
+	UiFocus.observe(event)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") and not _history.is_empty():
@@ -70,26 +55,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			_go_back()
 
-func _release_idle_focus() -> void:
-	for modal in get_tree().get_nodes_in_group("modal_dialogs"):
-		if modal.is_visible_in_tree():
-			return
-	if _busy or Input.get_mouse_button_mask() != 0:
-		return
-	var focused := get_viewport().gui_get_focus_owner()
-	if focused == null or _takes_keys(focused):
-		return
-	focused.release_focus()
-
-func _takes_keys(control: Control) -> bool:
-	for type: String in KEYBOARD_CONTROLS:
-		if control.is_class(type):
-			return true
-	var parent := control.get_parent()
-	return parent != null and parent.is_in_group("dropdowns")
-
 func _focus_current() -> void:
-	if _current != null and get_viewport().gui_get_focus_owner() == null:
+	if not _busy and _current != null and get_viewport().gui_get_focus_owner() == null:
 		_current.call("focus_first")
 
 func _show_panel(panel: Control) -> void:
@@ -118,7 +85,7 @@ func _swap_to(panel: Control) -> void:
 	_current.hide()
 	_current = panel
 	panel.show()
-	if _navigating_by_keyboard:
+	if UiFocus.using_keyboard:
 		_focus_current()
 	_busy = false
 
@@ -172,6 +139,12 @@ func _fade_music(target_db: float, seconds: float) -> Tween:
 	_music_fade = create_tween()
 	_music_fade.tween_property(_music, "volume_db", target_db, seconds)
 	return _music_fade
+
+func _exit_tree() -> void:
+	if _music_fade != null and _music_fade.is_valid():
+		_music_fade.kill()
+	_music.stop()
+	_music.stream = null
 
 func _fade_to_black() -> void:
 	var duration := 0.35 if Settings.reduce_motion else FADE_SECONDS

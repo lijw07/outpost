@@ -4,7 +4,6 @@ signal cancelled
 
 @export var initial_focus: NodePath
 var _previous_focus: Control
-var _keyboard_navigation := false
 
 func _ready() -> void:
 	add_to_group("modal_dialogs")
@@ -17,23 +16,20 @@ func _on_visibility_changed() -> void:
 		_previous_focus = get_viewport().gui_get_focus_owner()
 		_focus_default()
 	elif is_instance_valid(_previous_focus) and _previous_focus.is_visible_in_tree():
-		_previous_focus.grab_focus(not _keyboard_navigation)
+		_previous_focus.grab_focus(not UiFocus.using_keyboard)
 
 func _focus_default() -> void:
 	var target := get_node_or_null(initial_focus) as Control
 	if target != null:
 		# Keep the safe default action without making mouse-opened dialogs look hovered.
-		target.grab_focus(not _keyboard_navigation)
+		target.grab_focus(not UiFocus.using_keyboard)
 
 func _guard_focus(control: Control) -> void:
 	if is_visible_in_tree() and (control == null or not is_ancestor_of(control)):
 		_focus_default.call_deferred()
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouse:
-		_keyboard_navigation = false
-	elif event is InputEventKey or event is InputEventJoypadButton or event is InputEventJoypadMotion or event is InputEventAction:
-		_keyboard_navigation = true
+	UiFocus.observe(event)
 	if not is_visible_in_tree():
 		return
 	if event.is_action_pressed("ui_cancel"):

@@ -104,6 +104,30 @@ func check_revert_hover(panel: Control) -> void:
 	await pointer_button(revert, revert.size * 0.5, false)
 	check(not dialog.visible, "Revert remains clickable")
 
+func check_list_focus(panel: Control, list: VBoxContainer, entry: Dictionary) -> void:
+	for button_name in ["NextButton", "PrevButton"]:
+		var button: Button = panel.get_node("%" + button_name)
+		await pointer_motion(button, button.size * 0.5)
+		await pointer_button(button, button.size * 0.5, true)
+		await pointer_button(button, button.size * 0.5, false)
+		await settle()
+		var first: Button = list.get_child(0).get_node("Select")
+		check(not first.has_focus(true) and not first.is_hovered(), "%s mouse paging does not highlight the first row" % panel.name)
+	await pointer_motion(panel, Vector2.ZERO)
+	panel._ask_delete(entry)
+	await settle()
+	var cancel: Button = panel.get_node("%CancelDeleteButton")
+	check(cancel.has_focus() and not cancel.has_focus(true), "%s Cancel starts without a gold focus state" % panel.name)
+	await pointer_motion(cancel, cancel.size * 0.5)
+	check(cancel.is_hovered(), "%s Cancel responds to hover" % panel.name)
+	await pointer_motion(panel, Vector2.ZERO)
+	check(not cancel.is_hovered() and not cancel.has_focus(true), "%s Cancel returns to normal on mouse exit" % panel.name)
+	await action("ui_cancel")
+	await action("ui_focus_next")
+	check(root.gui_get_focus_owner().has_focus(true), "%s keyboard navigation still shows focus" % panel.name)
+	await pointer_motion(panel, Vector2.ZERO)
+	check(not root.gui_get_focus_owner().has_focus(true), "%s mouse movement hides keyboard highlighting" % panel.name)
+
 func type_name(panel: Control, value: String) -> void:
 	for character in value:
 		var text: String = panel._name_field.text + character
@@ -312,6 +336,7 @@ func run() -> void:
 	survivor_panel.refresh()
 	check(survivor_panel._slot_list.get_child_count() == 3 and survivor_panel._pager.visible, "six survivors paginate three at a time")
 	check(survivor_panel._new_game_button.disabled and "6 / 6" in survivor_panel.get_node("%SlotSummary").text, "full survivor list explains its capacity")
+	await check_list_focus(survivor_panel, survivor_panel._slot_list, survivor)
 	survivor_panel._turn_page(1)
 	check(survivor_panel._slot_list.get_child_count() == 3 and survivor_panel._next_button.disabled, "last survivor page is bounded")
 	await menu._show_panel(menu._world_select_panel)
@@ -322,6 +347,7 @@ func run() -> void:
 		extra_world = worlds.create_world("EXTRA WORLD%d" % i)
 	world_panel.refresh()
 	check(world_panel._new_world_button.disabled and world_panel._pager.visible, "world capacity and pagination match survivors")
+	await check_list_focus(world_panel, world_panel._world_list, extra_world)
 	world_panel._turn_page(1)
 	await settle()
 	check(world_panel._world_list.get_child_count() == 3, "second world page contains the remaining records")

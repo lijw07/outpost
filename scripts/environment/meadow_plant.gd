@@ -25,9 +25,9 @@ func _ready() -> void:
 	frame = posmod(int(global_position.x + global_position.y), 8)
 	if picked_texture != null: add_to_group("meadow_pickables")
 	if smooth_motion:
-		var name := sprite_frames.resource_path.get_file().get_basename()
-		var path := "res://assets/environment/meadow/props/"+name+".png"
-		if not ResourceLoader.exists(path): path = "res://assets/environment/meadow/grass/"+name+".png"
+		var asset_name := sprite_frames.resource_path.get_file().get_basename()
+		var path := "res://assets/environment/meadow/props/"+asset_name+".png"
+		if not ResourceLoader.exists(path): path = "res://assets/environment/meadow/grass/"+asset_name+".png"
 		var rest: Texture2D = load(path)
 		_motion_material = ShaderMaterial.new()
 		_motion_material.shader = preload("res://assets/shaders/meadow_foliage.gdshader")

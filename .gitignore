@@ -40,3 +40,10 @@ _to_delete/
 Thumbs.db
 /docs
 /output
+
+# Python generator caches
+__pycache__/
+*.py[cod]
+
+# Source artwork is not imported by Godot
+/assets/_source/*.import

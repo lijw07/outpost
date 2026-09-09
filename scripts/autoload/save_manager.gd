@@ -77,10 +77,10 @@ func format_timestamp(unix_time: int) -> String:
 	if elapsed < 60:
 		return "JUST NOW"
 	if elapsed < 3600:
-		return "%d MIN AGO" % (elapsed / 60)
+		return "%d MIN AGO" % floori(float(elapsed) / 60.0)
 	if elapsed < 86400:
-		return "%d HR AGO" % (elapsed / 3600)
-	return "%d DAYS AGO" % (elapsed / 86400)
+		return "%d HR AGO" % floori(float(elapsed) / 3600.0)
+	return "%d DAYS AGO" % floori(float(elapsed) / 86400.0)
 
 func _path_for(id: String) -> String:
 	return "%s/%s.cfg" % [SAVE_DIR, id]

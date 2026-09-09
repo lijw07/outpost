@@ -81,7 +81,7 @@ func _build_ui() -> void:
 	search.text_changed.connect(func(value: String) -> void: _filter=value.to_lower(); _filter_cards())
 	gallery.add_child(search)
 	var categories := OptionButton.new()
-	for name in ["All assets","Ground","Transitions","Paths","Grass","Props","Picked"]: categories.add_item(name)
+	for category_name in ["All assets","Ground","Transitions","Paths","Grass","Props","Picked"]: categories.add_item(category_name)
 	categories.item_selected.connect(func(index: int) -> void:
 		_category=["all","terrain","transitions","paths","grass","props","harvested"][index]
 		_filter_cards())
@@ -139,7 +139,7 @@ func _build_ui() -> void:
 	options.add_child(zoom)
 	options.add_child(_label("Background",16))
 	var background := OptionButton.new()
-	for name in ["Charcoal","Light","Meadow"]: background.add_item(name)
+	for background_name in ["Charcoal","Light","Meadow"]: background.add_item(background_name)
 	background.item_selected.connect(func(index: int) -> void:
 		_background=[Color("30383a"),Color("b9b9b3"),Color("687d4b")][index]
 		_set_background())
@@ -232,11 +232,11 @@ func _select(index: int) -> void:
 	var asset: Dictionary = _assets[index]
 	_title.text = String(asset["name"]).replace("_"," ").capitalize()
 	_meta.text = "%d x %d px  |  %s\n%s"%[asset["size"][0],asset["size"][1],asset["kind"],asset["path"]]
-	var name: String = asset["name"]
-	var has_animation := FileAccess.file_exists(PACK+"animations/"+name+".tres")
+	var asset_name: String = asset["name"]
+	var has_animation := FileAccess.file_exists(PACK+"animations/"+asset_name+".tres")
 	if has_animation:
 		_animated = AnimatedSprite2D.new()
-		_animated.sprite_frames = load(PACK+"animations/"+name+".tres")
+		_animated.sprite_frames = load(PACK+"animations/"+asset_name+".tres")
 		if asset.get("reactive",false):
 			_animated.set_script(load("res://scripts/environment/meadow_plant.gd"))
 			_animated.set("smooth_motion",false)
@@ -312,9 +312,9 @@ func _process(_delta: float) -> void:
 	else:
 		_status.text = "Drag the preview to pan. Inspect on different backgrounds at 1x to 4x. Frames are numbered from 1."
 
-func _find_asset(name: String) -> int:
+func _find_asset(asset_name: String) -> int:
 	for i in range(_assets.size()):
-		if _assets[i]["name"]==name: return i
+		if _assets[i]["name"]==asset_name: return i
 	return -1
 
 func _run_checks() -> void:

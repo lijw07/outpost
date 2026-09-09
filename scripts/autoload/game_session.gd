@@ -1,6 +1,5 @@
 extends Node
 
-const MAX_PLAYERS := 4
 const LAST_SESSION_PATH := "user://last_session.cfg"
 const SHOW_LOADING_SCREEN := true
 const LOADING_SCENE := "res://scenes/ui/loading_screen.tscn"

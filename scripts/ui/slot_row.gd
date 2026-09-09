@@ -5,11 +5,11 @@ const DELETE_WIDTH := 112.0
 const SEPARATION := 16
 const COLUMN_GAP := 40
 
-static func build(source: Control, name_text: String, value_text: String, name_column: float,
+static func build(source: Control, name_text: String, value_text: String, name_column_width: float,
 		trash_icon: Texture2D, delete_tooltip: String) -> HBoxContainer:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", SEPARATION)
-	row.add_child(_select(name_text, value_text, name_column, _content_inset(source)))
+	row.add_child(_select(name_text, value_text, name_column_width, _content_inset(source)))
 	row.add_child(_delete(trash_icon, delete_tooltip))
 	return row
 
@@ -41,10 +41,7 @@ static func _select(name_text: String, value_text: String, name_column_width: fl
 	columns.add_child(_column("Name", name_text, HORIZONTAL_ALIGNMENT_LEFT, name_column_width))
 	columns.add_child(_column("Value", value_text, HORIZONTAL_ALIGNMENT_RIGHT, 0.0))
 	select.add_child(columns)
-	select.mouse_entered.connect(_tint.bind(select, true))
-	select.mouse_exited.connect(_tint.bind(select, false))
-	select.focus_entered.connect(_tint.bind(select, true))
-	select.focus_exited.connect(_tint.bind(select, false))
+	select.draw.connect(_tint.bind(select))
 	return select
 
 static func _column(node_name: String, text: String, alignment: HorizontalAlignment,
@@ -72,7 +69,8 @@ static func _delete(icon: Texture2D, tooltip: String) -> Button:
 	remove.tooltip_text = tooltip
 	return remove
 
-static func _tint(select: Button, active: bool) -> void:
+static func _tint(select: Button) -> void:
+	var active := select.is_hovered() or select.has_focus(true)
 	var key := "font_hover_color" if active else "font_color"
 	var color: Color = select.get_theme_color(key, "Button")
 	for node in select.find_children("*", "Label", true, false):

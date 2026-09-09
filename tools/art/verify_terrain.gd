@@ -1,7 +1,6 @@
 extends SceneTree
 const PACK := "res://assets/environment/meadow/"
-const CORNERS := [TileSet.CELL_NEIGHBOR_TOP_LEFT_CORNER,TileSet.CELL_NEIGHBOR_TOP_RIGHT_CORNER,TileSet.CELL_NEIGHBOR_BOTTOM_LEFT_CORNER,TileSet.CELL_NEIGHBOR_BOTTOM_RIGHT_CORNER]
-const SIDES := [TileSet.CELL_NEIGHBOR_TOP_SIDE,TileSet.CELL_NEIGHBOR_RIGHT_SIDE,TileSet.CELL_NEIGHBOR_BOTTOM_SIDE,TileSet.CELL_NEIGHBOR_LEFT_SIDE]
+const SIDES: Array[TileSet.CellNeighbor] = [TileSet.CELL_NEIGHBOR_TOP_SIDE,TileSet.CELL_NEIGHBOR_RIGHT_SIDE,TileSet.CELL_NEIGHBOR_BOTTOM_SIDE,TileSet.CELL_NEIGHBOR_LEFT_SIDE]
 
 func _initialize() -> void:
 	call_deferred("_verify")
@@ -53,10 +52,10 @@ func _verify() -> void:
 			if x in range(3,6) and y in range(3,6): soil.append(Vector2i(x,y))
 	paint.set_cells_terrain_connect(soil,0,1,true)
 	assert(_ground_edges_match(paint))
-	assert(paint.get_cell_tile_data(Vector2i(4,4)).get_terrain_peering_bit(CORNERS[0]) == 1)
+	assert(paint.get_cell_tile_data(Vector2i(4,4)).get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_LEFT_CORNER) == 1)
 	paint.set_cells_terrain_connect(soil,0,0,true)
 	assert(_ground_edges_match(paint))
-	assert(paint.get_cell_tile_data(Vector2i(4,4)).get_terrain_peering_bit(CORNERS[0]) == 0)
+	assert(paint.get_cell_tile_data(Vector2i(4,4)).get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_LEFT_CORNER) == 0)
 	var game: Node = load("res://scenes/world/game.tscn").instantiate()
 	root.add_child(game)
 	assert(game.has_node("MeadowTerrain/Ground"))
@@ -74,9 +73,9 @@ func _ground_edges_match(layer: TileMapLayer) -> bool:
 		var right := layer.get_cell_tile_data(pos+Vector2i.RIGHT)
 		var down := layer.get_cell_tile_data(pos+Vector2i.DOWN)
 		if right:
-			if not (a.get_terrain_peering_bit(CORNERS[1]) == right.get_terrain_peering_bit(CORNERS[0])): return false
-			if not (a.get_terrain_peering_bit(CORNERS[3]) == right.get_terrain_peering_bit(CORNERS[2])): return false
+			if not (a.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_RIGHT_CORNER) == right.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_LEFT_CORNER)): return false
+			if not (a.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_BOTTOM_RIGHT_CORNER) == right.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_BOTTOM_LEFT_CORNER)): return false
 		if down:
-			if not (a.get_terrain_peering_bit(CORNERS[2]) == down.get_terrain_peering_bit(CORNERS[0])): return false
-			if not (a.get_terrain_peering_bit(CORNERS[3]) == down.get_terrain_peering_bit(CORNERS[1])): return false
+			if not (a.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_BOTTOM_LEFT_CORNER) == down.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_LEFT_CORNER)): return false
+			if not (a.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_BOTTOM_RIGHT_CORNER) == down.get_terrain_peering_bit(TileSet.CELL_NEIGHBOR_TOP_RIGHT_CORNER)): return false
 	return true

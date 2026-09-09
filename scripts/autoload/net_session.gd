@@ -70,9 +70,6 @@ func is_host() -> bool:
 func can_start() -> bool:
 	return TRANSPORT_AVAILABLE and is_host() and not roster.is_empty() and not GameSession.world_id.is_empty()
 
-func open_slots() -> int:
-	return MAX_PLAYERS - roster.size()
-
 func _slot(display_name: String, is_owner: bool, ready_state: bool) -> Dictionary:
 	var fallback := "PLAYER %d" % (roster.size() + 1)
 	return {

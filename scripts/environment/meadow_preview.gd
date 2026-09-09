@@ -30,7 +30,7 @@ func _ready() -> void:
 		for x in range(30):
 			var corners := 0
 			for i in range(4):
-				var p := Vector2(x+(i%2),y+(i/2))
+				var p := Vector2(x+(i%2),y+(i >> 1))
 				var center := Vector2(16.0,8.5)
 				var d := Vector2((p.x-center.x)/4.5,(p.y-center.y)/3.2)
 				if d.length() > 1.0: corners |= 1<<i

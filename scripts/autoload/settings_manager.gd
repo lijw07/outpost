@@ -161,12 +161,6 @@ func revert_display() -> void:
 	apply_display()
 	settings_applied.emit()
 
-func set_window_mode(mode: int) -> void:
-	preview_display(mode, resolution)
-
-func set_resolution(size: Vector2i) -> void:
-	preview_display(int(window_mode), size)
-
 func set_reduce_motion(enabled: bool) -> void:
 	reduce_motion = enabled
 	settings_applied.emit()
@@ -241,11 +235,6 @@ func reset_display() -> void:
 	set_vsync(true)
 	set_reduce_motion(false)
 	preview_display(DEFAULT_WINDOW_MODE, _default_resolution())
-
-func reset_all() -> void:
-	reset_bindings()
-	reset_audio()
-	reset_display()
 
 func save_settings() -> void:
 	var config := ConfigFile.new()
@@ -370,7 +359,7 @@ func _apply_resolution() -> void:
 	if usable.size.x <= 0 or usable.size.y <= 0:
 		usable = Rect2i(Vector2i.ZERO, DESIGN_SIZE)
 	window.size = resolution.min(usable.size)
-	window.position = usable.position + (usable.size - window.size) / 2
+	window.position = usable.position + Vector2i(Vector2(usable.size - window.size) / 2.0)
 
 func _remapped_event(action: String, encoded: String) -> InputEvent:
 	var parts := encoded.split(">")

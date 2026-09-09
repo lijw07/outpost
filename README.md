@@ -29,7 +29,9 @@ tests/      headless and windowed verification scenes
 | --- | --- | --- |
 | `Settings` | `scripts/autoload/settings_manager.gd` | resolution, window mode, vsync, volumes, key bindings |
 | `UiAudio` | `scripts/autoload/ui_audio.gd` | wires hover and click sounds to every button in the tree |
+| `UiFocus` | `scripts/autoload/ui_focus.gd` | shares mouse/keyboard focus behavior across menus and dialogs |
 | `SaveManager` | `scripts/autoload/save_manager.gd` | save slots under `user://saves/` |
+| `WorldManager` | `scripts/autoload/world_manager.gd` | world records, seeds, and slot capacity |
 | `GameSession` | `scripts/autoload/game_session.gd` | the chosen save and mode, and starting or leaving a run |
 | `NetSession` | `scripts/autoload/net_session.gd` | co-op lobby state: host or join, the roster, the invite code |
 
@@ -129,6 +131,8 @@ Run the regression suite with Python 3 and Godot installed:
 
 ```
 python3 tests/run_ui_checks.py
+# Full cleanup checks, including every scene and editor diagnostics:
+python3 tests/run_ui_checks.py --all
 # Or choose an executable:
 python3 tests/run_ui_checks.py --godot /path/to/godot
 ```
@@ -139,6 +143,18 @@ persistence in a fresh process, display keep/revert/timeout/reset, save creation
 and pagination, lobby cleanup, loading into the game, pause/resume, and Continue.
 Do not run `ui_regression.gd` against your real user profile; it deliberately
 creates and deletes test saves, and refuses an ordinary profile.
+
+The runner fails on logged warnings as well as errors. `--all` also checks all
+20 scenes, UI artwork, terrain, vegetation, harvesting, and asset-review tools.
+It starts a private headless editor and reads diagnostics for every GDScript
+through its language server, without changing warnings or muting diagnostics.
+
+Mouse-driven paging and dialogs keep keyboard focus hidden; keyboard navigation
+reveals it. This policy is shared by the title/menu flow, pause menus, and lists.
+
+The loading screen yields its first frame, then loads its small destination scene
+on the main thread. This avoids a verified Godot 4.7.2 threaded-loader shutdown
+leak. Re-evaluate background loading when upgrading Godot or adding larger levels.
 
 Use a windowed playthrough to inspect layout and motion after scene changes.
 The September UI fixes were also checked in a separate rendered game instance.

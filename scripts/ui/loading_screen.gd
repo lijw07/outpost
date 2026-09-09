@@ -23,6 +23,7 @@ const TIPS: Array[String] = [
 @onready var _fade: ColorRect = %Fade
 
 var _target := ""
+var _first_frame := true
 
 func _ready() -> void:
 	_background.texture = load(BACKGROUNDS.pick_random())
@@ -30,20 +31,18 @@ func _ready() -> void:
 	_target = GameSession.pending_scene
 	if _target.is_empty():
 		_target = GameSession.MENU_SCENE
-	ResourceLoader.load_threaded_request(_target)
 	create_tween().tween_property(_fade, "color:a", 0.0, FADE_SECONDS)
 
 func _process(_delta: float) -> void:
-	var parts: Array = []
-	var status := ResourceLoader.load_threaded_get_status(_target, parts)
-	match status:
-		ResourceLoader.THREAD_LOAD_IN_PROGRESS:
-			_progress.value = float(parts[0]) * 100.0
-		ResourceLoader.THREAD_LOAD_LOADED:
-			set_process(false)
-			_progress.value = 100.0
-			var packed := ResourceLoader.load_threaded_get(_target) as PackedScene
-			get_tree().change_scene_to_packed(packed)
-		ResourceLoader.THREAD_LOAD_FAILED, ResourceLoader.THREAD_LOAD_INVALID_RESOURCE:
-			set_process(false)
-			get_tree().change_scene_to_file(GameSession.MENU_SCENE)
+	# Display the loading screen before loading on the main thread. Godot 4.7.2's
+	# threaded loader leaks RefCounted objects for this project's scene resources.
+	if _first_frame:
+		_first_frame = false
+		return
+	set_process(false)
+	var packed := load(_target) as PackedScene
+	if packed == null:
+		get_tree().change_scene_to_file(GameSession.MENU_SCENE)
+		return
+	_progress.value = 100.0
+	get_tree().change_scene_to_packed(packed)

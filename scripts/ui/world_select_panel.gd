@@ -14,7 +14,6 @@ signal back_requested
 @onready var _name_field: LineEdit = %NameField
 @onready var _create_button: Button = %CreateButton
 @onready var _scroll: ScrollContainer = %Scroll
-@onready var _footer: MarginContainer = %Footer
 @onready var _pager: HBoxContainer = %Pager
 @onready var _page_label: Label = %PageLabel
 @onready var _prev_button: Button = %PrevButton
@@ -134,7 +133,6 @@ func _ask_delete(world: Dictionary) -> void:
 	_pending_delete = world
 	_delete_question.text = "DELETE %s?" % world["world_name"]
 	_delete_confirm.show()
-	%CancelDeleteButton.grab_focus()
 
 func _cancel_delete() -> void:
 	_pending_delete = {}
