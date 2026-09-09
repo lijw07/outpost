@@ -27,79 +27,90 @@ unique_name_in_owner = true
 layout_mode = 1
 theme_override_constants/separation = 20
 
-[node name="Scroll" type="ScrollContainer" parent="Content"]
-unique_name_in_owner = true
+[node name="ListMask" type="ColorRect" parent="Content"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
+clip_children = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Content/ListMask"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+clip_contents = false
 horizontal_scroll_mode = 0
 
-[node name="Sections" type="VBoxContainer" parent="Content/Scroll"]
+[node name="Sections" type="VBoxContainer" parent="Content/ListMask/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 22
 
-[node name="DisplayHeading" type="Label" parent="Content/Scroll/Sections"]
+[node name="DisplayHeading" type="Label" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_type_variation = &"SectionLabel"
 text = "DISPLAY"
 
-[node name="DisplayGrid" type="GridContainer" parent="Content/Scroll/Sections"]
+[node name="DisplayGrid" type="GridContainer" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 18
 columns = 2
 
-[node name="WindowModeLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+[node name="WindowModeLabel" type="Label" parent="Content/ListMask/Scroll/Sections/DisplayGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "WINDOW MODE"
 
-[node name="WindowModeOption" parent="Content/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
+[node name="WindowModeOption" parent="Content/ListMask/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 64)
 layout_mode = 2
 
-[node name="ResolutionLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+[node name="ResolutionLabel" type="Label" parent="Content/ListMask/Scroll/Sections/DisplayGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "RESOLUTION"
 
-[node name="ResolutionOption" parent="Content/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
+[node name="ResolutionOption" parent="Content/ListMask/Scroll/Sections/DisplayGrid" instance=ExtResource("10_drop")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 64)
 layout_mode = 2
 
-[node name="VsyncLabel" type="Label" parent="Content/Scroll/Sections/DisplayGrid"]
+[node name="VsyncLabel" type="Label" parent="Content/ListMask/Scroll/Sections/DisplayGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "V-SYNC"
 
-[node name="VsyncCheck" type="CheckBox" parent="Content/Scroll/Sections/DisplayGrid"]
+[node name="VsyncCheck" type="CheckBox" parent="Content/ListMask/Scroll/Sections/DisplayGrid"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="AudioHeading" type="Label" parent="Content/Scroll/Sections"]
+[node name="AudioHeading" type="Label" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_type_variation = &"SectionLabel"
 text = "AUDIO"
 
-[node name="AudioGrid" type="GridContainer" parent="Content/Scroll/Sections"]
+[node name="AudioGrid" type="GridContainer" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 22
 columns = 3
 
-[node name="MasterLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MasterLabel" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "MASTER"
 
-[node name="MasterSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MasterSlider" type="HSlider" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 44)
 layout_mode = 2
@@ -107,7 +118,7 @@ size_flags_vertical = 1
 max_value = 100.0
 value = 80.0
 
-[node name="MasterValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MasterValue" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
@@ -116,13 +127,13 @@ text = "80%"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="MusicLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MusicLabel" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "MUSIC"
 
-[node name="MusicSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MusicSlider" type="HSlider" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 44)
 layout_mode = 2
@@ -130,7 +141,7 @@ size_flags_vertical = 1
 max_value = 100.0
 value = 70.0
 
-[node name="MusicValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="MusicValue" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
@@ -139,13 +150,13 @@ text = "70%"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="SfxLabel" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="SfxLabel" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "SOUND EFFECTS"
 
-[node name="SfxSlider" type="HSlider" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="SfxSlider" type="HSlider" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 44)
 layout_mode = 2
@@ -153,7 +164,7 @@ size_flags_vertical = 1
 max_value = 100.0
 value = 80.0
 
-[node name="SfxValue" type="Label" parent="Content/Scroll/Sections/AudioGrid"]
+[node name="SfxValue" type="Label" parent="Content/ListMask/Scroll/Sections/AudioGrid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
@@ -162,16 +173,16 @@ text = "80%"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="ControlsHeading" type="Label" parent="Content/Scroll/Sections"]
+[node name="ControlsHeading" type="Label" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_type_variation = &"SectionLabel"
 text = "CONTROLS"
 
-[node name="Hint" type="Label" parent="Content/Scroll/Sections"]
+[node name="Hint" type="Label" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
-text = "CLICK A BINDING THEN PRESS A KEY - ESC CANCELS"
+text = "CLICK A BINDING THEN PRESS A KEY"
 
-[node name="BindList" type="VBoxContainer" parent="Content/Scroll/Sections"]
+[node name="BindList" type="VBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -187,9 +198,15 @@ custom_minimum_size = Vector2(400, 72)
 layout_mode = 2
 text = "RESET ALL"
 
-[node name="Spacer" type="Control" parent="Content/Footer"]
+[node name="FooterHint" type="Label" parent="Content/Footer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "PRESS ESC TO CANCEL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BackButton" type="Button" parent="Content/Footer"]
 unique_name_in_owner = true

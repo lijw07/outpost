@@ -1,0 +1,2144 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_showcase.gd" id="1_nttq3"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_00.png" id="2_j3jll"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_01.png" id="3_let6t"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_02.png" id="4_x8p7m"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_03.png" id="5_02m0h"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_04.png" id="6_0knjo"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_05.png" id="7_xhjvj"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_06.png" id="8_bscoy"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/grass_07.png" id="9_dcrt1"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_00.png" id="10_ce3u0"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_01.png" id="11_pqn7d"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_02.png" id="12_yf46c"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_03.png" id="13_0t56g"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_04.png" id="14_sswgn"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_05.png" id="15_uhrtv"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_06.png" id="16_utqf6"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/terrain/soil_07.png" id="17_bu555"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_00.png" id="18_iamft"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_01.png" id="19_ktohv"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_02.png" id="20_s0wh4"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_03.png" id="21_60nsr"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_04.png" id="22_n7msg"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_05.png" id="23_mnwfh"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_06.png" id="24_naptv"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_07.png" id="25_lx5ty"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_08.png" id="26_dun6q"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_09.png" id="27_5yhnl"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_10.png" id="28_ag7py"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_11.png" id="29_g1jd1"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_12.png" id="30_qnbj6"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_13.png" id="31_ypmg3"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_14.png" id="32_5p60a"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_15.png" id="33_bcr1m"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_16.png" id="34_jviia"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/transitions/transition_17.png" id="35_6redl"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_00.png" id="36_aap0f"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_01.png" id="37_3x0cv"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_02.png" id="38_4ishe"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_03.png" id="39_bad42"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_04.png" id="40_s4nap"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_05.png" id="41_nflgx"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_06.png" id="42_hrk3g"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_07.png" id="43_04ghy"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_08.png" id="44_f7hie"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_09.png" id="45_v02x4"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_10.png" id="46_hhswa"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_11.png" id="47_nkfqp"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_12.png" id="48_pm2i8"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_13.png" id="49_kyeiq"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_14.png" id="50_g8l5f"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/paths/path_15.png" id="51_ul6ro"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_short.tres" id="52_yb8xv"]
+[ext_resource type="Script" path="res://scripts/environment/meadow_plant.gd" id="53_j6x01"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_tall.tres" id="54_ir8pn"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/flowers_white.tres" id="55_y4r1t"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/flowers_yellow.tres" id="56_lgbon"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/flowers_purple.tres" id="57_kjd3c"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/clover.tres" id="58_rcj5k"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/mushrooms.png" id="59_owe7w"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/fern.tres" id="60_vml0f"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/rock_small.png" id="61_pdvhy"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/rock_mossy.png" id="62_s1etf"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/pebbles.png" id="63_i4p1g"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/boulder.png" id="64_royli"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/shrub.tres" id="65_hgovh"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/shrub_flowering.tres" id="66_0siwl"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/stump_old.png" id="67_gas5j"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/props/branch.png" id="68_sf5qh"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_sparse.tres" id="69_fcdgy"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_dense.tres" id="70_ouee6"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_seedheads.tres" id="71_bbqus"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_flattened.tres" id="72_osylk"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_dry.tres" id="73_obxiv"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_mixed.tres" id="74_wi2t3"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_clover.tres" id="75_gt8sr"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/grass_reedlike.tres" id="76_7vl5x"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/effects/leaf_chip.png" id="77_64dij"]
+[ext_resource type="PackedScene" path="res://scenes/environment/meadow/oak.tscn" id="78_6mods"]
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="79_nh5ub"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/oak_crown.tres" id="80_uiwfi"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_trunk.png" id="81_vw0ki"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_stump.png" id="82_sm40f"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_log.png" id="83_2gnj1"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_trunk_joined.png" id="84_2g36k"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_stump_joined.png" id="85_glh78"]
+[ext_resource type="PackedScene" path="res://scenes/environment/meadow/birch.tscn" id="86_gself"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/birch_crown.tres" id="87_g0ojo"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_trunk.png" id="88_axdj3"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_stump.png" id="89_ctui7"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_log.png" id="90_ragpe"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_trunk_joined.png" id="91_4poj8"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_stump_joined.png" id="92_qdmvv"]
+[ext_resource type="PackedScene" path="res://scenes/environment/meadow/young_oak.tscn" id="93_oxi4l"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/young_oak_crown.tres" id="94_q6hpd"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/young_oak_trunk.png" id="95_n2xg8"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/young_oak_stump.png" id="96_50jmu"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/young_oak_log.png" id="97_2vyp5"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/young_oak_trunk_joined.png" id="98_dqgre"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/young_oak_stump_joined.png" id="99_mcw8r"]
+[ext_resource type="PackedScene" path="res://scenes/environment/meadow/deadwood.tscn" id="100_8huhx"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/deadwood_crown.tres" id="101_itvty"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_trunk.png" id="102_87b8m"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_stump.png" id="103_vji57"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_log.png" id="104_wco6b"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_trunk_joined.png" id="105_knapc"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_stump_joined.png" id="106_lia3q"]
+
+[node name="MeadowShowcase" type="Node2D" unique_id=607455050]
+texture_filter = 1
+script = ExtResource("1_nttq3")
+
+[node name="Backdrop" type="Polygon2D" parent="." unique_id=1589973069]
+color = Color(0.14509805, 0.19215687, 0.18431373, 1)
+polygon = PackedVector2Array(0, 0, 3840, 0, 3840, 3040, 0, 3040)
+
+[node name="@Label@2" type="Label" parent="." unique_id=1275374543]
+offset_left = 64.0
+offset_top = 28.0
+offset_right = 64.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 46
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "MEADOW / ALL ARTWORK"
+
+[node name="@Label@3" type="Label" parent="." unique_id=1284584497]
+offset_left = 64.0
+offset_top = 88.0
+offset_right = 64.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "Individual sprites at a shared scale. Click plants or standing trees to test them."
+
+[node name="GroundTiles" type="Node2D" parent="." unique_id=56140786]
+position = Vector2(64, 172)
+
+[node name="@Label@4" type="Label" parent="GroundTiles" unique_id=1706659706]
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "01  GRASS AND SOIL"
+
+[node name="grass_00" type="Sprite2D" parent="GroundTiles" unique_id=407747716 groups=["showcase_assets"]]
+position = Vector2(112, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("2_j3jll")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_00"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@5" type="Label" parent="GroundTiles" unique_id=89879045]
+offset_left = 4.0
+offset_top = 228.0
+offset_right = 4.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_00"
+
+[node name="grass_01" type="Sprite2D" parent="GroundTiles" unique_id=242587270 groups=["showcase_assets"]]
+position = Vector2(336, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("3_let6t")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_01"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@6" type="Label" parent="GroundTiles" unique_id=68230252]
+offset_left = 228.0
+offset_top = 228.0
+offset_right = 228.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_01"
+
+[node name="grass_02" type="Sprite2D" parent="GroundTiles" unique_id=2129018190 groups=["showcase_assets"]]
+position = Vector2(560, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("4_x8p7m")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_02"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@7" type="Label" parent="GroundTiles" unique_id=2115418985]
+offset_left = 452.0
+offset_top = 228.0
+offset_right = 452.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_02"
+
+[node name="grass_03" type="Sprite2D" parent="GroundTiles" unique_id=2012584219 groups=["showcase_assets"]]
+position = Vector2(784, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("5_02m0h")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_03"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@8" type="Label" parent="GroundTiles" unique_id=834183595]
+offset_left = 676.0
+offset_top = 228.0
+offset_right = 676.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_03"
+
+[node name="grass_04" type="Sprite2D" parent="GroundTiles" unique_id=791227523 groups=["showcase_assets"]]
+position = Vector2(1008, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("6_0knjo")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_04"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@9" type="Label" parent="GroundTiles" unique_id=709866727]
+offset_left = 900.0
+offset_top = 228.0
+offset_right = 900.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_04"
+
+[node name="grass_05" type="Sprite2D" parent="GroundTiles" unique_id=1557130843 groups=["showcase_assets"]]
+position = Vector2(1232, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("7_xhjvj")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_05"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@10" type="Label" parent="GroundTiles" unique_id=76541382]
+offset_left = 1124.0
+offset_top = 228.0
+offset_right = 1124.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_05"
+
+[node name="grass_06" type="Sprite2D" parent="GroundTiles" unique_id=1283986698 groups=["showcase_assets"]]
+position = Vector2(1456, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("8_bscoy")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_06"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@11" type="Label" parent="GroundTiles" unique_id=95595318]
+offset_left = 1348.0
+offset_top = 228.0
+offset_right = 1348.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_06"
+
+[node name="grass_07" type="Sprite2D" parent="GroundTiles" unique_id=1325596960 groups=["showcase_assets"]]
+position = Vector2(1680, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("9_dcrt1")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "grass_07"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@12" type="Label" parent="GroundTiles" unique_id=1162285748]
+offset_left = 1572.0
+offset_top = 228.0
+offset_right = 1572.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_07"
+
+[node name="soil_00" type="Sprite2D" parent="GroundTiles" unique_id=1228349808 groups=["showcase_assets"]]
+position = Vector2(112, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("10_ce3u0")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_00"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@13" type="Label" parent="GroundTiles" unique_id=444193427]
+offset_left = 4.0
+offset_top = 446.0
+offset_right = 4.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_00"
+
+[node name="soil_01" type="Sprite2D" parent="GroundTiles" unique_id=491491063 groups=["showcase_assets"]]
+position = Vector2(336, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("11_pqn7d")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_01"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@14" type="Label" parent="GroundTiles" unique_id=520495201]
+offset_left = 228.0
+offset_top = 446.0
+offset_right = 228.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_01"
+
+[node name="soil_02" type="Sprite2D" parent="GroundTiles" unique_id=1084504124 groups=["showcase_assets"]]
+position = Vector2(560, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("12_yf46c")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_02"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@15" type="Label" parent="GroundTiles" unique_id=2000567021]
+offset_left = 452.0
+offset_top = 446.0
+offset_right = 452.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_02"
+
+[node name="soil_03" type="Sprite2D" parent="GroundTiles" unique_id=1546970906 groups=["showcase_assets"]]
+position = Vector2(784, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("13_0t56g")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_03"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@16" type="Label" parent="GroundTiles" unique_id=1889761552]
+offset_left = 676.0
+offset_top = 446.0
+offset_right = 676.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_03"
+
+[node name="soil_04" type="Sprite2D" parent="GroundTiles" unique_id=1006778853 groups=["showcase_assets"]]
+position = Vector2(1008, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("14_sswgn")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_04"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@17" type="Label" parent="GroundTiles" unique_id=57838541]
+offset_left = 900.0
+offset_top = 446.0
+offset_right = 900.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_04"
+
+[node name="soil_05" type="Sprite2D" parent="GroundTiles" unique_id=997380891 groups=["showcase_assets"]]
+position = Vector2(1232, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("15_uhrtv")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_05"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@18" type="Label" parent="GroundTiles" unique_id=1779704359]
+offset_left = 1124.0
+offset_top = 446.0
+offset_right = 1124.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_05"
+
+[node name="soil_06" type="Sprite2D" parent="GroundTiles" unique_id=1822716414 groups=["showcase_assets"]]
+position = Vector2(1456, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("16_utqf6")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_06"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@19" type="Label" parent="GroundTiles" unique_id=1241553599]
+offset_left = 1348.0
+offset_top = 446.0
+offset_right = 1348.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_06"
+
+[node name="soil_07" type="Sprite2D" parent="GroundTiles" unique_id=1329645591 groups=["showcase_assets"]]
+position = Vector2(1680, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("17_bu555")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "soil_07"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@20" type="Label" parent="GroundTiles" unique_id=188947160]
+offset_left = 1572.0
+offset_top = 446.0
+offset_right = 1572.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "soil_07"
+
+[node name="Transitions" type="Node2D" parent="." unique_id=1122847940]
+position = Vector2(64, 764)
+
+[node name="@Label@21" type="Label" parent="Transitions" unique_id=2107950071]
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "02  GRASS / DIRT TRANSITIONS"
+
+[node name="transition_00" type="Sprite2D" parent="Transitions" unique_id=1766938552 groups=["showcase_assets"]]
+position = Vector2(112, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("18_iamft")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_00"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@22" type="Label" parent="Transitions" unique_id=578960310]
+offset_left = 4.0
+offset_top = 228.0
+offset_right = 4.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_00"
+
+[node name="transition_01" type="Sprite2D" parent="Transitions" unique_id=356847510 groups=["showcase_assets"]]
+position = Vector2(336, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("19_ktohv")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_01"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@23" type="Label" parent="Transitions" unique_id=761761361]
+offset_left = 228.0
+offset_top = 228.0
+offset_right = 228.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_01"
+
+[node name="transition_02" type="Sprite2D" parent="Transitions" unique_id=1809103355 groups=["showcase_assets"]]
+position = Vector2(560, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("20_s0wh4")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_02"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@24" type="Label" parent="Transitions" unique_id=1433522880]
+offset_left = 452.0
+offset_top = 228.0
+offset_right = 452.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_02"
+
+[node name="transition_03" type="Sprite2D" parent="Transitions" unique_id=1775534794 groups=["showcase_assets"]]
+position = Vector2(784, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("21_60nsr")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_03"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@25" type="Label" parent="Transitions" unique_id=1940271489]
+offset_left = 676.0
+offset_top = 228.0
+offset_right = 676.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_03"
+
+[node name="transition_04" type="Sprite2D" parent="Transitions" unique_id=1093912652 groups=["showcase_assets"]]
+position = Vector2(1008, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("22_n7msg")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_04"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@26" type="Label" parent="Transitions" unique_id=1571249840]
+offset_left = 900.0
+offset_top = 228.0
+offset_right = 900.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_04"
+
+[node name="transition_05" type="Sprite2D" parent="Transitions" unique_id=1521504756 groups=["showcase_assets"]]
+position = Vector2(1232, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("23_mnwfh")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_05"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@27" type="Label" parent="Transitions" unique_id=697433686]
+offset_left = 1124.0
+offset_top = 228.0
+offset_right = 1124.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_05"
+
+[node name="transition_06" type="Sprite2D" parent="Transitions" unique_id=1539789984 groups=["showcase_assets"]]
+position = Vector2(1456, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("24_naptv")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_06"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@28" type="Label" parent="Transitions" unique_id=1677610758]
+offset_left = 1348.0
+offset_top = 228.0
+offset_right = 1348.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_06"
+
+[node name="transition_07" type="Sprite2D" parent="Transitions" unique_id=1043959479 groups=["showcase_assets"]]
+position = Vector2(1680, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("25_lx5ty")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_07"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@29" type="Label" parent="Transitions" unique_id=1776227649]
+offset_left = 1572.0
+offset_top = 228.0
+offset_right = 1572.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_07"
+
+[node name="transition_08" type="Sprite2D" parent="Transitions" unique_id=1721964382 groups=["showcase_assets"]]
+position = Vector2(112, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("26_dun6q")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_08"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@30" type="Label" parent="Transitions" unique_id=1870395602]
+offset_left = 4.0
+offset_top = 446.0
+offset_right = 4.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_08"
+
+[node name="transition_09" type="Sprite2D" parent="Transitions" unique_id=510775143 groups=["showcase_assets"]]
+position = Vector2(336, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("27_5yhnl")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_09"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@31" type="Label" parent="Transitions" unique_id=58745381]
+offset_left = 228.0
+offset_top = 446.0
+offset_right = 228.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_09"
+
+[node name="transition_10" type="Sprite2D" parent="Transitions" unique_id=771894799 groups=["showcase_assets"]]
+position = Vector2(560, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("28_ag7py")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_10"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@32" type="Label" parent="Transitions" unique_id=568712266]
+offset_left = 452.0
+offset_top = 446.0
+offset_right = 452.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_10"
+
+[node name="transition_11" type="Sprite2D" parent="Transitions" unique_id=763748011 groups=["showcase_assets"]]
+position = Vector2(784, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("29_g1jd1")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_11"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@33" type="Label" parent="Transitions" unique_id=345016185]
+offset_left = 676.0
+offset_top = 446.0
+offset_right = 676.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_11"
+
+[node name="transition_12" type="Sprite2D" parent="Transitions" unique_id=1646483124 groups=["showcase_assets"]]
+position = Vector2(1008, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("30_qnbj6")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_12"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@34" type="Label" parent="Transitions" unique_id=1956369115]
+offset_left = 900.0
+offset_top = 446.0
+offset_right = 900.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_12"
+
+[node name="transition_13" type="Sprite2D" parent="Transitions" unique_id=508922906 groups=["showcase_assets"]]
+position = Vector2(1232, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("31_ypmg3")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_13"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@35" type="Label" parent="Transitions" unique_id=1619051431]
+offset_left = 1124.0
+offset_top = 446.0
+offset_right = 1124.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_13"
+
+[node name="transition_14" type="Sprite2D" parent="Transitions" unique_id=565086680 groups=["showcase_assets"]]
+position = Vector2(1456, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("32_5p60a")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_14"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@36" type="Label" parent="Transitions" unique_id=1911655458]
+offset_left = 1348.0
+offset_top = 446.0
+offset_right = 1348.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_14"
+
+[node name="transition_15" type="Sprite2D" parent="Transitions" unique_id=1630790361 groups=["showcase_assets"]]
+position = Vector2(1680, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("33_bcr1m")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_15"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@37" type="Label" parent="Transitions" unique_id=1793545985]
+offset_left = 1572.0
+offset_top = 446.0
+offset_right = 1572.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_15"
+
+[node name="transition_16" type="Sprite2D" parent="Transitions" unique_id=1978765462 groups=["showcase_assets"]]
+position = Vector2(112, 650)
+scale = Vector2(2, 2)
+texture = ExtResource("34_jviia")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_16"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@38" type="Label" parent="Transitions" unique_id=1770196678]
+offset_left = 4.0
+offset_top = 664.0
+offset_right = 4.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_16"
+
+[node name="transition_17" type="Sprite2D" parent="Transitions" unique_id=28070101 groups=["showcase_assets"]]
+position = Vector2(336, 650)
+scale = Vector2(2, 2)
+texture = ExtResource("35_6redl")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "transition_17"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@39" type="Label" parent="Transitions" unique_id=996324764]
+offset_left = 228.0
+offset_top = 664.0
+offset_right = 228.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "transition_17"
+
+[node name="Paths" type="Node2D" parent="." unique_id=1190437349]
+position = Vector2(64, 1554)
+
+[node name="@Label@40" type="Label" parent="Paths" unique_id=1599395081]
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "03  PATH PIECES"
+
+[node name="path_00" type="Sprite2D" parent="Paths" unique_id=2081184955 groups=["showcase_assets"]]
+position = Vector2(112, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("36_aap0f")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_00"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@41" type="Label" parent="Paths" unique_id=1882199401]
+offset_left = 4.0
+offset_top = 228.0
+offset_right = 4.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_00"
+
+[node name="path_01" type="Sprite2D" parent="Paths" unique_id=54766490 groups=["showcase_assets"]]
+position = Vector2(336, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("37_3x0cv")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_01"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@42" type="Label" parent="Paths" unique_id=1473235510]
+offset_left = 228.0
+offset_top = 228.0
+offset_right = 228.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_01"
+
+[node name="path_02" type="Sprite2D" parent="Paths" unique_id=1033238164 groups=["showcase_assets"]]
+position = Vector2(560, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("38_4ishe")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_02"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@43" type="Label" parent="Paths" unique_id=1365460641]
+offset_left = 452.0
+offset_top = 228.0
+offset_right = 452.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_02"
+
+[node name="path_03" type="Sprite2D" parent="Paths" unique_id=71852153 groups=["showcase_assets"]]
+position = Vector2(784, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("39_bad42")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_03"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@44" type="Label" parent="Paths" unique_id=10924479]
+offset_left = 676.0
+offset_top = 228.0
+offset_right = 676.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_03"
+
+[node name="path_04" type="Sprite2D" parent="Paths" unique_id=681292621 groups=["showcase_assets"]]
+position = Vector2(1008, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("40_s4nap")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_04"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@45" type="Label" parent="Paths" unique_id=395471934]
+offset_left = 900.0
+offset_top = 228.0
+offset_right = 900.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_04"
+
+[node name="path_05" type="Sprite2D" parent="Paths" unique_id=428662591 groups=["showcase_assets"]]
+position = Vector2(1232, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("41_nflgx")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_05"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@46" type="Label" parent="Paths" unique_id=1190352750]
+offset_left = 1124.0
+offset_top = 228.0
+offset_right = 1124.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_05"
+
+[node name="path_06" type="Sprite2D" parent="Paths" unique_id=1860028903 groups=["showcase_assets"]]
+position = Vector2(1456, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("42_hrk3g")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_06"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@47" type="Label" parent="Paths" unique_id=499408839]
+offset_left = 1348.0
+offset_top = 228.0
+offset_right = 1348.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_06"
+
+[node name="path_07" type="Sprite2D" parent="Paths" unique_id=18593631 groups=["showcase_assets"]]
+position = Vector2(1680, 214)
+scale = Vector2(2, 2)
+texture = ExtResource("43_04ghy")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_07"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@48" type="Label" parent="Paths" unique_id=1519083080]
+offset_left = 1572.0
+offset_top = 228.0
+offset_right = 1572.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_07"
+
+[node name="path_08" type="Sprite2D" parent="Paths" unique_id=847541231 groups=["showcase_assets"]]
+position = Vector2(112, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("44_f7hie")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_08"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@49" type="Label" parent="Paths" unique_id=357967791]
+offset_left = 4.0
+offset_top = 446.0
+offset_right = 4.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_08"
+
+[node name="path_09" type="Sprite2D" parent="Paths" unique_id=2016515880 groups=["showcase_assets"]]
+position = Vector2(336, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("45_v02x4")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_09"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@50" type="Label" parent="Paths" unique_id=713116851]
+offset_left = 228.0
+offset_top = 446.0
+offset_right = 228.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_09"
+
+[node name="path_10" type="Sprite2D" parent="Paths" unique_id=1834612614 groups=["showcase_assets"]]
+position = Vector2(560, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("46_hhswa")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_10"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@51" type="Label" parent="Paths" unique_id=1386448069]
+offset_left = 452.0
+offset_top = 446.0
+offset_right = 452.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_10"
+
+[node name="path_11" type="Sprite2D" parent="Paths" unique_id=1727026413 groups=["showcase_assets"]]
+position = Vector2(784, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("47_nkfqp")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_11"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@52" type="Label" parent="Paths" unique_id=1415796983]
+offset_left = 676.0
+offset_top = 446.0
+offset_right = 676.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_11"
+
+[node name="path_12" type="Sprite2D" parent="Paths" unique_id=2078363336 groups=["showcase_assets"]]
+position = Vector2(1008, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("48_pm2i8")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_12"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@53" type="Label" parent="Paths" unique_id=731913456]
+offset_left = 900.0
+offset_top = 446.0
+offset_right = 900.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_12"
+
+[node name="path_13" type="Sprite2D" parent="Paths" unique_id=302345717 groups=["showcase_assets"]]
+position = Vector2(1232, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("49_kyeiq")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_13"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@54" type="Label" parent="Paths" unique_id=1266425260]
+offset_left = 1124.0
+offset_top = 446.0
+offset_right = 1124.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_13"
+
+[node name="path_14" type="Sprite2D" parent="Paths" unique_id=655828249 groups=["showcase_assets"]]
+position = Vector2(1456, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("50_g8l5f")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_14"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@55" type="Label" parent="Paths" unique_id=675832255]
+offset_left = 1348.0
+offset_top = 446.0
+offset_right = 1348.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_14"
+
+[node name="path_15" type="Sprite2D" parent="Paths" unique_id=1069207080 groups=["showcase_assets"]]
+position = Vector2(1680, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("51_ul6ro")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "path_15"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@56" type="Label" parent="Paths" unique_id=651457309]
+offset_left = 1572.0
+offset_top = 446.0
+offset_right = 1572.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "path_15"
+
+[node name="GrassAndProps" type="Node2D" parent="." unique_id=938232978]
+position = Vector2(64, 2146)
+
+[node name="@Label@57" type="Label" parent="GrassAndProps" unique_id=2006257215]
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "04  GRASS, FLOWERS, ROCKS AND PROPS"
+
+[node name="grass_short" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=163846435 groups=["showcase_assets"]]
+position = Vector2(112, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("52_yb8xv")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_short"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@58" type="Label" parent="GrassAndProps" unique_id=1721963460]
+offset_left = 4.0
+offset_top = 200.0
+offset_right = 4.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_short"
+
+[node name="grass_tall" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=843000719 groups=["showcase_assets"]]
+position = Vector2(336, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("54_ir8pn")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_tall"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@59" type="Label" parent="GrassAndProps" unique_id=1738726082]
+offset_left = 228.0
+offset_top = 200.0
+offset_right = 228.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_tall"
+
+[node name="flowers_white" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=803740366 groups=["showcase_assets"]]
+position = Vector2(560, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("55_y4r1t")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "flowers_white"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@60" type="Label" parent="GrassAndProps" unique_id=567371455]
+offset_left = 452.0
+offset_top = 200.0
+offset_right = 452.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "flowers_white"
+
+[node name="flowers_yellow" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1807573221 groups=["showcase_assets"]]
+position = Vector2(784, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("56_lgbon")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "flowers_yellow"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@61" type="Label" parent="GrassAndProps" unique_id=548941184]
+offset_left = 676.0
+offset_top = 200.0
+offset_right = 676.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "flowers_yellow"
+
+[node name="flowers_purple" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1257703702 groups=["showcase_assets"]]
+position = Vector2(1008, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("57_kjd3c")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "flowers_purple"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@62" type="Label" parent="GrassAndProps" unique_id=387301657]
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 900.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "flowers_purple"
+
+[node name="clover" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=207768726 groups=["showcase_assets"]]
+position = Vector2(1232, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("58_rcj5k")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "clover"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@63" type="Label" parent="GrassAndProps" unique_id=457038776]
+offset_left = 1124.0
+offset_top = 200.0
+offset_right = 1124.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "clover"
+
+[node name="mushrooms" type="Sprite2D" parent="GrassAndProps" unique_id=1379451168 groups=["showcase_assets"]]
+position = Vector2(1456, 186)
+scale = Vector2(2, 2)
+texture = ExtResource("59_owe7w")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "mushrooms"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@64" type="Label" parent="GrassAndProps" unique_id=160547005]
+offset_left = 1348.0
+offset_top = 200.0
+offset_right = 1348.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "mushrooms"
+
+[node name="fern" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=921122148 groups=["showcase_assets"]]
+position = Vector2(1680, 186)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("60_vml0f")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "fern"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@65" type="Label" parent="GrassAndProps" unique_id=439252330]
+offset_left = 1572.0
+offset_top = 200.0
+offset_right = 1572.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "fern"
+
+[node name="rock_small" type="Sprite2D" parent="GrassAndProps" unique_id=1448414777 groups=["showcase_assets"]]
+position = Vector2(112, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("61_pdvhy")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "rock_small"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@66" type="Label" parent="GrassAndProps" unique_id=231407592]
+offset_left = 4.0
+offset_top = 408.0
+offset_right = 4.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "rock_small"
+
+[node name="rock_mossy" type="Sprite2D" parent="GrassAndProps" unique_id=704366078 groups=["showcase_assets"]]
+position = Vector2(336, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("62_s1etf")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "rock_mossy"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@67" type="Label" parent="GrassAndProps" unique_id=660462354]
+offset_left = 228.0
+offset_top = 408.0
+offset_right = 228.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "rock_mossy"
+
+[node name="pebbles" type="Sprite2D" parent="GrassAndProps" unique_id=2050865718 groups=["showcase_assets"]]
+position = Vector2(560, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("63_i4p1g")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "pebbles"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@68" type="Label" parent="GrassAndProps" unique_id=143920220]
+offset_left = 452.0
+offset_top = 408.0
+offset_right = 452.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "pebbles"
+
+[node name="boulder" type="Sprite2D" parent="GrassAndProps" unique_id=1816526304 groups=["showcase_assets"]]
+position = Vector2(784, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("64_royli")
+centered = false
+offset = Vector2(-48, -92)
+metadata/asset_name = "boulder"
+metadata/hit_rect = Rect2(-48, -92, 96, 96)
+
+[node name="@Label@69" type="Label" parent="GrassAndProps" unique_id=359469675]
+offset_left = 676.0
+offset_top = 408.0
+offset_right = 676.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "boulder"
+
+[node name="shrub" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=240010077 groups=["showcase_assets"]]
+position = Vector2(1008, 394)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("65_hgovh")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-48, -92)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "shrub"
+metadata/hit_rect = Rect2(-48, -92, 96, 96)
+
+[node name="@Label@70" type="Label" parent="GrassAndProps" unique_id=7611265]
+offset_left = 900.0
+offset_top = 408.0
+offset_right = 900.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "shrub"
+
+[node name="shrub_flowering" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1046472703 groups=["showcase_assets"]]
+position = Vector2(1232, 394)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("66_0siwl")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-48, -92)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "shrub_flowering"
+metadata/hit_rect = Rect2(-48, -92, 96, 96)
+
+[node name="@Label@71" type="Label" parent="GrassAndProps" unique_id=1672859170]
+offset_left = 1124.0
+offset_top = 408.0
+offset_right = 1124.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "shrub_flowering"
+
+[node name="stump_old" type="Sprite2D" parent="GrassAndProps" unique_id=816479880 groups=["showcase_assets"]]
+position = Vector2(1456, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("67_gas5j")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "stump_old"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@72" type="Label" parent="GrassAndProps" unique_id=760756928]
+offset_left = 1348.0
+offset_top = 408.0
+offset_right = 1348.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump_old"
+
+[node name="branch" type="Sprite2D" parent="GrassAndProps" unique_id=1498940276 groups=["showcase_assets"]]
+position = Vector2(1680, 394)
+scale = Vector2(2, 2)
+texture = ExtResource("68_sf5qh")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "branch"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@73" type="Label" parent="GrassAndProps" unique_id=100675704]
+offset_left = 1572.0
+offset_top = 408.0
+offset_right = 1572.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "branch"
+
+[node name="grass_sparse" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=65315455 groups=["showcase_assets"]]
+position = Vector2(112, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("69_fcdgy")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_sparse"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@74" type="Label" parent="GrassAndProps" unique_id=1831674651]
+offset_left = 4.0
+offset_top = 616.0
+offset_right = 4.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_sparse"
+
+[node name="grass_dense" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1777634515 groups=["showcase_assets"]]
+position = Vector2(336, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("70_ouee6")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_dense"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@75" type="Label" parent="GrassAndProps" unique_id=1559801079]
+offset_left = 228.0
+offset_top = 616.0
+offset_right = 228.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_dense"
+
+[node name="grass_seedheads" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=297295701 groups=["showcase_assets"]]
+position = Vector2(560, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("71_bbqus")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -92)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_seedheads"
+metadata/hit_rect = Rect2(-32, -92, 64, 96)
+
+[node name="@Label@76" type="Label" parent="GrassAndProps" unique_id=761437129]
+offset_left = 452.0
+offset_top = 616.0
+offset_right = 452.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_seedheads"
+
+[node name="grass_flattened" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=191701555 groups=["showcase_assets"]]
+position = Vector2(784, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("72_osylk")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_flattened"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@77" type="Label" parent="GrassAndProps" unique_id=448316318]
+offset_left = 676.0
+offset_top = 616.0
+offset_right = 676.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_flattened"
+
+[node name="grass_dry" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1704446262 groups=["showcase_assets"]]
+position = Vector2(1008, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("73_obxiv")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_dry"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@78" type="Label" parent="GrassAndProps" unique_id=1909518390]
+offset_left = 900.0
+offset_top = 616.0
+offset_right = 900.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_dry"
+
+[node name="grass_mixed" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1250887417 groups=["showcase_assets"]]
+position = Vector2(1232, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("74_wi2t3")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_mixed"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@79" type="Label" parent="GrassAndProps" unique_id=1601466281]
+offset_left = 1124.0
+offset_top = 616.0
+offset_right = 1124.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_mixed"
+
+[node name="grass_clover" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=566393264 groups=["showcase_assets"]]
+position = Vector2(1456, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("75_gt8sr")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -60)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_clover"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@80" type="Label" parent="GrassAndProps" unique_id=975543559]
+offset_left = 1348.0
+offset_top = 616.0
+offset_right = 1348.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_clover"
+
+[node name="grass_reedlike" type="AnimatedSprite2D" parent="GrassAndProps" unique_id=1582014984 groups=["showcase_assets"]]
+position = Vector2(1680, 602)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("76_7vl5x")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-32, -92)
+script = ExtResource("53_j6x01")
+metadata/asset_name = "grass_reedlike"
+metadata/hit_rect = Rect2(-32, -92, 64, 96)
+
+[node name="@Label@81" type="Label" parent="GrassAndProps" unique_id=13127573]
+offset_left = 1572.0
+offset_top = 616.0
+offset_right = 1572.0
+offset_bottom = 616.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "grass_reedlike"
+
+[node name="leaf_chip" type="Sprite2D" parent="GrassAndProps" unique_id=1523815677 groups=["showcase_assets"]]
+position = Vector2(112, 810)
+scale = Vector2(2, 2)
+texture = ExtResource("77_64dij")
+centered = false
+offset = Vector2(-3, -2)
+metadata/asset_name = "leaf_chip"
+metadata/hit_rect = Rect2(-3, -2, 6, 6)
+
+[node name="@Label@82" type="Label" parent="GrassAndProps" unique_id=816882109]
+offset_left = 4.0
+offset_top = 824.0
+offset_right = 4.0
+offset_bottom = 824.0
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "leaf_chip"
+
+[node name="Trees" type="Node2D" parent="." unique_id=373372929]
+position = Vector2(1984, 172)
+
+[node name="@Label@83" type="Label" parent="Trees" unique_id=1344540004]
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "05  TREES AND THEIR SEPARATE PIECES"
+
+[node name="Oak" type="Node2D" parent="Trees" unique_id=1975461370]
+position = Vector2(0, 80)
+
+[node name="@Label@84" type="Label" parent="Trees/Oak" unique_id=1794034068]
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "OAK"
+
+[node name="oak_standing" type="Node2D" parent="Trees/Oak" unique_id=1533577940 groups=["showcase_assets"] instance=ExtResource("78_6mods")]
+position = Vector2(210, 620)
+scale = Vector2(2, 2)
+script = ExtResource("79_nh5ub")
+metadata/asset_name = "oak_standing"
+metadata/hit_rect = Rect2(-104, -252, 208, 256)
+
+[node name="@Label@85" type="Label" parent="Trees/Oak" unique_id=16126780]
+offset_left = 140.0
+offset_top = 640.0
+offset_right = 140.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "standing"
+
+[node name="oak_crown" type="AnimatedSprite2D" parent="Trees/Oak" unique_id=731173153 groups=["showcase_assets"]]
+position = Vector2(630, 620)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("80_uiwfi")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-96, -140)
+metadata/asset_name = "oak_crown"
+metadata/hit_rect = Rect2(-96, -140, 192, 144)
+
+[node name="@Label@86" type="Label" parent="Trees/Oak" unique_id=1986077712]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 560.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "crown"
+
+[node name="oak_trunk" type="Sprite2D" parent="Trees/Oak" unique_id=578487905 groups=["showcase_assets"]]
+position = Vector2(906, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("81_vw0ki")
+centered = false
+offset = Vector2(-16, -80)
+metadata/asset_name = "oak_trunk"
+metadata/hit_rect = Rect2(-16, -80, 32, 84)
+
+[node name="@Label@87" type="Label" parent="Trees/Oak" unique_id=1173084824]
+offset_left = 836.0
+offset_top = 640.0
+offset_right = 836.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk"
+
+[node name="oak_stump" type="Sprite2D" parent="Trees/Oak" unique_id=545770370 groups=["showcase_assets"]]
+position = Vector2(1086, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("82_sm40f")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "oak_stump"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@88" type="Label" parent="Trees/Oak" unique_id=1766255268]
+offset_left = 1016.0
+offset_top = 640.0
+offset_right = 1016.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump"
+
+[node name="oak_log" type="Sprite2D" parent="Trees/Oak" unique_id=2074064011 groups=["showcase_assets"]]
+position = Vector2(1280, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("83_2gnj1")
+centered = false
+offset = Vector2(-42, -28)
+metadata/asset_name = "oak_log"
+metadata/hit_rect = Rect2(-42, -28, 84, 32)
+
+[node name="@Label@89" type="Label" parent="Trees/Oak" unique_id=972882989]
+offset_left = 1210.0
+offset_top = 640.0
+offset_right = 1210.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "log"
+
+[node name="oak_trunk_joined" type="Sprite2D" parent="Trees/Oak" unique_id=1618856289 groups=["showcase_assets"]]
+position = Vector2(1470, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("84_2g36k")
+centered = false
+offset = Vector2(-16, -80)
+metadata/asset_name = "oak_trunk_joined"
+metadata/hit_rect = Rect2(-16, -80, 32, 84)
+
+[node name="@Label@90" type="Label" parent="Trees/Oak" unique_id=1156291870]
+offset_left = 1400.0
+offset_top = 640.0
+offset_right = 1400.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk
+(join)"
+
+[node name="oak_stump_joined" type="Sprite2D" parent="Trees/Oak" unique_id=1245040369 groups=["showcase_assets"]]
+position = Vector2(1656, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("85_glh78")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "oak_stump_joined"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@91" type="Label" parent="Trees/Oak" unique_id=1909254225]
+offset_left = 1586.0
+offset_top = 640.0
+offset_right = 1586.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump
+(join)"
+
+[node name="Birch" type="Node2D" parent="Trees" unique_id=797154561]
+position = Vector2(0, 760)
+
+[node name="@Label@92" type="Label" parent="Trees/Birch" unique_id=29925090]
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "BIRCH"
+
+[node name="birch_standing" type="Node2D" parent="Trees/Birch" unique_id=1237876209 groups=["showcase_assets"] instance=ExtResource("86_gself")]
+position = Vector2(210, 620)
+scale = Vector2(2, 2)
+script = ExtResource("79_nh5ub")
+species = "birch"
+metadata/asset_name = "birch_standing"
+metadata/hit_rect = Rect2(-80, -284, 160, 288)
+
+[node name="@Label@93" type="Label" parent="Trees/Birch" unique_id=1284605025]
+offset_left = 140.0
+offset_top = 640.0
+offset_right = 140.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "standing"
+
+[node name="birch_crown" type="AnimatedSprite2D" parent="Trees/Birch" unique_id=1619582314 groups=["showcase_assets"]]
+position = Vector2(630, 620)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("87_g0ojo")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-72, -156)
+metadata/asset_name = "birch_crown"
+metadata/hit_rect = Rect2(-72, -156, 144, 160)
+
+[node name="@Label@94" type="Label" parent="Trees/Birch" unique_id=953961266]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 560.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "crown"
+
+[node name="birch_trunk" type="Sprite2D" parent="Trees/Birch" unique_id=143692336 groups=["showcase_assets"]]
+position = Vector2(906, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("88_axdj3")
+centered = false
+offset = Vector2(-16, -92)
+metadata/asset_name = "birch_trunk"
+metadata/hit_rect = Rect2(-16, -92, 32, 96)
+
+[node name="@Label@95" type="Label" parent="Trees/Birch" unique_id=1813556965]
+offset_left = 836.0
+offset_top = 640.0
+offset_right = 836.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk"
+
+[node name="birch_stump" type="Sprite2D" parent="Trees/Birch" unique_id=1900274614 groups=["showcase_assets"]]
+position = Vector2(1086, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("89_ctui7")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "birch_stump"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@96" type="Label" parent="Trees/Birch" unique_id=1061876916]
+offset_left = 1016.0
+offset_top = 640.0
+offset_right = 1016.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump"
+
+[node name="birch_log" type="Sprite2D" parent="Trees/Birch" unique_id=649348595 groups=["showcase_assets"]]
+position = Vector2(1280, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("90_ragpe")
+centered = false
+offset = Vector2(-48, -28)
+metadata/asset_name = "birch_log"
+metadata/hit_rect = Rect2(-48, -28, 96, 32)
+
+[node name="@Label@97" type="Label" parent="Trees/Birch" unique_id=1686988001]
+offset_left = 1210.0
+offset_top = 640.0
+offset_right = 1210.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "log"
+
+[node name="birch_trunk_joined" type="Sprite2D" parent="Trees/Birch" unique_id=1595604142 groups=["showcase_assets"]]
+position = Vector2(1470, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("91_4poj8")
+centered = false
+offset = Vector2(-16, -92)
+metadata/asset_name = "birch_trunk_joined"
+metadata/hit_rect = Rect2(-16, -92, 32, 96)
+
+[node name="@Label@98" type="Label" parent="Trees/Birch" unique_id=1790781227]
+offset_left = 1400.0
+offset_top = 640.0
+offset_right = 1400.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk
+(join)"
+
+[node name="birch_stump_joined" type="Sprite2D" parent="Trees/Birch" unique_id=1599156861 groups=["showcase_assets"]]
+position = Vector2(1656, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("92_qdmvv")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "birch_stump_joined"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@99" type="Label" parent="Trees/Birch" unique_id=635899384]
+offset_left = 1586.0
+offset_top = 640.0
+offset_right = 1586.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump
+(join)"
+
+[node name="YoungOak" type="Node2D" parent="Trees" unique_id=1543366938]
+position = Vector2(0, 1440)
+
+[node name="@Label@100" type="Label" parent="Trees/YoungOak" unique_id=1693055855]
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "YOUNG OAK"
+
+[node name="young_oak_standing" type="Node2D" parent="Trees/YoungOak" unique_id=322618319 groups=["showcase_assets"] instance=ExtResource("93_oxi4l")]
+position = Vector2(210, 620)
+scale = Vector2(2, 2)
+script = ExtResource("79_nh5ub")
+species = "young_oak"
+metadata/asset_name = "young_oak_standing"
+metadata/hit_rect = Rect2(-72, -204, 144, 208)
+
+[node name="@Label@101" type="Label" parent="Trees/YoungOak" unique_id=1110477117]
+offset_left = 140.0
+offset_top = 640.0
+offset_right = 140.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "standing"
+
+[node name="young_oak_crown" type="AnimatedSprite2D" parent="Trees/YoungOak" unique_id=433470641 groups=["showcase_assets"]]
+position = Vector2(630, 620)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("94_q6hpd")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-64, -108)
+metadata/asset_name = "young_oak_crown"
+metadata/hit_rect = Rect2(-64, -108, 128, 112)
+
+[node name="@Label@102" type="Label" parent="Trees/YoungOak" unique_id=1971883839]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 560.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "crown"
+
+[node name="young_oak_trunk" type="Sprite2D" parent="Trees/YoungOak" unique_id=498085358 groups=["showcase_assets"]]
+position = Vector2(906, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("95_n2xg8")
+centered = false
+offset = Vector2(-12.5, -68)
+metadata/asset_name = "young_oak_trunk"
+metadata/hit_rect = Rect2(-12.5, -68, 25, 72)
+
+[node name="@Label@103" type="Label" parent="Trees/YoungOak" unique_id=344228818]
+offset_left = 836.0
+offset_top = 640.0
+offset_right = 836.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk"
+
+[node name="young_oak_stump" type="Sprite2D" parent="Trees/YoungOak" unique_id=671868348 groups=["showcase_assets"]]
+position = Vector2(1086, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("96_50jmu")
+centered = false
+offset = Vector2(-24, -44)
+metadata/asset_name = "young_oak_stump"
+metadata/hit_rect = Rect2(-24, -44, 48, 48)
+
+[node name="@Label@104" type="Label" parent="Trees/YoungOak" unique_id=1471543384]
+offset_left = 1016.0
+offset_top = 640.0
+offset_right = 1016.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump"
+
+[node name="young_oak_log" type="Sprite2D" parent="Trees/YoungOak" unique_id=570422717 groups=["showcase_assets"]]
+position = Vector2(1280, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("97_2vyp5")
+centered = false
+offset = Vector2(-36, -21)
+metadata/asset_name = "young_oak_log"
+metadata/hit_rect = Rect2(-36, -21, 72, 25)
+
+[node name="@Label@105" type="Label" parent="Trees/YoungOak" unique_id=1951238344]
+offset_left = 1210.0
+offset_top = 640.0
+offset_right = 1210.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "log"
+
+[node name="young_oak_trunk_joined" type="Sprite2D" parent="Trees/YoungOak" unique_id=2068651886 groups=["showcase_assets"]]
+position = Vector2(1470, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("98_dqgre")
+centered = false
+offset = Vector2(-12.5, -68)
+metadata/asset_name = "young_oak_trunk_joined"
+metadata/hit_rect = Rect2(-12.5, -68, 25, 72)
+
+[node name="@Label@106" type="Label" parent="Trees/YoungOak" unique_id=1198604059]
+offset_left = 1400.0
+offset_top = 640.0
+offset_right = 1400.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk
+(join)"
+
+[node name="young_oak_stump_joined" type="Sprite2D" parent="Trees/YoungOak" unique_id=214254218 groups=["showcase_assets"]]
+position = Vector2(1656, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("99_mcw8r")
+centered = false
+offset = Vector2(-24, -44)
+metadata/asset_name = "young_oak_stump_joined"
+metadata/hit_rect = Rect2(-24, -44, 48, 48)
+
+[node name="@Label@107" type="Label" parent="Trees/YoungOak" unique_id=919036134]
+offset_left = 1586.0
+offset_top = 640.0
+offset_right = 1586.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump
+(join)"
+
+[node name="Deadwood" type="Node2D" parent="Trees" unique_id=1456311263]
+position = Vector2(0, 2120)
+
+[node name="@Label@108" type="Label" parent="Trees/Deadwood" unique_id=346855823]
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "DEADWOOD"
+
+[node name="deadwood_standing" type="Node2D" parent="Trees/Deadwood" unique_id=80335100 groups=["showcase_assets"] instance=ExtResource("100_8huhx")]
+position = Vector2(210, 620)
+scale = Vector2(2, 2)
+script = ExtResource("79_nh5ub")
+species = "deadwood"
+metadata/asset_name = "deadwood_standing"
+metadata/hit_rect = Rect2(-88, -268, 176, 272)
+
+[node name="@Label@109" type="Label" parent="Trees/Deadwood" unique_id=566924670]
+offset_left = 140.0
+offset_top = 640.0
+offset_right = 140.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "standing"
+
+[node name="deadwood_crown" type="AnimatedSprite2D" parent="Trees/Deadwood" unique_id=2077890845 groups=["showcase_assets"]]
+position = Vector2(630, 620)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("101_itvty")
+animation = &"wind"
+autoplay = "wind"
+centered = false
+offset = Vector2(-80, -140)
+metadata/asset_name = "deadwood_crown"
+metadata/hit_rect = Rect2(-80, -140, 160, 144)
+
+[node name="@Label@110" type="Label" parent="Trees/Deadwood" unique_id=883947623]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 560.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "crown"
+
+[node name="deadwood_trunk" type="Sprite2D" parent="Trees/Deadwood" unique_id=778610131 groups=["showcase_assets"]]
+position = Vector2(906, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("102_87b8m")
+centered = false
+offset = Vector2(-16.5, -92)
+metadata/asset_name = "deadwood_trunk"
+metadata/hit_rect = Rect2(-16.5, -92, 33, 96)
+
+[node name="@Label@111" type="Label" parent="Trees/Deadwood" unique_id=2131473468]
+offset_left = 836.0
+offset_top = 640.0
+offset_right = 836.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk"
+
+[node name="deadwood_stump" type="Sprite2D" parent="Trees/Deadwood" unique_id=1901882156 groups=["showcase_assets"]]
+position = Vector2(1086, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("103_vji57")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "deadwood_stump"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@112" type="Label" parent="Trees/Deadwood" unique_id=141605909]
+offset_left = 1016.0
+offset_top = 640.0
+offset_right = 1016.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump"
+
+[node name="deadwood_log" type="Sprite2D" parent="Trees/Deadwood" unique_id=2146310572 groups=["showcase_assets"]]
+position = Vector2(1280, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("104_wco6b")
+centered = false
+offset = Vector2(-48, -29)
+metadata/asset_name = "deadwood_log"
+metadata/hit_rect = Rect2(-48, -29, 96, 33)
+
+[node name="@Label@113" type="Label" parent="Trees/Deadwood" unique_id=1344126849]
+offset_left = 1210.0
+offset_top = 640.0
+offset_right = 1210.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "log"
+
+[node name="deadwood_trunk_joined" type="Sprite2D" parent="Trees/Deadwood" unique_id=83975463 groups=["showcase_assets"]]
+position = Vector2(1470, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("105_knapc")
+centered = false
+offset = Vector2(-16.5, -92)
+metadata/asset_name = "deadwood_trunk_joined"
+metadata/hit_rect = Rect2(-16.5, -92, 33, 96)
+
+[node name="@Label@114" type="Label" parent="Trees/Deadwood" unique_id=1081137002]
+offset_left = 1400.0
+offset_top = 640.0
+offset_right = 1400.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "trunk
+(join)"
+
+[node name="deadwood_stump_joined" type="Sprite2D" parent="Trees/Deadwood" unique_id=121404192 groups=["showcase_assets"]]
+position = Vector2(1656, 620)
+scale = Vector2(2, 2)
+texture = ExtResource("106_lia3q")
+centered = false
+offset = Vector2(-32, -60)
+metadata/asset_name = "deadwood_stump_joined"
+metadata/hit_rect = Rect2(-32, -60, 64, 64)
+
+[node name="@Label@115" type="Label" parent="Trees/Deadwood" unique_id=800411954]
+offset_left = 1586.0
+offset_top = 640.0
+offset_right = 1586.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "stump
+(join)"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=124911342]
+position = Vector2(1920, 1450)
+zoom = Vector2(0.31, 0.31)
+
+[node name="ViewingControls" type="CanvasLayer" parent="." unique_id=1457504468]
+
+[node name="ControlBackground" type="ColorRect" parent="ViewingControls" unique_id=404037907]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 66.0
+mouse_filter = 2
+color = Color(0.06, 0.09, 0.08, 0.94)
+
+[node name="@Label@116" type="Label" parent="ViewingControls" unique_id=737655765]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 24.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.9019608, 0.8862745, 0.78431374, 1)
+text = "MEADOW SHOWCASE    |    Drag / WASD: pan    |    Wheel: zoom    |    1: native size    |    Space: overview    |    R: reset"

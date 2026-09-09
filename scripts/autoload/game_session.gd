@@ -1,7 +1,7 @@
 extends Node
 
 const MAX_PLAYERS := 4
-const SHOW_LOADING_SCREEN := false
+const SHOW_LOADING_SCREEN := true
 const LOADING_SCENE := "res://scenes/ui/loading_screen.tscn"
 const MENU_SCENE := "res://scenes/ui/main_menu.tscn"
 const GAME_SCENE := "res://scenes/world/game.tscn"

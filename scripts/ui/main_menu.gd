@@ -1,5 +1,10 @@
 extends Control
 
+const FADE_SECONDS := 0.9
+const NAVIGATION_ACTIONS: Array[String] = ["ui_up", "ui_down", "ui_left", "ui_right",
+	"ui_focus_next", "ui_focus_prev"]
+const KEYBOARD_CONTROLS: Array[String] = ["LineEdit", "Range", "CheckBox", "CheckButton"]
+
 @onready var _title_panel: Control = $Screens/TitlePanel
 @onready var _mode_select_panel: Control = $Screens/ModeSelectPanel
 @onready var _settings_panel: Control = $Screens/SettingsPanel
@@ -38,10 +43,15 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		_navigating_by_keyboard = false
 		_release_idle_focus()
-	elif (event is InputEventKey or event is InputEventJoypadButton) and event.is_pressed():
-		if not _navigating_by_keyboard:
-			_navigating_by_keyboard = true
-			_focus_current()
+	elif _is_navigation(event) and not _navigating_by_keyboard:
+		_navigating_by_keyboard = true
+		_focus_current()
+
+func _is_navigation(event: InputEvent) -> bool:
+	for action in NAVIGATION_ACTIONS:
+		if event.is_action_pressed(action):
+			return true
+	return false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") and not _history.is_empty():
@@ -53,9 +63,16 @@ func _release_idle_focus() -> void:
 	if Input.get_mouse_button_mask() != 0:
 		return
 	var focused := get_viewport().gui_get_focus_owner()
-	if focused == null or focused is LineEdit:
+	if focused == null or _takes_keys(focused):
 		return
 	focused.release_focus()
+
+func _takes_keys(control: Control) -> bool:
+	for type: String in KEYBOARD_CONTROLS:
+		if control.is_class(type):
+			return true
+	var parent := control.get_parent()
+	return parent != null and parent.is_in_group("dropdowns")
 
 func _focus_current() -> void:
 	if _current != null and get_viewport().gui_get_focus_owner() == null:
@@ -109,7 +126,16 @@ func _launch() -> void:
 		return
 	_busy = true
 	await _hoist_current()
+	await _fade_to_black()
 	GameSession.start_game()
+
+func _fade_to_black() -> void:
+	var fade: ColorRect = %Fade
+	fade.color = Color(0.0, 0.0, 0.0, 0.0)
+	fade.show()
+	var tween := create_tween()
+	tween.tween_property(fade, "color:a", 1.0, FADE_SECONDS)
+	await tween.finished
 
 func _quit() -> void:
 	if _busy:

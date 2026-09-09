@@ -38,3 +38,5 @@ _to_delete/
 # OS cruft
 .DS_Store
 Thumbs.db
+/docs
+/output

@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="1_xyxqd"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_stump_joined.png" id="2_l7c2p"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_trunk_joined.png" id="3_tin2b"]
+[ext_resource type="SpriteFrames" path="res://assets/environment/meadow/animations/birch_crown.tres" id="4_w8iwf"]
+
+[node name="Birch" type="Node2D" unique_id=1237876209]
+script = ExtResource("1_xyxqd")
+species = "birch"
+
+[node name="Stump" type="Sprite2D" parent="." unique_id=2045923067]
+texture = ExtResource("2_l7c2p")
+centered = false
+offset = Vector2(-32, -60)
+
+[node name="Pivot" type="Node2D" parent="." unique_id=1382587732]
+position = Vector2(0, -49)
+
+[node name="Trunk" type="Sprite2D" parent="Pivot" unique_id=627520635]
+texture = ExtResource("3_tin2b")
+centered = false
+offset = Vector2(-16, -92)
+
+[node name="Crown" type="AnimatedSprite2D" parent="Pivot" unique_id=1892846840]
+position = Vector2(0, -70)
+sprite_frames = ExtResource("4_w8iwf")
+animation = &"wind"
+centered = false
+offset = Vector2(-72, -156)

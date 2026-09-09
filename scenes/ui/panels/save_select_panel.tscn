@@ -17,7 +17,7 @@ unique_name_in_owner = true
 layout_mode = 1
 heading_text = "SELECT A SURVIVOR"
 use_title_font = false
-plate_width = 1400.0
+plate_width = 1460.0
 body_height = 660.0
 top_margin = 60.0
 
@@ -27,9 +27,10 @@ layout_mode = 1
 theme_override_constants/separation = 16
 
 [node name="Scroll" type="ScrollContainer" parent="Content"]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
 
 [node name="Inner" type="VBoxContainer" parent="Content/Scroll"]
 layout_mode = 2
@@ -51,12 +52,25 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="NameRow" type="HBoxContainer" parent="Content"]
+[node name="Gap" type="Control" parent="Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Footer" type="MarginContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stack" type="VBoxContainer" parent="Content/Footer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="NameRow" type="HBoxContainer" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="NameField" type="LineEdit" parent="Content/NameRow"]
+[node name="NameField" type="LineEdit" parent="Content/Footer/Stack/NameRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
@@ -64,25 +78,52 @@ size_flags_horizontal = 3
 max_length = 14
 placeholder_text = "CHARACTER NAME"
 
-[node name="CreateButton" type="Button" parent="Content/NameRow"]
+[node name="CreateButton" type="Button" parent="Content/Footer/Stack/NameRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 76)
 layout_mode = 2
 text = "CREATE"
 
-[node name="CancelButton" type="Button" parent="Content/NameRow"]
+[node name="CancelButton" type="Button" parent="Content/Footer/Stack/NameRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(220, 76)
 layout_mode = 2
 text = "CANCEL"
 
-[node name="NewGameButton" type="Button" parent="Content"]
+[node name="Pager" type="HBoxContainer" parent="Content/Footer/Stack"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PrevButton" type="Button" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 68)
+layout_mode = 2
+text = "PREV"
+
+[node name="PageLabel" type="Label" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "PAGE 1 / 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 68)
+layout_mode = 2
+text = "NEXT"
+
+[node name="NewGameButton" type="Button" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 text = "NEW GAME"
 
-[node name="BackButton" type="Button" parent="Content"]
+[node name="BackButton" type="Button" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2

@@ -10,6 +10,7 @@ const FONT_SIZE_TITLE := 76
 const WIDGETS := "res://assets/ui/widgets/"
 const ICONS := "res://assets/ui/icons/"
 const PANELS := "res://assets/ui/panels/"
+const BUTTON_EDGE := 22
 
 const CREAM := Color("f7e3b0")
 const GOLD := Color("ffb545")
@@ -63,11 +64,11 @@ func _panel_box() -> StyleBoxTexture:
 	return _texture_box(PANELS + "panel_square.png", 46, 58, Color.WHITE, 54)
 
 func _setup_button(theme: Theme, type: String) -> void:
-	theme.set_stylebox("normal", type, _texture_box(WIDGETS + "button_wide_normal.png", 26, 22))
-	theme.set_stylebox("hover", type, _texture_box(WIDGETS + "button_wide_hover.png", 26, 22))
-	theme.set_stylebox("pressed", type, _texture_box(WIDGETS + "button_wide_hover.png", 26, 22, Color(0.62, 0.62, 0.62)))
-	theme.set_stylebox("focus", type, _texture_box(WIDGETS + "button_wide_hover.png", 26, 22))
-	theme.set_stylebox("disabled", type, _texture_box(WIDGETS + "button_wide_normal.png", 26, 22, Color(0.55, 0.57, 0.6)))
+	theme.set_stylebox("normal", type, _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("hover", type, _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("pressed", type, _texture_box(WIDGETS + "button_square_pressed.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("focus", type, _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("disabled", type, _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 22, Color(0.55, 0.57, 0.6)))
 	theme.set_color("font_color", type, CREAM)
 	theme.set_color("font_hover_color", type, GOLD)
 	theme.set_color("font_pressed_color", type, GOLD)
@@ -137,29 +138,29 @@ func _setup_dropdown(theme: Theme) -> void:
 	theme.set_icon("arrow", "DropdownToggle", load(ICONS + "icon_arrow_down.png"))
 	theme.set_type_variation("DropdownList", "PanelContainer")
 	theme.set_stylebox("panel", "DropdownList",
-		_texture_box(WIDGETS + "button_wide_normal.png", 26, 14, Color.WHITE, 12))
+		_texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 14, Color.WHITE, 12))
 	theme.set_type_variation("DropdownRow", "Button")
 	theme.set_stylebox("normal", "DropdownRow", StyleBoxEmpty.new())
 	theme.set_stylebox("disabled", "DropdownRow", StyleBoxEmpty.new())
 	theme.set_stylebox("focus", "DropdownRow", StyleBoxEmpty.new())
-	theme.set_stylebox("hover", "DropdownRow", _texture_box(WIDGETS + "button_wide_hover.png", 26, 16, Color.WHITE, 4))
-	theme.set_stylebox("pressed", "DropdownRow", _texture_box(WIDGETS + "button_wide_hover.png", 26, 16, Color(0.62, 0.62, 0.62), 4))
+	theme.set_stylebox("hover", "DropdownRow", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 16, Color.WHITE, 4))
+	theme.set_stylebox("pressed", "DropdownRow", _texture_box(WIDGETS + "button_square_pressed.png", BUTTON_EDGE, 16, Color.WHITE, 4))
 	theme.set_color("font_color", "DropdownRow", CREAM)
 	theme.set_color("font_hover_color", "DropdownRow", GOLD)
 	theme.set_color("font_pressed_color", "DropdownRow", GOLD)
 	theme.set_type_variation("DropdownRowCurrent", "Button")
-	theme.set_stylebox("normal", "DropdownRowCurrent", _texture_box(WIDGETS + "button_wide_hover.png", 26, 16, Color(0.74, 0.74, 0.74), 4))
+	theme.set_stylebox("normal", "DropdownRowCurrent", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 16, Color(0.74, 0.74, 0.74), 4))
 	theme.set_stylebox("disabled", "DropdownRowCurrent", StyleBoxEmpty.new())
 	theme.set_stylebox("focus", "DropdownRowCurrent", StyleBoxEmpty.new())
-	theme.set_stylebox("hover", "DropdownRowCurrent", _texture_box(WIDGETS + "button_wide_hover.png", 26, 16, Color.WHITE, 4))
-	theme.set_stylebox("pressed", "DropdownRowCurrent", _texture_box(WIDGETS + "button_wide_hover.png", 26, 16, Color(0.62, 0.62, 0.62), 4))
+	theme.set_stylebox("hover", "DropdownRowCurrent", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 16, Color.WHITE, 4))
+	theme.set_stylebox("pressed", "DropdownRowCurrent", _texture_box(WIDGETS + "button_square_pressed.png", BUTTON_EDGE, 16, Color.WHITE, 4))
 	theme.set_color("font_color", "DropdownRowCurrent", GOLD)
 	theme.set_color("font_hover_color", "DropdownRowCurrent", GOLD)
 	theme.set_color("font_pressed_color", "DropdownRowCurrent", GOLD)
 
 func _setup_popup_menu(theme: Theme) -> void:
-	theme.set_stylebox("panel", "PopupMenu", _texture_box(WIDGETS + "button_wide_normal.png", 26, 14, Color.WHITE, 14))
-	theme.set_stylebox("hover", "PopupMenu", _texture_box(WIDGETS + "button_wide_hover.png", 26, 14, Color.WHITE, 6))
+	theme.set_stylebox("panel", "PopupMenu", _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 14, Color.WHITE, 14))
+	theme.set_stylebox("hover", "PopupMenu", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 14, Color.WHITE, 6))
 	theme.set_stylebox("separator", "PopupMenu", StyleBoxEmpty.new())
 	theme.set_font("font", "PopupMenu", load(FONT_PATH))
 	theme.set_font_size("font_size", "PopupMenu", FONT_SIZE_BODY)
@@ -179,9 +180,9 @@ func _setup_popup_menu(theme: Theme) -> void:
 	theme.set_icon("unchecked", "PopupMenu", load(ICONS + "icon_blank.png"))
 
 func _setup_line_edit(theme: Theme) -> void:
-	theme.set_stylebox("normal", "LineEdit", _texture_box(WIDGETS + "button_wide_normal.png", 26, 22))
-	theme.set_stylebox("focus", "LineEdit", _texture_box(WIDGETS + "button_wide_hover.png", 26, 22))
-	theme.set_stylebox("read_only", "LineEdit", _texture_box(WIDGETS + "button_wide_normal.png", 26, 22, Color(0.55, 0.57, 0.6)))
+	theme.set_stylebox("normal", "LineEdit", _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("focus", "LineEdit", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 22))
+	theme.set_stylebox("read_only", "LineEdit", _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 22, Color(0.55, 0.57, 0.6)))
 	theme.set_color("font_color", "LineEdit", CREAM)
 	theme.set_color("font_placeholder_color", "LineEdit", MUTED)
 	theme.set_color("font_selected_color", "LineEdit", INK)

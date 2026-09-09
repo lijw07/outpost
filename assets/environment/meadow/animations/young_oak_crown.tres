@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/animation_atlases/young_oak_crown_wind.png" id="1_bw5l4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8ch"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g8s8"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo1wf"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(256, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt53m"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(384, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elfwq"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(512, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8xq4"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(640, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwtxr"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(768, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikcgf"]
+atlas = ExtResource("1_bw5l4")
+region = Rect2(896, 0, 128, 112)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8ch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g8s8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo1wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt53m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elfwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8xq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwtxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikcgf")
+}],
+"loop": 1,
+"name": &"wind",
+"speed": 8.0
+}]

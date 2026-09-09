@@ -1,0 +1,2250 @@
+{
+  "tile_size": 64,
+  "design_size": [
+    1920,
+    1080
+  ],
+  "assets": [
+    {
+      "name": "grass_00",
+      "path": "assets/environment/meadow/terrain/grass_00.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_01",
+      "path": "assets/environment/meadow/terrain/grass_01.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_02",
+      "path": "assets/environment/meadow/terrain/grass_02.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_03",
+      "path": "assets/environment/meadow/terrain/grass_03.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_04",
+      "path": "assets/environment/meadow/terrain/grass_04.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_05",
+      "path": "assets/environment/meadow/terrain/grass_05.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_06",
+      "path": "assets/environment/meadow/terrain/grass_06.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "grass_07",
+      "path": "assets/environment/meadow/terrain/grass_07.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "soil_00",
+      "path": "assets/environment/meadow/terrain/soil_00.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_01",
+      "path": "assets/environment/meadow/terrain/soil_01.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_02",
+      "path": "assets/environment/meadow/terrain/soil_02.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_03",
+      "path": "assets/environment/meadow/terrain/soil_03.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_04",
+      "path": "assets/environment/meadow/terrain/soil_04.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_05",
+      "path": "assets/environment/meadow/terrain/soil_05.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_06",
+      "path": "assets/environment/meadow/terrain/soil_06.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "soil_07",
+      "path": "assets/environment/meadow/terrain/soil_07.png",
+      "kind": "terrain",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "transition_00",
+      "path": "assets/environment/meadow/transitions/transition_00.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 3
+    },
+    {
+      "name": "transition_01",
+      "path": "assets/environment/meadow/transitions/transition_01.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 12
+    },
+    {
+      "name": "transition_02",
+      "path": "assets/environment/meadow/transitions/transition_02.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 5
+    },
+    {
+      "name": "transition_03",
+      "path": "assets/environment/meadow/transitions/transition_03.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 10
+    },
+    {
+      "name": "transition_04",
+      "path": "assets/environment/meadow/transitions/transition_04.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 1
+    },
+    {
+      "name": "transition_05",
+      "path": "assets/environment/meadow/transitions/transition_05.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 2
+    },
+    {
+      "name": "transition_06",
+      "path": "assets/environment/meadow/transitions/transition_06.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 4
+    },
+    {
+      "name": "transition_07",
+      "path": "assets/environment/meadow/transitions/transition_07.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 8
+    },
+    {
+      "name": "transition_08",
+      "path": "assets/environment/meadow/transitions/transition_08.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 14
+    },
+    {
+      "name": "transition_09",
+      "path": "assets/environment/meadow/transitions/transition_09.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 13
+    },
+    {
+      "name": "transition_10",
+      "path": "assets/environment/meadow/transitions/transition_10.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 11
+    },
+    {
+      "name": "transition_11",
+      "path": "assets/environment/meadow/transitions/transition_11.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 7
+    },
+    {
+      "name": "transition_12",
+      "path": "assets/environment/meadow/transitions/transition_12.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "transition_13",
+      "path": "assets/environment/meadow/transitions/transition_13.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 15
+    },
+    {
+      "name": "transition_14",
+      "path": "assets/environment/meadow/transitions/transition_14.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "transition_15",
+      "path": "assets/environment/meadow/transitions/transition_15.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 0
+    },
+    {
+      "name": "transition_16",
+      "path": "assets/environment/meadow/transitions/transition_16.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 6
+    },
+    {
+      "name": "transition_17",
+      "path": "assets/environment/meadow/transitions/transition_17.png",
+      "kind": "transitions",
+      "size": [
+        64,
+        64
+      ],
+      "corners": 9
+    },
+    {
+      "name": "path_00",
+      "path": "assets/environment/meadow/paths/path_00.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 0
+    },
+    {
+      "name": "path_01",
+      "path": "assets/environment/meadow/paths/path_01.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 1
+    },
+    {
+      "name": "path_02",
+      "path": "assets/environment/meadow/paths/path_02.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 2
+    },
+    {
+      "name": "path_03",
+      "path": "assets/environment/meadow/paths/path_03.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 3
+    },
+    {
+      "name": "path_04",
+      "path": "assets/environment/meadow/paths/path_04.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 4
+    },
+    {
+      "name": "path_05",
+      "path": "assets/environment/meadow/paths/path_05.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 5
+    },
+    {
+      "name": "path_06",
+      "path": "assets/environment/meadow/paths/path_06.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 6
+    },
+    {
+      "name": "path_07",
+      "path": "assets/environment/meadow/paths/path_07.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 7
+    },
+    {
+      "name": "path_08",
+      "path": "assets/environment/meadow/paths/path_08.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 8
+    },
+    {
+      "name": "path_09",
+      "path": "assets/environment/meadow/paths/path_09.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 9
+    },
+    {
+      "name": "path_10",
+      "path": "assets/environment/meadow/paths/path_10.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 10
+    },
+    {
+      "name": "path_11",
+      "path": "assets/environment/meadow/paths/path_11.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 11
+    },
+    {
+      "name": "path_12",
+      "path": "assets/environment/meadow/paths/path_12.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 12
+    },
+    {
+      "name": "path_13",
+      "path": "assets/environment/meadow/paths/path_13.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 13
+    },
+    {
+      "name": "path_14",
+      "path": "assets/environment/meadow/paths/path_14.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 14
+    },
+    {
+      "name": "path_15",
+      "path": "assets/environment/meadow/paths/path_15.png",
+      "kind": "paths",
+      "size": [
+        64,
+        64
+      ],
+      "connections": 15
+    },
+    {
+      "name": "grass_short",
+      "path": "assets/environment/meadow/props/grass_short.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_tall",
+      "path": "assets/environment/meadow/props/grass_tall.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "flowers_white",
+      "path": "assets/environment/meadow/props/flowers_white.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "flowers_yellow",
+      "path": "assets/environment/meadow/props/flowers_yellow.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "flowers_purple",
+      "path": "assets/environment/meadow/props/flowers_purple.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "clover",
+      "path": "assets/environment/meadow/props/clover.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "mushrooms",
+      "path": "assets/environment/meadow/props/mushrooms.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "fern",
+      "path": "assets/environment/meadow/props/fern.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "rock_small",
+      "path": "assets/environment/meadow/props/rock_small.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "rock_mossy",
+      "path": "assets/environment/meadow/props/rock_mossy.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "pebbles",
+      "path": "assets/environment/meadow/props/pebbles.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "boulder",
+      "path": "assets/environment/meadow/props/boulder.png",
+      "kind": "props",
+      "size": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        92
+      ],
+      "reactive": false
+    },
+    {
+      "name": "shrub",
+      "path": "assets/environment/meadow/props/shrub.png",
+      "kind": "props",
+      "size": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        92
+      ],
+      "reactive": true
+    },
+    {
+      "name": "shrub_flowering",
+      "path": "assets/environment/meadow/props/shrub_flowering.png",
+      "kind": "props",
+      "size": [
+        96,
+        96
+      ],
+      "pivot": [
+        48,
+        92
+      ],
+      "reactive": true
+    },
+    {
+      "name": "stump_old",
+      "path": "assets/environment/meadow/props/stump_old.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "branch",
+      "path": "assets/environment/meadow/props/branch.png",
+      "kind": "props",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": false
+    },
+    {
+      "name": "grass_sparse",
+      "path": "assets/environment/meadow/grass/grass_sparse.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_dense",
+      "path": "assets/environment/meadow/grass/grass_dense.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_seedheads",
+      "path": "assets/environment/meadow/grass/grass_seedheads.png",
+      "kind": "grass",
+      "size": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        92
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_flattened",
+      "path": "assets/environment/meadow/grass/grass_flattened.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_dry",
+      "path": "assets/environment/meadow/grass/grass_dry.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_mixed",
+      "path": "assets/environment/meadow/grass/grass_mixed.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_clover",
+      "path": "assets/environment/meadow/grass/grass_clover.png",
+      "kind": "grass",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "reactive": true
+    },
+    {
+      "name": "grass_reedlike",
+      "path": "assets/environment/meadow/grass/grass_reedlike.png",
+      "kind": "grass",
+      "size": [
+        64,
+        96
+      ],
+      "pivot": [
+        32,
+        92
+      ],
+      "reactive": true
+    },
+    {
+      "name": "oak_crown",
+      "path": "assets/environment/meadow/trees/oak_crown.png",
+      "kind": "trees",
+      "size": [
+        192,
+        144
+      ],
+      "pivot": [
+        96,
+        140
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_trunk",
+      "path": "assets/environment/meadow/trees/oak_trunk.png",
+      "kind": "trees",
+      "size": [
+        32,
+        84
+      ],
+      "pivot": [
+        16,
+        80
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_stump",
+      "path": "assets/environment/meadow/trees/oak_stump.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_log",
+      "path": "assets/environment/meadow/trees/oak_log.png",
+      "kind": "trees",
+      "size": [
+        84,
+        32
+      ],
+      "pivot": [
+        42,
+        28
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_trunk_joined",
+      "path": "assets/environment/meadow/trees/oak_trunk_joined.png",
+      "kind": "trees",
+      "size": [
+        32,
+        84
+      ],
+      "pivot": [
+        16,
+        80
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_stump_joined",
+      "path": "assets/environment/meadow/trees/oak_stump_joined.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "oak_standing",
+      "path": "assets/environment/meadow/trees/oak_standing.png",
+      "kind": "trees",
+      "size": [
+        208,
+        256
+      ],
+      "pivot": [
+        104,
+        252
+      ],
+      "tree": "oak"
+    },
+    {
+      "name": "leaf_chip",
+      "path": "assets/environment/meadow/effects/leaf_chip.png",
+      "kind": "effects",
+      "size": [
+        6,
+        6
+      ]
+    },
+    {
+      "name": "birch_crown",
+      "path": "assets/environment/meadow/trees/birch_crown.png",
+      "kind": "trees",
+      "size": [
+        144,
+        160
+      ],
+      "pivot": [
+        72,
+        156
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_trunk",
+      "path": "assets/environment/meadow/trees/birch_trunk.png",
+      "kind": "trees",
+      "size": [
+        32,
+        96
+      ],
+      "pivot": [
+        16,
+        92
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_stump",
+      "path": "assets/environment/meadow/trees/birch_stump.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_log",
+      "path": "assets/environment/meadow/trees/birch_log.png",
+      "kind": "trees",
+      "size": [
+        96,
+        32
+      ],
+      "pivot": [
+        48,
+        28
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_trunk_joined",
+      "path": "assets/environment/meadow/trees/birch_trunk_joined.png",
+      "kind": "trees",
+      "size": [
+        32,
+        96
+      ],
+      "pivot": [
+        16,
+        92
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_stump_joined",
+      "path": "assets/environment/meadow/trees/birch_stump_joined.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "birch_standing",
+      "path": "assets/environment/meadow/trees/birch_standing.png",
+      "kind": "trees",
+      "size": [
+        160,
+        288
+      ],
+      "pivot": [
+        80,
+        284
+      ],
+      "tree": "birch"
+    },
+    {
+      "name": "young_oak_crown",
+      "path": "assets/environment/meadow/trees/young_oak_crown.png",
+      "kind": "trees",
+      "size": [
+        128,
+        112
+      ],
+      "pivot": [
+        64,
+        108
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_trunk",
+      "path": "assets/environment/meadow/trees/young_oak_trunk.png",
+      "kind": "trees",
+      "size": [
+        25,
+        72
+      ],
+      "pivot": [
+        12,
+        68
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_stump",
+      "path": "assets/environment/meadow/trees/young_oak_stump.png",
+      "kind": "trees",
+      "size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_log",
+      "path": "assets/environment/meadow/trees/young_oak_log.png",
+      "kind": "trees",
+      "size": [
+        72,
+        25
+      ],
+      "pivot": [
+        36,
+        21
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_trunk_joined",
+      "path": "assets/environment/meadow/trees/young_oak_trunk_joined.png",
+      "kind": "trees",
+      "size": [
+        25,
+        72
+      ],
+      "pivot": [
+        12,
+        68
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_stump_joined",
+      "path": "assets/environment/meadow/trees/young_oak_stump_joined.png",
+      "kind": "trees",
+      "size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        44
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "young_oak_standing",
+      "path": "assets/environment/meadow/trees/young_oak_standing.png",
+      "kind": "trees",
+      "size": [
+        144,
+        208
+      ],
+      "pivot": [
+        72,
+        204
+      ],
+      "tree": "young_oak"
+    },
+    {
+      "name": "deadwood_crown",
+      "path": "assets/environment/meadow/trees/deadwood_crown.png",
+      "kind": "trees",
+      "size": [
+        160,
+        144
+      ],
+      "pivot": [
+        80,
+        140
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_trunk",
+      "path": "assets/environment/meadow/trees/deadwood_trunk.png",
+      "kind": "trees",
+      "size": [
+        33,
+        96
+      ],
+      "pivot": [
+        16,
+        92
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_stump",
+      "path": "assets/environment/meadow/trees/deadwood_stump.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_log",
+      "path": "assets/environment/meadow/trees/deadwood_log.png",
+      "kind": "trees",
+      "size": [
+        96,
+        33
+      ],
+      "pivot": [
+        48,
+        29
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_trunk_joined",
+      "path": "assets/environment/meadow/trees/deadwood_trunk_joined.png",
+      "kind": "trees",
+      "size": [
+        33,
+        96
+      ],
+      "pivot": [
+        16,
+        92
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_stump_joined",
+      "path": "assets/environment/meadow/trees/deadwood_stump_joined.png",
+      "kind": "trees",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "tree": "deadwood"
+    },
+    {
+      "name": "deadwood_standing",
+      "path": "assets/environment/meadow/trees/deadwood_standing.png",
+      "kind": "trees",
+      "size": [
+        176,
+        272
+      ],
+      "pivot": [
+        88,
+        268
+      ],
+      "tree": "deadwood"
+    }
+  ],
+  "animations": {
+    "grass_short": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_short_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_short_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_short_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_short_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_short_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_tall": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_tall_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_tall_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_tall_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_tall_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_tall_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "flowers_white": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_white_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_white_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_white_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_white_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_white_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "flowers_yellow": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_yellow_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_yellow_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_yellow_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_yellow_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_yellow_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "flowers_purple": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_purple_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_purple_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_purple_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_purple_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/flowers_purple_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "clover": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/clover_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/clover_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/clover_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/clover_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/clover_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "fern": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/fern_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/fern_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/fern_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/fern_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/fern_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "shrub": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      }
+    },
+    "shrub_flowering": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_flowering_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_flowering_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_flowering_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_flowering_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/shrub_flowering_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          96,
+          96
+        ]
+      }
+    },
+    "grass_sparse": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_sparse_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_sparse_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_sparse_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_sparse_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_sparse_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_dense": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dense_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dense_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dense_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dense_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dense_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_seedheads": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_seedheads_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_seedheads_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_seedheads_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_seedheads_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_seedheads_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      }
+    },
+    "grass_flattened": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_flattened_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_flattened_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_flattened_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_flattened_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_flattened_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_dry": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dry_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dry_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dry_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dry_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_dry_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_mixed": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_mixed_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_mixed_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_mixed_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_mixed_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_mixed_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_clover": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_clover_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_clover_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_clover_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_clover_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_clover_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          64
+        ]
+      }
+    },
+    "grass_reedlike": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/grass_reedlike_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "brush": {
+        "path": "assets/environment/meadow/animation_atlases/grass_reedlike_brush.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "recover": {
+        "path": "assets/environment/meadow/animation_atlases/grass_reedlike_recover.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "brush_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_reedlike_brush_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      },
+      "recover_left": {
+        "path": "assets/environment/meadow/animation_atlases/grass_reedlike_recover_left.png",
+        "count": 6,
+        "fps": 12,
+        "loop": false,
+        "size": [
+          64,
+          96
+        ]
+      }
+    },
+    "oak_crown": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/oak_crown_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          192,
+          144
+        ]
+      }
+    },
+    "birch_crown": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/birch_crown_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          144,
+          160
+        ]
+      }
+    },
+    "young_oak_crown": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/young_oak_crown_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          128,
+          112
+        ]
+      }
+    },
+    "deadwood_crown": {
+      "wind": {
+        "path": "assets/environment/meadow/animation_atlases/deadwood_crown_wind.png",
+        "count": 8,
+        "fps": 8,
+        "loop": true,
+        "size": [
+          160,
+          144
+        ]
+      }
+    }
+  },
+  "trees": {
+    "oak": {
+      "trunk_base_y": -42,
+      "crown_base_y": -100,
+      "cut_diameter": 24,
+      "stump_size": [
+        64,
+        64
+      ],
+      "crown_size": [
+        192,
+        144
+      ],
+      "trunk_size": [
+        32,
+        84
+      ]
+    },
+    "birch": {
+      "trunk_base_y": -49,
+      "crown_base_y": -119,
+      "cut_diameter": 24,
+      "stump_size": [
+        64,
+        64
+      ],
+      "crown_size": [
+        144,
+        160
+      ],
+      "trunk_size": [
+        32,
+        96
+      ]
+    },
+    "young_oak": {
+      "trunk_base_y": -35,
+      "crown_base_y": -81,
+      "cut_diameter": 17,
+      "stump_size": [
+        48,
+        48
+      ],
+      "crown_size": [
+        128,
+        112
+      ],
+      "trunk_size": [
+        25,
+        72
+      ]
+    },
+    "deadwood": {
+      "trunk_base_y": -49,
+      "crown_base_y": -119,
+      "cut_diameter": 25,
+      "stump_size": [
+        64,
+        64
+      ],
+      "crown_size": [
+        160,
+        144
+      ],
+      "trunk_size": [
+        33,
+        96
+      ]
+    }
+  }
+}

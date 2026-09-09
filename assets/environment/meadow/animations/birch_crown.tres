@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/animation_atlases/birch_crown_wind.png" id="1_aapvb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt0u4"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(0, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iudbn"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(144, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ip4"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(288, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dthyc"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(432, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppexi"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(576, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnaqv"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(720, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7fiv"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(864, 0, 144, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ygwa"]
+atlas = ExtResource("1_aapvb")
+region = Rect2(1008, 0, 144, 160)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt0u4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iudbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ip4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dthyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppexi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnaqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7fiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ygwa")
+}],
+"loop": 1,
+"name": &"wind",
+"speed": 8.0
+}]

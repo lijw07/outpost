@@ -28,21 +28,32 @@ unique_name_in_owner = true
 layout_mode = 1
 theme_override_constants/separation = 18
 
-[node name="Scroll" type="ScrollContainer" parent="Content"]
+[node name="ListMask" type="ColorRect" parent="Content"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
+clip_children = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Content/ListMask"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+clip_contents = false
 horizontal_scroll_mode = 0
 
-[node name="Sections" type="VBoxContainer" parent="Content/Scroll"]
+[node name="Sections" type="VBoxContainer" parent="Content/ListMask/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 10
 
-[node name="Tabs" type="HBoxContainer" parent="Content/Scroll/Sections"]
+[node name="Tabs" type="HBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HostTab" type="Button" parent="Content/Scroll/Sections/Tabs"]
+[node name="HostTab" type="Button" parent="Content/ListMask/Scroll/Sections/Tabs"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(260, 56)
 layout_mode = 2
@@ -51,7 +62,7 @@ button_pressed = true
 button_group = SubResource("ButtonGroup_tabs")
 text = "HOST"
 
-[node name="JoinTab" type="Button" parent="Content/Scroll/Sections/Tabs"]
+[node name="JoinTab" type="Button" parent="Content/ListMask/Scroll/Sections/Tabs"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(260, 56)
 layout_mode = 2
@@ -59,135 +70,135 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_tabs")
 text = "JOIN"
 
-[node name="HostForm" type="VBoxContainer" parent="Content/Scroll/Sections"]
+[node name="HostForm" type="VBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Grid" type="GridContainer" parent="Content/Scroll/Sections/HostForm"]
+[node name="Grid" type="GridContainer" parent="Content/ListMask/Scroll/Sections/HostForm"]
 layout_mode = 2
 theme_override_constants/h_separation = 24
 theme_override_constants/v_separation = 8
 columns = 2
 
-[node name="ServerLabel" type="Label" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="ServerLabel" type="Label" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "SERVER NAME"
 
-[node name="ServerField" type="LineEdit" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="ServerField" type="LineEdit" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(560, 56)
 layout_mode = 2
 
-[node name="HostPortLabel" type="Label" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="HostPortLabel" type="Label" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "PORT"
 
-[node name="HostPortField" type="LineEdit" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="HostPortField" type="LineEdit" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(260, 56)
 layout_mode = 2
 
-[node name="CodeLabel" type="Label" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="CodeLabel" type="Label" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "INVITE CODE"
 
-[node name="CodeRow" type="HBoxContainer" parent="Content/Scroll/Sections/HostForm/Grid"]
+[node name="CodeRow" type="HBoxContainer" parent="Content/ListMask/Scroll/Sections/HostForm/Grid"]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="CodeValue" type="Label" parent="Content/Scroll/Sections/HostForm/Grid/CodeRow"]
+[node name="CodeValue" type="Label" parent="Content/ListMask/Scroll/Sections/HostForm/Grid/CodeRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 56)
 layout_mode = 2
 vertical_alignment = 1
 text = "-"
 
-[node name="CopyButton" type="Button" parent="Content/Scroll/Sections/HostForm/Grid/CodeRow"]
+[node name="CopyButton" type="Button" parent="Content/ListMask/Scroll/Sections/HostForm/Grid/CodeRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(220, 56)
 layout_mode = 2
 text = "COPY"
 
-[node name="OpenButton" type="Button" parent="Content/Scroll/Sections/HostForm"]
+[node name="OpenButton" type="Button" parent="Content/ListMask/Scroll/Sections/HostForm"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 text = "OPEN SERVER"
 
-[node name="JoinForm" type="VBoxContainer" parent="Content/Scroll/Sections"]
+[node name="JoinForm" type="VBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Grid" type="GridContainer" parent="Content/Scroll/Sections/JoinForm"]
+[node name="Grid" type="GridContainer" parent="Content/ListMask/Scroll/Sections/JoinForm"]
 layout_mode = 2
 theme_override_constants/h_separation = 24
 theme_override_constants/v_separation = 8
 columns = 2
 
-[node name="AddressLabel" type="Label" parent="Content/Scroll/Sections/JoinForm/Grid"]
+[node name="AddressLabel" type="Label" parent="Content/ListMask/Scroll/Sections/JoinForm/Grid"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "ADDRESS"
 
-[node name="AddressField" type="LineEdit" parent="Content/Scroll/Sections/JoinForm/Grid"]
+[node name="AddressField" type="LineEdit" parent="Content/ListMask/Scroll/Sections/JoinForm/Grid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(560, 56)
 layout_mode = 2
 placeholder_text = "127.0.0.1"
 
-[node name="JoinPortLabel" type="Label" parent="Content/Scroll/Sections/JoinForm/Grid"]
+[node name="JoinPortLabel" type="Label" parent="Content/ListMask/Scroll/Sections/JoinForm/Grid"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "PORT"
 
-[node name="JoinPortField" type="LineEdit" parent="Content/Scroll/Sections/JoinForm/Grid"]
+[node name="JoinPortField" type="LineEdit" parent="Content/ListMask/Scroll/Sections/JoinForm/Grid"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(260, 56)
 layout_mode = 2
 
-[node name="ConnectButton" type="Button" parent="Content/Scroll/Sections/JoinForm"]
+[node name="ConnectButton" type="Button" parent="Content/ListMask/Scroll/Sections/JoinForm"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 text = "CONNECT"
 
-[node name="MapRow" type="HBoxContainer" parent="Content/Scroll/Sections"]
+[node name="MapRow" type="HBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="MapLabel" type="Label" parent="Content/Scroll/Sections/MapRow"]
+[node name="MapLabel" type="Label" parent="Content/ListMask/Scroll/Sections/MapRow"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "MAP"
 
-[node name="MapValue" type="Label" parent="Content/Scroll/Sections/MapRow"]
+[node name="MapValue" type="Label" parent="Content/ListMask/Scroll/Sections/MapRow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-"
 
-[node name="ChangeMapButton" type="Button" parent="Content/Scroll/Sections/MapRow"]
+[node name="ChangeMapButton" type="Button" parent="Content/ListMask/Scroll/Sections/MapRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 56)
 layout_mode = 2
 text = "CHANGE"
 
-[node name="PlayersLabel" type="Label" parent="Content/Scroll/Sections"]
+[node name="PlayersLabel" type="Label" parent="Content/ListMask/Scroll/Sections"]
 layout_mode = 2
 text = "PLAYERS"
 
-[node name="SlotList" type="VBoxContainer" parent="Content/Scroll/Sections"]
+[node name="SlotList" type="VBoxContainer" parent="Content/ListMask/Scroll/Sections"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="StatusLabel" type="Label" parent="Content/Scroll/Sections"]
+[node name="StatusLabel" type="Label" parent="Content/ListMask/Scroll/Sections"]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1

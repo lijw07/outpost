@@ -2,19 +2,15 @@ extends RefCounted
 
 const ROW_HEIGHT := 76.0
 const DELETE_WIDTH := 112.0
-const CLEARANCE := 22.0
 const SEPARATION := 16
 const COLUMN_GAP := 40
 
-static func build(name_text: String, value_text: String, name_column: float,
+static func build(source: Control, name_text: String, value_text: String, name_column: float,
 		trash_icon: Texture2D, delete_tooltip: String) -> HBoxContainer:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", SEPARATION)
-	row.add_child(_select(name_text, value_text, name_column))
+	row.add_child(_select(name_text, value_text, name_column, _content_inset(source)))
 	row.add_child(_delete(trash_icon, delete_tooltip))
-	var clearance := Control.new()
-	clearance.custom_minimum_size = Vector2(CLEARANCE, 0.0)
-	row.add_child(clearance)
 	return row
 
 static func name_column(source: Control, characters: int) -> float:
@@ -23,7 +19,12 @@ static func name_column(source: Control, characters: int) -> float:
 	return font.get_string_size("W".repeat(characters),
 		HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
 
-static func _select(name_text: String, value_text: String, name_column_width: float) -> Button:
+static func _content_inset(source: Control) -> Vector2:
+	var box: StyleBox = source.get_theme_stylebox("normal", "Button")
+	return Vector2(box.get_margin(SIDE_LEFT), box.get_margin(SIDE_TOP))
+
+static func _select(name_text: String, value_text: String, name_column_width: float,
+		inset: Vector2) -> Button:
 	var select := Button.new()
 	select.name = "Select"
 	select.custom_minimum_size = Vector2(0.0, ROW_HEIGHT)
@@ -31,6 +32,10 @@ static func _select(name_text: String, value_text: String, name_column_width: fl
 	select.clip_contents = true
 	var columns := HBoxContainer.new()
 	columns.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	columns.offset_left = inset.x
+	columns.offset_right = -inset.x
+	columns.offset_top = inset.y
+	columns.offset_bottom = -inset.y
 	columns.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	columns.add_theme_constant_override("separation", COLUMN_GAP)
 	columns.add_child(_column("Name", name_text, HORIZONTAL_ALIGNMENT_LEFT, name_column_width))

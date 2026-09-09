@@ -1,5 +1,7 @@
 extends Control
 
+const FADE_SECONDS := 0.6
+
 const BACKGROUNDS: Array[String] = [
 	"res://assets/loading/loading_forest_camp.png",
 	"res://assets/loading/loading_gas_station.png",
@@ -18,6 +20,7 @@ const TIPS: Array[String] = [
 @onready var _background: TextureRect = %Background
 @onready var _tip: Label = %Tip
 @onready var _progress: ProgressBar = %Progress
+@onready var _fade: ColorRect = %Fade
 
 var _target := ""
 
@@ -28,6 +31,7 @@ func _ready() -> void:
 	if _target.is_empty():
 		_target = GameSession.MENU_SCENE
 	ResourceLoader.load_threaded_request(_target)
+	create_tween().tween_property(_fade, "color:a", 0.0, FADE_SECONDS)
 
 func _process(_delta: float) -> void:
 	var parts: Array = []

@@ -10,6 +10,7 @@ const CONFIRM_SECONDS := 10
 @onready var _resolution_option: Control = %ResolutionOption
 @onready var _vsync_check: CheckBox = %VsyncCheck
 @onready var _bind_list: VBoxContainer = %BindList
+@onready var _footer_hint: Label = %FooterHint
 @onready var _confirm: Control = %DisplayConfirm
 @onready var _countdown_label: Label = %Countdown
 @onready var _countdown_timer: Timer = %CountdownTimer
@@ -62,7 +63,12 @@ func _build_bind_rows() -> void:
 	for action: String in Settings.REMAPPABLE_ACTIONS:
 		var row := KEY_BIND_ROW.instantiate()
 		row.setup(action, Settings.REMAPPABLE_ACTIONS[action])
+		row.listening_changed.connect(_on_listening_changed)
 		_bind_list.add_child(row)
+	_footer_hint.hide()
+
+func _on_listening_changed(active: bool) -> void:
+	_footer_hint.visible = active
 
 func _refresh() -> void:
 	_window_mode_option.selected = int(Settings.window_mode)
