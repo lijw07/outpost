@@ -32,7 +32,7 @@ func _ready() -> void:
 	_create_button.pressed.connect(_create_save)
 	_name_field.text_submitted.connect(_on_name_submitted)
 	_name_field.text_changed.connect(_on_name_changed)
-	back_button.pressed.connect(back_requested.emit)
+	back_button.pressed.connect(request_back)
 	var confirm_button: Button = %ConfirmDeleteButton
 	var cancel_button: Button = %CancelDeleteButton
 	confirm_button.pressed.connect(_confirm_delete)
@@ -41,6 +41,7 @@ func _ready() -> void:
 	_prev_button.pressed.connect(_turn_page.bind(-1))
 	_next_button.pressed.connect(_turn_page.bind(1))
 	visibility_changed.connect(_on_visibility_changed)
+	_delete_confirm.cancelled.connect(_cancel_delete)
 	_delete_confirm.hide()
 	_name_row.hide()
 	refresh()
@@ -76,10 +77,14 @@ func refresh() -> void:
 	_prev_button.disabled = _page == 0
 	_next_button.disabled = _page >= pages - 1
 	_new_game_button.disabled = not SaveManager.can_create()
+	%SlotSummary.text = "SURVIVORS %d / %d" % [entries.size(), SaveManager.MAX_SLOTS]
+	if _new_game_button.disabled:
+		%SlotSummary.text += " - DELETE ONE TO MAKE ROOM"
 
 func _turn_page(step: int) -> void:
 	_page += step
 	refresh()
+	focus_first.call_deferred()
 
 func _build_slot(save: Dictionary) -> HBoxContainer:
 	var row := SLOT_ROW.build(self, save["character_name"],
@@ -93,6 +98,7 @@ func _on_visibility_changed() -> void:
 	if visible:
 		_name_row.hide()
 		_delete_confirm.hide()
+		_pending_delete = {}
 		refresh()
 
 func _ask_delete(save: Dictionary) -> void:
@@ -111,6 +117,7 @@ func _confirm_delete() -> void:
 	_pending_delete = {}
 	_delete_confirm.hide()
 	refresh()
+	focus_first.call_deferred()
 
 func _show_name_entry() -> void:
 	_name_row.show()
@@ -124,11 +131,12 @@ func _cancel_name_entry() -> void:
 	_new_game_button.grab_focus()
 
 func _on_name_changed(new_text: String) -> void:
-	var clean := SaveManager.sanitize_name(new_text)
+	var caret := _name_field.caret_column
+	var clean := SaveManager.sanitize_name(new_text, false)
 	if clean != new_text:
 		_name_field.text = clean
-		_name_field.caret_column = clean.length()
-	_create_button.disabled = clean.is_empty()
+		_name_field.caret_column = SaveManager.sanitize_name(new_text.substr(0, caret), false).length()
+	_create_button.disabled = clean.strip_edges().is_empty()
 
 func _on_name_submitted(_new_text: String) -> void:
 	_create_save()
@@ -141,10 +149,17 @@ func _create_save() -> void:
 	_start(save)
 
 func _on_slot_pressed(save: Dictionary) -> void:
-	SaveManager.touch(save["id"])
 	_start(save)
 
 func _start(save: Dictionary) -> void:
 	GameSession.save_id = save["id"]
 	GameSession.character_name = save["character_name"]
 	save_chosen.emit()
+
+func request_back() -> void:
+	if _delete_confirm.visible:
+		_cancel_delete()
+	elif _name_row.visible:
+		_cancel_name_entry()
+	else:
+		back_requested.emit()

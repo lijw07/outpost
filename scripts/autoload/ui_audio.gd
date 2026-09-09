@@ -15,6 +15,7 @@ var _rattle_player: AudioStreamPlayer
 var _hoist_player: AudioStreamPlayer
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_hover_player = _create_player(HOVER_PATH, -11.0)
 	_click_player = _create_player(CLICK_PATH, -5.0)
 	_back_player = _create_player(BACK_PATH, -5.0)
@@ -121,3 +122,12 @@ func _on_menu_focused(_id: int) -> void:
 
 func _on_menu_pressed(_index: int) -> void:
 	play_click()
+
+func _exit_tree() -> void:
+	stop_all()
+
+func stop_all() -> void:
+	for player in [_hover_player, _click_player, _back_player, _rattle_player, _hoist_player]:
+		if is_instance_valid(player):
+			player.stop()
+			player.stream = null

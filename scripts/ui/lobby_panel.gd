@@ -38,6 +38,10 @@ func _ready() -> void:
 	visibility_changed.connect(_on_visibility_changed)
 	_host_port_field.text = str(NetSession.DEFAULT_PORT)
 	_join_port_field.text = str(NetSession.DEFAULT_PORT)
+	_address_field.text = "127.0.0.1"
+	open_button.disabled = not NetSession.TRANSPORT_AVAILABLE
+	connect_button.disabled = not NetSession.TRANSPORT_AVAILABLE
+	copy_button.disabled = true
 	_show_host(true)
 	_refresh()
 	rig.adopt(%Content)
@@ -48,7 +52,7 @@ func focus_first() -> void:
 func _on_visibility_changed() -> void:
 	if not is_visible_in_tree():
 		return
-	if _server_field.text.is_empty():
+	if not NetSession.is_host():
 		_server_field.text = _default_server_name()
 	NetSession.seat_local_player()
 	_refresh()
@@ -62,9 +66,15 @@ func _show_host(hosting: bool) -> void:
 	_join_form.visible = not hosting
 	_host_tab.set_pressed_no_signal(hosting)
 	_join_tab.set_pressed_no_signal(not hosting)
+	_map_value.get_parent().visible = hosting
+	_start_button.visible = hosting
 
 func _on_open_pressed() -> void:
-	NetSession.host(_server_field.text, _port_from(_host_port_field))
+	var port := _port_from(_host_port_field)
+	if not NetSession.valid_port(port):
+		_on_status("PORT MUST BE BETWEEN 1 AND 65535")
+		return
+	NetSession.host(_server_field.text, port)
 	_refresh()
 
 func _on_connect_pressed() -> void:
@@ -83,13 +93,16 @@ func _on_status(message: String) -> void:
 	_status_label.text = message
 
 func _port_from(field: LineEdit) -> int:
-	var value := field.text.to_int()
-	return value if value > 0 and value < 65536 else NetSession.DEFAULT_PORT
+	var text := field.text.strip_edges()
+	return text.to_int() if text.is_valid_int() else -1
 
 func _refresh() -> void:
 	_map_value.text = GameSession.world_name if not GameSession.world_name.is_empty() else "NO MAP SELECTED"
 	_code_value.text = NetSession.invite_code if not NetSession.invite_code.is_empty() else "-"
 	_start_button.disabled = not NetSession.can_start()
+	%CopyButton.disabled = NetSession.invite_code.is_empty()
+	if not NetSession.TRANSPORT_AVAILABLE:
+		_status_label.text = NetSession.UNAVAILABLE_MESSAGE
 	for child in _slot_list.get_children():
 		_slot_list.remove_child(child)
 		child.queue_free()
@@ -100,9 +113,12 @@ func _build_slot(index: int) -> Label:
 	var row := Label.new()
 	if index < NetSession.roster.size():
 		var player: Dictionary = NetSession.roster[index]
-		var tag: String = "HOST" if player["is_host"] else "READY" if player["ready"] else "WAITING"
+		var tag: String = "LOCAL" if NetSession.role == NetSession.Role.OFFLINE else "HOST" if player["is_host"] else "READY" if player["ready"] else "WAITING"
 		row.text = "%d.  %s      %s" % [index + 1, player["name"], tag]
 	else:
 		row.text = "%d.  OPEN SLOT" % (index + 1)
 		row.modulate = Color(1.0, 1.0, 1.0, 0.45)
 	return row
+
+func request_back() -> void:
+	_on_back_pressed()

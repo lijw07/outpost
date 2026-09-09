@@ -94,17 +94,31 @@ func _setup_slider(theme: Theme) -> void:
 	theme.set_icon("grabber", "HSlider", load(WIDGETS + "slider_grabber.png"))
 	theme.set_icon("grabber_highlight", "HSlider", load(WIDGETS + "slider_grabber_hover.png"))
 	theme.set_icon("grabber_disabled", "HSlider", load(WIDGETS + "slider_grabber.png"))
-	theme.set_constant("center_grabber", "HSlider", 1)
+	# Keep the whole handle inside the control's mouse hit area at both endpoints.
+	theme.set_constant("center_grabber", "HSlider", 0)
 
 func _setup_checkbox(theme: Theme) -> void:
-	theme.set_icon("checked", "CheckBox", load(WIDGETS + "checkbox_checked.png"))
-	theme.set_icon("unchecked", "CheckBox", load(WIDGETS + "checkbox_unchecked.png"))
-	theme.set_icon("checked_disabled", "CheckBox", load(WIDGETS + "checkbox_checked.png"))
-	theme.set_icon("unchecked_disabled", "CheckBox", load(WIDGETS + "checkbox_unchecked.png"))
-	theme.set_icon("radio_checked", "CheckBox", load(WIDGETS + "checkbox_checked.png"))
-	theme.set_icon("radio_unchecked", "CheckBox", load(WIDGETS + "checkbox_unchecked.png"))
-	for state in ["normal", "hover", "pressed", "focus", "disabled"]:
-		theme.set_stylebox(state, "CheckBox", StyleBoxEmpty.new())
+	# Draw the frame as a button background, with only the check mark above it.
+	# This lets the entire frame change to the same gold artwork as other buttons.
+	var checked := AtlasTexture.new()
+	checked.atlas = load(WIDGETS + "checkbox_check.png")
+	checked.margin = Rect2(6, 7, 12, 15)
+	var transparent := Gradient.new()
+	transparent.colors = PackedColorArray([Color.TRANSPARENT, Color.TRANSPARENT])
+	var unchecked := GradientTexture2D.new()
+	unchecked.gradient = transparent
+	unchecked.width = 73
+	unchecked.height = 69
+	for state in ["checked", "checked_disabled", "radio_checked"]:
+		theme.set_icon(state, "CheckBox", checked)
+	for state in ["unchecked", "unchecked_disabled", "radio_unchecked"]:
+		theme.set_icon(state, "CheckBox", unchecked)
+	var normal := _texture_box(WIDGETS + "checkbox_unchecked.png", BUTTON_EDGE, 0)
+	for state in ["normal", "pressed", "disabled"]:
+		theme.set_stylebox(state, "CheckBox", normal)
+	var hover := _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 0)
+	for state in ["hover", "hover_pressed", "focus"]:
+		theme.set_stylebox(state, "CheckBox", hover)
 	theme.set_color("font_color", "CheckBox", CREAM)
 	theme.set_color("font_hover_color", "CheckBox", GOLD)
 

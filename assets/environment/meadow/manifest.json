@@ -545,7 +545,12 @@
         32,
         60
       ],
-      "reactive": true
+      "reactive": true,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/flowers_white_picked.png",
+        "item": "flowers",
+        "amount": 1
+      }
     },
     {
       "name": "flowers_yellow",
@@ -559,7 +564,12 @@
         32,
         60
       ],
-      "reactive": true
+      "reactive": true,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/flowers_yellow_picked.png",
+        "item": "flowers",
+        "amount": 1
+      }
     },
     {
       "name": "flowers_purple",
@@ -573,7 +583,12 @@
         32,
         60
       ],
-      "reactive": true
+      "reactive": true,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/flowers_purple_picked.png",
+        "item": "flowers",
+        "amount": 1
+      }
     },
     {
       "name": "clover",
@@ -587,7 +602,12 @@
         32,
         60
       ],
-      "reactive": true
+      "reactive": true,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/clover_picked.png",
+        "item": "flowers",
+        "amount": 1
+      }
     },
     {
       "name": "mushrooms",
@@ -601,7 +621,12 @@
         32,
         60
       ],
-      "reactive": false
+      "reactive": false,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/mushrooms_picked.png",
+        "item": "mushrooms",
+        "amount": 1
+      }
     },
     {
       "name": "fern",
@@ -699,7 +724,12 @@
         48,
         92
       ],
-      "reactive": true
+      "reactive": true,
+      "harvest": {
+        "picked_path": "assets/environment/meadow/harvested/shrub_flowering_picked.png",
+        "item": "flowers",
+        "amount": 1
+      }
     },
     {
       "name": "stump_old",
@@ -842,37 +872,9 @@
       "reactive": true
     },
     {
-      "name": "oak_crown",
-      "path": "assets/environment/meadow/trees/oak_crown.png",
-      "kind": "trees",
-      "size": [
-        192,
-        144
-      ],
-      "pivot": [
-        96,
-        140
-      ],
-      "tree": "oak"
-    },
-    {
-      "name": "oak_trunk",
-      "path": "assets/environment/meadow/trees/oak_trunk.png",
-      "kind": "trees",
-      "size": [
-        32,
-        84
-      ],
-      "pivot": [
-        16,
-        80
-      ],
-      "tree": "oak"
-    },
-    {
-      "name": "oak_stump",
-      "path": "assets/environment/meadow/trees/oak_stump.png",
-      "kind": "trees",
+      "name": "flowers_white_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/flowers_white_picked.png",
       "size": [
         64,
         64
@@ -881,40 +883,12 @@
         32,
         60
       ],
-      "tree": "oak"
+      "source_asset": "flowers_white"
     },
     {
-      "name": "oak_log",
-      "path": "assets/environment/meadow/trees/oak_log.png",
-      "kind": "trees",
-      "size": [
-        84,
-        32
-      ],
-      "pivot": [
-        42,
-        28
-      ],
-      "tree": "oak"
-    },
-    {
-      "name": "oak_trunk_joined",
-      "path": "assets/environment/meadow/trees/oak_trunk_joined.png",
-      "kind": "trees",
-      "size": [
-        32,
-        84
-      ],
-      "pivot": [
-        16,
-        80
-      ],
-      "tree": "oak"
-    },
-    {
-      "name": "oak_stump_joined",
-      "path": "assets/environment/meadow/trees/oak_stump_joined.png",
-      "kind": "trees",
+      "name": "flowers_yellow_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/flowers_yellow_picked.png",
       "size": [
         64,
         64
@@ -923,63 +897,12 @@
         32,
         60
       ],
-      "tree": "oak"
+      "source_asset": "flowers_yellow"
     },
     {
-      "name": "oak_standing",
-      "path": "assets/environment/meadow/trees/oak_standing.png",
-      "kind": "trees",
-      "size": [
-        208,
-        256
-      ],
-      "pivot": [
-        104,
-        252
-      ],
-      "tree": "oak"
-    },
-    {
-      "name": "leaf_chip",
-      "path": "assets/environment/meadow/effects/leaf_chip.png",
-      "kind": "effects",
-      "size": [
-        6,
-        6
-      ]
-    },
-    {
-      "name": "birch_crown",
-      "path": "assets/environment/meadow/trees/birch_crown.png",
-      "kind": "trees",
-      "size": [
-        144,
-        160
-      ],
-      "pivot": [
-        72,
-        156
-      ],
-      "tree": "birch"
-    },
-    {
-      "name": "birch_trunk",
-      "path": "assets/environment/meadow/trees/birch_trunk.png",
-      "kind": "trees",
-      "size": [
-        32,
-        96
-      ],
-      "pivot": [
-        16,
-        92
-      ],
-      "tree": "birch"
-    },
-    {
-      "name": "birch_stump",
-      "path": "assets/environment/meadow/trees/birch_stump.png",
-      "kind": "trees",
+      "name": "flowers_purple_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/flowers_purple_picked.png",
       "size": [
         64,
         64
@@ -988,259 +911,49 @@
         32,
         60
       ],
-      "tree": "birch"
+      "source_asset": "flowers_purple"
     },
     {
-      "name": "birch_log",
-      "path": "assets/environment/meadow/trees/birch_log.png",
-      "kind": "trees",
+      "name": "clover_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/clover_picked.png",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "source_asset": "clover"
+    },
+    {
+      "name": "mushrooms_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/mushrooms_picked.png",
+      "size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        60
+      ],
+      "source_asset": "mushrooms"
+    },
+    {
+      "name": "shrub_flowering_picked",
+      "kind": "harvested",
+      "path": "assets/environment/meadow/harvested/shrub_flowering_picked.png",
       "size": [
         96,
-        32
-      ],
-      "pivot": [
-        48,
-        28
-      ],
-      "tree": "birch"
-    },
-    {
-      "name": "birch_trunk_joined",
-      "path": "assets/environment/meadow/trees/birch_trunk_joined.png",
-      "kind": "trees",
-      "size": [
-        32,
         96
       ],
       "pivot": [
-        16,
+        48,
         92
       ],
-      "tree": "birch"
-    },
-    {
-      "name": "birch_stump_joined",
-      "path": "assets/environment/meadow/trees/birch_stump_joined.png",
-      "kind": "trees",
-      "size": [
-        64,
-        64
-      ],
-      "pivot": [
-        32,
-        60
-      ],
-      "tree": "birch"
-    },
-    {
-      "name": "birch_standing",
-      "path": "assets/environment/meadow/trees/birch_standing.png",
-      "kind": "trees",
-      "size": [
-        160,
-        288
-      ],
-      "pivot": [
-        80,
-        284
-      ],
-      "tree": "birch"
-    },
-    {
-      "name": "young_oak_crown",
-      "path": "assets/environment/meadow/trees/young_oak_crown.png",
-      "kind": "trees",
-      "size": [
-        128,
-        112
-      ],
-      "pivot": [
-        64,
-        108
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_trunk",
-      "path": "assets/environment/meadow/trees/young_oak_trunk.png",
-      "kind": "trees",
-      "size": [
-        25,
-        72
-      ],
-      "pivot": [
-        12,
-        68
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_stump",
-      "path": "assets/environment/meadow/trees/young_oak_stump.png",
-      "kind": "trees",
-      "size": [
-        48,
-        48
-      ],
-      "pivot": [
-        24,
-        44
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_log",
-      "path": "assets/environment/meadow/trees/young_oak_log.png",
-      "kind": "trees",
-      "size": [
-        72,
-        25
-      ],
-      "pivot": [
-        36,
-        21
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_trunk_joined",
-      "path": "assets/environment/meadow/trees/young_oak_trunk_joined.png",
-      "kind": "trees",
-      "size": [
-        25,
-        72
-      ],
-      "pivot": [
-        12,
-        68
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_stump_joined",
-      "path": "assets/environment/meadow/trees/young_oak_stump_joined.png",
-      "kind": "trees",
-      "size": [
-        48,
-        48
-      ],
-      "pivot": [
-        24,
-        44
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "young_oak_standing",
-      "path": "assets/environment/meadow/trees/young_oak_standing.png",
-      "kind": "trees",
-      "size": [
-        144,
-        208
-      ],
-      "pivot": [
-        72,
-        204
-      ],
-      "tree": "young_oak"
-    },
-    {
-      "name": "deadwood_crown",
-      "path": "assets/environment/meadow/trees/deadwood_crown.png",
-      "kind": "trees",
-      "size": [
-        160,
-        144
-      ],
-      "pivot": [
-        80,
-        140
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_trunk",
-      "path": "assets/environment/meadow/trees/deadwood_trunk.png",
-      "kind": "trees",
-      "size": [
-        33,
-        96
-      ],
-      "pivot": [
-        16,
-        92
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_stump",
-      "path": "assets/environment/meadow/trees/deadwood_stump.png",
-      "kind": "trees",
-      "size": [
-        64,
-        64
-      ],
-      "pivot": [
-        32,
-        60
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_log",
-      "path": "assets/environment/meadow/trees/deadwood_log.png",
-      "kind": "trees",
-      "size": [
-        96,
-        33
-      ],
-      "pivot": [
-        48,
-        29
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_trunk_joined",
-      "path": "assets/environment/meadow/trees/deadwood_trunk_joined.png",
-      "kind": "trees",
-      "size": [
-        33,
-        96
-      ],
-      "pivot": [
-        16,
-        92
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_stump_joined",
-      "path": "assets/environment/meadow/trees/deadwood_stump_joined.png",
-      "kind": "trees",
-      "size": [
-        64,
-        64
-      ],
-      "pivot": [
-        32,
-        60
-      ],
-      "tree": "deadwood"
-    },
-    {
-      "name": "deadwood_standing",
-      "path": "assets/environment/meadow/trees/deadwood_standing.png",
-      "kind": "trees",
-      "size": [
-        176,
-        272
-      ],
-      "pivot": [
-        88,
-        268
-      ],
-      "tree": "deadwood"
+      "source_asset": "shrub_flowering"
     }
   ],
   "animations": {
@@ -2127,124 +1840,6 @@
           96
         ]
       }
-    },
-    "oak_crown": {
-      "wind": {
-        "path": "assets/environment/meadow/animation_atlases/oak_crown_wind.png",
-        "count": 8,
-        "fps": 8,
-        "loop": true,
-        "size": [
-          192,
-          144
-        ]
-      }
-    },
-    "birch_crown": {
-      "wind": {
-        "path": "assets/environment/meadow/animation_atlases/birch_crown_wind.png",
-        "count": 8,
-        "fps": 8,
-        "loop": true,
-        "size": [
-          144,
-          160
-        ]
-      }
-    },
-    "young_oak_crown": {
-      "wind": {
-        "path": "assets/environment/meadow/animation_atlases/young_oak_crown_wind.png",
-        "count": 8,
-        "fps": 8,
-        "loop": true,
-        "size": [
-          128,
-          112
-        ]
-      }
-    },
-    "deadwood_crown": {
-      "wind": {
-        "path": "assets/environment/meadow/animation_atlases/deadwood_crown_wind.png",
-        "count": 8,
-        "fps": 8,
-        "loop": true,
-        "size": [
-          160,
-          144
-        ]
-      }
-    }
-  },
-  "trees": {
-    "oak": {
-      "trunk_base_y": -42,
-      "crown_base_y": -100,
-      "cut_diameter": 24,
-      "stump_size": [
-        64,
-        64
-      ],
-      "crown_size": [
-        192,
-        144
-      ],
-      "trunk_size": [
-        32,
-        84
-      ]
-    },
-    "birch": {
-      "trunk_base_y": -49,
-      "crown_base_y": -119,
-      "cut_diameter": 24,
-      "stump_size": [
-        64,
-        64
-      ],
-      "crown_size": [
-        144,
-        160
-      ],
-      "trunk_size": [
-        32,
-        96
-      ]
-    },
-    "young_oak": {
-      "trunk_base_y": -35,
-      "crown_base_y": -81,
-      "cut_diameter": 17,
-      "stump_size": [
-        48,
-        48
-      ],
-      "crown_size": [
-        128,
-        112
-      ],
-      "trunk_size": [
-        25,
-        72
-      ]
-    },
-    "deadwood": {
-      "trunk_base_y": -49,
-      "crown_base_y": -119,
-      "cut_diameter": 25,
-      "stump_size": [
-        64,
-        64
-      ],
-      "crown_size": [
-        160,
-        144
-      ],
-      "trunk_size": [
-        33,
-        96
-      ]
     }
   }
 }

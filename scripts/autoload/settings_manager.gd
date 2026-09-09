@@ -1,6 +1,7 @@
 extends Node
 
 signal settings_applied
+signal display_preview_started
 
 const CONFIG_PATH := "user://settings.cfg"
 
@@ -82,6 +83,8 @@ var resolutions: Array[Vector2i] = []
 var resolution := Vector2i(1920, 1080)
 var window_mode := WindowMode.WINDOWED
 var vsync_enabled := true
+var reduce_motion := false
+var _display_restore := {}
 var bus_volumes := {}
 
 var _default_events := {}
@@ -137,18 +140,36 @@ func apply_audio() -> void:
 		AudioServer.set_bus_mute(index, linear <= 0.001)
 
 func preview_display(mode: int, size: Vector2i) -> void:
-	window_mode = mode as WindowMode
+	if _display_restore.is_empty():
+		_display_restore = {"mode": int(window_mode), "resolution": resolution}
+	window_mode = clampi(mode, 0, 2) as WindowMode
 	resolution = size.max(MIN_RESOLUTION)
 	apply_display()
+	settings_applied.emit()
+	display_preview_started.emit()
 
-func set_window_mode(mode: int) -> void:
-	window_mode = mode as WindowMode
-	apply_display()
+func confirm_display() -> void:
+	_display_restore.clear()
 	save_settings()
 
+func revert_display() -> void:
+	if _display_restore.is_empty():
+		return
+	window_mode = int(_display_restore["mode"]) as WindowMode
+	resolution = _display_restore["resolution"]
+	_display_restore.clear()
+	apply_display()
+	settings_applied.emit()
+
+func set_window_mode(mode: int) -> void:
+	preview_display(mode, resolution)
+
 func set_resolution(size: Vector2i) -> void:
-	resolution = size.max(MIN_RESOLUTION)
-	_apply_resolution()
+	preview_display(int(window_mode), size)
+
+func set_reduce_motion(enabled: bool) -> void:
+	reduce_motion = enabled
+	settings_applied.emit()
 	save_settings()
 
 func get_resolution_index() -> int:
@@ -176,17 +197,27 @@ func get_binding(action: String) -> InputEvent:
 	var events := InputMap.action_get_events(action)
 	return events[0] if not events.is_empty() else null
 
-func set_binding(action: String, event: InputEvent) -> void:
-	if not InputMap.has_action(action):
-		return
+func binding_conflict(action: String, event: InputEvent) -> String:
 	for other: String in REMAPPABLE_ACTIONS:
 		if other == action:
 			continue
 		var existing := get_binding(other)
 		if existing != null and existing.is_match(event, false):
-			InputMap.action_erase_events(other)
+			return other
+	return ""
+
+func set_binding(action: String, event: InputEvent, swap := false) -> void:
+	if not InputMap.has_action(action):
+		return
+	var old_event := get_binding(action)
+	var conflict := binding_conflict(action, event)
+	if not conflict.is_empty():
+		InputMap.action_erase_events(conflict)
+		if swap and old_event != null:
+			InputMap.action_add_event(conflict, old_event.duplicate())
 	InputMap.action_erase_events(action)
-	InputMap.action_add_event(action, event)
+	if event != null:
+		InputMap.action_add_event(action, event.duplicate())
 	save_settings()
 	settings_applied.emit()
 
@@ -200,17 +231,28 @@ func reset_bindings() -> void:
 	save_settings()
 	settings_applied.emit()
 
-func reset_all() -> void:
-	_load_defaults()
-	reset_bindings()
-	apply_all()
+func reset_audio() -> void:
+	bus_volumes = {"Master": 0.8, "Music": 0.7, "SFX": 0.8}
+	apply_audio()
 	save_settings()
+	settings_applied.emit()
+
+func reset_display() -> void:
+	set_vsync(true)
+	set_reduce_motion(false)
+	preview_display(DEFAULT_WINDOW_MODE, _default_resolution())
+
+func reset_all() -> void:
+	reset_bindings()
+	reset_audio()
+	reset_display()
 
 func save_settings() -> void:
 	var config := ConfigFile.new()
-	config.set_value("display", "window_mode", int(window_mode))
-	config.set_value("display", "resolution", resolution)
+	config.set_value("display", "window_mode", _display_restore.get("mode", int(window_mode)))
+	config.set_value("display", "resolution", _display_restore.get("resolution", resolution))
 	config.set_value("display", "vsync", vsync_enabled)
+	config.set_value("accessibility", "reduce_motion", reduce_motion)
 	for bus_name: String in AUDIO_BUSES:
 		config.set_value("audio", bus_name, get_bus_volume(bus_name))
 	for action: String in REMAPPABLE_ACTIONS:
@@ -227,14 +269,20 @@ func load_settings() -> void:
 	window_mode = config.get_value("display", "window_mode", int(window_mode)) as WindowMode
 	resolution = config.get_value("display", "resolution", resolution)
 	vsync_enabled = config.get_value("display", "vsync", vsync_enabled)
+	reduce_motion = config.get_value("accessibility", "reduce_motion", false)
 	for bus_name: String in AUDIO_BUSES:
 		bus_volumes[bus_name] = config.get_value("audio", bus_name, get_bus_volume(bus_name))
 	for action: String in REMAPPABLE_ACTIONS:
-		var event := _remapped_event(action, config.get_value("input", action, ""))
-		if event == null or not InputMap.has_action(action):
+		var encoded: String = config.get_value("input", action, "")
+		var parts := encoded.split(">")
+		if parts.size() != 2 or parts[0] != _default_binding_text(action) or not InputMap.has_action(action):
+			continue
+		var event := deserialize_event(parts[1])
+		if event == null and not parts[1].is_empty():
 			continue
 		InputMap.action_erase_events(action)
-		InputMap.action_add_event(action, event)
+		if event != null:
+			InputMap.action_add_event(action, event)
 
 func resolution_label(size: Vector2i) -> String:
 	return "%d X %d  (%s)" % [size.x, size.y, aspect_label(size)]
@@ -286,7 +334,9 @@ func event_display_name(event: InputEvent) -> String:
 		return "UNBOUND"
 	if event is InputEventKey:
 		var key_event := event as InputEventKey
-		var keycode := DisplayServer.keyboard_get_keycode_from_physical(key_event.physical_keycode)
+		var keycode := key_event.physical_keycode
+		if DisplayServer.get_name() != "headless":
+			keycode = DisplayServer.keyboard_get_keycode_from_physical(keycode)
 		return OS.get_keycode_string(keycode).to_upper()
 	if event is InputEventMouseButton:
 		match (event as InputEventMouseButton).button_index:
@@ -316,11 +366,11 @@ func _apply_resolution() -> void:
 	window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	window.content_scale_size = DESIGN_SIZE
 	window.content_scale_factor = 1.0
-	window.size = resolution.min(DisplayServer.screen_get_size(window.current_screen))
-	var screen := window.current_screen
-	var margin := DisplayServer.screen_get_size(screen) - resolution
-	window.position = DisplayServer.screen_get_position(screen) \
-		+ Vector2i(roundi(margin.x * 0.5), roundi(margin.y * 0.5))
+	var usable := DisplayServer.screen_get_usable_rect(window.current_screen)
+	if usable.size.x <= 0 or usable.size.y <= 0:
+		usable = Rect2i(Vector2i.ZERO, DESIGN_SIZE)
+	window.size = resolution.min(usable.size)
+	window.position = usable.position + (usable.size - window.size) / 2
 
 func _remapped_event(action: String, encoded: String) -> InputEvent:
 	var parts := encoded.split(">")

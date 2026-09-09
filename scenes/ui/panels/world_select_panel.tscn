@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/world_select_panel.gd" id="1_world"]
 [ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[ext_resource type="Script" path="res://scripts/ui/modal.gd" id="modal"]
 
 [node name="WorldSelectPanel" type="Control"]
 layout_mode = 3
@@ -18,13 +20,27 @@ layout_mode = 1
 heading_text = "SELECT A WORLD"
 use_title_font = false
 plate_width = 1460.0
-body_height = 660.0
+body_height = 860.0
 top_margin = 60.0
 
 [node name="Content" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 theme_override_constants/separation = 16
+
+[node name="SelectionContext" type="Label" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SURVIVOR:"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 26
+
+[node name="SlotSummary" type="Label" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "WORLDS 0 / 6"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 26
 
 [node name="Scroll" type="ScrollContainer" parent="Content"]
 unique_name_in_owner = true
@@ -130,6 +146,8 @@ layout_mode = 2
 text = "BACK"
 
 [node name="DeleteConfirm" type="Control" parent="."]
+script = ExtResource("modal")
+initial_focus = NodePath("Box/Inner/Buttons/CancelDeleteButton")
 unique_name_in_owner = true
 visible = false
 z_index = 200

@@ -63,17 +63,40 @@ Dropdowns (`scripts/ui/dropdown.gd`) are in-tree controls rather than Godot
 popups, so the open list rotates and translates with the sign instead of sitting
 level beside it.
 
-## Co-op
+## Play and co-op preview
 
-Play > Co-op opens the lobby (`scenes/ui/panels/lobby_panel.tscn`), which hosts
-a server or joins one, shows an invite code, and seats up to four players.
+Play > Single Player selects a survivor and a world. Survivor and world lists
+show their six-slot limits and paginate three entries at a time. Continue on the
+title screen reopens the last valid single-player survivor/world pair; deleting
+either record hides Continue. The current game is a terrain preview, so Continue
+restores that selection, not a gameplay simulation or camera position.
 
-No transport is wired up yet. `NetSession` holds the lobby state behind
-`host()`, `join()` and `leave()`; the UI only reads `roster`, `invite_code` and
-`role`, so dropping in a `MultiplayerPeer` — ENet for direct IP, or a Steam or
-relay backend — means filling in those three methods and emitting
-`roster_changed`. `join()` currently reports that no transport is configured
-rather than pretending to connect.
+Play > Co-op Preview selects a survivor and opens Host/Join without requiring a
+local world. Hosts can choose a world with Change; Join does not use local world
+selection. Networking is not connected yet: Open Server, Connect, Copy, and
+Start are disabled rather than reporting a successful server or fake invite.
+Back and Escape clear the lobby consistently.
+
+## Settings and pause
+
+Settings has Display, Audio, and Controls tabs with section-specific resets.
+All ten bindings fit in two columns. Conflicting bindings offer Swap, Replace,
+and Cancel; explicitly unbound actions remain unbound after restarting. Open
+dropdowns support arrows, Enter, and Escape, and dialogs keep keyboard focus
+inside their buttons.
+
+Display includes Reduce Motion, which skips the sign's drop, swing, and hoist.
+Escape in-game opens a pause menu with Resume, Settings, and Return to Menu.
+The camera stays paused while settings are open, and HUD hints use the current
+bindings. Selected survivor and world names appear in the HUD.
+
+## Menu music
+
+The menu plays an original 1:47 looping cue, **Last Light at the Outpost**:
+muted plucked melody, low harmonies, and a sparse pulse. It fades in on entry,
+continues across the menu screens, and fades out on game launch or Quit. The
+Music and Master sliders control its volume. See `assets/audio/music/README.md`
+for the composition details and rebuild command.
 
 ## UI scaling
 
@@ -87,8 +110,8 @@ detected on first launch.
 
 Changing resolution or window mode previews the change without writing it to
 disk and puts up a ten-second "keep these display settings?" prompt. Keep saves
-it; Revert, or letting the timer run out, restores what you had. A setting you
-cannot see well enough to undo therefore cannot get stuck.
+it; Revert, or letting the timer run out, restores what you had. Reset Display uses the same preview, and Escape reverts immediately. Changes
+to audio or other preferences cannot accidentally save a pending display preview.
 
 ## Generators
 
@@ -102,23 +125,23 @@ godot --headless --path . -s tools/build_sprite_frames.gd
 
 ## Tests
 
-Each test is a scene that prints a single `OK` or `FAILED` line and quits.
+Run the regression suite with Python 3 and Godot installed:
 
 ```
-godot --path . tests/flow_test.tscn        # every panel has a script, buttons wired
-godot --path . tests/physics_test.tscn     # the rig settles, stops, and hoists clear
-godot --path . tests/bead_test.tscn        # blood beads travel the chain and reset
-godot --path . tests/drip_test.tscn        # every drip is anchored to the plate
-godot --path . tests/dropdown_test.tscn    # lists stay tied to the UI and fit the plate
-godot --path . tests/save_test.tscn        # save slots round-trip and respect the cap
-godot --path . tests/lobby_test.tscn       # hosting seats a player, ports validate, leaving resets
-godot --path . tests/confirm_test.tscn     # display changes preview, then keep, revert or time out
-godot --path . tests/pick_test.tscn        # an open dropdown receives hover and clicks over the content
+python3 tests/run_ui_checks.py
+# Or choose an executable:
+python3 tests/run_ui_checks.py --godot /path/to/godot
 ```
 
-Before shipping a change, wipe `.godot`, run `--headless --path . --import`,
-then `--headless --editor --quit` (this catches global-class errors that a
-headless run does not), then the tests above.
+The runner uses a disposable project and a separate temporary user profile.
+It checks clean importing, editor loading, keyboard/modal input, binding conflicts, settings
+persistence in a fresh process, display keep/revert/timeout/reset, save creation
+and pagination, lobby cleanup, loading into the game, pause/resume, and Continue.
+Do not run `ui_regression.gd` against your real user profile; it deliberately
+creates and deletes test saves, and refuses an ordinary profile.
+
+Use a windowed playthrough to inspect layout and motion after scene changes.
+The September UI fixes were also checked in a separate rendered game instance.
 
 ## Controls
 

@@ -2,7 +2,6 @@ extends Node2D
 ## Standalone art review scene; leaves the game's existing world scene untouched.
 const PACK := "res://assets/environment/meadow/"
 var _plants: Array[AnimatedSprite2D] = []
-var _trees: Array[Node2D] = []
 var _probe := Node2D.new()
 var _dust: Node2D
 var _last_step := Vector2.ZERO
@@ -80,13 +79,6 @@ func _ready() -> void:
 			prop = art
 		prop.position = at
 		props.add_child(prop)
-	var species := ["oak","birch","young_oak","deadwood","oak","birch"]
-	var places := [Vector2(350,480),Vector2(1570,460),Vector2(660,390),Vector2(1700,920),Vector2(380,1030),Vector2(1320,1030)]
-	for i in range(species.size()):
-		var tree: Node2D = load("res://scenes/environment/meadow/"+species[i]+".tscn").instantiate()
-		tree.position = places[i]
-		props.add_child(tree)
-		_trees.append(tree)
 	_probe.position = Vector2(920,670)
 	_probe.add_to_group("players")
 	props.add_child(_probe)
@@ -114,7 +106,7 @@ func _add_header() -> void:
 	title.modulate = Color("f2dfae")
 	hud.add_child(title)
 	var hint := Label.new()
-	hint.text = "WASD: walk the marker   ·   Move the mouse: brush plants   ·   Click a tree: hit / collect log   ·   R: reset"
+	hint.text = "WASD: walk the marker   ·   Move the mouse: brush plants   ·   R: reset"
 	hint.position = Vector2(40,73)
 	hint.add_theme_font_size_override("font_size",19)
 	hint.modulate = Color("bbcaac")
@@ -145,13 +137,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		_mouse_mode = true
 	if event is InputEventKey and event.pressed and event.keycode == KEY_R:
 		get_tree().reload_current_scene()
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var at := get_global_mouse_position()
-		for tree in _trees:
-			if Rect2(tree.position+Vector2(-110,-280),Vector2(235,310)).has_point(at):
-				if tree.state == "felled": tree.collect_log()
-				else: tree.hit()
-				break
 
 func _run_checks() -> void:
 	await get_tree().process_frame
@@ -162,46 +147,11 @@ func _run_checks() -> void:
 	_probe.position = Vector2(1000,800)
 	await get_tree().create_timer(1.3).timeout
 	assert(plant.animation == &"wind")
-	var tree := _trees[0]
-	tree.hit()
-	assert(tree.remaining_hits == 2)
-	await get_tree().create_timer(0.08).timeout
-	assert(absf(tree.get_node("Pivot").rotation) > 0.0)
-	tree.hit(2)
-	assert(tree.state == "shedding")
-	assert(tree.get_node("Stump").visible)
-	assert(not tree.collect_log())
-	assert(tree.get_node("Pivot/Trunk").rotation == 0.0)
-	await get_tree().create_timer(0.35).timeout
-	assert(tree.state == "falling")
-	assert(not tree.get_node("Pivot/Crown").visible)
-	await get_tree().create_timer(1.2).timeout
-	assert(tree.state == "felled")
-	assert(not tree.get_node("Pivot/Crown").visible)
-	assert(tree.get_node("Pivot/Trunk").visible)
-	assert(tree.collect_log())
-	assert(tree.get_node("Stump").visible)
-	assert(not tree.get_node("Pivot/Trunk").visible)
-	for other in _trees.slice(1,4):
-		other.hit(3)
-	await get_tree().create_timer(1.3).timeout
-	for other in _trees.slice(1,4):
-		assert(other.state == "felled")
-		assert(other.get_node("Stump").visible)
-		assert(other.collect_log())
-		assert(not other.collect_log())
-	print("PASS: meadow plant contact/recovery; four species, shake, foliage-before-fall, persistent stumps and log collection.")
+	print("PASS: meadow plant contact and recovery.")
 	get_tree().quit()
 
 func _capture() -> void:
 	await get_tree().create_timer(0.4).timeout
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://output/meadow/meadow_scene.png")
-	for i in range(36):
-		if i==5: _trees[0].hit()
-		if i==12: _trees[0].hit(2)
-		await get_tree().create_timer(0.07).timeout
-		await RenderingServer.frame_post_draw
-		var capture := get_viewport().get_texture().get_image()
-		capture.get_region(Rect2i(200,180,330,340)).save_png("res://output/meadow/tree_frame_%02d.png"%i)
 	get_tree().quit()

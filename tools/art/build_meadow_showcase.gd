@@ -12,40 +12,23 @@ func _initialize() -> void:
 	scene.set_script(load("res://scripts/environment/meadow_showcase.gd"))
 	var bg:=Polygon2D.new()
 	bg.name="Backdrop"
-	bg.polygon=PackedVector2Array([Vector2.ZERO,Vector2(3840,0),Vector2(3840,3040),Vector2(0,3040)])
+	bg.polygon=PackedVector2Array([Vector2.ZERO,Vector2(3840,0),Vector2(3840,1640),Vector2(0,1640)])
 	bg.color=Color("25312f")
 	_add(bg,scene)
 	_label("MEADOW / ALL ARTWORK",Vector2(64,28),46,scene)
-	_label("Individual sprites at a shared scale. Click plants or standing trees to test them.",Vector2(64,88),26,scene)
+	_label("Individual sprites at a shared scale. Click plants to test their movement.",Vector2(64,88),26,scene)
 	var ground:=_section("GroundTiles","01  GRASS AND SOIL",Vector2(64,172))
 	_grid(ground,["terrain"],8,224,218,108)
 	var transitions:=_section("Transitions","02  GRASS / DIRT TRANSITIONS",Vector2(64,764))
 	_grid(transitions,["transitions"],8,224,218,108)
-	var paths:=_section("Paths","03  PATH PIECES",Vector2(64,1554))
+	var paths:=_section("Paths","03  PATH PIECES",Vector2(1984,172))
 	_grid(paths,["paths"],8,224,218,108)
-	var props:=_section("GrassAndProps","04  GRASS, FLOWERS, ROCKS AND PROPS",Vector2(64,2146))
-	_grid(props,["grass","props","effects"],8,224,208,80)
-	var trees:=_section("Trees","05  TREES AND THEIR SEPARATE PIECES",Vector2(1984,172))
-	var states: Array[String]=["standing","crown","trunk","stump","log","trunk_joined","stump_joined"]
-	var columns: Array[float]=[210,630,906,1086,1280,1470,1656]
-	var names: Array[String]=["oak","birch","young_oak","deadwood"]
-	for row in range(4):
-		var species: String=names[row]
-		var family:=Node2D.new()
-		family.name=species.capitalize().replace(" ","")
-		family.position.y=80+row*680
-		_add(family,trees)
-		_label(species.replace("_"," ").to_upper(),Vector2(0,0),32,family)
-		for i in range(states.size()):
-			var name:=species+"_"+states[i]
-			for asset: Dictionary in assets:
-				if asset["name"]==name:
-					_place(asset,Vector2(columns[i],620),family)
-					_label(states[i].replace("_joined","\n(join)").replace("_"," "),Vector2(columns[i]-70,640),22,family)
+	var props:=_section("GrassAndProps","04  GRASS, FLOWERS, ROCKS AND PROPS",Vector2(1984,764))
+	_grid(props,["grass","props","harvested"],8,224,208,80)
 	var camera:=Camera2D.new()
 	camera.name="Camera2D"
-	camera.position=Vector2(1920,1450)
-	camera.zoom=Vector2.ONE*0.31
+	camera.position=Vector2(1920,720)
+	camera.zoom=Vector2.ONE*0.48
 	_add(camera,scene)
 	var hud:=CanvasLayer.new()
 	hud.name="ViewingControls"
@@ -58,11 +41,11 @@ func _initialize() -> void:
 	band.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	_add(band,hud)
 	_label("MEADOW SHOWCASE    |    Drag / WASD: pan    |    Wheel: zoom    |    1: native size    |    Space: overview    |    R: reset",Vector2(24,20),20,hud)
-	assert(placed==103)
+	assert(placed==assets.size())
 	var packed:=PackedScene.new()
 	assert(packed.pack(scene)==OK)
 	assert(ResourceSaver.save(packed,"res://scenes/environment/meadow_showcase.tscn")==OK)
-	print("PASS: saved 103 actual Sprite2D, AnimatedSprite2D and tree scene instances in MeadowShowcase.")
+	print("PASS: saved 80 individually placed terrain and plant/prop sprites in MeadowShowcase.")
 	scene.free()
 	quit()
 
@@ -99,9 +82,7 @@ func _grid(parent: Node2D,kinds: Array,columns: int,width: float,height: float,t
 func _place(asset: Dictionary,position: Vector2,parent: Node2D) -> void:
 	var name: String=asset["name"]
 	var art: Node2D
-	if asset["kind"]=="trees" and name.ends_with("_standing"):
-		art=load("res://scenes/environment/meadow/"+String(asset["tree"])+".tscn").instantiate()
-	elif FileAccess.file_exists(PACK+"animations/"+name+".tres"):
+	if FileAccess.file_exists(PACK+"animations/"+name+".tres"):
 		var animated:=AnimatedSprite2D.new()
 		animated.sprite_frames=load(PACK+"animations/"+name+".tres")
 		animated.animation=&"wind"

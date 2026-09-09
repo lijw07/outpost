@@ -189,88 +189,6 @@ def props():
         bake(name, a)
 
 
-def tree_source_slices():
-    """Reject a source boundary that cuts through visible neighboring artwork."""
-    spec = json.loads((ROOT/'tools/art/meadow_tree_slices.json').read_text())
-    im = Image.open(ROOT/spec['source']).convert('RGBA')
-    assert list(im.size) == spec['source_size'], 'Tree source changed; re-audit slices'
-    visible = np.array(im)[:, :, 3] >= spec['alpha_threshold']
-    cuts = spec['column_boundaries']
-    result = {}
-    for layer, (top, bottom) in spec['rows'].items():
-        for x in cuts[1:-1]:
-            assert not visible[top:bottom,x-2:x+2].any(), f'{layer}: source boundary intersects artwork at {x}'
-        for i, name in enumerate(spec['species']):
-            left, right = cuts[i:i+2]
-            columns = visible[top:bottom,left:right].any(axis=0)
-            starts = np.flatnonzero(columns & ~np.r_[False,columns[:-1]])
-            assert len(starts) == 1, f'{name} {layer}: neighboring fragment or changed source layout'
-            result[name, layer] = im.crop((left,top,right,bottom))
-    return result, spec['species']
-
-
-def trees():
-    slices, names = tree_source_slices()
-    MANIFEST['trees'] = {}
-    for i, name in enumerate(names):
-        crown_size = [(192,144),(144,160),(128,112),(160,144)][i]
-        stump_size = (48,48) if i==2 else (64,64)
-        crown = sprite(slices[name, 'crown'], crown_size)
-        stump = sprite(slices[name, 'stump'], stump_size)
-        trunk_source = slices[name, 'trunk']
-        sa=np.array(stump)[:,:,3]>0
-        ys,xs=np.where(sa)
-        cut_y=int(ys.min()+max(2,(ys.max()-ys.min())*.13))
-        row=np.where(sa[cut_y])[0]
-        diameter=max(int(np.count_nonzero(sa[y])) for y in range(int(ys.min()), cut_y+3))
-        # Match the shaft to the actual cut-face width, not the stump's flared roots.
-        trunk=sprite(trunk_source,(diameter+8,96 if i!=2 else 72))
-        bbox=trunk.getbbox(); target_width=diameter
-        shaft=trunk.crop(bbox).resize((target_width,bbox[3]-bbox[1]),RESAMPLE)
-        trunk=Image.new('RGBA',(diameter+8,shaft.height+8));trunk.paste(shaft,(4,4))
-        log=trunk.transpose(Image.Transpose.ROTATE_270)
-        # Cover the exposed saw cuts only while the tree is standing. Reuse the
-        # shaft's own bark pixels, then reveal the original cut faces on felling.
-        ta=np.array(trunk)
-        joined=ta.copy()
-        bark=ta[trunk.height//2-4:trunk.height//2+4,4:-4]
-        for y in list(range(4,12))+list(range(trunk.height-11,trunk.height-4)):
-            for x in range(4,trunk.width-4):
-                if joined[y,x,3]: joined[y,x]=bark[y%8,x-4]
-        joined_trunk=Image.fromarray(joined)
-        st=np.array(stump)
-        # The upper ellipse is hidden behind living bark until the cut completes.
-        for y in range(int(ys.min()),cut_y+5):
-            for x in range(stump.width):
-                if st[y,x,3]:
-                    bx=min(diameter-1,max(0,x-(stump.width-diameter)//2))
-                    st[y,x]=bark[y%8,bx]
-        joined_stump=Image.fromarray(st)
-        ca=np.array(crown)
-        # Remove the generated cut-face at the bottom of the branch socket.
-        bottom=crown.getbbox()[3]
-        ca[bottom-4:bottom]=0
-        crown=Image.fromarray(ca)
-        base_y=-stump.height+4+cut_y
-        crown_y=base_y-(trunk.height-8)+18
-        MANIFEST['trees'][name]={'trunk_base_y':base_y,'crown_base_y':crown_y,'cut_diameter':diameter,
-                                  'stump_size':list(stump.size),'crown_size':list(crown.size),'trunk_size':list(trunk.size)}
-        for state,a in [('crown',crown),('trunk',trunk),('stump',stump),('log',log),('trunk_joined',joined_trunk),('stump_joined',joined_stump)]:
-            export(name+'_'+state,a,'trees',pivot=[a.width//2,a.height-4],tree=name)
-        top=crown_y-crown.height+4
-        size=(max(crown.width,stump.width)+16,math.ceil((-top+12)/16)*16)
-        standing=Image.new('RGBA',size)
-        foot_y=size[1]-4
-        for a,offset in [(joined_stump,0),(joined_trunk,base_y),(crown,crown_y)]:
-            standing.alpha_composite(a,((size[0]-a.width)//2,round(foot_y+offset-a.height+4)))
-        export(name+'_standing',standing,'trees',pivot=[size[0]//2,foot_y],tree=name)
-        bake(name+'_crown',crown,canopy=True)
-        if i==0:
-            # Small source-art leaf chip for the foliage-shedding particle emitter.
-            chip=crown.crop((crown.width//2-3,26,crown.width//2+3,32))
-            export('leaf_chip',chip,'effects')
-
-
 def contact_sheet():
     assets = MANIFEST['assets']
     canvas = Image.new('RGB', (1440, 54+math.ceil(len(assets)/8)*166), '#1c2924')
@@ -285,14 +203,14 @@ def contact_sheet():
         draw.text((x,y+133),entry['name'],fill='#d7cdaa')
     canvas.crop((0,0,1440,54+math.ceil(len(assets)/8)*166)).save(OUT/'meadow_catalog.png')
     # A short visible preview of the actual exported wind/contact frames.
-    names=['grass_dense','grass_seedheads','flowers_white','shrub','oak_crown']
+    names=['grass_dense','grass_seedheads','flowers_white','shrub','fern']
     frames=[]
     for t in range(40):
         c=Image.new('RGB',(1000,380),'#344d30'); d=ImageDraw.Draw(c)
         d.text((20,18),'OUTPOST / Wind, brush-through and recovery',fill='#f4e6ba')
         for j,name in enumerate(names):
             states=MANIFEST['animations'][name]
-            state='wind' if t<16 or name=='oak_crown' else ('brush' if t<22 else 'recover' if t<28 else 'wind')
+            state='wind' if t<16 else ('brush' if t<22 else 'recover' if t<28 else 'wind')
             info=states[state];w,h=info['size'];idx=(t if state=='wind' else t-16 if state=='brush' else t-22)%info['count']
             im=Image.open(ROOT/info['path']).crop((idx*w,0,(idx+1)*w,h))
             scale=1 if h>128 else 2
@@ -300,7 +218,7 @@ def contact_sheet():
             c.paste(im,(j*195+(190-im.width)//2,325-im.height),im)
             d.text((j*195+12,345),name+' / '+state,fill='#f4e6ba')
         frames.append(c)
-    frames[0].save(OUT/'meadow_motion.gif',save_all=True,append_images=frames[1:],duration=110,loop=0,disposal=2)
+    frames[0].save(OUT/'meadow_source_frames.gif',save_all=True,append_images=frames[1:],duration=110,loop=0,disposal=2)
 
 
 def verify():
@@ -330,10 +248,6 @@ def verify():
             if i&4 and j&1: assert np.array_equal(a[-1],b[0]), 'Path north-south seam'
         for bit,edge in [(1,a[0]),(2,a[:,-1]),(4,a[-1]),(8,a[:,0])]:
             if not i&bit: assert not edge[:,3].any(), 'Unconnected path edge'
-    for name in MANIFEST['trees']:
-        trunk=Image.open(PACK/'trees'/f'{name}_trunk.png')
-        log=Image.open(PACK/'trees'/f'{name}_log.png')
-        assert np.array_equal(np.array(trunk.transpose(Image.Transpose.ROTATE_270)),np.array(log)), 'Log changed bark'
     for states in MANIFEST['animations'].values():
         roots=None
         for info in states.values():
@@ -348,16 +262,11 @@ def verify():
 
 
 if __name__=='__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--trees-only', action='store_true', help='Re-slice trees and rebuild their wind frames without rewriting terrain or props')
-    args = parser.parse_args()
+    argparse.ArgumentParser(description=__doc__).parse_args()
     OUT.mkdir(parents=True,exist_ok=True)
-    if args.trees_only:
-        MANIFEST = json.loads((PACK/'manifest.json').read_text())
-        MANIFEST['assets'] = [a for a in MANIFEST['assets'] if a['kind'] != 'trees' and a['name'] != 'leaf_chip']
-        MANIFEST['animations'] = {name: info for name, info in MANIFEST['animations'].items() if name not in ['oak_crown','birch_crown','young_oak_crown','deadwood_crown']}
-    else:
-        terrain(); paths(); props()
-    trees(); verify()
+    terrain(); paths(); props()
+    import build_meadow_harvest
+    build_meadow_harvest.build(MANIFEST)
+    verify()
     (PACK/'manifest.json').write_text(json.dumps(MANIFEST,indent=2)+'\n')
     contact_sheet()

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" path="res://assets/ui/widgets/button_square_normal.png" id="1_cec2f"]
 [ext_resource type="Texture2D" path="res://assets/ui/widgets/button_square_hover.png" id="2_v58c2"]
 [ext_resource type="Texture2D" path="res://assets/ui/widgets/button_square_pressed.png" id="3_rm7lf"]
-[ext_resource type="Texture2D" path="res://assets/ui/widgets/checkbox_checked.png" id="4_2ryes"]
+[ext_resource type="Texture2D" path="res://assets/ui/widgets/checkbox_check.png" id="4_cec2f"]
 [ext_resource type="Texture2D" path="res://assets/ui/widgets/checkbox_unchecked.png" id="5_0jnbp"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_arrow_down.png" id="6_8i20c"]
 [ext_resource type="Texture2D" path="res://assets/ui/widgets/slider_grabber.png" id="7_bsmgl"]
@@ -73,15 +73,39 @@ texture_margin_top = 22.0
 texture_margin_right = 22.0
 texture_margin_bottom = 22.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21w1r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_v58c2"]
+atlas = ExtResource("4_cec2f")
+margin = Rect2(6, 7, 12, 15)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe8mq"]
+[sub_resource type="Gradient" id="Gradient_rm7lf"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hdgvh"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2ryes"]
+gradient = SubResource("Gradient_rm7lf")
+width = 73
+height = 69
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kk8qk"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jnbp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_0jnbp")
+texture_margin_left = 22.0
+texture_margin_top = 22.0
+texture_margin_right = 22.0
+texture_margin_bottom = 22.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yewwk"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8i20c"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_v58c2")
+texture_margin_left = 22.0
+texture_margin_top = 22.0
+texture_margin_right = 22.0
+texture_margin_bottom = 22.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tjqr"]
 content_margin_left = 14.0
@@ -376,17 +400,18 @@ Button/styles/normal = SubResource("StyleBoxTexture_mab3j")
 Button/styles/pressed = SubResource("StyleBoxTexture_cy6l7")
 CheckBox/colors/font_color = Color(0.96862745, 0.8901961, 0.6901961, 1)
 CheckBox/colors/font_hover_color = Color(1, 0.70980394, 0.27058825, 1)
-CheckBox/icons/checked = ExtResource("4_2ryes")
-CheckBox/icons/checked_disabled = ExtResource("4_2ryes")
-CheckBox/icons/radio_checked = ExtResource("4_2ryes")
-CheckBox/icons/radio_unchecked = ExtResource("5_0jnbp")
-CheckBox/icons/unchecked = ExtResource("5_0jnbp")
-CheckBox/icons/unchecked_disabled = ExtResource("5_0jnbp")
-CheckBox/styles/disabled = SubResource("StyleBoxEmpty_21w1r")
-CheckBox/styles/focus = SubResource("StyleBoxEmpty_qe8mq")
-CheckBox/styles/hover = SubResource("StyleBoxEmpty_hdgvh")
-CheckBox/styles/normal = SubResource("StyleBoxEmpty_kk8qk")
-CheckBox/styles/pressed = SubResource("StyleBoxEmpty_yewwk")
+CheckBox/icons/checked = SubResource("AtlasTexture_v58c2")
+CheckBox/icons/checked_disabled = SubResource("AtlasTexture_v58c2")
+CheckBox/icons/radio_checked = SubResource("AtlasTexture_v58c2")
+CheckBox/icons/radio_unchecked = SubResource("GradientTexture2D_2ryes")
+CheckBox/icons/unchecked = SubResource("GradientTexture2D_2ryes")
+CheckBox/icons/unchecked_disabled = SubResource("GradientTexture2D_2ryes")
+CheckBox/styles/disabled = SubResource("StyleBoxTexture_0jnbp")
+CheckBox/styles/focus = SubResource("StyleBoxTexture_8i20c")
+CheckBox/styles/hover = SubResource("StyleBoxTexture_8i20c")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxTexture_8i20c")
+CheckBox/styles/normal = SubResource("StyleBoxTexture_0jnbp")
+CheckBox/styles/pressed = SubResource("StyleBoxTexture_0jnbp")
 DropdownList/base_type = &"PanelContainer"
 DropdownList/styles/panel = SubResource("StyleBoxTexture_7tjqr")
 DropdownRow/base_type = &"Button"
@@ -413,7 +438,7 @@ HScrollBar/styles/grabber = SubResource("StyleBoxFlat_swqnk")
 HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_32d5w")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_32d5w")
 HScrollBar/styles/scroll = SubResource("StyleBoxFlat_c6l2u")
-HSlider/constants/center_grabber = 1
+HSlider/constants/center_grabber = 0
 HSlider/icons/grabber = ExtResource("7_bsmgl")
 HSlider/icons/grabber_disabled = ExtResource("7_bsmgl")
 HSlider/icons/grabber_highlight = ExtResource("8_6urtu")

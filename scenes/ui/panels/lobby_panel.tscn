@@ -17,7 +17,7 @@ script = ExtResource("1_lobby")
 [node name="ChainRig" parent="." instance=ExtResource("9_rig")]
 unique_name_in_owner = true
 layout_mode = 1
-heading_text = "CO-OP LOBBY"
+heading_text = "CO-OP PREVIEW"
 use_title_font = false
 plate_width = 1180.0
 body_height = 960.0
@@ -198,7 +198,9 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="StatusLabel" type="Label" parent="Content/ListMask/Scroll/Sections"]
+[node name="StatusLabel" type="Label" parent="Content"]
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 26
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
@@ -212,7 +214,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "START RUN"
+text = "COMING SOON"
 
 [node name="BackButton" type="Button" parent="Content/Buttons"]
 unique_name_in_owner = true

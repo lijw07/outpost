@@ -18,12 +18,9 @@ var _preview_panel: PanelContainer
 var _viewport: SubViewport
 var _stage: Node2D
 var _animated: AnimatedSprite2D
-var _tree: Node2D
 var _dust: Node2D
 var _brush_left: Button
 var _brush_right: Button
-var _hit: Button
-var _collect: Button
 var _dust_button: Button
 var _pan := Vector2.ZERO
 var _zoom := 2
@@ -70,7 +67,7 @@ func _build_ui() -> void:
 	layout.add_theme_constant_override("separation",16)
 	margin.add_child(layout)
 	layout.add_child(_label("OUTPOST  /  MEADOW ART LAB",28))
-	layout.add_child(_label("Choose any asset to inspect it. Test wind, step through frames, brush plants, or chop and reset a tree.",17))
+	layout.add_child(_label("Inspect artwork and original animation frames here. Play the Meadow Playground to review the smoother live movement.",17))
 	var main := HSplitContainer.new()
 	main.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	main.split_offset = 730
@@ -84,9 +81,9 @@ func _build_ui() -> void:
 	search.text_changed.connect(func(value: String) -> void: _filter=value.to_lower(); _filter_cards())
 	gallery.add_child(search)
 	var categories := OptionButton.new()
-	for name in ["All assets","Ground","Transitions","Paths","Grass","Props","Trees","Effects"]: categories.add_item(name)
+	for name in ["All assets","Ground","Transitions","Paths","Grass","Props","Picked"]: categories.add_item(name)
 	categories.item_selected.connect(func(index: int) -> void:
-		_category=["all","terrain","transitions","paths","grass","props","trees","effects"][index]
+		_category=["all","terrain","transitions","paths","grass","props","harvested"][index]
 		_filter_cards())
 	gallery.add_child(categories)
 	_count = _label("")
@@ -178,10 +175,8 @@ func _build_ui() -> void:
 	inspector.add_child(actions)
 	_brush_left = _button("Brush left",func() -> void: _brush(true))
 	_brush_right = _button("Brush right",func() -> void: _brush(false))
-	_hit = _button("Hit tree",func() -> void: if is_instance_valid(_tree): _tree.hit())
-	_collect = _button("Collect log",func() -> void: if is_instance_valid(_tree): _tree.collect_log())
 	_dust_button = _button("Dust burst",func() -> void: if is_instance_valid(_dust): _dust.step_at(_dust.global_position))
-	for button in [_brush_left,_brush_right,_hit,_collect,_dust_button]: actions.add_child(button)
+	for button in [_brush_left,_brush_right,_dust_button]: actions.add_child(button)
 	_status = _label("",17)
 	_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_status.custom_minimum_size.y = 54
@@ -232,24 +227,19 @@ func _select(index: int) -> void:
 	_selected = index
 	for i in range(_cards.size()): _cards[i].set_pressed_no_signal(i==index)
 	_pan = Vector2.ZERO
-	_animated = null; _tree = null; _dust = null
+	_animated = null; _dust = null
 	for child in _stage.get_children(): child.free()
 	var asset: Dictionary = _assets[index]
 	_title.text = String(asset["name"]).replace("_"," ").capitalize()
 	_meta.text = "%d x %d px  |  %s\n%s"%[asset["size"][0],asset["size"][1],asset["kind"],asset["path"]]
 	var name: String = asset["name"]
-	var is_tree: bool = asset["kind"]=="trees" and name.ends_with("_standing")
 	var has_animation := FileAccess.file_exists(PACK+"animations/"+name+".tres")
-	if is_tree:
-		_tree = load("res://scenes/environment/meadow/"+String(asset["tree"])+".tscn").instantiate()
-		_stage.add_child(_tree)
-		_tree.position.y = float(asset["size"][1])/2.0-10.0
-		_animated = _tree.get_node("Pivot/Crown")
-	elif has_animation:
+	if has_animation:
 		_animated = AnimatedSprite2D.new()
 		_animated.sprite_frames = load(PACK+"animations/"+name+".tres")
 		if asset.get("reactive",false):
 			_animated.set_script(load("res://scripts/environment/meadow_plant.gd"))
+			_animated.set("smooth_motion",false)
 		_stage.add_child(_animated)
 		_animated.play(&"wind")
 	else:
@@ -267,9 +257,7 @@ func _select(index: int) -> void:
 	_frame.editable = is_instance_valid(_animated)
 	_brush_left.visible = asset.get("reactive",false)
 	_brush_right.visible = _brush_left.visible
-	_hit.visible = is_tree
-	_collect.visible = is_tree
-	_dust_button.visible = asset["kind"] in ["terrain","transitions","paths","effects"]
+	_dust_button.visible = asset["kind"] in ["terrain","transitions","paths"]
 	if _dust_button.visible:
 		_dust = Node2D.new()
 		_dust.set_script(load("res://scripts/environment/meadow_footsteps.gd"))
@@ -319,11 +307,7 @@ func _process(_delta: float) -> void:
 	else:
 		_frame_text.text = "Static image"
 		_frame.set_value_no_signal(1)
-	if is_instance_valid(_tree):
-		_status.text = "Tree: %s  |  Hits remaining: %d. Reset asset restores the tree."%[_tree.state,_tree.remaining_hits]
-		_hit.disabled = _tree.state!="standing"
-		_collect.disabled = _tree.state!="felled"
-	elif _brush_left.visible:
+	if _brush_left.visible:
 		_status.text = "Brush tests use the plant's interaction animation, followed by recovery and wind. Pause or drag the frame slider to inspect pixels."
 	else:
 		_status.text = "Drag the preview to pan. Inspect on different backgrounds at 1x to 4x. Frames are numbered from 1."
@@ -334,11 +318,11 @@ func _find_asset(name: String) -> int:
 	return -1
 
 func _run_checks() -> void:
-	assert(_cards.size()==103)
+	assert(_cards.size()==80)
 	for i in range(_assets.size()):
 		_select(i)
 		assert(_stage.get_child_count()>0)
-	_select(_find_asset("birch_crown"))
+	_select(_find_asset("grass_dense"))
 	_animated.pause()
 	_animated.frame = 6
 	_step_frame(1)
@@ -350,24 +334,17 @@ func _run_checks() -> void:
 	assert(_animated.animation==&"brush_left")
 	await get_tree().create_timer(1.4).timeout
 	assert(_animated.animation==&"wind")
-	_select(_find_asset("oak_standing"))
-	_tree.hit(3)
-	await get_tree().create_timer(1.3).timeout
-	assert(_tree.state=="felled")
-	assert(_tree.collect_log())
-	_select(_selected)
-	assert(_tree.state=="standing")
 	_select(_find_asset("soil_00"))
 	_dust.step_at(_dust.global_position)
 	assert(_dust.motes.size()==7)
-	_category="trees"
+	_category="grass"
 	_filter_cards()
-	assert(_cards.filter(func(card: Button) -> bool: return card.visible).size()==28)
-	print("PASS: 103 gallery assets load; frame stepping/wrap, brush/recovery, tree hit/fall/collect/reset, dust and filtering.")
+	assert(_cards.filter(func(card: Button) -> bool: return card.visible).size()==8)
+	print("PASS: 80 gallery assets load; frame stepping/wrap, brush/recovery, dust and filtering.")
 	get_tree().quit()
 
 func _capture() -> void:
-	_select(_find_asset("birch_crown"))
+	_select(_find_asset("grass_dense"))
 	_animated.pause()
 	_animated.frame = 6
 	await get_tree().create_timer(0.4).timeout

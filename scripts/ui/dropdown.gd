@@ -16,6 +16,7 @@ const EDGE_MARGIN := 18.0
 var _labels: PackedStringArray = PackedStringArray()
 var _selected := -1
 var _opens_down := true
+var _highlighted := -1
 
 var selected: int:
 	get:
@@ -34,6 +35,9 @@ func _ready() -> void:
 	_list.hide()
 	set_process(false)
 	custom_minimum_size.y = row_height
+	visibility_changed.connect(func() -> void:
+		if not is_visible_in_tree():
+			close())
 
 func _reparent_list() -> void:
 	var host := _overlay()
@@ -96,6 +100,8 @@ func close() -> void:
 		return
 	_list.hide()
 	set_process(false)
+	if is_visible_in_tree():
+		_toggle.grab_focus()
 
 func _process(_delta: float) -> void:
 	if _toggle_hidden_by_scroll():
@@ -113,7 +119,7 @@ func _mark_current() -> void:
 	var rows := _rows.get_children()
 	for index in rows.size():
 		var row := rows[index] as Button
-		row.theme_type_variation = &"DropdownRowCurrent" if index == _selected else &"DropdownRow"
+		row.theme_type_variation = &"DropdownRowCurrent" if index == (_highlighted if is_open() else _selected) else &"DropdownRow"
 
 func _refresh_toggle() -> void:
 	_toggle.text = _labels[_selected] if _selected >= 0 and _selected < _labels.size() else ""
@@ -125,6 +131,9 @@ func _on_toggle_pressed() -> void:
 	_open()
 
 func _open() -> void:
+	if _labels.is_empty():
+		return
+	_highlighted = maxi(0, _selected)
 	for other in get_tree().get_nodes_in_group("dropdowns"):
 		if other != self:
 			other.close()
@@ -132,6 +141,8 @@ func _open() -> void:
 	_size_list()
 	_place_list()
 	_list.show()
+	_toggle.grab_focus()
+	_mark_current()
 	set_process(true)
 	var visible_rows := _scroll.custom_minimum_size.y / row_height
 	_scroll.scroll_vertical = int(maxf(0.0, (_selected - visible_rows * 0.5 + 0.5) * row_height))
@@ -186,7 +197,20 @@ func _on_row_pressed(index: int) -> void:
 	item_selected.emit(index)
 
 func _input(event: InputEvent) -> void:
-	if not _list.visible:
+	if not is_visible_in_tree() or not _list.visible:
+		return
+	if event.is_action_pressed("ui_down") or event.is_action_pressed("ui_up"):
+		get_viewport().set_input_as_handled()
+		_highlighted = posmod(_highlighted + (1 if event.is_action_pressed("ui_down") else -1), _labels.size())
+		_mark_current()
+		_scroll.ensure_control_visible(_rows.get_child(_highlighted))
+		return
+	if event.is_action_pressed("ui_accept"):
+		get_viewport().set_input_as_handled()
+		_on_row_pressed(_highlighted)
+		return
+	if event.is_action_pressed("ui_focus_next") or event.is_action_pressed("ui_focus_prev") or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right"):
+		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("ui_cancel"):
 		get_viewport().set_input_as_handled()

@@ -65,12 +65,12 @@ func touch(id: String) -> void:
 	config.set_value("meta", "last_played", int(Time.get_unix_time_from_system()))
 	config.save(_path_for(id))
 
-func sanitize_name(raw_name: String) -> String:
+func sanitize_name(raw_name: String, trim := true) -> String:
 	var clean := ""
 	for character: String in raw_name.to_upper():
 		if character.is_valid_identifier() or character == " " or character.is_valid_int():
 			clean += character
-	return clean.strip_edges().substr(0, MAX_NAME_LENGTH)
+	return (clean.strip_edges() if trim else clean).substr(0, MAX_NAME_LENGTH)
 
 func seed_label(value: int) -> String:
 	return "SEED %d" % absi(value)

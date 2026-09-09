@@ -1,6 +1,6 @@
 extends Node2D
 ## All artwork is saved as placed scene nodes; this script only handles viewing and tests.
-const BOARD := Vector2(3840,3040)
+const BOARD := Vector2(3840,1640)
 @onready var camera: Camera2D = $Camera2D
 var _dragged := false
 var _press := Vector2.ZERO
@@ -49,10 +49,7 @@ func _test_asset(at: Vector2) -> void:
 		if not is_ancestor_of(art): continue
 		var bounds: Rect2 = art.get_meta("hit_rect")
 		if not bounds.has_point(art.to_local(at)): continue
-		if art.has_method("hit"):
-			if art.state=="felled": art.collect_log()
-			else: art.hit()
-		elif art.has_method("brush_from"):
+		if art.has_method("brush_from"):
 			art.brush_from(at)
 		return
 
@@ -61,19 +58,14 @@ func _verify() -> void:
 	var seen := {}
 	for art: Node2D in get_tree().get_nodes_in_group("showcase_assets"):
 		if is_ancestor_of(art): seen[art.get_meta("asset_name")]=art
-	assert(seen.size()==103)
+	assert(seen.size()==80 and seen.size()==manifest["assets"].size())
 	for entry: Dictionary in manifest["assets"]: assert(seen.has(entry["name"]))
 	var plant: Node2D = seen["grass_dense"]
 	_test_asset(plant.to_global(Vector2(0,-12)))
 	assert(String(plant.animation).begins_with("brush"))
 	await get_tree().create_timer(1.4).timeout
 	assert(plant.animation==&"wind")
-	var tree: Node2D = seen["birch_standing"]
-	for i in range(3): _test_asset(tree.to_global(Vector2(0,-50)))
-	await get_tree().create_timer(1.3).timeout
-	assert(tree.state=="felled")
-	assert(tree.get_node("Stump").visible)
-	print("PASS: 103 saved, individually placed assets; plant clicks/recovery and tree clicks/felling.")
+	print("PASS: 80 saved, individually placed assets; plant clicks and recovery.")
 	get_tree().quit()
 
 func _capture() -> void:
