@@ -1,0 +1,168 @@
+{
+  "species": {
+    "oak": {
+      "revision": "simple-16color-v1",
+      "standing_size": [
+        208,
+        256
+      ],
+      "trunk_base_y": -36.0,
+      "pivot_x": 0.0,
+      "crown_base_y": -42.0,
+      "crown_x": -1.0,
+      "stump_offset": [
+        -42,
+        -44
+      ],
+      "trunk_offset": [
+        -24.0,
+        -68.0
+      ],
+      "cut_diameter": 34,
+      "source_region": [
+        0,
+        0,
+        610,
+        825
+      ],
+      "split_rows": [
+        156,
+        216
+      ],
+      "trunk_rect": [
+        8,
+        4,
+        42,
+        72
+      ],
+      "pieces": [
+        "oak_piece_0",
+        "oak_piece_1"
+      ]
+    },
+    "birch": {
+      "revision": "simple-16color-v1",
+      "standing_size": [
+        160,
+        288
+      ],
+      "trunk_base_y": -36.0,
+      "pivot_x": 2.0,
+      "crown_base_y": -44.0,
+      "crown_x": -3.0,
+      "stump_offset": [
+        -32,
+        -44
+      ],
+      "trunk_offset": [
+        -20.0,
+        -68.0
+      ],
+      "cut_diameter": 26,
+      "source_region": [
+        610,
+        0,
+        1024,
+        825
+      ],
+      "split_rows": [
+        188,
+        248
+      ],
+      "trunk_rect": [
+        8,
+        4,
+        34,
+        72
+      ],
+      "pieces": [
+        "birch_piece_0",
+        "birch_piece_1",
+        "birch_piece_2"
+      ]
+    },
+    "young_oak": {
+      "revision": "simple-16color-v1",
+      "standing_size": [
+        144,
+        208
+      ],
+      "trunk_base_y": -32.0,
+      "pivot_x": 4.0,
+      "crown_base_y": -54.0,
+      "crown_x": -4.0,
+      "stump_offset": [
+        -30,
+        -40
+      ],
+      "trunk_offset": [
+        -18.0,
+        -54.0
+      ],
+      "cut_diameter": 22,
+      "source_region": [
+        0,
+        825,
+        540,
+        1536
+      ],
+      "split_rows": [
+        126,
+        172
+      ],
+      "trunk_rect": [
+        8,
+        4,
+        30,
+        58
+      ],
+      "pieces": [
+        "young_oak_piece_0",
+        "young_oak_piece_1"
+      ]
+    },
+    "deadwood": {
+      "revision": "simple-16color-v1",
+      "standing_size": [
+        176,
+        272
+      ],
+      "trunk_base_y": -44.0,
+      "pivot_x": 6.0,
+      "crown_base_y": -84.0,
+      "crown_x": -6.0,
+      "stump_offset": [
+        -52,
+        -52
+      ],
+      "trunk_offset": [
+        -32.0,
+        -76.0
+      ],
+      "cut_diameter": 50,
+      "source_region": [
+        540,
+        825,
+        1024,
+        1536
+      ],
+      "split_rows": [
+        156,
+        224
+      ],
+      "trunk_rect": [
+        8,
+        4,
+        58,
+        80
+      ],
+      "pieces": [
+        "deadwood_piece_0",
+        "deadwood_piece_1",
+        "deadwood_piece_2"
+      ]
+    }
+  },
+  "dust_frames": 6,
+  "physics_pixels_per_meter": 64
+}

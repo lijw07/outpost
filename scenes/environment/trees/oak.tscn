@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="1_2hhic"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_standing.png" id="2_hk7xs"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_stump.png" id="3_x3cod"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_crown.png" id="4_rvxwi"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/oak_trunk.png" id="5_4tebp"]
+
+[node name="Oak" type="Node2D" unique_id=1935866507]
+texture_filter = 1
+script = ExtResource("1_2hhic")
+
+[node name="Standing" type="Sprite2D" parent="." unique_id=332116683]
+texture = ExtResource("2_hk7xs")
+centered = false
+offset = Vector2(-104, -252)
+
+[node name="Stump" type="Sprite2D" parent="." unique_id=481492242]
+visible = false
+texture = ExtResource("3_x3cod")
+centered = false
+offset = Vector2(-42, -44)
+
+[node name="Foliage" type="Sprite2D" parent="." unique_id=1133724501]
+visible = false
+texture = ExtResource("4_rvxwi")
+centered = false
+offset = Vector2(-104, -256)
+
+[node name="Log" type="Sprite2D" parent="." unique_id=1550398350]
+visible = false
+texture = ExtResource("5_4tebp")
+centered = false
+offset = Vector2(-24, -104)
+
+[node name="Effects" type="Node2D" parent="." unique_id=1987457053]
+z_index = 20

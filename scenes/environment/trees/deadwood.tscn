@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="1_pdovd"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_standing.png" id="2_aald5"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_stump.png" id="3_63ylp"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_crown.png" id="4_f7rot"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/deadwood_trunk.png" id="5_ecnlj"]
+
+[node name="Deadwood" type="Node2D" unique_id=118540350]
+texture_filter = 1
+script = ExtResource("1_pdovd")
+species = "deadwood"
+
+[node name="Standing" type="Sprite2D" parent="." unique_id=555482051]
+texture = ExtResource("2_aald5")
+centered = false
+offset = Vector2(-88, -268)
+
+[node name="Stump" type="Sprite2D" parent="." unique_id=1294340825]
+visible = false
+texture = ExtResource("3_63ylp")
+centered = false
+offset = Vector2(-52, -52)
+
+[node name="Foliage" type="Sprite2D" parent="." unique_id=1800789735]
+visible = false
+texture = ExtResource("4_f7rot")
+centered = false
+offset = Vector2(-92, -272)
+
+[node name="Log" type="Sprite2D" parent="." unique_id=449782635]
+visible = false
+texture = ExtResource("5_ecnlj")
+centered = false
+offset = Vector2(-26, -120)
+
+[node name="Effects" type="Node2D" parent="." unique_id=867327274]
+z_index = 20

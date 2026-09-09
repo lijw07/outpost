@@ -6,7 +6,7 @@ const MAP_SIZE := Vector2(4096, 2560)
 @onready var _marker: Node2D = $MeadowDressing/WalkMarker
 @onready var _dust: Node2D = $MeadowDressing/Footsteps
 var _last_step := Vector2(1984,1454)
-var collected := {"flowers":0,"mushrooms":0}
+var collected := {"flowers":0,"mushrooms":0,"wood":0}
 var _pick_target: Node2D
 const PICK_RADIUS := 76.0
 
@@ -19,6 +19,8 @@ func _ready() -> void:
 	_refresh_hud()
 	for plant in get_tree().get_nodes_in_group("meadow_pickables"):
 		if is_ancestor_of(plant): plant.harvested.connect(_on_harvested)
+	for tree in get_tree().get_nodes_in_group("meadow_trees"):
+		if is_ancestor_of(tree): tree.wood_collected.connect(func(amount: int) -> void: _on_harvested("wood",amount))
 	if "--terrain-capture" in OS.get_cmdline_user_args():
 		_capture_terrain()
 
@@ -54,8 +56,15 @@ func _capture_terrain() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and not event.is_echo():
 		_update_pick_target()
-		if _pick_target != null: _pick_target.harvest()
+		var found_wood := 0
+		for tree in get_tree().get_nodes_in_group("meadow_trees"):
+			if is_ancestor_of(tree): found_wood += tree.collect_wood(_marker.global_position)
+		if found_wood == 0 and _pick_target != null: _pick_target.harvest()
 		get_viewport().set_input_as_handled()
+	if event.is_action_pressed("attack") and not event.is_echo():
+		if _try_chop(get_global_mouse_position()):
+			get_viewport().set_input_as_handled()
+			return
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var at := get_global_mouse_position()
 		for plant: AnimatedSprite2D in get_tree().get_nodes_in_group("meadow_plants"):
@@ -75,7 +84,7 @@ func _refresh_hud() -> void:
 	var movement: Array[String] = []
 	for action: String in ["move_up", "move_left", "move_down", "move_right"]:
 		movement.append(Settings.event_display_name(Settings.get_binding(action)))
-	%MovementHint.text = "%s: WALK    CLICK PLANTS: BRUSH    %s: PAUSE" % [" / ".join(movement), Settings.event_display_name(Settings.get_binding("pause"))]
+	%MovementHint.text = "%s: WALK    CLICK: BRUSH / CHOP NEARBY TREE    %s: PAUSE" % [" / ".join(movement), Settings.event_display_name(Settings.get_binding("pause"))]
 
 func _update_pick_target() -> void:
 	_pick_target = null
@@ -86,11 +95,24 @@ func _update_pick_target() -> void:
 		if distance < nearest:
 			nearest = distance
 			_pick_target = plant
-	var action := "WALK UP TO FLOWERS OR MUSHROOMS TO PICK"
+	var action := "%s: PICK FLOWERS, MUSHROOMS OR SETTLED WOOD" % Settings.event_display_name(Settings.get_binding("interact"))
+	for tree in get_tree().get_nodes_in_group("meadow_trees"):
+		if is_ancestor_of(tree) and tree.state == "standing" and _marker.global_position.distance_to(tree.global_position) < 100.0:
+			action = "CLICK TREE: CHOP (%d HITS LEFT)" % tree.remaining_hits
+			break
 	if _pick_target != null:
 		action = "%s: PICK %s" % [Settings.event_display_name(Settings.get_binding("interact")),_pick_target.pickup_kind.to_upper()]
-	%HarvestHint.text = "FLOWERS: %d	MUSHROOMS: %d\n%s" % [collected["flowers"],collected["mushrooms"],action]
+	%HarvestHint.text = "FLOWERS: %d / MUSHROOMS: %d / WOOD: %d\n%s" % [collected["flowers"],collected["mushrooms"],collected["wood"],action]
 
 func _on_harvested(kind: String, amount: int) -> void:
 	collected[kind] = int(collected.get(kind,0))+amount
 	_update_pick_target()
+
+func _try_chop(at: Vector2) -> bool:
+	for tree in get_tree().get_nodes_in_group("meadow_trees"):
+		if not is_ancestor_of(tree) or tree.state != "standing": continue
+		if _marker.global_position.distance_to(tree.global_position) > 100.0: continue
+		var bounds := Rect2(tree.standing.offset,tree.standing.texture.get_size())
+		if bounds.grow(12).has_point(tree.to_local(at)):
+			return tree.hit(_marker.global_position)
+	return false

@@ -92,7 +92,17 @@ Escape in-game opens a pause menu with Resume, Settings, and Return to Menu.
 The camera stays paused while settings are open, and HUD hints use the current
 bindings. Selected survivor and world names appear in the HUD.
 
-## Menu music
+## Menu atmosphere
+
+The main menu runs a live survival demo: survivors gather supplies, construct and
+repair defenses, and fight zombie waves with moving projectiles. It rotates
+between a forest camp (**Last Watch**), roadside outpost (**Dead Air**), and marsh
+causeway (**The Drowned Mile**). The title panel sits on the left so the fort and
+combat remain visible. Each demo is an isolated world with no access to player
+saves or input. A persistent shuffled deck prevents adjacent repeats across
+launches; returning from gameplay keeps the session's location. Reduce Motion
+freezes the entire demo. See `assets/menu/README.md` for behavior, asset provenance,
+and the outlined 2.5D artwork workflow.
 
 The menu plays an original 1:47 looping cue, **Last Light at the Outpost**:
 muted plucked melody, low harmonies, and a sparse pulse. It fades in on entry,
@@ -133,6 +143,8 @@ Run the regression suite with Python 3 and Godot installed:
 python3 tests/run_ui_checks.py
 # Full cleanup checks, including every scene and editor diagnostics:
 python3 tests/run_ui_checks.py --all
+# Include a rendered Godot review and save preview images:
+python3 tests/run_ui_checks.py --all --render
 # Or choose an executable:
 python3 tests/run_ui_checks.py --godot /path/to/godot
 ```
@@ -144,8 +156,8 @@ and pagination, lobby cleanup, loading into the game, pause/resume, and Continue
 Do not run `ui_regression.gd` against your real user profile; it deliberately
 creates and deletes test saves, and refuses an ordinary profile.
 
-The runner fails on logged warnings as well as errors. `--all` also checks all
-20 scenes, UI artwork, terrain, vegetation, harvesting, and asset-review tools.
+The runner fails on logged warnings as well as errors. `--all` also checks every
+scene, UI artwork, terrain, vegetation, harvesting, and asset-review tools.
 It starts a private headless editor and reads diagnostics for every GDScript
 through its language server, without changing warnings or muting diagnostics.
 
@@ -158,6 +170,13 @@ leak. Re-evaluate background loading when upgrading Godot or adding larger level
 
 Use a windowed playthrough to inspect layout and motion after scene changes.
 The September UI fixes were also checked in a separate rendered game instance.
+`tests/menu_background_checks.gd` covers shuffled scenery, fresh-process rotation,
+independent simulations, four minutes of combat/building/hauling per scene,
+scenery overlap, body clearance, worker stalls, distance-driven walking,
+and live Reduce Motion changes. `--render` adds GPU checks
+of moving/frozen pixels and resizing, and saves title, Settings, and landscape
+PNGs under `output/menu-review/`. It requires a desktop display and uses Godot's
+normal audio driver with a muted disposable profile.
 
 ## Controls
 

@@ -1,0 +1,107 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree_lab.gd" id="1_4qn6r"]
+[ext_resource type="PackedScene" path="res://scenes/world/meadow_terrain.tscn" id="2_81h6b"]
+[ext_resource type="PackedScene" path="res://scenes/environment/trees/oak.tscn" id="3_ud0pv"]
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="4_vspyf"]
+[ext_resource type="PackedScene" path="res://scenes/environment/trees/birch.tscn" id="5_4vs2n"]
+[ext_resource type="PackedScene" path="res://scenes/environment/trees/young_oak.tscn" id="6_4w044"]
+[ext_resource type="PackedScene" path="res://scenes/environment/trees/deadwood.tscn" id="7_l3col"]
+
+[node name="MeadowTreeLab" type="Node2D" unique_id=1919016068]
+texture_filter = 1
+script = ExtResource("1_4qn6r")
+
+[node name="MeadowTerrain" type="Node2D" parent="." unique_id=1080411061 instance=ExtResource("2_81h6b")]
+texture_filter = 1
+position = Vector2(-1024, -600)
+
+[node name="Oak" type="Node2D" parent="." unique_id=350825814 instance=ExtResource("3_ud0pv")]
+texture_filter = 1
+position = Vector2(240, 780)
+scale = Vector2(2, 2)
+script = ExtResource("4_vspyf")
+
+[node name="@Label@2" type="Label" parent="." unique_id=1139375224]
+offset_left = 160.0
+offset_top = 860.0
+offset_right = 160.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 28
+text = "OAK"
+
+[node name="Birch" type="Node2D" parent="." unique_id=886685731 instance=ExtResource("5_4vs2n")]
+texture_filter = 1
+position = Vector2(720, 780)
+scale = Vector2(2, 2)
+script = ExtResource("4_vspyf")
+species = "birch"
+
+[node name="@Label@3" type="Label" parent="." unique_id=1499898850]
+offset_left = 640.0
+offset_top = 860.0
+offset_right = 640.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 28
+text = "BIRCH"
+
+[node name="YoungOak" type="Node2D" parent="." unique_id=1920794786 instance=ExtResource("6_4w044")]
+texture_filter = 1
+position = Vector2(1200, 780)
+scale = Vector2(2, 2)
+script = ExtResource("4_vspyf")
+species = "young_oak"
+
+[node name="@Label@4" type="Label" parent="." unique_id=151872384]
+offset_left = 1120.0
+offset_top = 860.0
+offset_right = 1120.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 28
+text = "YOUNG OAK"
+
+[node name="Deadwood" type="Node2D" parent="." unique_id=1383066762 instance=ExtResource("7_l3col")]
+texture_filter = 1
+position = Vector2(1680, 780)
+scale = Vector2(2, 2)
+script = ExtResource("4_vspyf")
+species = "deadwood"
+
+[node name="@Label@5" type="Label" parent="." unique_id=415177994]
+offset_left = 1600.0
+offset_top = 860.0
+offset_right = 1600.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 28
+text = "DEADWOOD"
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2027572156]
+
+[node name="@ColorRect@6" type="ColorRect" parent="HUD" unique_id=1002234351]
+offset_right = 1920.0
+offset_bottom = 140.0
+mouse_filter = 2
+color = Color(0.09019608, 0.14117648, 0.12156863, 0.93333334)
+
+[node name="Instructions0" type="Label" parent="HUD" unique_id=1350437548]
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 24.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 24
+text = "MEADOW / CHOPPABLE TREE TEST"
+
+[node name="Instructions1" type="Label" parent="HUD" unique_id=464088794]
+offset_left = 24.0
+offset_top = 58.0
+offset_right = 24.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 20
+text = "Click a tree three times. Click its left/right side to choose the fall direction. F near wood: collect. R: reset."
+
+[node name="Status" type="Label" parent="HUD" unique_id=1196414083]
+offset_left = 24.0
+offset_top = 98.0
+offset_right = 24.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 20

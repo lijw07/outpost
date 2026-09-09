@@ -1,0 +1,10 @@
+[
+  {"id":"bat", "name":"Baseball bat", "frame":0,"length":43,"reach":64,"damage":42,"cycle":0.82},
+  {"id":"spiked_bat", "name":"Spiked bat", "frame":1,"length":43,"reach":64,"damage":52,"cycle":0.9},
+  {"id":"knife", "name":"Combat knife", "frame":2,"length":23,"reach":43,"damage":30,"cycle":0.56},
+  {"id":"machete", "name":"Machete", "frame":3,"length":37,"reach":57,"damage":45,"cycle":0.74},
+  {"id":"golf_club", "name":"Golf club", "frame":4,"length":47,"reach":69,"damage":38,"cycle":0.8},
+  {"id":"crowbar", "name":"Crowbar", "frame":5,"length":36,"reach":57,"damage":40,"cycle":0.78},
+  {"id":"axe", "name":"Fire axe", "frame":6,"length":38,"reach":60,"damage":60,"cycle":1.0},
+  {"id":"pipe", "name":"Steel pipe", "frame":7,"length":37,"reach":59,"damage":40,"cycle":0.82}
+]

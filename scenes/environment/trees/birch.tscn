@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/meadow_tree.gd" id="1_gm7pu"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_standing.png" id="2_uxnjs"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_stump.png" id="3_3adql"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_crown.png" id="4_ig7ke"]
+[ext_resource type="Texture2D" path="res://assets/environment/meadow/trees/birch_trunk.png" id="5_f0n7s"]
+
+[node name="Birch" type="Node2D" unique_id=2042023038]
+texture_filter = 1
+script = ExtResource("1_gm7pu")
+species = "birch"
+
+[node name="Standing" type="Sprite2D" parent="." unique_id=1049190127]
+texture = ExtResource("2_uxnjs")
+centered = false
+offset = Vector2(-80, -284)
+
+[node name="Stump" type="Sprite2D" parent="." unique_id=375998551]
+visible = false
+texture = ExtResource("3_3adql")
+centered = false
+offset = Vector2(-32, -44)
+
+[node name="Foliage" type="Sprite2D" parent="." unique_id=1510888003]
+visible = false
+texture = ExtResource("4_ig7ke")
+centered = false
+offset = Vector2(-68, -288)
+
+[node name="Log" type="Sprite2D" parent="." unique_id=1451438542]
+visible = false
+texture = ExtResource("5_f0n7s")
+centered = false
+offset = Vector2(-18, -104)
+
+[node name="Effects" type="Node2D" parent="." unique_id=1023754355]
+z_index = 20

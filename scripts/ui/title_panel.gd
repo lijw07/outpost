@@ -22,6 +22,15 @@ func _ready() -> void:
 	extras_button.pressed.connect(extras_requested.emit)
 	quit_button.pressed.connect(quit_requested.emit)
 	rig.adopt(content)
+	resized.connect(_layout_demo_menu)
+	_layout_demo_menu()
+
+func _layout_demo_menu() -> void:
+	# Give the live fort a clear view on the right; other panels remain centered.
+	var rig: Control = %ChainRig
+	rig.anchor_right = 0.5
+	rig.plate_width = clampf(size.x * 0.5 - 80.0,600.0,760.0)
+	rig._relayout.call_deferred()
 
 func focus_first() -> void:
 	if %ContinueButton.visible:

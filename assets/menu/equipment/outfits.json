@@ -1,0 +1,6 @@
+[
+  {"id":"civilian", "name":"Civilian denim and sneakers", "jacket":"497b92", "trousers":"454656", "shoes":"d0bd99", "backpack":"987143", "headgear":0},
+  {"id":"military", "name":"Military fatigues and combat boots", "jacket":"697446", "trousers":"596142", "shoes":"3c352a", "backpack":"59603c", "headgear":1},
+  {"id":"police", "name":"Police uniform and duty boots", "jacket":"344b72", "trousers":"303f56", "shoes":"34363a", "backpack":"414955", "headgear":2},
+  {"id":"streetwear", "name":"Burgundy jacket, chinos and white trainers", "jacket":"974849", "trousers":"918270", "shoes":"d6d8cc", "backpack":"4f7778", "headgear":3}
+]

@@ -10,7 +10,7 @@ The terrain and `meadow_dressing.tscn` are instanced into the game, so placement
 
 ## Side-by-side scene
 
-Open **`scenes/environment/meadow_showcase.tscn`** in Godot's 2D editor. All **80 active assets** are saved as individually positioned nodes in labeled sections: ground tiles, grass/dirt transitions, paths, grasses, flowers, rocks, shrubs and small props. The placement scale is 2×.
+Open **`scenes/environment/meadow_showcase.tscn`** in Godot's 2D editor. All **80 non-tree assets** are saved as individually positioned nodes in labeled sections: ground tiles, grass/dirt transitions, paths, grasses, flowers, rocks, shrubs and small props. The placement scale is 2×.
 
 Press **F6** to run it. Drag or use WASD to pan, use the wheel to zoom, press **1** for native sprite size, **2** for double size, or **Space** for the overview. Click plants to test brush movement. **R** resets the scene.
 
@@ -28,7 +28,9 @@ Press **F6** to run it. Drag or use WASD to pan, use the wheel to zoom, press **
 - 17 plant SpriteFrames sets with wind, brush and recovery in both directions.
 - Six picked-state sprites in `harvested/`, on the original sprite canvases and pivots.
 
-Tree support is paused. Tree scenes, sprites, chopping, shaking, crown wind animations and tree-building tools are removed from the active pack and previews. They are preserved under `output/meadow/trees_paused/`, excluded from Godot import, with a snapshot of their previous integration. The ordinary `stump_old` and `branch` decorative props remain static; they have no chopping behavior.
+Four simplified choppable trees are active: oak, birch, young oak and deadwood. Their sprites share a 16-color palette and a 2px native grid. Open `scenes/environment/meadow_tree_lab.tscn` and press **F6** to inspect them side by side at 2× scale. Click a tree three times; clicking its left or right side chooses the opposite fall direction. Point near settled wood and press **F** to collect it; **R** resets. These four trees also appear in the playable meadow: move the marker within 100 pixels, click to chop, then approach settled wood and press your interaction key.
+
+Trees sway and bend smoothly away from hits, with no hit dust. The entire tree falls with its branches and leaves. On landing, a small translucent puff softens its change into one matching log and three sticks. Stumps remain. Wood pickups are local preview counters, reset on reload, and are not persistent inventory or multiplayer replication. Tree metadata lives separately in `trees/catalog.json`; see [tree assets and physics](trees/README.md). Earlier detailed trees remain archived under `output/meadow/trees_paused/`. The decorative `stump_old` and `branch` props remain static.
 
 ## Terrain and vegetation
 
@@ -44,7 +46,7 @@ The original eight-frame wind and six-frame contact atlases are retained for sou
 
 ## Sources and rebuilding
 
-Source artwork was generated with ImageGen. Historical prompts remain in `prompts.json`; the built-in ImageGen prompt for the picked-state sheet is recorded in `harvested/generation.json`. The chosen master is `source/props_picked.png`; its neutral checkerboard matte is removed during slicing. Original canvas size, crop, scale and pivot are retained, though the generated remaining foliage is not an exact pixel-for-pixel subtraction. Active source sheets are under `source/`, excluded from Godot import. Archived tree prompts do not indicate active support.
+Source artwork was generated with ImageGen. Historical prompts remain in `prompts.json`; the built-in ImageGen prompt for the picked-state sheet is recorded in `harvested/generation.json`. The chosen master is `source/props_picked.png`; its neutral checkerboard matte is removed during slicing. Original canvas size, crop, scale and pivot are retained, though the generated remaining foliage is not an exact pixel-for-pixel subtraction. Active source sheets are under `source/`, excluded from Godot import. The current simplified tree prompt is in `trees/simple_art_prompt.json`; dust provenance is in `trees/provenance.json`.
 
 With Python, Pillow and NumPy installed:
 

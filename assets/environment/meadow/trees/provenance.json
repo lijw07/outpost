@@ -1,0 +1,9 @@
+{
+  "tree_source": "Simplified built-in ImageGen master, normalized to one explicit 16-color palette on a 2px grid",
+  "dust_mode": "built-in image_gen",
+  "dust_source": "../source/tree_dust.png",
+  "dust_prompt": "Game VFX sprite sheet for Outpost, detailed top-down pixel art meadow survival game. One horizontal row of SIX evenly spaced square frames, chronological animation of ONE dry wood dust / smoke puff. Frame1 compact warm gray tan opaque puff, frame2 larger chunky billowing cloud, frame3 largest opaque soft-edged clustered cloud with dark shaded lobes and lit cream-gray edges, frame4 spread broken cloud, frame5 dispersed smaller wisps, frame6 a few fading dust flecks. Earthy muted taupe, warm gray, pale sand, brown shadows, no fire, no red, no text, no labels, no borders, no ground plane, no objects. TRUE transparent alpha background, no checkerboard. Pixel clusters at a uniform native scale, hard pixel contours, subtle internal shade ramps, no vector look. Each frame fully separate with generous empty gutters, no neighboring-frame overlap. Texture used to mask transitions when a tree is chopped and breaks into log pieces; cloud must be dense enough in frames 1-3. Landscape canvas 1536x256 if possible, each frame centered within identical square cells.",
+  "tree_prompt": "simple_art_prompt.json",
+  "tree_master": "../source/trees_simple.png",
+  "current_dust_behavior": "Landing only: atlas region [711,176,364,356] of cloud_master.png; maximum opacity 0.60, duration 0.65s. No dust from axe hits."
+}

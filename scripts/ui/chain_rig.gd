@@ -206,6 +206,7 @@ func _relayout() -> void:
 	_clear_height = plate_bottom + CLEAR_MARGIN
 	_scatter_blood(half, plate_top, plate_bottom)
 	_laid_out = true
+	_lay_chains()
 
 func _build_splatters() -> void:
 	for i in SPLATTER_COUNT:

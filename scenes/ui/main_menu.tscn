@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
 [ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
-[ext_resource type="Texture2D" path="res://assets/loading/loading_forest_camp.png" id="3_bg"]
+[ext_resource type="Script" path="res://scripts/ui/menu_background.gd" id="3_bg"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/title_panel.tscn" id="4_title"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/mode_select_panel.tscn" id="5_mode"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/settings_panel.tscn" id="6_settings"]
@@ -28,7 +28,7 @@ stream = ExtResource("12_music")
 volume_db = -60.0
 bus = &"Music"
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="Control" parent="."]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = 15
@@ -37,9 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("3_bg")
-expand_mode = 1
-stretch_mode = 6
+script = ExtResource("3_bg")
 
 [node name="Vignette" type="ColorRect" parent="."]
 layout_mode = 1
@@ -49,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.0392157, 0.0431373, 0.0509804, 0.62)
+color = Color(0.0392157, 0.0431373, 0.0509804, 0.10)
 
 [node name="Screens" type="Control" parent="."]
 layout_mode = 1
