@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
 [ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/extras_panel.tscn" id="7_extras"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/save_select_panel.tscn" id="8_save"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/lobby_panel.tscn" id="10_lobby"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/world_select_panel.tscn" id="11_world"]
+[ext_resource type="AudioStream" path="res://assets/audio/music/last_light.ogg" id="12_music"]
 
 [node name="MainMenu" type="Control"]
 texture_filter = 2
@@ -20,6 +22,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_theme")
 script = ExtResource("1_menu")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_music")
+volume_db = -60.0
+bus = &"Music"
 
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 2
@@ -75,3 +82,20 @@ layout_mode = 1
 [node name="LobbyPanel" parent="Screens" instance=ExtResource("10_lobby")]
 visible = false
 layout_mode = 1
+
+[node name="WorldSelectPanel" parent="Screens" instance=ExtResource("11_world")]
+visible = false
+layout_mode = 1
+
+[node name="Fade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 400
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

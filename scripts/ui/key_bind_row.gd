@@ -1,5 +1,8 @@
 extends HBoxContainer
 
+signal listening_changed(active: bool)
+signal binding_requested(action: String, event: InputEvent)
+
 @onready var _action_label: Label = %ActionLabel
 @onready var _bind_button: Button = %BindButton
 
@@ -23,7 +26,7 @@ func refresh() -> void:
 	_bind_button.text = Settings.event_display_name(Settings.get_binding(_action))
 
 func _input(event: InputEvent) -> void:
-	if not _listening:
+	if not _listening or not is_visible_in_tree():
 		return
 	if event is InputEventKey and (event as InputEventKey).is_echo():
 		return
@@ -34,10 +37,11 @@ func _input(event: InputEvent) -> void:
 	get_viewport().set_input_as_handled()
 	_listening = false
 	set_process_input(false)
-	if event is InputEventKey and (event as InputEventKey).physical_keycode == KEY_ESCAPE:
+	listening_changed.emit(false)
+	if event is InputEventKey and ((event as InputEventKey).physical_keycode == KEY_ESCAPE or (event as InputEventKey).keycode == KEY_ESCAPE):
 		refresh()
 		return
-	Settings.set_binding(_action, event)
+	binding_requested.emit(_action, event)
 	refresh()
 
 func _start_listening() -> void:
@@ -46,3 +50,12 @@ func _start_listening() -> void:
 	_listening = true
 	_bind_button.text = "PRESS A KEY"
 	set_process_input(true)
+	listening_changed.emit(true)
+
+func cancel_listening() -> void:
+	if not _listening:
+		return
+	_listening = false
+	set_process_input(false)
+	listening_changed.emit(false)
+	refresh()

@@ -20,7 +20,9 @@ config/icon="res://icon.svg"
 Settings="*res://scripts/autoload/settings_manager.gd"
 GameSession="*res://scripts/autoload/game_session.gd"
 SaveManager="*res://scripts/autoload/save_manager.gd"
+WorldManager="*res://scripts/autoload/world_manager.gd"
 UiAudio="*res://scripts/autoload/ui_audio.gd"
+UiFocus="*res://scripts/autoload/ui_focus.gd"
 NetSession="*res://scripts/autoload/net_session.gd"
 
 [display]

@@ -22,6 +22,7 @@ CLAUDE.md
 AGENTS.md
 .mcp.json
 Claude outputs/
+_to_delete/
 .cursor/
 .cursorrules
 .cursorignore
@@ -37,3 +38,12 @@ Claude outputs/
 # OS cruft
 .DS_Store
 Thumbs.db
+/docs
+/output
+
+# Python generator caches
+__pycache__/
+*.py[cod]
+
+# Source artwork is not imported by Godot
+/assets/_source/*.import

@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/pause_menu.gd" id="script"]
+[ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="rig"]
+[ext_resource type="PackedScene" path="res://scenes/ui/panels/settings_panel.tscn" id="settings"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+texture_filter = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("script")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.03, 0.025, 0.8)
+
+[node name="PauseScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChainRig" parent="PauseScreen" instance=ExtResource("rig")]
+layout_mode = 1
+heading_text = "PAUSED"
+subtitle_text = "THE MEADOW"
+plate_width = 960.0
+body_height = 560.0
+
+[node name="Content" type="VBoxContainer" parent="PauseScreen"]
+layout_mode = 1
+theme_override_constants/separation = 22
+
+[node name="ResumeButton" type="Button" parent="PauseScreen/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 76)
+text = "RESUME"
+
+[node name="PauseSettingsButton" type="Button" parent="PauseScreen/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 76)
+text = "SETTINGS"
+
+[node name="ReturnButton" type="Button" parent="PauseScreen/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 76)
+text = "RETURN TO MENU"
+
+[node name="SettingsPanel" parent="." instance=ExtResource("settings")]
+visible = false
+layout_mode = 1

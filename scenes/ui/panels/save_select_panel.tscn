@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/save_select_panel.gd" id="1_save"]
 [ext_resource type="PackedScene" path="res://scenes/ui/components/chain_rig.tscn" id="9_rig"]
+
+[ext_resource type="Script" path="res://scripts/ui/modal.gd" id="modal"]
 
 [node name="SaveSelectPanel" type="Control"]
 layout_mode = 3
@@ -17,8 +19,8 @@ unique_name_in_owner = true
 layout_mode = 1
 heading_text = "SELECT A SURVIVOR"
 use_title_font = false
-plate_width = 1040.0
-body_height = 620.0
+plate_width = 1460.0
+body_height = 860.0
 top_margin = 60.0
 
 [node name="Content" type="VBoxContainer" parent="."]
@@ -26,10 +28,25 @@ unique_name_in_owner = true
 layout_mode = 1
 theme_override_constants/separation = 16
 
-[node name="Scroll" type="ScrollContainer" parent="Content"]
+[node name="SelectionContext" type="Label" parent="Content"]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
+text = "YOUR SURVIVOR IS SEPARATE FROM YOUR WORLD."
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 26
+
+[node name="SlotSummary" type="Label" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SURVIVORS 0 / 6"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 26
+
+[node name="Scroll" type="ScrollContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
 
 [node name="Inner" type="VBoxContainer" parent="Content/Scroll"]
 layout_mode = 2
@@ -38,8 +55,12 @@ theme_override_constants/separation = 12
 
 [node name="EmptyHint" type="Label" parent="Content/Scroll/Inner"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-text = "NO SURVIVORS YET - START A NEW GAME"
+size_flags_horizontal = 3
+text = "NO SURVIVORS YET - CREATE ONE TO BEGIN"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SlotList" type="VBoxContainer" parent="Content/Scroll/Inner"]
 unique_name_in_owner = true
@@ -47,12 +68,25 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="NameRow" type="HBoxContainer" parent="Content"]
+[node name="Gap" type="Control" parent="Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Footer" type="MarginContainer" parent="Content"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stack" type="VBoxContainer" parent="Content/Footer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="NameRow" type="HBoxContainer" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="NameField" type="LineEdit" parent="Content/NameRow"]
+[node name="NameField" type="LineEdit" parent="Content/Footer/Stack/NameRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
@@ -60,20 +94,121 @@ size_flags_horizontal = 3
 max_length = 14
 placeholder_text = "CHARACTER NAME"
 
-[node name="CreateButton" type="Button" parent="Content/NameRow"]
+[node name="CreateButton" type="Button" parent="Content/Footer/Stack/NameRow"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(280, 76)
 layout_mode = 2
 text = "CREATE"
 
-[node name="NewGameButton" type="Button" parent="Content"]
+[node name="CancelButton" type="Button" parent="Content/Footer/Stack/NameRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 76)
+layout_mode = 2
+text = "CANCEL"
+
+[node name="Pager" type="HBoxContainer" parent="Content/Footer/Stack"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PrevButton" type="Button" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 68)
+layout_mode = 2
+text = "PREV"
+
+[node name="PageLabel" type="Label" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "PAGE 1 / 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="Content/Footer/Stack/Pager"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 68)
+layout_mode = 2
+text = "NEXT"
+
+[node name="NewGameButton" type="Button" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
-text = "NEW GAME"
+text = "NEW SURVIVOR"
 
-[node name="BackButton" type="Button" parent="Content"]
+[node name="BackButton" type="Button" parent="Content/Footer/Stack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 text = "BACK"
+
+[node name="DeleteConfirm" type="Control" parent="."]
+script = ExtResource("modal")
+initial_focus = NodePath("Box/Inner/Buttons/CancelDeleteButton")
+unique_name_in_owner = true
+visible = false
+z_index = 200
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="DeleteConfirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0392157, 0.0431373, 0.0509804, 0.78)
+
+[node name="Box" type="PanelContainer" parent="DeleteConfirm"]
+custom_minimum_size = Vector2(940, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"MenuPlate"
+
+[node name="Inner" type="VBoxContainer" parent="DeleteConfirm/Box"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="DeleteQuestion" type="Label" parent="DeleteConfirm/Box/Inner"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SectionLabel"
+text = "DELETE SURVIVOR?"
+horizontal_alignment = 1
+
+[node name="Warning" type="Label" parent="DeleteConfirm/Box/Inner"]
+layout_mode = 2
+text = "THIS CANNOT BE UNDONE"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="DeleteConfirm/Box/Inner"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ConfirmDeleteButton" type="Button" parent="DeleteConfirm/Box/Inner/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DELETE"
+
+[node name="CancelDeleteButton" type="Button" parent="DeleteConfirm/Box/Inner/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CANCEL"

@@ -2,13 +2,30 @@ extends Control
 
 signal hoisted
 
+const CHAIN_TEXTURE := preload("res://assets/ui/props/chains/chain_tile.png")
+const SPLATTERS: Array[Texture2D] = [
+	preload("res://assets/ui/decals/blood_splatter_01.png"),
+	preload("res://assets/ui/decals/blood_splatter_02.png"),
+	preload("res://assets/ui/decals/blood_splatter_03.png"),
+	preload("res://assets/ui/decals/blood_splatter_04.png"),
+	preload("res://assets/ui/decals/blood_splatter_05.png"),
+	preload("res://assets/ui/decals/blood_splatter_06.png"),
+	preload("res://assets/ui/decals/blood_splatter_07.png"),
+	preload("res://assets/ui/decals/blood_splatter_08.png"),
+	preload("res://assets/ui/decals/blood_splatter_09.png"),
+	preload("res://assets/ui/decals/blood_splatter_10.png"),
+	preload("res://assets/ui/decals/blood_splatter_11.png"),
+	preload("res://assets/ui/decals/blood_splatter_12.png"),
+]
+const SPLATTER_COUNT := 6
 const CHAIN_INSET := 98.0
-const CHAIN_HALF_WIDTH := 22.0
-const CHAIN_TOP := -1700.0
+const CHAIN_CEILING := -90.0
 const CHAIN_TILE := 50.0
+const CHAIN_LINKS := 56
+const CHAIN_BOW := 26.0
+const CHAIN_LAG := 0.34
 const MOUNT_HALF_WIDTH := 65.0
 const PLATE_BITE := 18.0
-const DRIP_SOURCE_Y := 10.0
 const CLEAR_MARGIN := 220.0
 
 const FALL_GRAVITY := 2600.0
@@ -24,12 +41,6 @@ const REST_FALL := 0.6
 const HOIST_ACCEL := 9000.0
 const HOIST_KICK := 260.0
 
-const BEAD_START := -90.0
-const BEAD_SPEED_MIN := 45.0
-const BEAD_SPEED_MAX := 80.0
-const BEAD_WAIT_MIN := 1.5
-const BEAD_WAIT_MAX := 6.5
-
 @export var heading_text := "OUTPOST"
 @export var subtitle_text := ""
 @export var use_title_font := false
@@ -42,13 +53,10 @@ const BEAD_WAIT_MAX := 6.5
 @onready var _content: VBoxContainer = %Content
 @onready var _heading_label: Label = %HeadingLabel
 @onready var _subtitle_label: Label = %SubtitleLabel
-@onready var _chain_left: TextureRect = %ChainLeft
-@onready var _chain_right: TextureRect = %ChainRight
+@onready var _chains: Node2D = %Chains
+@onready var _splatters: Node2D = %Splatters
 @onready var _mount_left: TextureRect = %MountLeft
 @onready var _mount_right: TextureRect = %MountRight
-@onready var _beads: Array[Sprite2D] = [%BeadLeft, %BeadRight]
-@onready var _bead_drips: Array[AnimatedSprite2D] = [%DripChainA, %DripChainB]
-@onready var _drips: Array[AnimatedSprite2D] = [%DripA, %DripB, %DripC, %DripD]
 
 var _clear_height := 1500.0
 var _hoisting := false
@@ -56,45 +64,45 @@ var _angle := 0.0
 var _spin := 0.0
 var _sag := 0.0
 var _fall := 0.0
-var _bead_end := 0.0
-var _bead_travel: Array[float] = [0.0, 0.0]
-var _bead_speed: Array[float] = [0.0, 0.0]
-var _bead_wait: Array[float] = [0.0, 0.0]
+var _chain_x := 0.0
+var _chain_count := 1
+var _laid_out := false
+var _mount_local := Vector2.ZERO
+var _link_pool: Array[Array] = [[], []]
 
 func _ready() -> void:
 	_heading_label.text = heading_text
 	_heading_label.theme_type_variation = &"TitleLabel" if use_title_font else &"HeadingLabel"
 	_subtitle_label.text = subtitle_text
 	_subtitle_label.visible = not subtitle_text.is_empty()
-	_stagger_drips()
-	for drip: AnimatedSprite2D in _bead_drips:
-		drip.animation_looped.connect(drip.hide)
-	_bead_wait[0] = randf_range(0.4, 2.0)
-	_bead_wait[1] = randf_range(2.0, 5.0)
+	_build_links()
+	_build_splatters()
 	resized.connect(_relayout)
 	visibility_changed.connect(_on_visibility_changed)
+	Settings.settings_applied.connect(_on_motion_changed)
 	set_physics_process(false)
 	_relayout.call_deferred()
 
 func adopt(node: Control) -> void:
 	var previous := node.get_parent()
 	if previous != null:
-		previous.remove_child(node)
+		node.reparent(_content, false)
+	else:
+		_content.add_child(node)
 	node.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	node.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_content.add_child(node)
 	_relayout.call_deferred()
 
 func hoist() -> void:
 	if _hoisting:
 		return
-	if not is_visible_in_tree():
+	if not is_visible_in_tree() or Settings.reduce_motion:
 		hoisted.emit.call_deferred()
 		return
 	_hoisting = true
 	_fall -= HOIST_KICK
 	_spin += randf_range(-0.08, 0.08)
-	UiAudio.play_rattle(1.18)
+	UiAudio.play_hoist()
 
 func _physics_process(delta: float) -> void:
 	_spin += (-SWING * sin(_angle) - SWING_DAMP * _spin) * delta
@@ -113,8 +121,6 @@ func _physics_process(delta: float) -> void:
 		UiAudio.play_back()
 		_spin += randf_range(-0.15, 0.15)
 
-	_run_beads(delta)
-
 	_apply_transform()
 	if not _hoisting and _is_at_rest():
 		_come_to_rest()
@@ -122,7 +128,47 @@ func _physics_process(delta: float) -> void:
 func _apply_transform() -> void:
 	_rig.rotation = _angle
 	_rig.position.y = _sag
+	_lay_chains()
 
+func _build_links() -> void:
+	for side in 2:
+		for i in CHAIN_LINKS:
+			var link := Sprite2D.new()
+			link.texture = CHAIN_TEXTURE
+			link.hide()
+			_chains.add_child(link)
+			_link_pool[side].append(link)
+
+func _lay_chains() -> void:
+	if not _laid_out:
+		return
+	var centre := size.x * 0.5
+	for side in 2:
+		var facing := -1.0 if side == 0 else 1.0
+		var ceiling := Vector2(centre + facing * _chain_x, CHAIN_CEILING)
+		var local := Vector2(facing * _mount_local.x, _mount_local.y)
+		var mount := Vector2(centre, _sag) + local.rotated(_angle)
+		_lay_chain(_link_pool[side], ceiling, mount)
+
+func _lay_chain(links: Array, ceiling: Vector2, mount: Vector2) -> void:
+	var span := mount - ceiling
+	var direction := span / maxf(span.length(), 0.001)
+	var perpendicular := Vector2(-direction.y, direction.x)
+	var bow := clampf(_spin * CHAIN_BOW, -CHAIN_BOW, CHAIN_BOW)
+	var angle := direction.angle() - PI * 0.5
+	var used := _chain_count
+	if _sag < -1.0:
+		used = clampi(floori((mount.y - ceiling.y) / CHAIN_TILE), 0, _chain_count)
+	for index in links.size():
+		var link: Sprite2D = links[index]
+		if index >= used:
+			link.hide()
+			continue
+		var travel: float = (float(index) + 0.5) / float(_chain_count)
+		var sway := sin(travel * PI) * bow * (1.0 - travel * CHAIN_LAG)
+		link.position = ceiling + direction * ((float(index) + 0.5) * CHAIN_TILE) + perpendicular * sway
+		link.rotation = angle
+		link.show()
 
 func _is_at_rest() -> bool:
 	return absf(_angle) < REST_ANGLE and absf(_spin) < REST_SPIN \
@@ -141,69 +187,43 @@ func _chain_force(stretch: float, speed: float) -> float:
 		return FALL_GRAVITY
 	return FALL_GRAVITY - CHAIN_STIFFNESS * pull - CHAIN_DAMPING * speed
 
-func _run_beads(delta: float) -> void:
-	for index in _beads.size():
-		if _bead_wait[index] > 0.0:
-			_bead_wait[index] -= delta
-			if _bead_wait[index] <= 0.0:
-				_launch_bead(index)
-			continue
-		_bead_travel[index] += _bead_speed[index] * delta
-		_beads[index].position.y = _bead_travel[index]
-		if _bead_travel[index] < _bead_end:
-			continue
-		_beads[index].hide()
-		_bead_wait[index] = randf_range(BEAD_WAIT_MIN, BEAD_WAIT_MAX)
-		var drip := _bead_drips[index]
-		drip.show()
-		drip.frame = 0
-		drip.play()
-
-func _launch_bead(index: int) -> void:
-	_bead_wait[index] = 0.0
-	_bead_travel[index] = BEAD_START
-	_bead_speed[index] = randf_range(BEAD_SPEED_MIN, BEAD_SPEED_MAX)
-	_beads[index].position.y = BEAD_START
-	_beads[index].show()
-
-func _stagger_drips() -> void:
-	for drip: AnimatedSprite2D in _drips:
-		drip.speed_scale = randf_range(0.72, 1.28)
-		drip.frame = randi() % drip.sprite_frames.get_frame_count(drip.animation)
-
 func _relayout() -> void:
 	var half := plate_width * 0.5
 	var chain_x := half - CHAIN_INSET
-	var wanted: float = maxf(_plate.get_combined_minimum_size().y, body_height)
+	var wanted: float = body_height if body_height > 0.0 else _plate.get_combined_minimum_size().y
 	var plate_height: float = minf(wanted, size.y - top_margin * 2.0)
 	var plate_top: float = maxf(top_margin, (size.y - plate_height) * 0.5)
 	var plate_bottom := plate_top + plate_height
 	_set_rect(_plate, -half, plate_top, half, plate_bottom)
 
-	var chain_bottom := plate_top + PLATE_BITE
-	var chain_top := chain_bottom - _tiled_height(chain_bottom - CHAIN_TOP)
-	_set_rect(_chain_left, -chain_x - CHAIN_HALF_WIDTH, chain_top, -chain_x + CHAIN_HALF_WIDTH, chain_bottom)
-	_set_rect(_chain_right, chain_x - CHAIN_HALF_WIDTH, chain_top, chain_x + CHAIN_HALF_WIDTH, chain_bottom)
+	_chain_x = chain_x
+	_mount_local = Vector2(chain_x, plate_top + PLATE_BITE)
+	var rest_run := _mount_local.y - CHAIN_CEILING
+	_chain_count = clampi(ceili(rest_run / CHAIN_TILE) + 1, 1, CHAIN_LINKS)
 	_set_rect(_mount_left, -chain_x - MOUNT_HALF_WIDTH, plate_top - 38.0, -chain_x + MOUNT_HALF_WIDTH, plate_top + 56.0)
 	_set_rect(_mount_right, chain_x - MOUNT_HALF_WIDTH, plate_top - 38.0, chain_x + MOUNT_HALF_WIDTH, plate_top + 56.0)
 
 	_clear_height = plate_bottom + CLEAR_MARGIN
-	_bead_end = plate_top + 6.0
-	_beads[0].position.x = -chain_x
-	_beads[1].position.x = chain_x
-	_place_drip(_bead_drips[0], Vector2(-chain_x, plate_top + 12.0))
-	_place_drip(_bead_drips[1], Vector2(chain_x, plate_top + 12.0))
-	_place_drip(_drips[0], Vector2(-half * 0.34, plate_top + 24.0))
-	_place_drip(_drips[1], Vector2(half * 0.52, plate_top + 18.0))
-	_place_drip(_drips[2], Vector2(-half * 0.62, plate_bottom - 8.0))
-	_place_drip(_drips[3], Vector2(half * 0.26, plate_bottom - 4.0))
+	_scatter_blood(half, plate_top, plate_bottom)
+	_laid_out = true
 
-func _place_drip(drip: AnimatedSprite2D, anchor: Vector2) -> void:
-	var frame_height := drip.sprite_frames.get_frame_texture(drip.animation, 0).get_size().y
-	drip.position = anchor + Vector2(0.0, (frame_height * 0.5 - DRIP_SOURCE_Y) * drip.scale.y)
+func _build_splatters() -> void:
+	for i in SPLATTER_COUNT:
+		var decal := Sprite2D.new()
+		_splatters.add_child(decal)
 
-func _tiled_height(wanted: float) -> float:
-	return ceilf(wanted / CHAIN_TILE) * CHAIN_TILE
+func _scatter_blood(half: float, plate_top: float, plate_bottom: float) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash(heading_text)
+	for index in _splatters.get_child_count():
+		var decal := _splatters.get_child(index) as Sprite2D
+		decal.texture = SPLATTERS[rng.randi() % SPLATTERS.size()]
+		decal.rotation = rng.randf_range(0.0, TAU)
+		# Keep the entire decal inside the side-frame gutter, clear of controls.
+		decal.scale = Vector2.ONE * (36.0 / decal.texture.get_size().length())
+		decal.modulate.a = rng.randf_range(0.5, 0.85)
+		decal.position = Vector2((-1.0 if index % 2 == 0 else 1.0) * (half - 18.0),
+			rng.randf_range(plate_top + 48.0, plate_bottom - 48.0))
 
 func _set_rect(node: Control, left: float, top: float, right: float, bottom: float) -> void:
 	node.offset_left = left
@@ -212,15 +232,30 @@ func _set_rect(node: Control, left: float, top: float, right: float, bottom: flo
 	node.offset_bottom = bottom
 
 func _on_visibility_changed() -> void:
-	set_physics_process(is_visible_in_tree())
+	set_physics_process(is_visible_in_tree() and not Settings.reduce_motion)
 	if is_visible_in_tree():
+		_relayout()
 		_drop()
 
 func _drop() -> void:
 	_hoisting = false
+	if Settings.reduce_motion:
+		_come_to_rest()
+		return
 	_sag = -_clear_height
 	_fall = 0.0
 	_angle = -0.02
 	_spin = 0.0
 	_apply_transform()
 	UiAudio.play_rattle()
+
+func _on_motion_changed() -> void:
+	if not is_visible_in_tree():
+		return
+	set_physics_process(not Settings.reduce_motion)
+	if Settings.reduce_motion:
+		var was_hoisting := _hoisting
+		_hoisting = false
+		_come_to_rest()
+		if was_hoisting:
+			hoisted.emit.call_deferred()

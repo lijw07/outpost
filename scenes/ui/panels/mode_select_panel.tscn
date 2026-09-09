@@ -37,7 +37,7 @@ text = "SINGLE PLAYER"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 84)
 layout_mode = 2
-text = "CO-OP"
+text = "CO-OP PREVIEW"
 
 [node name="BackButton" type="Button" parent="Content"]
 unique_name_in_owner = true
