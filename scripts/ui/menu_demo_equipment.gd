@@ -3,6 +3,7 @@ extends RefCounted
 const ROOT := "res://assets/menu/equipment/"
 static var outfits: Array = []
 static var weapons: Array = []
+static var firearms: Array = []
 static var atlases: Dictionary = {}
 
 static func prepare() -> void:
@@ -10,6 +11,7 @@ static func prepare() -> void:
 		return
 	outfits = JSON.parse_string(FileAccess.get_file_as_string(ROOT+"outfits.json"))
 	weapons = JSON.parse_string(FileAccess.get_file_as_string(ROOT+"weapons.json"))
+	firearms = JSON.parse_string(FileAccess.get_file_as_string(ROOT+"firearms.json"))
 	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(ROOT+"frames.json"))
 	for category: String in data:
 		var source: Texture2D = load(ROOT+data[category].path)

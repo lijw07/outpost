@@ -1,10 +1,154 @@
 [
-  {"id":"bat", "name":"Baseball bat", "frame":0,"length":43,"reach":64,"damage":42,"cycle":0.82},
-  {"id":"spiked_bat", "name":"Spiked bat", "frame":1,"length":43,"reach":64,"damage":52,"cycle":0.9},
-  {"id":"knife", "name":"Combat knife", "frame":2,"length":23,"reach":43,"damage":30,"cycle":0.56},
-  {"id":"machete", "name":"Machete", "frame":3,"length":37,"reach":57,"damage":45,"cycle":0.74},
-  {"id":"golf_club", "name":"Golf club", "frame":4,"length":47,"reach":69,"damage":38,"cycle":0.8},
-  {"id":"crowbar", "name":"Crowbar", "frame":5,"length":36,"reach":57,"damage":40,"cycle":0.78},
-  {"id":"axe", "name":"Fire axe", "frame":6,"length":38,"reach":60,"damage":60,"cycle":1.0},
-  {"id":"pipe", "name":"Steel pipe", "frame":7,"length":37,"reach":59,"damage":40,"cycle":0.82}
+  {
+    "id": "bat",
+    "name": "Baseball bat",
+    "frame": 0,
+    "length": 43,
+    "reach": 64,
+    "damage": 42,
+    "cycle": 0.82
+  },
+  {
+    "id": "spiked_bat",
+    "name": "Spiked bat",
+    "frame": 1,
+    "length": 43,
+    "reach": 64,
+    "damage": 52,
+    "cycle": 0.9
+  },
+  {
+    "id": "knife",
+    "name": "Combat knife",
+    "frame": 2,
+    "length": 23,
+    "reach": 43,
+    "damage": 30,
+    "cycle": 0.56
+  },
+  {
+    "id": "machete",
+    "name": "Machete",
+    "frame": 3,
+    "length": 37,
+    "reach": 57,
+    "damage": 45,
+    "cycle": 0.74
+  },
+  {
+    "id": "golf_club",
+    "name": "Golf club",
+    "frame": 4,
+    "length": 47,
+    "reach": 69,
+    "damage": 38,
+    "cycle": 0.8
+  },
+  {
+    "id": "crowbar",
+    "name": "Crowbar",
+    "frame": 5,
+    "length": 36,
+    "reach": 57,
+    "damage": 40,
+    "cycle": 0.78
+  },
+  {
+    "id": "axe",
+    "name": "Fire axe",
+    "frame": 6,
+    "length": 38,
+    "reach": 60,
+    "damage": 60,
+    "cycle": 1.0
+  },
+  {
+    "id": "pipe",
+    "name": "Steel pipe",
+    "frame": 7,
+    "length": 37,
+    "reach": 59,
+    "damage": 40,
+    "cycle": 0.82
+  },
+  {
+    "id": "katana",
+    "name": "Katana",
+    "atlas": "extra_weapons",
+    "frame": 0,
+    "length": 49,
+    "reach": 70,
+    "damage": 53,
+    "cycle": 0.9
+  },
+  {
+    "id": "sledgehammer",
+    "name": "Sledgehammer",
+    "atlas": "extra_weapons",
+    "frame": 1,
+    "length": 44,
+    "reach": 65,
+    "damage": 76,
+    "cycle": 1.25
+  },
+  {
+    "id": "shovel",
+    "name": "Shovel",
+    "atlas": "extra_weapons",
+    "frame": 2,
+    "length": 47,
+    "reach": 69,
+    "damage": 44,
+    "cycle": 0.95
+  },
+  {
+    "id": "spear",
+    "name": "Improvised spear",
+    "atlas": "extra_weapons",
+    "frame": 3,
+    "length": 57,
+    "reach": 82,
+    "damage": 43,
+    "cycle": 0.85
+  },
+  {
+    "id": "wrench",
+    "name": "Adjustable wrench",
+    "atlas": "extra_weapons",
+    "frame": 4,
+    "length": 29,
+    "reach": 48,
+    "damage": 40,
+    "cycle": 0.7
+  },
+  {
+    "id": "pickaxe",
+    "name": "Pickaxe",
+    "atlas": "extra_weapons",
+    "frame": 5,
+    "length": 43,
+    "reach": 64,
+    "damage": 63,
+    "cycle": 1.1
+  },
+  {
+    "id": "hockey_stick",
+    "name": "Hockey stick",
+    "atlas": "extra_weapons",
+    "frame": 6,
+    "length": 51,
+    "reach": 73,
+    "damage": 38,
+    "cycle": 0.8
+  },
+  {
+    "id": "fire_poker",
+    "name": "Fire poker",
+    "atlas": "extra_weapons",
+    "frame": 7,
+    "length": 45,
+    "reach": 65,
+    "damage": 40,
+    "cycle": 0.76
+  }
 ]

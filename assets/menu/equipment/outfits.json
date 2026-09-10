@@ -1,6 +1,72 @@
 [
-  {"id":"civilian", "name":"Civilian denim and sneakers", "jacket":"497b92", "trousers":"454656", "shoes":"d0bd99", "backpack":"987143", "headgear":0},
-  {"id":"military", "name":"Military fatigues and combat boots", "jacket":"697446", "trousers":"596142", "shoes":"3c352a", "backpack":"59603c", "headgear":1},
-  {"id":"police", "name":"Police uniform and duty boots", "jacket":"344b72", "trousers":"303f56", "shoes":"34363a", "backpack":"414955", "headgear":2},
-  {"id":"streetwear", "name":"Burgundy jacket, chinos and white trainers", "jacket":"974849", "trousers":"918270", "shoes":"d6d8cc", "backpack":"4f7778", "headgear":3}
+  {
+    "id": "civilian",
+    "name": "Civilian denim and sneakers",
+    "jacket": "497b92",
+    "trousers": "454656",
+    "shoes": "d0bd99",
+    "backpack": "987143",
+    "headgear": 0,
+    "shirt": "d1c8af",
+    "armor": -1,
+    "hair": 0,
+    "bag": 0,
+    "earmuffs": false
+  },
+  {
+    "id": "military",
+    "name": "Military fatigues and combat boots",
+    "jacket": "697446",
+    "trousers": "596142",
+    "shoes": "3c352a",
+    "backpack": "59603c",
+    "headgear": 1,
+    "shirt": "292f29",
+    "armor": 1,
+    "hair": 2,
+    "bag": 1,
+    "earmuffs": false
+  },
+  {
+    "id": "police",
+    "name": "Police uniform and duty boots",
+    "jacket": "344b72",
+    "trousers": "303f56",
+    "shoes": "34363a",
+    "backpack": "414955",
+    "headgear": 2,
+    "shirt": "aebac7",
+    "armor": 0,
+    "hair": 0,
+    "bag": 0,
+    "earmuffs": false
+  },
+  {
+    "id": "streetwear",
+    "name": "Burgundy jacket, chinos and white trainers",
+    "jacket": "974849",
+    "trousers": "918270",
+    "shoes": "d6d8cc",
+    "backpack": "4f7778",
+    "headgear": 3,
+    "shirt": "dad4c0",
+    "armor": -1,
+    "hair": 1,
+    "bag": 2,
+    "earmuffs": true
+  },
+  {
+    "id": "ghillie",
+    "name": "Woodland ghillie suit",
+    "jacket": "667645",
+    "shirt": "424c32",
+    "trousers": "566540",
+    "shoes": "3c392c",
+    "backpack": "5a6941",
+    "headgear": 4,
+    "armor": 2,
+    "hair": 2,
+    "bag": 0,
+    "earmuffs": false
+  }
 ]

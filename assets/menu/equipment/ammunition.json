@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Pistol ammunition",
+    "atlas": "ammunition",
+    "frame": 0
+  },
+  {
+    "name": "5.56 rifle ammunition",
+    "atlas": "ammunition",
+    "frame": 1
+  },
+  {
+    "name": "7.62 rifle ammunition",
+    "atlas": "ammunition",
+    "frame": 2
+  },
+  {
+    "name": "Sniper ammunition",
+    "atlas": "ammunition",
+    "frame": 3
+  },
+  {
+    "name": "Shotgun shells",
+    "atlas": "ammunition",
+    "frame": 4
+  },
+  {
+    "name": "Launcher grenades",
+    "atlas": "ammunition",
+    "frame": 5
+  },
+  {
+    "name": "Rocket",
+    "atlas": "ammunition",
+    "frame": 6
+  },
+  {
+    "name": "Loose cartridges",
+    "atlas": "ammunition",
+    "frame": 7
+  },
+  {
+    "name": "Pistol magazine",
+    "atlas": "ammunition",
+    "frame": 8
+  },
+  {
+    "name": "STANAG magazine",
+    "atlas": "ammunition",
+    "frame": 9
+  },
+  {
+    "name": "SCAR magazine",
+    "atlas": "ammunition",
+    "frame": 10
+  },
+  {
+    "name": "AK magazine",
+    "atlas": "ammunition",
+    "frame": 11
+  },
+  {
+    "name": "Drum magazine",
+    "atlas": "ammunition",
+    "frame": 12
+  },
+  {
+    "name": "Belt-fed box",
+    "atlas": "ammunition",
+    "frame": 13
+  },
+  {
+    "name": "Sniper magazine",
+    "atlas": "ammunition",
+    "frame": 14
+  },
+  {
+    "name": "Shotgun shell holder",
+    "atlas": "ammunition",
+    "frame": 15
+  }
+]

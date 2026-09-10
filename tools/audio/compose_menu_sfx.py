@@ -88,7 +88,27 @@ def main():
         age = np.maximum(0, t-onset)
         fire += (t >= onset)*noise(len(t), 3)*np.exp(-age*RNG.uniform(90, 220))*.15
     write('campfire', fire, .4, loop=True)
-    print('Wrote eight original PCM sounds to', ROOT)
+
+    t = np.arange(int(SR*.7))/SR
+    blast = noise(len(t), 45)*np.exp(-t*7)*.6
+    blast += noise(len(t), 3)*np.exp(-t*38)*.25
+    blast += np.sin(2*np.pi*(58*t-12*t*t))*np.exp(-t*10)*.7
+    write('explosion', blast, .8)
+    t = np.arange(int(SR*.36))/SR
+    launch = noise(len(t), 17)*np.exp(-t*18)*.35
+    launch += np.sin(2*np.pi*96*t)*np.exp(-t*25)*.5
+    write('launcher', launch, .7)
+    t = np.arange(int(SR*.22))/SR
+    write('swing', noise(len(t), 9)*np.sin(np.pi*t/.22)**2, .45)
+    t = np.arange(int(SR*.25))/SR
+    write('grenade', noise(len(t), 15)*np.exp(-t*32)+.25*np.sin(2*np.pi*135*t)*np.exp(-t*25), .6)
+    t = np.arange(int(SR*.45))/SR
+    reload_sound = np.zeros(len(t))
+    for onset in [0, .18, .32]:
+        age = np.maximum(0, t-onset)
+        reload_sound += (t >= onset)*(noise(len(t), 3)*.4+np.sin(2*np.pi*780*age)*.15)*np.exp(-age*70)
+    write('reload', reload_sound, .5)
+    print('Wrote thirteen original PCM sounds to', ROOT)
 
 
 if __name__ == '__main__':

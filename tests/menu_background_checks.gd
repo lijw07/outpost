@@ -250,10 +250,13 @@ func run() -> void:
 		var stalled_workers := 0
 		var too_many_survivors := false
 		var crossed_solid := false
+		var spawned_on_screen := false
 		var idle_streaks := {}
 		for tick in 7200:
 			demo.step(1.0 / 30.0)
 			too_many_survivors = too_many_survivors or demo.survivors.size() > 4
+			for undead in demo.zombies:
+				spawned_on_screen = spawned_on_screen or not demo._outside_view(undead.spawn_position)
 			if tick % 30 != 0:
 				continue
 			for actor in demo.survivors+demo.zombies:
@@ -275,15 +278,17 @@ func run() -> void:
 		check(body_errors == 0,"four-minute run keeps every live body on land and outside solid scenery")
 		check(not crossed_solid,"actors cannot tunnel through built fence sections or props between ticks")
 		check(not too_many_survivors,"the four-survivor cap persists through deaths and replacements")
+		check(not spawned_on_screen,"every zombie begins fully outside the visible menu, including wave spawns")
 		check(overlapping_bodies == 0,"survivors and zombies share body separation")
 		check(sliding_feet == 0,"moving poses always correspond to actual movement")
 		check(stalled_workers == 0,"workers do not remain idle against an unreachable work spot")
 		check(demo.stats.shots > 20 and demo.stats.kills > 0, "survivors fire real projectiles and defeat zombies")
+		check(demo.stats.melee_hits > 0,"survivors land timed melee strikes during live combat")
 		check(demo.stats.built > 2, "builders complete new defensive walls")
 		check(demo.stats.gathered > 0, "haulers gather and deliver supplies")
 		check(demo.stats.waves >= 4, "new waves keep the simulation running")
 		check(demo.stats.breaches > 0, "zombies can damage and breach built defenses")
-		check(demo.zombies.size() <= demo.MAX_ZOMBIES and demo.bullets.size() <= demo.MAX_BULLETS and demo.effects.size() <= demo.MAX_EFFECTS, "long-running demo keeps actors and effects bounded")
+		check(demo.zombies.size() <= demo.MAX_ZOMBIES and demo.bullets.size() <= demo.MAX_BULLETS and demo.effects.size() <= demo.MAX_EFFECTS and demo.fields.size() <= 6, "long-running demo keeps actors and effects bounded")
 		check(demo.supplies >= 0 and demo.supplies <= 60, "construction never spends unavailable resources")
 		check(demo.audio.players.size() == 10 and demo.audio.events > 0,"gameplay emits sound events through a bounded voice pool")
 		print("DEMO ",demo.variant," after 240 seconds: ",demo.stats)

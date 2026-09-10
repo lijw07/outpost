@@ -54,6 +54,15 @@ shader; other animation clips retain their original alpha behavior. The exact
 built-in ImageGen prompts and source identifiers are in
 `characters/shooting_provenance.json`.
 
+`characters/survivor_move_shoot.png` adds sixteen armed walking poses, bringing
+the character total to 112 frames. Strides follow distance traveled independently
+of firing; backing away reverses the gait while the rifle remains aimed at the
+enemy. Stopping returns to planted firing poses. A small upper-body recoil keeps
+the feet anchored, and projectiles use the current moving pose's muzzle anchor.
+Ranged survivors begin retreating at 180 units, before close-range engagement.
+The exact built-in ImageGen prompt is in
+`characters/moving_shooting_provenance.json`.
+
 All three locations include bounded, seeded patches of existing meadow grass,
 clover, ferns, flowers, mushrooms, pebbles, and fallen branches. Decorations stay
 outside roads, water, construction footprints, and the working camp clearing.
@@ -93,3 +102,21 @@ timing, muzzle bounds, decoration placement, foliage pause/contact behavior, and
 combat in all three locations. With a graphical renderer it also saves action
 and world captures into `output/menu-shooting/`. These additions affect only the
 animated menu world; the rejected meadow art experiment remains removed.
+
+## Modular equipment and movement follow-up
+
+The demo now caps survivors at four. See `equipment/README.md` for the clothing,
+weapons, throwables, and ammunition catalogs. Equipped firearms use separate
+sprites attached to animated hand grips; the original authored rifle clips
+remain available for unmodularized actors. Headgear, bags, and armor follow
+per-frame head/torso sockets instead of fixed screen offsets. A designated melee
+survivor uses windup/contact/recovery attacks and cannot fire bullets.
+
+Active body detours retain their collision constraints during route smoothing.
+Passing-side persistence and short target commitment prevent repeated steering
+reversals. Zombies start beyond the visible frame, including their full height.
+
+`tests/menu_equipment_checks.gd` covers attachments, melee timing, firearm identity,
+magazines, reloads, resupply, and detour smoothing. `capture_menu_live_review.gd`
+records the actual menu through Godot Movie Maker at 60 fps with synchronized
+audio. It runs only in a disposable test profile.

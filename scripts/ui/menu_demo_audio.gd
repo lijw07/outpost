@@ -1,8 +1,8 @@
 extends Node2D
 ## Bounded, positional menu sounds. Music remains on its separate existing bus.
 const VOICES := 10
-const LEVELS := {"rifle":-15.0,"hammer":-15.0,"footstep":-24.0,"groan":-22.0,"body_fall":-18.0,"fence_break":-16.0,"timber":-21.0}
-const GAPS := {"rifle":0.08,"hammer":0.1,"footstep":0.09,"groan":3.0,"body_fall":0.12,"fence_break":0.2,"timber":0.2}
+const LEVELS := {"rifle":-15.0,"hammer":-15.0,"footstep":-24.0,"groan":-22.0,"body_fall":-18.0,"fence_break":-16.0,"timber":-21.0,"launcher":-15.0,"explosion":-18.0,"swing":-22.0,"grenade":-20.0,"reload":-20.0}
+const GAPS := {"rifle":0.08,"hammer":0.1,"footstep":0.09,"groan":3.0,"body_fall":0.12,"fence_break":0.2,"timber":0.2,"launcher":0.2,"explosion":0.15,"swing":0.15,"grenade":0.15,"reload":0.2}
 var enabled := true
 var clock := 0.0
 var events := 0

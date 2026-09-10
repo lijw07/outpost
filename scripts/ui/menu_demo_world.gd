@@ -7,11 +7,12 @@ const Structure := preload("res://scripts/ui/menu_demo_structure.gd")
 const OUTLINE := preload("res://assets/shaders/menu_pixel_outline.gdshader")
 const Prop := preload("res://scripts/ui/menu_demo_prop.gd")
 const Ground := preload("res://scripts/ui/menu_demo_ground.gd")
+const Equipment := preload("res://scripts/ui/menu_demo_equipment.gd")
 const Audio := preload("res://scripts/ui/menu_demo_audio.gd")
 const Scatter := preload("res://scripts/ui/menu_demo_scatter.gd")
 const STEP := 1.0 / 30.0
 const CELL_SIZE := 16
-const GRID_SIZE := Vector2i(124,70)
+const GRID_SIZE := Vector2i(132,76)
 const CELL_CENTER := Vector2(8,8)
 const MAX_SURVIVORS := 4
 const SURVIVOR_ROLES := [0,0,1,2]
@@ -23,12 +24,14 @@ var variant := 0
 var elapsed := 0.0
 var wave := 1
 var supplies := 12
-var stats := {"shots": 0, "kills": 0, "built": 0, "repaired": 0, "gathered": 0, "breaches": 0, "waves": 1}
+var stats := {"shots": 0, "melee_hits":0, "throws":0, "kills": 0, "built": 0, "repaired": 0, "gathered": 0, "breaches": 0, "waves": 1}
 var survivors: Array[Node2D] = []
 var zombies: Array[Node2D] = []
 var structures: Array[Node2D] = []
 var bullets: Array[Dictionary] = []
 var effects: Array[Dictionary] = []
+var fields: Array[Dictionary] = []
+var _throw_clock := 0.0
 var scenery_bounds: Array[Rect2] = []
 var scenery_kinds: Array[String] = []
 var ground_props: Array[Node2D] = []
@@ -49,6 +52,7 @@ var _footprints: Array[Rect2] = []
 var _fire_point := Vector2(1330, 620)
 var _supply_point := Vector2(905, 845)
 var _depot := Vector2(1180, 565)
+var _ammo_depot := Vector2(1440,570)
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -88,6 +92,7 @@ func _build_location() -> void:
 		_supply_point = Vector2(900,820)
 	_prop(0, Vector2(1300,500))
 	_prop(3, _depot)
+	_prop(8, _ammo_depot)
 	_prop(6, _supply_point)
 	_prop(7, Vector2(1770,780) if variant != 1 else Vector2(1030,940))
 	_prop(4, Vector2(1560,515))
@@ -213,7 +218,7 @@ func _add_wall(point: Vector2, progress: float, vertical := false) -> void:
 	structures.append(wall)
 
 func _on_land(point: Vector2, margin := 12.0) -> bool:
-	return point.x >= margin and point.x <= 1980-margin and point.y >= (220+margin if variant == 2 else margin) and point.y <= (960-margin if variant == 2 else 1120-margin)
+	return point.x >= margin and point.x <= 2120-margin and point.y >= (220+margin if variant == 2 else margin) and point.y <= (960-margin if variant == 2 else 1216-margin)
 
 func _add_light(point: Vector2) -> void:
 	var gradient := Gradient.new()
@@ -239,6 +244,21 @@ func _add_survivor(job: int, point: Vector2) -> void:
 		return
 	var actor := Actor.new()
 	actor.setup(false, job)
+	var occupied_slots: Array[int] = []
+	for survivor in survivors:
+		occupied_slots.append(survivor.loadout_slot)
+	var slot := 0
+	while occupied_slots.has(slot):
+		slot += 1
+	actor.equip(slot,4 if variant == 2 and slot == 1 else slot,(variant*5+slot+(wave-1)*4)%16)
+	actor.firearm = Equipment.firearms[(variant*4+slot+(wave-1)*3)%Equipment.firearms.size()]
+	actor.wardrobe.firearm = actor.firearm
+	actor.reset_ammo()
+	if (variant > 0 and slot == 0) or slot == 3:
+		actor.wardrobe.outfit = actor.wardrobe.outfit.duplicate()
+		actor.wardrobe.outfit.headgear = -1
+		if variant == 2 and slot == 0:
+			actor.wardrobe.outfit.hair = 2
 	var occupied_lanes: Array[int] = []
 	for survivor in survivors:
 		if survivor.role != 0 and survivor.health > 0:
@@ -254,25 +274,28 @@ func _add_survivor(job: int, point: Vector2) -> void:
 	entities.add_child(actor)
 	survivors.append(actor)
 
-func _spawn_zombie(initial := false) -> void:
+func _spawn_zombie(_initial := false) -> void:
 	if zombies.size() >= MAX_ZOMBIES:
+		return
+	var requested := Vector2(_rng.randf_range(2000,2070),_rng.randf_range(330,920))
+	if variant != 2 and _rng.randf() < 0.45:
+		requested = Vector2(_rng.randf_range(960,1860),1192)
+	var spawn := _spawn_position(requested,true)
+	if not spawn.is_finite():
 		return
 	var actor := Actor.new()
 	actor.setup(true, 0)
-	var side := _rng.randi_range(0,2)
-	actor.position = Vector2(1930, _rng.randf_range(360,910))
-	if side == 1:
-		actor.position = Vector2(_rng.randf_range(950,1800), 230 if variant == 2 else 100)
-	elif side == 2:
-		actor.position = Vector2(_rng.randf_range(1000,1800), 945 if variant == 2 else 1050)
-	if initial:
-		actor.position = Vector2(_rng.randf_range(1710,1910),_rng.randf_range(600,900))
-	actor.position = _spawn_position(actor.position)
+	actor.position = spawn
+	actor.spawn_position = spawn
 	actor.previous_position = actor.position
 	actor.phase = _rng.randf_range(0,4)
 	actor.tint = Color(0.85,_rng.randf_range(0.8,1.0),0.79)
 	entities.add_child(actor)
 	zombies.append(actor)
+
+func _outside_view(point: Vector2) -> bool:
+	# Include the whole standing sprite, its outline, and an entry margin.
+	return point.x >= 1984 or point.y >= 1180
 
 func advance(delta: float) -> void:
 	_accumulator += minf(delta,0.15)
@@ -285,6 +308,11 @@ func advance(delta: float) -> void:
 func step(delta: float) -> void:
 	elapsed += delta
 	audio.advance(delta)
+	_step_fields(delta)
+	_throw_clock += delta
+	if _throw_clock > 10.0:
+		_throw_clock = 0.0
+		_throw_item()
 	_groan_clock += delta
 	if _groan_clock > 6.0:
 		_groan_clock = 0.0
@@ -320,12 +348,15 @@ func step(delta: float) -> void:
 		var previous_stride := int(actor.phase*2)
 		var previous_death: float = actor.death_age
 		actor.action = "idle"
+		actor.shot_target = null
 		if actor.health > 0:
 			if actor.team == 0:
 				_survivor_ai(actor,delta)
 			else:
 				_zombie_ai(actor,delta)
 		actor.animate(delta,actor.position-before)
+		if is_instance_valid(actor.shot_target):
+			_shoot(actor,actor.shot_target)
 		if actor.health > 0 and int(actor.phase*2) != previous_stride:
 			audio.emit_sound("footstep",actor.position)
 		if actor.team == 1 and previous_death < 0.48 and actor.death_age >= 0.48:
@@ -362,27 +393,111 @@ func _nearest(point: Vector2, actors: Array[Node2D], limit: float) -> Node2D:
 	return best
 
 func _survivor_ai(actor: Node2D, delta: float) -> void:
-	var enemy := _nearest(actor.position,zombies,450 if actor.role == 0 else 230)
+	if actor.reload_clock > 0:
+		_reload(actor,delta)
+		return
+	if actor.melee_clock > 0:
+		_melee(actor,actor.melee_target,delta)
+		return
+	var enemy := _combat_target(actor,zombies,450 if actor.role == 0 else 230)
+	if enemy != null and not actor.melee_weapon.is_empty():
+		var range_to_enemy := actor.position.distance_to(enemy.position)
+		if range_to_enemy < float(actor.melee_weapon.reach)+8 or actor.loadout_slot == 0:
+			_melee(actor,enemy,delta)
+			return
 	if enemy != null and (actor.role != 1 or actor.position.distance_to(enemy.position) < 130) and _line_of_fire(actor.position,enemy.position):
-		if actor.position.distance_to(enemy.position) < 120:
+		if actor.position.distance_to(enemy.position) < 180:
 			_move(actor,actor.position + (actor.position-enemy.position).normalized() * 90,delta,90)
-			if actor.action == "run":
-				# The rifle poses have planted feet. Retreat with the walk cycle,
-				# then plant and fire instead of sliding a standing shooter backward.
-				return
 		actor.action = "shoot"
 		actor.aim = (enemy.position-actor.position).normalized()
 		if actor.cooldown <= 0:
-			_shoot(actor,enemy)
+			# Fire after the movement pose is selected so its muzzle anchor matches.
+			actor.shot_target=enemy
 		return
 	if actor.role == 0:
-		var patrol: Vector2 = actor.home + Vector2(sin(elapsed * 0.17 + actor.home.x) * 85,cos(elapsed * 0.12 + actor.home.x) * 42)
-		_move(actor,patrol,delta,88)
+		_patrol(actor,delta)
 		return
 	if actor.role == 2:
 		_haul(actor,delta)
 		return
 	_build(actor,delta)
+
+func _patrol(actor: Node2D, delta: float) -> void:
+	# A moving sine-wave goal repeatedly entered/exited the arrival radius,
+	# making an unobstructed guard alternate between idle and one walking frame.
+	if actor.patrol_point.is_finite() and actor.position.distance_to(actor.patrol_point) < 8:
+		actor.patrol_pause += delta
+		if actor.patrol_pause < 0.8:
+			return
+		actor.patrol_point = Vector2.INF
+		actor.patrol_pause = 0.0
+	if not actor.patrol_point.is_finite():
+		var corners := [Vector2(-72,-36),Vector2(72,-36),Vector2(72,40),Vector2(-72,40)]
+		actor.patrol_index = (actor.patrol_index+1)%corners.size()
+		actor.patrol_point = _spawn_position(actor.home+corners[(actor.patrol_index+actor.loadout_slot)%corners.size()])
+	_move(actor,actor.patrol_point,delta,88)
+
+func _combat_target(actor: Node2D, candidates: Array[Node2D], limit: float) -> Node2D:
+	# Hold a live target briefly instead of reversing between equally close enemies.
+	if is_instance_valid(actor.combat_target) and actor.combat_target.health > 0 and actor.target_clock > 0 and actor.position.distance_to(actor.combat_target.position) <= limit:
+		return actor.combat_target
+	actor.combat_target = _nearest(actor.position,candidates,limit)
+	actor.target_clock = 0.8
+	return actor.combat_target
+
+func _reload(actor: Node2D, delta: float) -> void:
+	if actor.reserve_ammo <= 0:
+		var pickup := _ammo_depot+Vector2(-54+actor.loadout_slot*36,64)
+		if actor.position.distance_to(pickup) > 8:
+			_move(actor,pickup,delta,110)
+			return
+		actor.action = "gather"
+		actor.ammo_pickup_clock += delta
+		if actor.ammo_pickup_clock >= 0.75:
+			actor.ammo_pickup_clock = 0
+			actor.reserve_ammo = int(actor.firearm.capacity)*3
+			audio.emit_sound("reload",actor.position)
+		return
+	actor.action = "reload"
+	actor.reload_clock += delta
+	if actor.reload_clock >= float(actor.firearm.reload):
+		var loaded := mini(int(actor.firearm.capacity)-actor.rounds,actor.reserve_ammo)
+		actor.rounds += loaded
+		actor.reserve_ammo -= loaded
+		actor.reload_clock = 0
+		audio.emit_sound("reload",actor.position)
+
+func _melee(actor: Node2D, enemy: Node2D, delta: float) -> void:
+	if not is_instance_valid(enemy):
+		actor.melee_clock = 0.0
+		return
+	var reach: float = actor.melee_weapon.reach
+	if actor.melee_clock <= 0:
+		if enemy.health <= 0:
+			return
+		if actor.position.distance_to(enemy.position) > reach or not _clear_segment(actor.position,enemy.position):
+			_move(actor,enemy.position,delta,104)
+			return
+		actor.melee_target = enemy
+		actor.melee_hit = false
+		audio.emit_sound("swing",actor.position)
+		actor.aim = (enemy.position-actor.position).normalized()
+	actor.action = "melee"
+	actor.melee_clock += delta
+	var cycle: float = actor.melee_weapon.cycle
+	if actor.melee_clock >= cycle*0.4 and not actor.melee_hit:
+		actor.melee_hit = true
+		if enemy.health > 0 and actor.position.distance_to(enemy.position) <= reach+6 and _clear_segment(actor.position,enemy.position):
+			enemy.health -= float(actor.melee_weapon.damage)
+			enemy.hurt = 0.4
+			stats.melee_hits += 1
+			audio.emit_sound("timber",enemy.position)
+			_burst(enemy.position+Vector2(0,-32),Color(0.50,0.12,0.10),3)
+			if enemy.health <= 0:
+				stats.kills += 1
+	if actor.melee_clock >= cycle:
+		actor.melee_clock = 0.0
+		actor.melee_target = null
 
 func _haul(actor: Node2D, delta: float) -> void:
 	var offset := Vector2(-54+actor.supply_lane*36,64)
@@ -511,7 +626,18 @@ func _build(actor: Node2D, delta: float) -> void:
 		_burst(target.position - Vector2(0,25),Color(0.76,0.6,0.34),7)
 
 func _zombie_ai(actor: Node2D, delta: float) -> void:
-	var target := _nearest(actor.position,survivors,2000)
+	if actor.stun_time > 0:
+		actor.attack_clock = 0.0
+		actor.attack_target = null
+		return
+	if actor.attack_clock > 0:
+		_zombie_attack(actor,delta)
+		return
+	for field in fields:
+		if field.kind == "flare" and actor.position.distance_to(field.point) < 350 and _line_of_fire(actor.position,field.point):
+			_move(actor,field.point,delta,48)
+			return
+	var target := _combat_target(actor,survivors,2000)
 	if target == null:
 		return
 	var goal: Vector2 = target.position
@@ -536,22 +662,35 @@ func _zombie_ai(actor: Node2D, delta: float) -> void:
 		return
 	if barrier != null:
 		actor.aim = (barrier.position-actor.position).normalized()
+	actor.attack_target = barrier if barrier != null else target
+	actor.attack_hit = false
+	_zombie_attack(actor,delta)
+
+func _zombie_attack(actor: Node2D, delta: float) -> void:
 	actor.action = "attack"
-	if actor.cooldown > 0:
-		return
-	actor.cooldown = 0.85
-	if barrier != null:
-		barrier.health = maxf(0.0,barrier.health - 21)
-		if barrier.health <= 0:
-			audio.emit_sound("fence_break",barrier.position)
-			barrier.progress = 0.08
-			stats.breaches += 1
-			_navigation_dirty = true
-			_burst(barrier.position,Color(0.45,0.30,0.16),12)
-		barrier.queue_redraw()
-	else:
-		target.health -= 13
-		target.hurt = 0.6
+	actor.move_velocity = Vector2.ZERO
+	actor.attack_clock += delta
+	var victim: Node2D = actor.attack_target
+	if not actor.attack_hit and actor.zombie_attack_progress() >= actor.ZOMBIE_CONTACT:
+		actor.attack_hit = true
+		if is_instance_valid(victim) and victim.health > 0:
+			if victim in structures:
+				var bounds: Rect2 = victim.collision_bounds()
+				if bounds.has_area() and actor.position.distance_to(actor.position.clamp(bounds.position,bounds.end)) <= 30:
+					victim.health = maxf(0,victim.health-21)
+					if victim.health <= 0:
+						audio.emit_sound("fence_break",victim.position)
+						victim.progress = 0.08
+						stats.breaches += 1
+						_navigation_dirty = true
+						_burst(victim.position,Color(0.45,0.30,0.16),12)
+					victim.queue_redraw()
+			elif actor.position.distance_to(victim.position) <= 46 and _line_of_fire(actor.position,victim.position) and actor.aim.dot((victim.position-actor.position).normalized()) > 0.5:
+				victim.health -= 13
+				victim.hurt = 0.6
+	if actor.attack_clock >= actor.ZOMBIE_ATTACK_CYCLE:
+		actor.attack_clock = 0.0
+		actor.attack_target = null
 
 func _move(actor: Node2D, destination: Vector2, delta: float, speed: float) -> void:
 	# Patrol/retreat goals can fall inside scenery. End at a reachable ground cell.
@@ -571,7 +710,7 @@ func _move(actor: Node2D, destination: Vector2, delta: float, speed: float) -> v
 			actor.detour_time = 1.5
 		actor.blocked_time = 0.0
 	# Skip grid stair-steps whenever the whole body can travel directly ahead.
-	while actor.route.size() > 1 and _clear_segment(actor.position,actor.route[1]):
+	while actor.route.size() > 1 and _route_segment_clear(actor,actor.route[1]):
 		actor.route.remove_at(0)
 	while not actor.route.is_empty() and actor.position.distance_to(actor.route[0]) < 4:
 		actor.route.remove_at(0)
@@ -590,9 +729,11 @@ func _move(actor: Node2D, destination: Vector2, delta: float, speed: float) -> v
 	if _clear_segment(before,proposed) and _agents_clear(actor,proposed):
 		actor.position = proposed
 	else:
-		# Choose a clear forward side step; never reverse in place for a whole cycle.
+		# Keep a chosen passing side until the obstacle is behind us.
 		var best := INF
 		for angle in [PI/4,-PI/4,PI/2,-PI/2]:
+			if actor.avoidance_time > 0 and signf(angle) != actor.avoidance.x:
+				continue
 			var side_direction := direction.rotated(angle)
 			var sidestep := before+side_direction*speed*delta
 			if not _clear_segment(before,sidestep) or not _agents_clear(actor,sidestep):
@@ -605,6 +746,9 @@ func _move(actor: Node2D, destination: Vector2, delta: float, speed: float) -> v
 				best = score
 				actor.position = sidestep
 				actor.move_velocity = side_direction*speed
+				actor.avoidance = Vector2(signf(angle),0)
+		if best < INF:
+			actor.avoidance_time = 0.65
 	var movement: Vector2 = actor.position-before
 	var progress := before.distance_to(waypoint)-actor.position.distance_to(waypoint)
 	actor.blocked_time = actor.blocked_time+delta if progress < speed*delta*0.15 else maxf(0,actor.blocked_time-delta*0.25)
@@ -613,6 +757,15 @@ func _move(actor: Node2D, destination: Vector2, delta: float, speed: float) -> v
 		actor.aim = movement.normalized()
 	else:
 		actor.move_velocity = Vector2.ZERO
+
+func _route_segment_clear(actor: Node2D, point: Vector2) -> bool:
+	if not _clear_segment(actor.position,point):
+		return false
+	if actor.detour_time > 0:
+		for other in survivors+zombies:
+			if other != actor and other.health > 0 and other.position.distance_to(Geometry2D.get_closest_point_to_segment(other.position,actor.position,point)) < 25:
+				return false
+	return true
 
 func _route_around_bodies(actor: Node2D, destination: Vector2, avoid_bodies: bool) -> PackedVector2Array:
 	var start := _visible_cell(actor.position)
@@ -641,7 +794,7 @@ func _agents_clear(actor: Node2D, point: Vector2) -> bool:
 	return true
 
 func _body_clear(point: Vector2, radius := 12.0) -> bool:
-	if point.x < 830 or point.x > 1948 or not _on_land(point,radius):
+	if point.x < 830 or point.x > 2100 or not _on_land(point,radius):
 		return false
 	for footprint in _footprints:
 		if footprint.grow(radius).has_point(point):
@@ -683,14 +836,16 @@ func _visible_cell(point: Vector2) -> Vector2i:
 				result = candidate
 	return result
 
-func _spawn_position(point: Vector2) -> Vector2:
+func _spawn_position(point: Vector2, outside := false) -> Vector2:
 	var best := Vector2(_free_cell(point))*CELL_SIZE+CELL_CENTER
-	if _body_clear(best) and _nearest(best,survivors+zombies,28) == null:
+	if (not outside or _outside_view(best)) and _body_clear(best) and _nearest(best,survivors+zombies,28) == null:
 		return best
 	var nearest := INF
 	for y in GRID_SIZE.y:
 		for x in range(52,GRID_SIZE.x):
 			var candidate := Vector2(x,y)*CELL_SIZE+CELL_CENTER
+			if outside and not _outside_view(candidate):
+				continue
 			if _navigation.is_point_solid(Vector2i(x,y)) or not _body_clear(candidate):
 				continue
 			if _nearest(candidate,survivors+zombies,28) != null:
@@ -699,7 +854,7 @@ func _spawn_position(point: Vector2) -> Vector2:
 			if distance < nearest:
 				nearest = distance
 				best = candidate
-	return best
+	return Vector2.INF if outside and nearest == INF else best
 
 func _cell(point: Vector2) -> Vector2i:
 	return Vector2i(floori(point.x / CELL_SIZE),floori(point.y / CELL_SIZE)).clamp(Vector2i.ZERO,GRID_SIZE-Vector2i.ONE)
@@ -754,46 +909,130 @@ func _line_of_fire(from: Vector2, to: Vector2) -> bool:
 	return true
 
 func _shoot(actor: Node2D, enemy: Node2D) -> void:
+	if actor.action != "shoot" or actor.loadout_slot == 0 or actor.melee_clock > 0 or actor.reload_clock > 0:
+		return
 	if bullets.size() >= MAX_BULLETS or not _line_of_fire(actor.position,enemy.position):
 		return
-	actor.cooldown = _rng.randf_range(0.55,0.9)
+	if actor.rounds <= 0:
+		actor.reload_clock = 0.001
+		return
+	var gun: Dictionary = actor.firearm
+	actor.rounds -= 1
+	actor.cooldown = float(gun.get("interval",0.7))*_rng.randf_range(0.95,1.05)
 	actor.begin_shot()
 	var muzzle: Vector2 = actor.position + actor.muzzle_offset()
 	var destination: Vector2 = enemy.position + Vector2(0,-34)
-	bullets.append({"point":muzzle,"velocity":(destination-muzzle).normalized()*780,"life":1.0})
+	var speed: float = gun.get("speed",780.0)
+	var arc: bool = int(gun.get("arc",0)) != 0
+	var flight := muzzle.distance_to(destination)/speed if arc else 1.8
+	bullets.append({"point":muzzle,"origin":muzzle,"destination":destination,"velocity":(destination-muzzle).normalized()*speed,"life":flight,"duration":flight,"damage":float(gun.get("damage",34.0)),"blast":float(gun.get("blast",0.0)),"arc":arc,"kind":"round"})
 	stats.shots += 1
-	audio.emit_sound("rifle",actor.position)
+	audio.emit_sound("launcher" if float(gun.get("blast",0.0)) > 0 else "rifle",actor.position)
 	_burst(muzzle,Color(0.85,0.74,0.40),1)
+
+func _damage_zombie(enemy: Node2D, damage: float, point: Vector2) -> void:
+	if enemy.health <= 0:
+		return
+	enemy.health -= damage
+	enemy.hurt = 0.4
+	_burst(point,Color(0.50,0.12,0.10),3)
+	if enemy.health <= 0:
+		stats.kills += 1
 
 func _step_bullets(delta: float) -> void:
 	for index in range(bullets.size()-1,-1,-1):
 		var bullet: Dictionary = bullets[index]
 		var before: Vector2 = bullet.point
-		bullet.point += bullet.velocity * delta
 		bullet.life -= delta
-		for enemy in zombies:
-			if enemy.health <= 0:
-				continue
-			var chest: Vector2 = enemy.position + Vector2(0,-34)
-			if chest.distance_to(Geometry2D.get_closest_point_to_segment(chest,before,bullet.point)) < 22:
-				enemy.health -= 34
-				enemy.hurt = 0.4
-				_burst(chest,Color(0.50,0.12,0.10),4)
-				if enemy.health <= 0:
-					stats.kills += 1
+		if bullet.arc:
+			var progress: float = clampf(1.0-bullet.life/bullet.duration,0,1)
+			bullet.point = bullet.origin.lerp(bullet.destination,progress)+Vector2(0,-sin(progress*PI)*85)
+		else:
+			bullet.point += bullet.velocity*delta
+			if not _line_of_fire(before+Vector2(0,34),bullet.point+Vector2(0,34)):
 				bullet.life = 0
-				break
+			for enemy in (zombies if bullet.life > 0 else []):
+				if enemy.health <= 0:
+					continue
+				var chest: Vector2 = enemy.position + Vector2(0,-34)
+				if chest.distance_to(Geometry2D.get_closest_point_to_segment(chest,before,bullet.point)) < 22:
+					if bullet.blast == 0:
+						_damage_zombie(enemy,bullet.damage,chest)
+					bullet.point = chest
+					bullet.life = 0
+					break
 		if bullet.life <= 0:
+			_detonate(bullet)
 			bullets.remove_at(index)
+
+func _detonate(bullet: Dictionary) -> void:
+	var point: Vector2 = bullet.point+Vector2(0,34)
+	if bullet.kind in ["flash","smoke","flare"]:
+		if fields.size() < 6:
+			fields.append({"kind":bullet.kind,"point":point,"life":0.28 if bullet.kind == "flash" else 4.0 if bullet.kind == "smoke" else 7.0})
+		if bullet.kind == "flash":
+			for enemy in zombies:
+				if enemy.health > 0 and enemy.position.distance_to(point) < 105:
+					enemy.stun_time = 1.8
+		audio.emit_sound("grenade",point)
+	elif bullet.blast > 0:
+		for enemy in zombies:
+			var distance: float = enemy.position.distance_to(point)
+			if distance < float(bullet.blast) and _line_of_fire(point,enemy.position):
+				_damage_zombie(enemy,float(bullet.damage)*(1.0-0.45*distance/float(bullet.blast)),enemy.position+Vector2(0,-34))
+		if fields.size() < 6:
+			fields.append({"kind":"blast","point":point,"life":0.35})
+		_burst(point,Color("e7a94b"),15)
+		audio.emit_sound("explosion",point)
+
+func _throw_item() -> void:
+	if bullets.size() >= MAX_BULLETS or survivors.is_empty():
+		return
+	var actor: Node2D = survivors[survivors.size()-1]
+	if actor.health <= 0:
+		return
+	var enemy := _nearest(actor.position,zombies,400)
+	if enemy == null or not _line_of_fire(actor.position,enemy.position):
+		return
+	var kind: String = ["frag","flash","smoke","flare"][stats.throws%4]
+	var origin: Vector2 = actor.position+Vector2(0,-34)
+	var destination: Vector2 = enemy.position+Vector2(0,-34)
+	bullets.append({"point":origin,"origin":origin,"destination":destination,"velocity":Vector2.ZERO,"life":0.9,"duration":0.9,"damage":85.0,"blast":90.0 if kind == "frag" else 0.0,"arc":true,"kind":kind,"item_frame":4+stats.throws%4})
+	stats.throws += 1
+	audio.emit_sound("swing",actor.position)
+
+func _step_fields(delta: float) -> void:
+	for index in range(fields.size()-1,-1,-1):
+		fields[index].life -= delta
+		if fields[index].life <= 0:
+			fields.remove_at(index)
 
 func _burst(point: Vector2, color: Color, count: int) -> void:
 	for index in mini(count,MAX_EFFECTS-effects.size()):
 		effects.append({"point":point,"velocity":Vector2(_rng.randf_range(-50,50),_rng.randf_range(-50,15)),"color":color,"life":_rng.randf_range(0.2,0.5)})
 
 func _draw_effects() -> void:
+	for field in fields:
+		var point: Vector2 = field.point
+		if field.kind == "smoke":
+			for puff in 7:
+				var offset := Vector2(sin(puff*2.1)*38,cos(puff*1.7)*20-15)
+				effects_layer.draw_rect(Rect2(point+offset-Vector2(17,17),Vector2(34,34)),Color(0.48,0.52,0.48,minf(0.18,field.life*0.15)))
+		elif field.kind == "flare":
+			effects_layer.draw_circle(point,30,Color(0.85,0.19,0.08,0.12))
+			effects_layer.draw_rect(Rect2(point-Vector2(3,8),Vector2(6,10)),Color("ef7850"))
+		else:
+			var color := Color(1,0.92,0.68,minf(0.5,field.life*2)) if field.kind == "flash" else Color(1,0.51,0.12,minf(0.5,field.life*2))
+			effects_layer.draw_circle(point-Vector2(0,15),22+(0.35-float(field.life))*60,color)
 	for bullet in bullets:
 		var velocity: Vector2 = bullet.velocity
-		effects_layer.draw_line(bullet.point,Vector2(bullet.point)-velocity.normalized()*24,Color(1.0,0.83,0.45,0.88),2)
+		if bullet.has("item_frame"):
+			var texture := Equipment.frame("rifles_throwables",bullet.item_frame)
+			effects_layer.draw_texture_rect(texture,Rect2(Vector2(bullet.point)-Vector2(5,7),Vector2(10,14)),false)
+		elif bullet.blast > 0:
+			effects_layer.draw_rect(Rect2(Vector2(bullet.point)-Vector2(4,3),Vector2(8,6)),Color("a5a77c"))
+		else:
+			effects_layer.draw_line(bullet.point,Vector2(bullet.point)-velocity.normalized()*24,Color(1.0,0.83,0.45,0.88),2)
 	for effect in effects:
 		var color: Color = effect.color
 		color.a = minf(effect.life * 3.0,1.0)

@@ -1,13 +1,14 @@
 extends Node2D
 ## Outlined 2.5D camp art, placed at its front ground contact with explicit footprints.
 const Art := preload("res://scripts/ui/menu_demo_art.gd")
-const ATLAS_INDEX := {0:0,3:2,4:1,5:5,6:3,7:4}
-const WIDTH := {0:200.0,3:72.0,4:90.0,5:64.0,6:86.0,7:112.0}
+const Equipment := preload("res://scripts/ui/menu_demo_equipment.gd")
+const ATLAS_INDEX := {0:0,3:2,4:1,5:5,6:3,7:4,8:2}
+const WIDTH := {0:200.0,3:72.0,4:90.0,5:64.0,6:86.0,7:112.0,8:72.0}
 var kind := 0
 var flame_frame := 0
 
 func footprint() -> Rect2:
-	var sizes := {0:Vector2(176,100),3:Vector2(64,38),4:Vector2(64,58),5:Vector2(42,28),6:Vector2(80,76),7:Vector2(92,140)}
+	var sizes := {0:Vector2(176,100),3:Vector2(64,38),4:Vector2(64,58),5:Vector2(42,28),6:Vector2(80,76),7:Vector2(92,140),8:Vector2(64,38)}
 	var dimensions: Vector2 = sizes[kind]
 	return Rect2(position-Vector2(dimensions.x*0.5,dimensions.y),dimensions)
 
@@ -27,3 +28,5 @@ func _draw() -> void:
 	if kind == 5:
 		warmth = Color(1,0.93+0.025*(flame_frame%3),0.88+0.04*(flame_frame%3))
 	draw_texture_rect(Art.frame(ATLAS_INDEX[kind]),art_rect(),false,warmth)
+	if kind == 8:
+		draw_texture_rect(Equipment.frame("ammunition",1),Rect2(-21,-62,42,32),false)

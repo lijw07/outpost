@@ -1,0 +1,6 @@
+[
+  {"id":"frag", "name":"Fragmentation grenade", "atlas":"rifles_throwables", "frame":4,"radius":90,"damage":85},
+  {"id":"flash", "name":"Flashbang", "atlas":"rifles_throwables", "frame":5,"radius":105,"stun_seconds":1.8},
+  {"id":"smoke", "name":"Smoke grenade", "atlas":"rifles_throwables", "frame":6,"duration":4},
+  {"id":"flare", "name":"Emergency flare", "atlas":"rifles_throwables", "frame":7,"duration":7,"attract_radius":350}
+]

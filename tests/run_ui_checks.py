@@ -46,6 +46,8 @@ def main():
             commands = [
                 ('clean import', ['--import']),
                 ('editor load', ['--editor', '--quit']),
+                ('shooting and foliage', ['-s', 'res://tools/art/verify_menu_shooting.gd']),
+                ('equipment and combat', ['-s', 'res://tests/menu_equipment_checks.gd']),
                 ('animated menu backgrounds', ['-s', 'res://tests/menu_background_checks.gd']),
                 ('fresh-process scenery rotation', ['-s', 'res://tests/menu_background_checks.gd', '--', '--rotation-reload']),
                 ('UI regressions', ['--verbose', '-s', 'res://tests/ui_regression.gd']),
@@ -53,6 +55,7 @@ def main():
             ]
             if args.render:
                 commands.append(('rendered menu backgrounds', ['-s', 'res://tests/menu_background_render.gd']))
+                commands.append(('rendered hat masks', ['-s', 'res://tests/menu_hat_render_checks.gd']))
             if args.all:
                 commands += [
                     ('scene smoke checks', ['-s', 'res://tests/scene_smoke.gd']),
@@ -66,20 +69,21 @@ def main():
                     ('meadow showcase', ['res://scenes/environment/meadow_showcase.tscn', '--', '--showcase-test']),
                 ]
             for index, (label, extra) in enumerate(commands):
-                display = [] if label == 'rendered menu backgrounds' else ['--headless']
+                display = [] if label in ['rendered menu backgrounds','rendered hat masks'] else ['--headless']
+                stage_timeout = 180 if label == 'animated menu backgrounds' else 60
                 try:
                     result = subprocess.run(
                         [args.godot, *display, '--path', str(project), '--log-file', str(base / f'{index}.log'), *extra],
-                        capture_output=True, text=True, timeout=60)
+                        capture_output=True, text=True, timeout=stage_timeout)
                 except subprocess.TimeoutExpired as error:
-                    print(f'FAIL: {label} exceeded 60 seconds.', flush=True)
+                    print(f'FAIL: {label} exceeded {stage_timeout} seconds.', flush=True)
                     for captured in [error.stdout, error.stderr]:
                         if captured:
                             print(captured.decode(errors='replace') if isinstance(captured, bytes) else captured, flush=True)
                     return 1
                 output = result.stdout + result.stderr
                 print(f'{label}:', flush=True)
-                important = [line for line in output.splitlines() if any(tag in line for tag in ['REGRESSION:', 'SCENE CHECK:', 'BACKGROUND CHECK:', 'RENDER CHECK:', 'FAIL:', 'PASS:'])]
+                important = [line for line in output.splitlines() if any(tag in line for tag in ['REGRESSION:', 'EQUIPMENT CHECK:', 'HAT RENDER CHECK:', 'MENU SHOOTING:', 'SCENE CHECK:', 'BACKGROUND CHECK:', 'RENDER CHECK:', 'FAIL:', 'PASS:'])]
                 for line in important:
                     print(line, flush=True)
                 incomplete_render = label == 'rendered menu backgrounds' and 'RENDER CHECK:' not in output

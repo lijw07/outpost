@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[2] / 'assets/menu/characters'
 
 def measure(path, columns=4, rows=4, action="walk"):
     image = Image.open(path)
-    if action == 'shoot' and image.mode == 'RGB':
+    if action in ('shoot', 'move_shoot') and image.mode == 'RGB':
         # Match the runtime shader's neutral-background key without editing source art.
         rgb = np.asarray(image).astype(int)
         mask = ~((rgb.min(axis=2) > 148) & (rgb.max(axis=2)-rgb.min(axis=2) < 22))
@@ -62,7 +62,7 @@ def measure(path, columns=4, rows=4, action="walk"):
             center = (right-left)*(.15 if direction == 1 else .85 if direction == 3 else .5)
             pivot_y = (bottom-top)*(.25 if direction == 0 else .7)
         frame = {'region': [left, top, right-left, bottom-top], 'pivot': [round(center), round(pivot_y)]}
-        if action == 'shoot':
+        if action in ('shoot', 'move_shoot'):
             direction=index//columns
             if direction in (1,3):
                 muzzle_x=right-2 if direction==1 else left+1
@@ -78,9 +78,10 @@ def measure(path, columns=4, rows=4, action="walk"):
     return {'path': path.name, 'height': reference_height, 'frames': frames}
 
 if __name__ == '__main__':
-    result = {key: measure(ROOT / name, action=action) for key, name, action in [('survivor','survivor_walk.png','walk'),('zombie','zombie_walk.png','walk'),('carry','survivor_carry.png','carry'),('build','survivor_build.png','build'),('death','zombie_death.png','death'),('shoot','survivor_shoot.png','shoot')]}
-    (ROOT / 'frames.json').write_text(json.dumps(result, indent=2) + '\n')
+    from register_menu_anchors import register
+    result = {key: measure(ROOT / name, action=action) for key, name, action in [('survivor','survivor_walk.png','walk'),('zombie','zombie_walk.png','walk'),('carry','survivor_carry.png','carry'),('build','survivor_build.png','build'),('death','zombie_death.png','death'),('shoot','survivor_shoot.png','shoot'),('move_shoot','survivor_move_shoot.png','move_shoot')]}
+    (ROOT / 'frames.json').write_text(json.dumps(register(result), indent=2) + '\n')
     camp_root = ROOT.parent / 'camp'
     camp = measure(camp_root / 'outlined_camp.png', columns=5, rows=2, action='prop')
     (camp_root / 'frames.json').write_text(json.dumps(camp, indent=2) + '\n')
-    print('Registered 96 action frames and ten camp props; source artwork unchanged.')
+    print('Registered 112 action frames and ten camp props; source artwork unchanged.')
