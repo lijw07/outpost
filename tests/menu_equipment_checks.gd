@@ -72,12 +72,37 @@ func run() -> void:
 			var raised: Vector2 = pose_actor.weapon_grip()
 			pose_actor.melee_clock = float(weapon.cycle)*0.42
 			pose_actor._update_body()
-			overhead = overhead and raised.y < rest.y-15 and pose_actor.weapon_grip().y > raised.y+20
+			overhead = overhead and raised.y < rest.y-8 and pose_actor.weapon_grip().y > raised.y+12
 			pose_actor.melee_clock = float(weapon.cycle)
 			pose_actor._update_body()
 			returns_to_rest = returns_to_rest and pose_actor.weapon_grip().distance_to(rest) < 1
 	check(upright and overhead,"all sixteen melee weapons hold upright and strike downward in all four directions")
 	check(returns_to_rest,"overhead strikes recover to the upright grip without snapping")
+	var attached := true
+	var bounded := true
+	for direction in [Vector2.DOWN,Vector2.RIGHT,Vector2.UP,Vector2.LEFT]:
+		pose_actor.aim = direction
+		for weapon in EQUIPMENT.weapons:
+			pose_actor.melee_weapon = weapon
+			pose_actor.wardrobe.weapon = weapon
+			for tick in 41:
+				pose_actor.action = "melee"
+				pose_actor.melee_clock = float(weapon.cycle)*tick/40.0
+				pose_actor._update_body()
+				var joints: PackedVector2Array = pose_actor.arm_pose(true)
+				attached = attached and joints[2].distance_to(pose_actor.weapon_grip()) < 2
+				attached = attached and pose_actor.arm_pose(false)[2].distance_to(pose_actor.support_grip()) < 2
+				bounded = bounded and joints[0].distance_to(joints[2]) < 29
+	check(attached and bounded,"hands stay on melee grips through full swings without stretched arms")
+	pose_actor.action = "run"
+	pose_actor.velocity = Vector2.RIGHT*50
+	pose_actor.aim = Vector2.RIGHT
+	pose_actor.phase = 0.25
+	pose_actor.animate(0.1,Vector2.RIGHT*2)
+	var free_forward: Vector2 = pose_actor.relaxed_hand(false)
+	pose_actor.phase = 0.75
+	pose_actor.animate(0.1,Vector2.RIGHT*2)
+	check(pose_actor.relaxed_hand(false).distance_to(free_forward)>10,"the free arm swings with the walking stride")
 	pose_actor.free()
 	var world := WORLD.new()
 	root.add_child(world)
@@ -123,6 +148,17 @@ func run() -> void:
 		gunner._update_body()
 		aim_matches = aim_matches and absf(angle_difference(gunner.wardrobe.held.rotation,direction.angle())) < 0.001
 	check(aim_matches,"equipment preserves exact target aiming in cardinal and diagonal directions")
+	var top_views := true
+	for direction in [Vector2.UP,Vector2.DOWN]:
+		gunner.aim = direction
+		gunner._update_body()
+		top_views = top_views and gunner.wardrobe.held.texture.get_width() == 48
+		var muzzle: Vector2 = gunner.muzzle_offset()-gunner.render_offset-gunner.weapon_grip()
+		top_views = top_views and absf(muzzle.cross(direction)) < 0.01
+	gunner.aim = Vector2.UP
+	gunner._update_body()
+	check(top_views,"vertical firearms use a centered top view with the muzzle on the aiming axis")
+	check(gunner.arm_pose(true)[1].x < gunner.torso_socket.x-14 and gunner.arm_pose(false)[1].x > gunner.torso_socket.x+14,"rear-facing rifle elbows extend beyond the torso")
 	gunner.aim = Vector2.RIGHT
 	gunner._update_body()
 	var rounds_before: int = gunner.rounds

@@ -1,5 +1,6 @@
 extends Node2D
 ## Modular visual attachments follow the same ground pivot as the character.
+const FirearmViews := preload("res://scripts/ui/menu_demo_firearm_views.gd")
 const Equipment := preload("res://scripts/ui/menu_demo_equipment.gd")
 var outfit: Dictionary
 var weapon: Dictionary
@@ -87,20 +88,20 @@ func update_pose(actor: Node2D) -> void:
 	held.visible = visible and (actor.weapon_kind() != "")
 	held.modulate = modulate
 	if held.get_parent() == actor:
-		actor.move_child(held,0 if actor.aim.y < -0.6 else actor.get_child_count()-2)
+		actor.move_child(held,1 if direction == 2 else actor.get_child_count()-2)
 	if actor.weapon_kind() == "melee":
 		held.texture = Equipment.frame(weapon.get("atlas","weapons"),weapon.frame)
 		held.offset = Vector2(-held.texture.get_width()*0.12,-held.texture.get_height()*0.5)
 		held.scale = Vector2.ONE*actor.weapon_scale()/held.texture.get_width()
 		held.position = actor.render_offset+actor.weapon_grip()
 		held.rotation = actor.weapon_direction().angle()
-		held.flip_v = false
-		held.show_behind_parent = actor.aim.y < -0.6
+		held.flip_v = direction in [2,3]
+		held.show_behind_parent = false
 	elif actor.weapon_kind() == "firearm":
-		held.texture = Equipment.frame(firearm.get("atlas","firearms"),firearm.frame)
-		held.offset = Vector2(-held.texture.get_width()*0.32,-held.texture.get_height()*(0.58 if actor.aim.x >= 0 else 0.42))
+		held.texture = FirearmViews.top_view(firearm.id) if direction in [0,2] else Equipment.frame(firearm.get("atlas","firearms"),firearm.frame)
+		held.offset = Vector2(-held.texture.get_width()*0.32,-held.texture.get_height()*(0.5 if direction in [0,2] else 0.58 if actor.aim.x >= 0 else 0.42))
 		held.scale = Vector2.ONE*actor.weapon_scale()/held.texture.get_width()
 		held.position = actor.render_offset+actor.weapon_grip()
 		held.rotation = actor.weapon_direction().angle()
 		held.flip_v = actor.aim.x < 0
-		held.show_behind_parent = actor.aim.y < -0.6
+		held.show_behind_parent = false

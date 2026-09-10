@@ -7,6 +7,10 @@ var attack_clock := 0.0
 var attack_hit := false
 var attack_target: Node2D
 
+const LimbRig := preload("res://scripts/ui/menu_demo_limb_rig.gd")
+var rear_arms: Node2D
+var front_arms: Node2D
+
 const INK := Color("14211f")
 var team := 0
 var role := 0
@@ -45,6 +49,7 @@ var ammo_pickup_clock := 0.0
 var pose_clock := 0.0
 var phase := 0.0
 var armed_phase := 0.0
+var arm_stride := 0.0
 var shot_target: Node2D
 var moving_recoil := Vector2.ZERO
 var action_phase := 0.0
@@ -100,6 +105,12 @@ func setup(undead: bool, job: int) -> void:
 	shadow.color = Color(0.04,0.07,0.05,0.38)
 	shadow.show_behind_parent = true
 	add_child(shadow)
+	rear_arms = Node2D.new()
+	add_child(rear_arms)
+	rear_arms.draw.connect(_draw_arms.bind(rear_arms,true))
+	front_arms = Node2D.new()
+	add_child(front_arms)
+	front_arms.draw.connect(_draw_arms.bind(front_arms,false))
 	body = Sprite2D.new()
 	body.centered = false
 	body.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -107,6 +118,7 @@ func setup(undead: bool, job: int) -> void:
 	palette.shader = preload("res://assets/shaders/menu_actor_palette.gdshader")
 	body.material = palette
 	add_child(body)
+	move_child(front_arms,get_child_count()-1)
 	_update_body()
 
 func equip(slot: int, outfit_index: int, weapon_index: int) -> void:
@@ -136,6 +148,7 @@ func animate(delta: float, displacement := Vector2.ZERO) -> void:
 	detour_time = maxf(0,detour_time-delta)
 	target_clock = maxf(0,target_clock-delta)
 	phase += displacement.length() / (48.0 if team else 60.0)
+	arm_stride = lerpf(arm_stride,sin(phase*TAU) if velocity.length_squared()>1 else 0.0,1-exp(-delta*18))
 	if action == "shoot":
 		armed_phase += displacement.length()/60.0*(-1.0 if displacement.dot(aim)<0.0 else 1.0)
 	else:
@@ -170,6 +183,8 @@ func render_interpolated(weight: float) -> void:
 	shadow.position = render_offset
 	if wardrobe != null:
 		wardrobe.update_pose(self)
+	rear_arms.queue_redraw()
+	front_arms.queue_redraw()
 	if hand_layer != null:
 		hand_layer.queue_redraw()
 	queue_redraw()
@@ -178,7 +193,7 @@ func muzzle_offset() -> Vector2:
 	if uses_sprite_gun():
 		var texture: Texture2D = wardrobe.held.texture
 		var scale_factor: float = weapon_scale()/texture.get_width()
-		var barrel := Vector2(texture.get_width()*0.67,texture.get_height()*(-0.32 if aim.x >= 0 else 0.32))
+		var barrel := Vector2(texture.get_width()*0.67,0.0 if facing in [0,2] else texture.get_height()*(-0.32 if aim.x >= 0 else 0.32))
 		return render_offset+weapon_grip()+barrel.rotated(weapon_direction().angle())*scale_factor
 	if current_clip in ["shoot","move_shoot"]:
 		var clip: Dictionary=clips[current_clip]
@@ -219,19 +234,19 @@ func weapon_grip() -> Vector2:
 	var torso := torso_socket+pose_shift*0.55
 	if weapon_kind() == "melee":
 		var side := 1.0 if facing in [0,1] else -1.0
-		var rest := torso+Vector2(side*19,7)+weapon_sway()
+		var rest := torso+Vector2(side*16,-10 if facing in [0,2] else -5)+weapon_sway()
 		if action != "melee":
 			return rest
 		var progress := melee_progress()
-		var raised := torso+Vector2(side*18,-16)
-		var contact := torso+Vector2(aim.x*24,16+aim.y*7)
+		var raised := torso+Vector2(side*10,-24)
+		var contact := torso+Vector2(aim.x*20,3+aim.y*9)
 		if progress < 0.22:
 			return rest.lerp(raised,smoothstep(0,0.22,progress))
 		if progress < 0.42:
 			return raised.lerp(contact,smoothstep(0.22,0.42,progress))
 		return contact.lerp(rest,smoothstep(0.52,1,progress))
 	var direction := weapon_direction()
-	var grip := torso+Vector2(direction.x,direction.y*0.55)*14+moving_recoil*0.5+weapon_sway()
+	var grip := torso+Vector2(direction.x*12,direction.y*(14 if facing == 2 else 6))+moving_recoil*0.5+weapon_sway()
 	if action not in ["shoot","reload"]:
 		grip.y += 5
 	return grip
@@ -239,11 +254,10 @@ func weapon_grip() -> Vector2:
 func support_grip() -> Vector2:
 	var grip := weapon_grip()
 	if weapon_kind() == "melee":
-		var side := 1.0 if facing in [0,1] else -1.0
-		var free_hand := torso_socket+Vector2(-side*12,13)+weapon_sway()
+		var free_hand := relaxed_hand(false)
 		# The free hand stays relaxed; longer weapons use both hands for the strike.
-		return free_hand.lerp(grip+weapon_direction()*4,melee_engagement()) if float(melee_weapon.length) >= 36 else free_hand
-	return grip+weapon_direction()*(2 if firearm.get("id","") == "pistol" else 12)
+		return free_hand.lerp(grip-weapon_direction()*4,melee_engagement()) if float(melee_weapon.length) >= 36 else free_hand
+	return grip+weapon_direction()*(2 if firearm.get("id","") == "pistol" else 9)
 
 func weapon_direction() -> Vector2:
 	if weapon_kind() != "melee":
@@ -255,11 +269,15 @@ func weapon_direction() -> Vector2:
 	# An overhead arc starts vertical, then descends toward the target.
 	# Side views follow their facing; front/back views keep a readable diagonal.
 	var side := 1.0 if facing in [0,1] else -1.0
-	var contact_angle := Vector2(side*maxf(absf(aim.x),0.35),0.7).angle()
-	if side < 0:
+	var contact_angle := Vector2(side*maxf(absf(aim.x),0.35),0.7+aim.y*1.5).angle()
+	if side < 0 and contact_angle > 0:
 		contact_angle -= TAU
-	var strike := smoothstep(0.22,0.42,progress)*(1-smoothstep(0.52,1,progress))
-	return Vector2.from_angle(lerpf(-PI/2,contact_angle,strike))
+	var raised_angle := -PI/2-side*0.35
+	if progress < 0.22:
+		return Vector2.from_angle(lerpf(-PI/2,raised_angle,smoothstep(0,0.22,progress)))
+	if progress < 0.42:
+		return Vector2.from_angle(lerpf(raised_angle,contact_angle,smoothstep(0.22,0.42,progress)))
+	return Vector2.from_angle(lerpf(contact_angle,-PI/2,smoothstep(0.52,1,progress)))
 
 func weapon_scale() -> float:
 	if weapon_kind() == "melee":
@@ -275,11 +293,12 @@ func zombie_reach() -> float:
 	var progress := zombie_attack_progress()
 	return smoothstep(0.24,ZOMBIE_CONTACT,progress)*(1-smoothstep(0.5,1,progress))
 
-func zombie_hand() -> Vector2:
+func zombie_hand(primary := true) -> Vector2:
 	var side := 1.0 if facing in [0,1] else -1.0
-	var raised := Vector2(side*14,-50)
-	var contact := Vector2(aim.x*38,-34+aim.y*22)
-	var rest := Vector2(side*17,-30)
+	var shoulder := arm_shoulder(primary)
+	var rest := shoulder+Vector2(aim.x*12+(side*3 if primary else -side*3),10+aim.y*3)
+	var raised := shoulder+Vector2(aim.x*8+(side*9 if primary else -side*9),10+aim.y*4)
+	var contact := shoulder+Vector2(aim.x*23+(side*3 if primary else -side*3),9+aim.y*12)
 	var progress := zombie_attack_progress()
 	if progress < 0.24:
 		return rest.lerp(raised,smoothstep(0,0.24,progress))
@@ -287,11 +306,54 @@ func zombie_hand() -> Vector2:
 		return raised.lerp(contact,smoothstep(0.24,ZOMBIE_CONTACT,progress))
 	return contact.lerp(rest,smoothstep(0.5,1,progress))
 
+func arm_shoulder(primary: bool) -> Vector2:
+	var side := 1.0 if facing in [0,1] else -1.0
+	var torso := torso_socket+(pose_shift+moving_recoil)*0.55
+	if facing in [1,3]:
+		return torso+Vector2(-side*2 if primary else side*3,-7 if primary else -9)
+	return torso+Vector2(side*(10 if primary else -10),-7)
+
+func relaxed_hand(primary: bool) -> Vector2:
+	var shoulder := arm_shoulder(primary)
+	var stride := arm_stride*(1 if primary else -1)
+	if facing in [1,3]:
+		return shoulder+Vector2(stride*9,22-absf(stride)*3)
+	return shoulder+Vector2(stride*2,21+stride*3)
+
+func arm_pose(primary: bool) -> PackedVector2Array:
+	var hand := zombie_hand(primary) if team == 1 else (weapon_grip() if primary else support_grip())
+	var shoulder := arm_shoulder(primary)
+	var outward := 1.0 if shoulder.x >= torso_socket.x else -1.0
+	if team == 1:
+		var elbow := shoulder+Vector2(outward*6,10)
+		elbow = elbow.lerp(shoulder+Vector2(aim.x*11+outward*4,8+aim.y*4),zombie_reach())
+		return PackedVector2Array([shoulder,elbow,hand])
+	if not primary and weapon_kind() == "melee" and (action != "melee" or float(melee_weapon.length)<36):
+		return PackedVector2Array([shoulder,shoulder.lerp(hand,0.5)+Vector2(outward,0),hand])
+	if facing == 2:
+		return PackedVector2Array([shoulder,shoulder+Vector2(outward*6,10),hand])
+	var side := 1.0 if facing in [0,1] else -1.0
+	var bend := side if primary else -side
+	if facing in [1,3]:
+		bend = -side
+
+	return LimbRig.joints(arm_shoulder(primary),hand,bend)
+
+func arm_is_behind(primary: bool) -> bool:
+	return facing == 2 or (facing in [1,3] and not primary)
+
+func _draw_arms(canvas: Node2D, behind: bool) -> void:
+	if health <= 0 or (team == 1 and action != "attack") or (team == 0 and weapon_kind() == ""):
+		return
+	canvas.draw_set_transform(render_offset,0,Vector2(2,2))
+	var sleeve := Color(wardrobe.outfit.jacket) if wardrobe != null else Color("62644c")
+	var skin := Color("c5a17b") if team == 0 else Color("929a74")
+	for primary in [false,true]:
+		if arm_is_behind(primary) == behind:
+			LimbRig.draw_arm(canvas,arm_pose(primary),sleeve.darkened(0.15) if behind else sleeve,skin,team == 1)
+
 func melee_ready() -> bool:
 	return weapon_kind() == "melee"
-
-func visible_weapon_hands() -> bool:
-	return facing != 2 or (weapon_kind() == "melee" and action != "melee")
 
 func begin_shot() -> void:
 	shot_age=0.0
@@ -391,7 +453,7 @@ func _update_body() -> void:
 	if health <= 0:
 		body.modulate.a = 1.0-smoothstep(3.0,4.0,death_age) if team else 1.0-smoothstep(0.1,0.6,death_age)
 	# The rifle is part of the drawn pose; only muzzle flashes draw over the body.
-	body.show_behind_parent = true
+	body.show_behind_parent = false
 	if wardrobe != null:
 		wardrobe.update_pose(self)
 
@@ -399,24 +461,6 @@ func _draw() -> void:
 	draw_set_transform(render_offset,0,Vector2(2,2))
 	if health <= 0:
 		return
-	var skin := Color("c5a17b") if team == 0 else Color("929a74")
-	var sleeve := Color(wardrobe.outfit.jacket) if wardrobe != null else Color("8b714b")
-	if wardrobe != null and weapon_kind() != "" and visible_weapon_hands():
-		var grip := weapon_grip()*0.5
-		var shoulder := (torso_socket+pose_shift*0.55)*0.5+Vector2(0,-3)
-		var support := support_grip()*0.5
-		var hand_side := 1.0 if facing in [0,1] else -1.0
-		var arm_pairs: Array = [[shoulder+Vector2(hand_side*6,0),grip],[shoulder+Vector2(-hand_side*6,0),support]]
-		if facing in [1,3]:
-			arm_pairs = [[shoulder+Vector2(-2 if facing == 1 else 2,1),grip]]
-		for pair in arm_pairs:
-			var elbow: Vector2 = pair[0]+Vector2(0,6)
-			elbow = elbow.lerp(pair[1],0.25)
-			_stroke(pair[0],elbow,4,INK)
-			_stroke(elbow,pair[1],3,INK)
-			_stroke(pair[0],elbow,2,sleeve)
-			_stroke(elbow,pair[1],1,sleeve)
-			_stroke(pair[0]+Vector2(0,-1),elbow+Vector2(0,-1),1,sleeve.lightened(0.18))
 	if action == "shoot" and flash > 0:
 		var tip := (muzzle_offset()-render_offset)*0.5
 		var shot_direction: Vector2 = aim if uses_sprite_gun() else [Vector2.DOWN,Vector2.RIGHT,Vector2.UP,Vector2.LEFT][int(current_frame/4.0)]
@@ -427,26 +471,16 @@ func _draw() -> void:
 		_box(10,-3,14,5,INK)
 		for row in mini(carrying,3):
 			_box(11,-3+row*2,12,1,Color("ab8150"))
-	elif action == "attack" and team == 1:
-		var side := 1.0 if facing in [0,1] else -1.0
-		var shoulder := Vector2(side*6,-21)+pose_shift*0.25
-		var hand := zombie_hand()*0.5
-		var elbow := shoulder.lerp(hand,0.55)+Vector2(-side*2,2)
-		_stroke(shoulder,elbow,5,INK)
-		_stroke(shoulder,elbow,3,Color("5d6350"))
-		_stroke(elbow,hand,4,INK)
-		_stroke(elbow,hand,2,skin)
-		_box(hand.x-2,hand.y-2,4,4,INK)
-		_box(hand.x-1,hand.y-1,2,2,skin.lightened(0.12))
 	if hurt > 0:
 		_box(-10,-42,20,2,INK)
 		_box(-10,-42,floorf(20*health/(85.0 if team else 150.0)),2,Color("ab634a") if team else Color("97b15c"))
 
 func _draw_hands() -> void:
-	if health <= 0 or wardrobe == null or weapon_kind() == "" or not visible_weapon_hands():
+	if health <= 0 or wardrobe == null or weapon_kind() == "":
 		return
-	var grip := render_offset+weapon_grip()
-	var support := render_offset+support_grip()
-	for point: Vector2 in [grip,support]:
+	for primary in [false,true]:
+		if arm_is_behind(primary):
+			continue
+		var point := render_offset+arm_pose(primary)[2]
 		hand_layer.draw_rect(Rect2((point-Vector2(2,2)).snapped(Vector2(2,2)),Vector2(4,4)),INK)
 		hand_layer.draw_rect(Rect2(point.snapped(Vector2(2,2)),Vector2(2,2)),Color("c5a17b"))

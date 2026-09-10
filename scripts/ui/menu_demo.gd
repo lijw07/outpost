@@ -1,6 +1,9 @@
 extends Control
 ## A live miniature survival world rendered beneath the menu, never the real save.
 
+const PixelWorld := preload("res://scripts/pixel_world/world.gd")
+var renderer: Node3D
+
 const World := preload("res://scripts/ui/menu_demo_world.gd")
 @export_range(0,2) var variant := 0
 @export var location_title := "LAST WATCH"
@@ -13,8 +16,11 @@ var status: Label
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	viewport = SubViewport.new()
-	viewport.size = Vector2i(960,540)
-	viewport.disable_3d = true
+	viewport.size = Vector2i(640,360)
+	viewport.disable_3d = false
+	viewport.own_world_3d = true
+	viewport.msaa_3d = Viewport.MSAA_DISABLED
+	viewport.screen_space_aa = Viewport.SCREEN_SPACE_AA_DISABLED
 	viewport.gui_disable_input = true
 	viewport.audio_listener_enable_2d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
@@ -23,6 +29,10 @@ func _ready() -> void:
 	simulation = World.new()
 	simulation.variant = variant
 	viewport.add_child(simulation)
+	simulation.visible = false
+	renderer = PixelWorld.new()
+	renderer.simulation = simulation
+	viewport.add_child(renderer)
 	var listener := AudioListener2D.new()
 	listener.position = Vector2(1360,600)
 	simulation.add_child(listener)
@@ -63,6 +73,7 @@ func _apply_motion() -> void:
 func _process(delta: float) -> void:
 	elapsed += delta
 	simulation.advance(delta)
+	renderer.sync(delta)
 	_refresh_status()
 
 func _refresh_status() -> void:

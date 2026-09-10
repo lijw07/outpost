@@ -2,7 +2,7 @@ extends SceneTree
 func _initialize() -> void:
 	call_deferred("_verify")
 func _verify() -> void:
-	var game: Node2D = load("res://scenes/world/game.tscn").instantiate()
+	var game: Node2D = load("res://scenes/environment/legacy_meadow_game.tscn").instantiate()
 	root.add_child(game)
 	current_scene = game
 	await process_frame

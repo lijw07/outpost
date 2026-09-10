@@ -50,6 +50,8 @@ def main():
                 ('equipment and combat', ['-s', 'res://tests/menu_equipment_checks.gd']),
                 ('animated menu backgrounds', ['-s', 'res://tests/menu_background_checks.gd']),
                 ('fresh-process scenery rotation', ['-s', 'res://tests/menu_background_checks.gd', '--', '--rotation-reload']),
+                ('modular character creation', ['-s', 'res://tests/character_creation_checks.gd']),
+                ('hybrid pixel world', ['-s', 'res://tests/pixel_world_checks.gd']),
                 ('UI regressions', ['--verbose', '-s', 'res://tests/ui_regression.gd']),
                 ('fresh-process persistence', ['-s', 'res://tests/ui_regression.gd', '--', '--binding-reload']),
             ]
@@ -83,7 +85,7 @@ def main():
                     return 1
                 output = result.stdout + result.stderr
                 print(f'{label}:', flush=True)
-                important = [line for line in output.splitlines() if any(tag in line for tag in ['REGRESSION:', 'EQUIPMENT CHECK:', 'HAT RENDER CHECK:', 'MENU SHOOTING:', 'SCENE CHECK:', 'BACKGROUND CHECK:', 'RENDER CHECK:', 'FAIL:', 'PASS:'])]
+                important = [line for line in output.splitlines() if any(tag in line for tag in ['CHARACTER CHECK:', 'PIXEL WORLD CHECK:', 'REGRESSION:', 'EQUIPMENT CHECK:', 'HAT RENDER CHECK:', 'MENU SHOOTING:', 'SCENE CHECK:', 'BACKGROUND CHECK:', 'RENDER CHECK:', 'FAIL:', 'PASS:'])]
                 for line in important:
                     print(line, flush=True)
                 incomplete_render = label == 'rendered menu backgrounds' and 'RENDER CHECK:' not in output

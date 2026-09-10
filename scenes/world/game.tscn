@@ -1,17 +1,11 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/game.gd" id="1_game"]
 [ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
-[ext_resource type="PackedScene" path="res://scenes/world/meadow_terrain.tscn" id="3_terrain"]
 
 [ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="4_pause"]
 
-[ext_resource type="PackedScene" path="res://scenes/environment/meadow_dressing.tscn" id="5_dressing"]
 
-[ext_resource type="PackedScene" path="res://scenes/environment/trees/oak.tscn" id="tree_oak"]
-[ext_resource type="PackedScene" path="res://scenes/environment/trees/birch.tscn" id="tree_birch"]
-[ext_resource type="PackedScene" path="res://scenes/environment/trees/young_oak.tscn" id="tree_young_oak"]
-[ext_resource type="PackedScene" path="res://scenes/environment/trees/deadwood.tscn" id="tree_deadwood"]
 
 [sub_resource type="StyleBoxFlat" id="Style_topbar"]
 bg_color = Color(0.05, 0.08, 0.06, 0.94)
@@ -20,29 +14,6 @@ bg_color = Color(0.05, 0.08, 0.06, 0.94)
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_game")
-
-[node name="MeadowTerrain" parent="." instance=ExtResource("3_terrain")]
-
-[node name="MeadowDressing" parent="." instance=ExtResource("5_dressing")]
-
-[node name="MeadowTrees" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Oak" parent="MeadowTrees" instance=ExtResource("tree_oak")]
-position = Vector2(1530, 1430)
-
-[node name="Birch" parent="MeadowTrees" instance=ExtResource("tree_birch")]
-position = Vector2(2380, 1250)
-
-[node name="Youngoak" parent="MeadowTrees" instance=ExtResource("tree_young_oak")]
-position = Vector2(1940, 1050)
-
-[node name="Deadwood" parent="MeadowTrees" instance=ExtResource("tree_deadwood")]
-position = Vector2(2710, 1630)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1984, 1344)
-position_smoothing_enabled = false
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

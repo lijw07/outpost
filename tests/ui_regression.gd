@@ -133,7 +133,7 @@ func type_name(panel: Control, value: String) -> void:
 		var text: String = panel._name_field.text + character
 		panel._name_field.text = text
 		panel._name_field.caret_column = text.length()
-		panel._on_name_changed(text)
+		panel._name_field.text_changed.emit(text)
 
 func run() -> void:
 	if not "outpost-ui-checks" in OS.get_user_data_dir().to_lower():
@@ -240,7 +240,7 @@ func run() -> void:
 	type_name(survivor_panel, "QA Survivor")
 	check(survivor_panel._name_field.text == "QA SURVIVOR", "spaces survive survivor entry")
 	await action("ui_cancel")
-	check(not survivor_panel._name_row.visible and menu._current == survivor_panel, "Escape cancels name entry without leaving screen")
+	check(not survivor_panel._creator.visible and menu._current == survivor_panel, "Escape cancels name entry without leaving screen")
 	survivor_panel._show_name_entry()
 	type_name(survivor_panel, "QA Survivor")
 	survivor_panel._create_save()
@@ -267,7 +267,7 @@ func run() -> void:
 	check(not session.last_session().is_empty(), "launch records Continue pair")
 	settings.set_binding("pause", key(KEY_P))
 	check("P: PAUSE" in game.get_node("%MovementHint").text, "HUD reflects remapped pause key")
-	var camera: Camera2D = game.get_node("Camera2D")
+	var camera: Camera3D = game.renderer.camera
 	var camera_before := camera.position
 	Input.action_press("move_right")
 	await create_timer(0.05).timeout

@@ -7,9 +7,15 @@ func run() -> void:
 		quit(2)
 		return
 	var view := SubViewport.new()
-	view.size = Vector2i(1400,800)
+	view.size = Vector2i(1400,920)
 	view.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	root.add_child(view)
+	root.title = "Outpost - Attack Animation Review"
+	root.size = view.size
+	var preview := TextureRect.new()
+	preview.texture = view.get_texture()
+	preview.size = view.size
+	root.add_child(preview)
 	var background := ColorRect.new()
 	background.size = view.size
 	background.color = Color("35453a")
@@ -27,13 +33,13 @@ func run() -> void:
 			view.add_child(actor)
 			if column < 6:
 				actor.equip(1 if column == 5 else 0,column%5,[0,2,0,2,6,1][column])
-			actor.position = Vector2(column*200+90,row*190+180)
+			actor.position = Vector2(column*200+90,row*220+200)
 			actor.previous_position = actor.position
 			actor.scale = Vector2(1.7,1.7)
 			actor.aim = [Vector2.DOWN,Vector2.RIGHT,Vector2.UP,Vector2.LEFT][row]
 			actors.append(actor)
 	var motion := "--motion" in OS.get_cmdline_user_args()
-	DirAccess.make_dir_recursive_absolute("user://weapon_pose_frames")
+	DirAccess.make_dir_recursive_absolute("user://rig_pose_frames")
 	for frame in (180 if motion else 1):
 		var time := frame/60.0 if motion else 0.3
 		for index in actors.size():
@@ -50,7 +56,7 @@ func run() -> void:
 		for wait_frame in 2:
 			await process_frame
 			await RenderingServer.frame_post_draw
-		view.get_texture().get_image().save_png("user://weapon_pose_frames/frame_%04d.png" % frame)
+		view.get_texture().get_image().save_png("user://rig_pose_frames/frame_%04d.png" % frame)
 	view.queue_free()
 	await process_frame
 	print("WEAPON POSES: four directions, upright holds, overhead strikes, recoil and zombie contact")

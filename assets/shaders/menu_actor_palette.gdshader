@@ -59,17 +59,18 @@ void fragment() {
 			if (armor.a > 0.5) pixel.rgb = armor.rgb;
 		}
 		bool arm_side = facing_direction == 1 ? anatomy.x > 8.0 : facing_direction == 3 ? anatomy.x < -8.0 : abs(anatomy.x) > 10.0;
-		if (replace_arms && arm_side && anatomy.y > -40.0 && anatomy.y < -14.0) pixel.a = 0.0;
+
 		// Faces share warm colors with the source jacket; protect the animated head.
 		if (abs(garment.x-head_socket.x) < head_width*0.52 && garment.y < head_socket.y+head_width*0.78) pixel = COLOR;
+		if (replace_arms && arm_side && anatomy.y > -49.0 && anatomy.y < -14.0) pixel.a = 0.0;
 		// Remove the baked-in crown under a hat, including stray outlined spikes.
 		// Bound the cut to the head so raised tools remain intact above it.
 		if (cover_hair && abs(garment.x-head_socket.x) < head_width*0.72 && garment.y > head_socket.y-head_width*0.9 && garment.y < head_socket.y+head_width*0.22) pixel.a = 0.0;
 	}
 	if (zombie_attack) {
 		vec2 point = ((UV-frame_region.xy)/frame_region.zw-frame_pivot)*frame_size;
-		bool near_arm = facing_direction == 1 ? point.x > 9.0 : facing_direction == 3 ? point.x < -9.0 : (facing_direction == 0 ? point.x > 10.0 : point.x < -10.0);
-		if (near_arm && point.y > -43.0 && point.y < -16.0) pixel.a = 0.0;
+		bool near_arm = facing_direction == 1 ? point.x > 8.0 : facing_direction == 3 ? point.x < -8.0 : abs(point.x) > 9.0;
+		if (near_arm && point.y > -49.0 && point.y < -16.0) pixel.a = 0.0;
 	}
 	if (key_neutral_background) {
 		float low = min(source.r, min(source.g, source.b));

@@ -1,5 +1,6 @@
 extends Node
 
+const Appearance := preload("res://scripts/characters/appearance.gd")
 const SAVE_DIR := "user://saves"
 const MAX_SLOTS := 6
 const MAX_NAME_LENGTH := 14
@@ -26,6 +27,8 @@ func read_save(id: String) -> Dictionary:
 	return {
 		"id": id,
 		"character_name": config.get_value("character", "name", "UNNAMED"),
+		"appearance": Appearance.sanitize(config.get_value("character", "appearance", {})),
+		"equipment": Appearance.equipment(config.get_value("character", "equipment", {})),
 		"created": config.get_value("meta", "created", 0),
 		"last_played": config.get_value("meta", "last_played", 0),
 	}
@@ -33,18 +36,26 @@ func read_save(id: String) -> Dictionary:
 func can_create() -> bool:
 	return list_saves().size() < MAX_SLOTS
 
-func create_save(raw_name: String) -> Dictionary:
+func create_save(raw_name: String, appearance: Dictionary = {}) -> Dictionary:
 	var clean := sanitize_name(raw_name)
 	if clean.is_empty() or not can_create():
 		return {}
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(SAVE_DIR))
 	var now := int(Time.get_unix_time_from_system())
 	var id := "%s_%d" % [clean.to_lower().replace(" ", "_"), now]
+	var base_id := id
+	var suffix := 1
+	while FileAccess.file_exists(_path_for(id)):
+		id = "%s_%d" % [base_id,suffix]
+		suffix += 1
 	var config := ConfigFile.new()
+	config.set_value("character", "appearance", Appearance.sanitize(appearance))
+	config.set_value("character", "equipment", {})
 	config.set_value("character", "name", clean)
 	config.set_value("meta", "created", now)
 	config.set_value("meta", "last_played", now)
-	config.save(_path_for(id))
+	if config.save(_path_for(id)) != OK:
+		return {}
 	return read_save(id)
 
 func delete_save(id: String) -> bool:

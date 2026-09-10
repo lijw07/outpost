@@ -20,6 +20,8 @@ const MAX_ZOMBIES := 24
 const MAX_BULLETS := 64
 const MAX_EFFECTS := 90
 
+var controlled_actor: Node2D
+var spawn_exclusion := Rect2()
 var variant := 0
 var elapsed := 0.0
 var wave := 1
@@ -281,7 +283,7 @@ func _spawn_zombie(_initial := false) -> void:
 	if variant != 2 and _rng.randf() < 0.45:
 		requested = Vector2(_rng.randf_range(960,1860),1192)
 	var spawn := _spawn_position(requested,true)
-	if not spawn.is_finite():
+	if not spawn.is_finite() or spawn_exclusion.has_point(spawn):
 		return
 	var actor := Actor.new()
 	actor.setup(true, 0)
@@ -343,6 +345,8 @@ func step(delta: float) -> void:
 		var missing := 0 if roles[0] < 2 else 1 if roles[1] < 1 else 2
 		_add_survivor(missing,Vector2(1260,540))
 	for actor in survivors + zombies:
+		if actor == controlled_actor:
+			continue
 		var before: Vector2 = actor.position
 		actor.previous_position = before
 		var previous_stride := int(actor.phase*2)
@@ -393,6 +397,8 @@ func _nearest(point: Vector2, actors: Array[Node2D], limit: float) -> Node2D:
 	return best
 
 func _survivor_ai(actor: Node2D, delta: float) -> void:
+	if actor == controlled_actor:
+		return
 	if actor.reload_clock > 0:
 		_reload(actor,delta)
 		return
