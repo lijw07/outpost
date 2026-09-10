@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene format=3 uid="uid://bnbxeicfajq62"]
 
-[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://7u2emb2gxamk" path="res://scripts/ui/main_menu.gd" id="1_menu"]
 [ext_resource type="Theme" path="res://assets/ui/outpost_theme.tres" id="2_theme"]
-[ext_resource type="Texture2D" path="res://assets/loading/loading_forest_camp.png" id="3_bg"]
+[ext_resource type="Texture2D" uid="uid://bgldjfxdjaeka" path="res://assets/loading/loading_forest_camp.png" id="3_bg"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/title_panel.tscn" id="4_title"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/mode_select_panel.tscn" id="5_mode"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/settings_panel.tscn" id="6_settings"]
@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/save_select_panel.tscn" id="8_save"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/lobby_panel.tscn" id="10_lobby"]
 [ext_resource type="PackedScene" path="res://scenes/ui/panels/world_select_panel.tscn" id="11_world"]
-[ext_resource type="AudioStream" path="res://assets/audio/music/last_light.ogg" id="12_music"]
+[ext_resource type="AudioStream" uid="uid://c3urr067cc4o2" path="res://assets/audio/music/last_light.ogg" id="12_music"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1928157710]
 texture_filter = 2
 layout_mode = 3
 anchors_preset = 15
@@ -23,12 +23,12 @@ grow_vertical = 2
 theme = ExtResource("2_theme")
 script = ExtResource("1_menu")
 
-[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=952215109]
 stream = ExtResource("12_music")
 volume_db = -60.0
 bus = &"Music"
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=857983333]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = 15
@@ -41,7 +41,7 @@ texture = ExtResource("3_bg")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Vignette" type="ColorRect" parent="."]
+[node name="Vignette" type="ColorRect" parent="." unique_id=1195972276]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +51,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0392157, 0.0431373, 0.0509804, 0.62)
 
-[node name="Screens" type="Control" parent="."]
+[node name="Screens" type="Control" parent="." unique_id=626159634]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,34 +60,34 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TitlePanel" parent="Screens" instance=ExtResource("4_title")]
+[node name="TitlePanel" parent="Screens" unique_id=425036349 instance=ExtResource("4_title")]
 layout_mode = 1
 
-[node name="ModeSelectPanel" parent="Screens" instance=ExtResource("5_mode")]
+[node name="ModeSelectPanel" parent="Screens" unique_id=290167008 instance=ExtResource("5_mode")]
 visible = false
 layout_mode = 1
 
-[node name="SettingsPanel" parent="Screens" instance=ExtResource("6_settings")]
+[node name="SettingsPanel" parent="Screens" unique_id=310320528 instance=ExtResource("6_settings")]
 visible = false
 layout_mode = 1
 
-[node name="ExtrasPanel" parent="Screens" instance=ExtResource("7_extras")]
+[node name="ExtrasPanel" parent="Screens" unique_id=1512021699 instance=ExtResource("7_extras")]
 visible = false
 layout_mode = 1
 
-[node name="SaveSelectPanel" parent="Screens" instance=ExtResource("8_save")]
+[node name="SaveSelectPanel" parent="Screens" unique_id=146571637 instance=ExtResource("8_save")]
 visible = false
 layout_mode = 1
 
-[node name="LobbyPanel" parent="Screens" instance=ExtResource("10_lobby")]
+[node name="LobbyPanel" parent="Screens" unique_id=238777950 instance=ExtResource("10_lobby")]
 visible = false
 layout_mode = 1
 
-[node name="WorldSelectPanel" parent="Screens" instance=ExtResource("11_world")]
+[node name="WorldSelectPanel" parent="Screens" unique_id=702197661 instance=ExtResource("11_world")]
 visible = false
 layout_mode = 1
 
-[node name="Fade" type="ColorRect" parent="."]
+[node name="Fade" type="ColorRect" parent="." unique_id=423559028]
 unique_name_in_owner = true
 visible = false
 z_index = 400
