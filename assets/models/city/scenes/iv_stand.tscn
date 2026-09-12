@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/iv_stand.gltf" id="1_qmcib"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/iv_stand.res" id="2_dq3hl"]
+
+[node name="IvStand" type="Node3D" unique_id=1594134852]
+metadata/asset_id = "iv_stand"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1017402241]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=64955538 instance=ExtResource("1_qmcib")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=109071811]
+shape = ExtResource("2_dq3hl")

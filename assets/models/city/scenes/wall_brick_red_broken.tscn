@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_brick_red_broken.gltf" id="1_1g3fo"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_brick_red_broken.res" id="2_byd5n"]
+
+[node name="WallBrickRedBroken" type="Node3D" unique_id=1899263978]
+metadata/asset_id = "wall_brick_red_broken"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=485530908]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=951310661 instance=ExtResource("1_1g3fo")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1692870008]
+shape = ExtResource("2_byd5n")

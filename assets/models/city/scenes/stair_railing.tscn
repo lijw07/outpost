@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/stair_railing.gltf" id="1_dgvsg"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/stair_railing.res" id="2_moc10"]
+
+[node name="StairRailing" type="Node3D" unique_id=968851970]
+metadata/asset_id = "stair_railing"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=858865782]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=490838512 instance=ExtResource("1_dgvsg")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1837859921]
+shape = ExtResource("2_moc10")

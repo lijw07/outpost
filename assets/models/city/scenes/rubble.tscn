@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/rubble.gltf" id="1_1kjd6"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/rubble.res" id="2_shy45"]
+
+[node name="Rubble" type="Node3D" unique_id=643673296]
+metadata/asset_id = "rubble"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1869556107]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=862467674 instance=ExtResource("1_1kjd6")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2034836326]
+shape = ExtResource("2_shy45")

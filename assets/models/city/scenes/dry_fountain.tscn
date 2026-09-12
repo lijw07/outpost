@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/dry_fountain.gltf" id="1_2lowu"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/dry_fountain.res" id="2_rcehw"]
+
+[node name="DryFountain" type="Node3D" unique_id=1779336027]
+metadata/asset_id = "dry_fountain"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1362752383]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=787732671 instance=ExtResource("1_2lowu")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=322628164]
+shape = ExtResource("2_rcehw")

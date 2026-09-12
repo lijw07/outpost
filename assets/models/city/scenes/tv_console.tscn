@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/tv_console.gltf" id="1_r263t"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/tv_console.res" id="2_6lhhl"]
+
+[node name="TvConsole" type="Node3D" unique_id=1774499840]
+metadata/asset_id = "tv_console"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=458142642]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=431791438 instance=ExtResource("1_r263t")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=257260338]
+shape = ExtResource("2_6lhhl")

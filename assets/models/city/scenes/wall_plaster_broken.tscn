@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_plaster_broken.gltf" id="1_ws7jw"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_plaster_broken.res" id="2_5r1sc"]
+
+[node name="WallPlasterBroken" type="Node3D" unique_id=1811976762]
+metadata/asset_id = "wall_plaster_broken"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1343288282]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1270354500 instance=ExtResource("1_ws7jw")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1141611366]
+shape = ExtResource("2_5r1sc")

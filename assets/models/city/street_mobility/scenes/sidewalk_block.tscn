@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/vehicles/street_fixture.gd" id="1_1jr15"]
+[ext_resource type="PackedScene" path="res://assets/models/city/street_mobility/gltf/sidewalk_block.gltf" id="2_flqw7"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mb7rv"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, -1, -1, 2, 1, -1, 0, -1, -1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, 1, -1, 0, 1, 1, 0, 1, -1, 0, -1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 2, 1, 1, 2, 1, -1, 0, 1, -1, 0, 1, 1, 2, 1, 1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1)
+backface_collision = true
+
+[node name="SidewalkBlock" type="Node3D" unique_id=393145340]
+script = ExtResource("1_1jr15")
+fixture_id = "sidewalk_block"
+metadata/asset_id = "sidewalk_block"
+metadata/source = "res://assets/models/city/street_mobility/blockbench/sidewalk_block.bbmodel"
+
+[node name="Model" type="Node3D" parent="." unique_id=699977658 instance=ExtResource("2_flqw7")]
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=174278381]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2082046986]
+shape = SubResource("ConcavePolygonShape3D_mb7rv")

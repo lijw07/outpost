@@ -1,0 +1,43 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/trees/textures/meadow_oak_young.png" id="1_wixqx"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/tree_parts/meadow_oak_young_stump.res" id="2_emmeq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yk4it"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_wixqx")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u0nef"]
+_surfaces = [{
+"aabb": AABB(-0.125, 0, -0.125, 0.375, 0.5, 0.3125),
+"attribute_data": PackedByteArray("oPifPQAAgD+g8B891VRVP6D4nz3VVFU/oPAfPQAAgD+g/B8+AACAP/D47z3VVFU/oPwfPtVUVT/w+O89AACAP6DwHz3VUNU9AAAAAAAAAACg8B89AAAAAAAAAADVUNU98P7vPsVURT/c/ts+q6kqP/D+7z6rqSo/3P7bPsVURT/w+O89AACAP6D4nz3VVFU/8PjvPdVUVT+g+J89AACAP6DwHz0AAIA/AAAAANVUVT+g8B891VRVPwAAAAAAAIA/nP6bPtupWj+U/pM+wP8/P5z+mz7A/z8/lP6TPtupWj+w+K89q6AqPaD4nz0AAAAAsPivPQAAAACg+J89q6AqPZT/Ez+1VDU/kv8RP6upKj+U/xM/q6kqP5L/ET+1VDU/oP6fPtupWj+c/ps+wP8/P6D+nz7A/z8/nP6bPtupWj+U/pM+26laP5D+jz7A/z8/lP6TPsD/Pz+Q/o8+26laPw=="),
+"format": 34359742487,
+"index_count": 66,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkA"),
+"material": SubResource("StandardMaterial3D_yk4it"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("QP8/PgAAAAAAAAC+QP8/PgAAAD8AAEA+QP8/PgAAAD8AAAC+QP8/PgAAAAAAAEA+AAAAvgAAAAAAAEA+AAAAvgAAAD8AAAC+AAAAvgAAAD8AAEA+AAAAvgAAAAAAAAC+QP8/PgAAAD8AAEA+AAAAvgAAAD8AAAC+QP8/PgAAAD8AAAC+AAAAvgAAAD8AAEA+QP8/PgAAAAAAAAC+AAAAvgAAAAAAAEA+QP8/PgAAAAAAAEA+AAAAvgAAAAAAAAC+QP8/PgAAAAAAAEA+AAAAvgAAAD8AAEA+QP8/PgAAAD8AAEA+AAAAvgAAAAAAAEA+AAAAvgAAAAAAAAC+QP8/PgAAAD8AAAC+AAAAvgAAAD8AAAC+QP8/PgAAAAAAAAC+AACAPsD+Pz4AAIC9AACAPgAAAD8AAIA9AACAPgAAAD8AAIC9AACAPsD+Pz4AAIA9AACAPgAAAD8AAIA9QP8/PgAAAD8AAIC9AACAPgAAAD8AAIC9QP8/PgAAAD8AAIA9AACAPsD+Pz4AAIC9QP8/PsD+Pz4AAIA9AACAPsD+Pz4AAIA9QP8/PsD+Pz4AAIC9AACAPsD+Pz4AAIA9QP8/PgAAAD8AAIA9AACAPgAAAD8AAIA9QP8/PsD+Pz4AAIA9QP8/PsD+Pz4AAIC9AACAPgAAAD8AAIC9QP8/PgAAAD8AAIC9AACAPsD+Pz4AAIC9/f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//vwCAAQD+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/vw==")
+}]
+
+[node name="TreePartsMeadowOakYoungStump" type="Node3D" unique_id=1884335704]
+metadata/asset_id = "tree_parts/meadow_oak_young_stump"
+metadata/original_scene = "res://assets/models/trees/gltf/meadow_oak_young_stump.gltf"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1608219808]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=193752626]
+
+[node name="meadow_oak_young_stump_0" type="MeshInstance3D" parent="Body/Model" unique_id=1595741463]
+mesh = SubResource("ArrayMesh_u0nef")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1805861969]
+shape = ExtResource("2_emmeq")

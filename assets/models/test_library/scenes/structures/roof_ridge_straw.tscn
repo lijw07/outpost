@@ -1,0 +1,42 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/structures/textures/wood_atlas.png" id="1_artgc"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/structures/roof_ridge_straw.res" id="2_cnwed"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2abnh"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_artgc")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_02sl5"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.375, 2, 0.3125, 0.75),
+"attribute_data": PackedByteArray("mP8XP7D/Lz8A//8+rP8rP5j/Fz+s/ys/AP//PrD/Lz/A/z8/sP8vP6j/Jz+s/ys/wP8/P6z/Kz+o/yc/sP8vP8D/Pz/g/F8+AP//PgD5/z3A/z8/APn/PQD//z7g/F8+wP8/P8D4vz0A//8+AAAAAMD/Pz8AAAAAAP//PsD4vz3A/z8/sP8vPwD//z6s/ys/wP8/P6z/Kz8A//8+sP8vP8D/Pz+w/y8/AP//Pqz/Kz/A/z8/rP8rPwD//z6w/y8/kP8PP8D/Pz8A//8+vP87P5D/Dz+8/zs/AP//PsD/Pz/A/z8/wP8/P7D/Lz+8/zs/wP8/P7z/Oz+w/y8/wP8/P8D/Pz/A/D8+AP//PgD5/z3A/z8/APn/PQD//z7A/D8+wP8/P8D/Pz8A//8+vP87P8D/Pz+8/zs/AP//PsD/Pz/A/z8/wP8/PwD//z68/zs/wP8/P7z/Oz8A//8+wP8/P4j/Bz+w/y8/AP//Pq7/LT+I/wc/rv8tPwD//z6w/y8/wP8/P7D/Lz+4/zc/rv8tP8D/Pz+u/y0/uP83P7D/Lz/A/z8/yPxHPgD//z6o/Cc+wP8/P6j8Jz4A//8+yPxHPsD/Pz+w/y8/AP//Pq7/LT/A/z8/rv8tPwD//z6w/y8/wP8/P7D/Lz8A//8+rv8tP8D/Pz+u/y0/AP//PrD/Lz8="),
+"format": 34359742487,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A"),
+"material": SubResource("StandardMaterial3D_2abnh"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("AACAPwAAAAAAAMC+AACAPwAAAD4AAMA+AACAPwAAAD4AAMC+AACAPwAAAAAAAMA+AACAvwAAAAAAAMA+AACAvwAAAD4AAMC+AACAvwAAAD4AAMA+AACAvwAAAAAAAMC+AACAPwAAAD4AAMA+AACAvwAAAD4AAMC+AACAPwAAAD4AAMC+AACAvwAAAD4AAMA+AACAPwAAAAAAAMC+AACAvwAAAAAAAMA+AACAPwAAAAAAAMA+AACAvwAAAAAAAMC+AACAPwAAAAAAAMA+AACAvwAAAD4AAMA+AACAPwAAAD4AAMA+AACAvwAAAAAAAMA+AACAvwAAAAAAAMC+AACAPwAAAD4AAMC+AACAvwAAAD4AAMC+AACAPwAAAAAAAMC+AACAPwAAAD7AAIC+AACAPwAAgD6A/n8+AACAPwAAgD7AAIC+AACAPwAAAD6A/n8+AACAvwAAAD6A/n8+AACAvwAAgD7AAIC+AACAvwAAgD6A/n8+AACAvwAAAD7AAIC+AACAPwAAgD6A/n8+AACAvwAAgD7AAIC+AACAPwAAgD7AAIC+AACAvwAAgD6A/n8+AACAPwAAAD6A/n8+AACAvwAAgD6A/n8+AACAPwAAgD6A/n8+AACAvwAAAD6A/n8+AACAvwAAAD7AAIC+AACAPwAAgD7AAIC+AACAvwAAgD7AAIC+AACAPwAAAD7AAIC+AACAPwAAgD4AAAC+AACAPwAAoD4AAAA+AACAPwAAoD4AAAC+AACAPwAAgD4AAAA+AACAvwAAgD4AAAA+AACAvwAAoD4AAAC+AACAvwAAoD4AAAA+AACAvwAAgD4AAAC+AACAPwAAoD4AAAA+AACAvwAAoD4AAAC+AACAPwAAoD4AAAC+AACAvwAAoD4AAAA+AACAPwAAgD4AAAA+AACAvwAAoD4AAAA+AACAPwAAoD4AAAA+AACAvwAAgD4AAAA+AACAvwAAgD4AAAC+AACAPwAAoD4AAAC+AACAvwAAoD4AAAC+AACAPwAAgD4AAAC+/f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/3/AID+//7//f8AgP7//v/9/wCA/v/+//3/AID+//7/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//v/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/78=")
+}]
+
+[node name="StructuresRoofRidgeStraw" type="Node3D" unique_id=685130773]
+metadata/asset_id = "structures/roof_ridge_straw"
+metadata/original_scene = "res://assets/models/structures/scenes/roof_ridge_straw.tscn"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=851450141]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=2138345257]
+
+[node name="roof_ridge_straw_0" type="MeshInstance3D" parent="Body/Model" unique_id=1173020]
+mesh = SubResource("ArrayMesh_02sl5")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1199786228]
+shape = ExtResource("2_cnwed")

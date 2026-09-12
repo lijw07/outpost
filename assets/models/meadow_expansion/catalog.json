@@ -1,0 +1,659 @@
+{
+  "tile_units": 32,
+  "tile_godot_units": 2,
+  "texture_pixels": 32,
+  "stage": "review",
+  "assets": [
+    {
+      "id": "mall_wall_brick",
+      "category": "mall",
+      "elements": 3
+    },
+    {
+      "id": "mall_storefront_glass",
+      "category": "mall",
+      "elements": 7
+    },
+    {
+      "id": "mall_double_glass_door",
+      "category": "mall",
+      "elements": 15,
+      "functional_groups": [
+        "left_hinge",
+        "right_hinge"
+      ]
+    },
+    {
+      "id": "mall_upper_window",
+      "category": "mall",
+      "elements": 10
+    },
+    {
+      "id": "mall_pilaster",
+      "category": "mall",
+      "elements": 4
+    },
+    {
+      "id": "mall_cornice_straight",
+      "category": "mall",
+      "elements": 11
+    },
+    {
+      "id": "mall_cornice_corner",
+      "category": "mall",
+      "elements": 4
+    },
+    {
+      "id": "mall_arch_left",
+      "category": "mall",
+      "elements": 12,
+      "join": "Place left/right at x=-16/+16 for a 64-unit arch; stack over jamb modules"
+    },
+    {
+      "id": "mall_arch_right",
+      "category": "mall",
+      "elements": 12,
+      "join": "Place left/right at x=-16/+16 for a 64-unit arch; stack over jamb modules"
+    },
+    {
+      "id": "mall_arch_jamb_left",
+      "category": "mall",
+      "elements": 1
+    },
+    {
+      "id": "mall_arch_jamb_right",
+      "category": "mall",
+      "elements": 1
+    },
+    {
+      "id": "atrium_glass_panel",
+      "category": "mall",
+      "elements": 7
+    },
+    {
+      "id": "atrium_slope_panel",
+      "category": "mall",
+      "elements": 4
+    },
+    {
+      "id": "atrium_end_triangle",
+      "category": "mall",
+      "elements": 4
+    },
+    {
+      "id": "mall_roof_tile",
+      "category": "mall",
+      "elements": 1
+    },
+    {
+      "id": "mall_hvac",
+      "category": "mall",
+      "elements": 12
+    },
+    {
+      "id": "sign_mall",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_cinema",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_cafe",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_books",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_fashion",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_dock",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "sign_bait",
+      "category": "signage",
+      "elements": 2
+    },
+    {
+      "id": "cinema_marquee",
+      "category": "mall",
+      "elements": 11
+    },
+    {
+      "id": "cinema_poster_case",
+      "category": "mall",
+      "elements": 3
+    },
+    {
+      "id": "mall_directory",
+      "category": "mall",
+      "elements": 4
+    },
+    {
+      "id": "shop_display_shelf",
+      "category": "mall",
+      "elements": 17
+    },
+    {
+      "id": "shop_clothing_rack",
+      "category": "mall",
+      "elements": 17
+    },
+    {
+      "id": "boathouse_service_window",
+      "category": "mall",
+      "elements": 6
+    },
+    {
+      "id": "church_belfry",
+      "category": "landmark",
+      "elements": 8
+    },
+    {
+      "id": "church_spire",
+      "category": "landmark",
+      "elements": 2
+    },
+    {
+      "id": "water_deep_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "texture_frames": [
+        "water_deep_0.png",
+        "water_deep_1.png",
+        "water_deep_2.png",
+        "water_deep_3.png"
+      ],
+      "waterline_y": 32
+    },
+    {
+      "id": "water_shallow_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "texture_frames": [
+        "water_shallow_0.png",
+        "water_shallow_1.png",
+        "water_shallow_2.png",
+        "water_shallow_3.png"
+      ],
+      "waterline_y": 32
+    },
+    {
+      "id": "shore_edge_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "waterline_y": 32,
+      "rotate_y_degrees": [
+        0,
+        90,
+        180,
+        270
+      ]
+    },
+    {
+      "id": "shore_corner_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "waterline_y": 32,
+      "rotate_y_degrees": [
+        0,
+        90,
+        180,
+        270
+      ]
+    },
+    {
+      "id": "shore_inner_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "waterline_y": 32,
+      "rotate_y_degrees": [
+        0,
+        90,
+        180,
+        270
+      ]
+    },
+    {
+      "id": "wet_sand_block",
+      "category": "coast",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "finish": "wet sand variant"
+    },
+    {
+      "id": "coastal_rock_face",
+      "category": "coast",
+      "elements": 2
+    },
+    {
+      "id": "dune_grass",
+      "category": "coast",
+      "elements": 13
+    },
+    {
+      "id": "dock_deck_tile",
+      "category": "dock",
+      "elements": 10,
+      "walk_surface_y": 32
+    },
+    {
+      "id": "dock_edge_tile",
+      "category": "dock",
+      "elements": 13,
+      "walk_surface_y": 32
+    },
+    {
+      "id": "dock_corner_tile",
+      "category": "dock",
+      "elements": 12,
+      "walk_surface_y": 32
+    },
+    {
+      "id": "dock_piling",
+      "category": "dock",
+      "elements": 3,
+      "stackable_height": 32
+    },
+    {
+      "id": "dock_support_beam",
+      "category": "dock",
+      "elements": 3
+    },
+    {
+      "id": "dock_wood_railing",
+      "category": "dock",
+      "elements": 4
+    },
+    {
+      "id": "dock_railing_corner",
+      "category": "dock",
+      "elements": 7
+    },
+    {
+      "id": "dock_rope_railing",
+      "category": "dock",
+      "elements": 10
+    },
+    {
+      "id": "dock_stairs_tile",
+      "category": "dock",
+      "elements": 24,
+      "rise": 32,
+      "run": 32
+    },
+    {
+      "id": "dock_ramp_tile",
+      "category": "dock",
+      "elements": 3,
+      "rise": 32,
+      "run": 32,
+      "orientation": "rises along +X"
+    },
+    {
+      "id": "mooring_cleat",
+      "category": "dock",
+      "elements": 3
+    },
+    {
+      "id": "mooring_rope_coil",
+      "category": "dock",
+      "elements": 48
+    },
+    {
+      "id": "life_ring",
+      "category": "dock",
+      "elements": 16
+    },
+    {
+      "id": "fishing_rod",
+      "category": "dock",
+      "elements": 3
+    },
+    {
+      "id": "rowboat_stern_tile",
+      "category": "boat",
+      "elements": 7,
+      "assembly": "rowboat",
+      "waterline_y": 4
+    },
+    {
+      "id": "boat_oar",
+      "category": "boat",
+      "elements": 2
+    },
+    {
+      "id": "fishing_boat_mid",
+      "category": "boat",
+      "elements": 7,
+      "assembly": "fishing_boat",
+      "waterline_y": 4
+    },
+    {
+      "id": "fishing_boat_stern",
+      "category": "boat",
+      "elements": 8,
+      "assembly": "fishing_boat",
+      "waterline_y": 4
+    },
+    {
+      "id": "fishing_boat_cabin",
+      "category": "boat",
+      "elements": 15,
+      "assembly": "fishing_boat",
+      "mount_on_mid_y": 8
+    },
+    {
+      "id": "fountain_water_basin",
+      "category": "coast",
+      "elements": 6,
+      "waterline_y": 4
+    },
+    {
+      "id": "fountain_spout",
+      "category": "coast",
+      "elements": 5
+    },
+    {
+      "id": "umbrella_sage",
+      "category": "beach",
+      "elements": 11
+    },
+    {
+      "id": "umbrella_ochre",
+      "category": "beach",
+      "elements": 11
+    },
+    {
+      "id": "beach_lounger",
+      "category": "beach",
+      "elements": 10
+    },
+    {
+      "id": "beach_towel",
+      "category": "beach",
+      "elements": 1
+    },
+    {
+      "id": "sandcastle",
+      "category": "beach",
+      "elements": 21
+    },
+    {
+      "id": "beach_bucket",
+      "category": "beach",
+      "elements": 10
+    },
+    {
+      "id": "cafe_round_table",
+      "category": "detail",
+      "elements": 3
+    },
+    {
+      "id": "cafe_chair",
+      "category": "detail",
+      "elements": 11
+    },
+    {
+      "id": "cafe_cup_plate",
+      "category": "detail",
+      "elements": 3
+    },
+    {
+      "id": "flower_pot_terracotta",
+      "category": "detail",
+      "elements": 21
+    },
+    {
+      "id": "flower_pot_sage",
+      "category": "detail",
+      "elements": 21
+    },
+    {
+      "id": "window_flower_box",
+      "category": "detail",
+      "elements": 36
+    },
+    {
+      "id": "planter_open_straight",
+      "category": "detail",
+      "elements": 5,
+      "join": "Open ends for seamless long beds"
+    },
+    {
+      "id": "planter_open_corner",
+      "category": "detail",
+      "elements": 5
+    },
+    {
+      "id": "planter_open_end",
+      "category": "detail",
+      "elements": 4
+    },
+    {
+      "id": "hedge_straight",
+      "category": "detail",
+      "elements": 6
+    },
+    {
+      "id": "hedge_corner",
+      "category": "detail",
+      "elements": 8
+    },
+    {
+      "id": "plaza_inlay_block",
+      "category": "detail",
+      "elements": 1,
+      "dimensions": [
+        32,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "bicycle_rack",
+      "category": "detail",
+      "elements": 9
+    },
+    {
+      "id": "bicycle",
+      "category": "detail",
+      "elements": 32
+    },
+    {
+      "id": "civilian_sage",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "civilian_ochre",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "civilian_rust",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "civilian_cream",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "beach_swimmer",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "beach_sunhat",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "fisher",
+      "category": "people",
+      "elements": 1,
+      "sprite_size": [
+        32,
+        32
+      ],
+      "directions": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "frames_per_direction": 3,
+      "billboard_required": true
+    },
+    {
+      "id": "arch_glass_left",
+      "category": "mall",
+      "elements": 1,
+      "join": "Infill behind matching mall arch, no doorway collision intended"
+    },
+    {
+      "id": "arch_glass_right",
+      "category": "mall",
+      "elements": 1,
+      "join": "Infill behind matching mall arch, no doorway collision intended"
+    },
+    {
+      "id": "boathouse_roof_slope",
+      "category": "mall",
+      "elements": 1
+    },
+    {
+      "id": "rowboat_bow_tile",
+      "category": "boat",
+      "elements": 6,
+      "assembly": "rowboat",
+      "waterline_y": 4
+    },
+    {
+      "id": "fishing_boat_bow",
+      "category": "boat",
+      "elements": 7,
+      "assembly": "fishing_boat",
+      "waterline_y": 4
+    },
+    {
+      "id": "menu_a_board",
+      "category": "detail",
+      "elements": 7
+    }
+  ]
+}

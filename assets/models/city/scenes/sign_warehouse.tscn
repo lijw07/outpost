@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sign_warehouse.gltf" id="1_iq74c"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sign_warehouse.res" id="2_xxoab"]
+
+[node name="SignWarehouse" type="Node3D" unique_id=1986094484]
+metadata/asset_id = "sign_warehouse"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1318112935]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=525752318 instance=ExtResource("1_iq74c")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=923993218]
+shape = ExtResource("2_xxoab")

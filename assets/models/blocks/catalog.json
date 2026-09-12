@@ -1,0 +1,202 @@
+{
+  "assets": [
+    {
+      "id": "dirt_block",
+      "terrain_type": "dirt",
+      "scene": "res://assets/models/blocks/scenes/dirt_block.tscn",
+      "model": "res://assets/models/blocks/gltf/dirt_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_bath_tile_block",
+      "terrain_type": "floor_bath_tile",
+      "scene": "res://assets/models/blocks/scenes/floor_bath_tile_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_bath_tile_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_carpet_block",
+      "terrain_type": "floor_carpet",
+      "scene": "res://assets/models/blocks/scenes/floor_carpet_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_carpet_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_clinic_tile_block",
+      "terrain_type": "floor_clinic_tile",
+      "scene": "res://assets/models/blocks/scenes/floor_clinic_tile_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_clinic_tile_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_concrete_block",
+      "terrain_type": "floor_concrete",
+      "scene": "res://assets/models/blocks/scenes/floor_concrete_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_concrete_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_concrete_worn_block",
+      "terrain_type": "floor_concrete_worn",
+      "scene": "res://assets/models/blocks/scenes/floor_concrete_worn_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_concrete_worn_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_shop_tile_block",
+      "terrain_type": "floor_shop_tile",
+      "scene": "res://assets/models/blocks/scenes/floor_shop_tile_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_shop_tile_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_tile_block",
+      "terrain_type": "floor_tile",
+      "scene": "res://assets/models/blocks/scenes/floor_tile_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_tile_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "floor_wood_block",
+      "terrain_type": "floor_wood",
+      "scene": "res://assets/models/blocks/scenes/floor_wood_block.tscn",
+      "model": "res://assets/models/blocks/gltf/floor_wood_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "grass_block",
+      "terrain_type": "grass",
+      "scene": "res://assets/models/blocks/scenes/grass_block.tscn",
+      "model": "res://assets/models/blocks/gltf/grass_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "grass_flowers_block",
+      "terrain_type": "grass_flowers",
+      "scene": "res://assets/models/blocks/scenes/grass_flowers_block.tscn",
+      "model": "res://assets/models/blocks/gltf/grass_flowers_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "gravel_block",
+      "terrain_type": "gravel",
+      "scene": "res://assets/models/blocks/scenes/gravel_block.tscn",
+      "model": "res://assets/models/blocks/gltf/gravel_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "road_block",
+      "terrain_type": "road_asphalt",
+      "scene": "res://assets/models/blocks/scenes/road_block.tscn",
+      "model": "res://assets/models/blocks/gltf/road_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "road_crossing_block",
+      "terrain_type": "road_crossing",
+      "scene": "res://assets/models/blocks/scenes/road_crossing_block.tscn",
+      "model": "res://assets/models/blocks/gltf/road_crossing_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "road_lane_block",
+      "terrain_type": "road_lane",
+      "scene": "res://assets/models/blocks/scenes/road_lane_block.tscn",
+      "model": "res://assets/models/blocks/gltf/road_lane_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "sand_block",
+      "terrain_type": "sand",
+      "scene": "res://assets/models/blocks/scenes/sand_block.tscn",
+      "model": "res://assets/models/blocks/gltf/sand_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "sidewalk_block",
+      "terrain_type": "sidewalk",
+      "scene": "res://assets/models/blocks/scenes/sidewalk_block.tscn",
+      "model": "res://assets/models/blocks/gltf/sidewalk_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    },
+    {
+      "id": "stone_block",
+      "terrain_type": "stone",
+      "scene": "res://assets/models/blocks/scenes/stone_block.tscn",
+      "model": "res://assets/models/blocks/gltf/stone_block.gltf",
+      "placement": {
+        "terrain_block": true,
+        "anchor": "base",
+        "top_surface_y": 32
+      }
+    }
+  ]
+}

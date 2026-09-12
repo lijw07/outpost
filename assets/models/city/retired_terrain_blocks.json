@@ -1,0 +1,21 @@
+{
+  "replacement_library": "res://assets/models/blocks/catalog.json",
+  "removed": [
+    "floor_wood",
+    "floor_tile",
+    "floor_concrete",
+    "floor_carpet",
+    "road_asphalt",
+    "sidewalk",
+    "gravel",
+    "dirt",
+    "grass",
+    "sand",
+    "road_lane",
+    "road_crossing",
+    "floor_bath_tile",
+    "floor_shop_tile",
+    "floor_clinic_tile",
+    "floor_concrete_worn"
+  ]
+}

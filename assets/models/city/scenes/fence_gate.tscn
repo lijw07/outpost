@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/fence_gate.gltf" id="1_dejn2"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/fence_gate.res" id="2_icxte"]
+
+[node name="FenceGate" type="Node3D" unique_id=37844261]
+metadata/asset_id = "fence_gate"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1316367109]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1590776004 instance=ExtResource("1_dejn2")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=64385431]
+shape = ExtResource("2_icxte")

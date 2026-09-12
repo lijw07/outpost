@@ -1,0 +1,43 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/trees/textures/meadow_oak_tall.png" id="1_vd1rx"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/tree_parts/meadow_oak_tall_stump.res" id="2_m7v4k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybdrb"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_vd1rx")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oepd0"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.1875, 0.5625, 0.5, 0.4375),
+"attribute_data": PackedByteArray("oP6fPrMyMz+E/oM+mpkZP6D+nz6amRk/hP6DPrMyMz/Y/tc+szIzP7z+uz6amRk/2P7XPpqZGT+8/rs+szIzP+DwXz2zMLM9AAAAAAAAAADg8F89AAAAAAAAAACzMLM94PjfPdZlVj/g8F89wP8/P+D43z3A/z8/4PBfPdZlVj+8/rs+szIzP6D+nz6amRk/vP67PpqZGT+g/p8+szIzP4T+gz6zMjM/0PxPPpqZGT+E/oM+mpkZP9D8Tz6zMjM/qv8pP5ZlFj+m/yU/hmUGP6r/KT+GZQY/pv8lP5ZlFj/w+O89zcDMPOD43z0AAAAA8PjvPQAAAADg+N89zcDMPMDwPz3dy1w/oPAfPdZlVj/A8D891mVWP6DwHz3dy1w/rP8rP5ZlFj+q/yk/hmUGP6z/Kz+GZQY/qv8pP5ZlFj+m/yU/lmUWP6T/Iz+GZQY/pv8lP4ZlBj+k/yM/lmUWP7T/Mz+TMhM/sP8vP43MDD+0/zM/jcwMP7D/Lz+TMhM/iPwHPs3AzDwA+f89AAAAAIj8Bz4AAAAAAPn/Pc3AzDwA8X893ctcP+DwXz3WZVY/APF/PdZlVj/g8F893ctcP7D/Lz+TMhM/rv8tP43MDD+w/y8/jcwMP67/LT+TMhM/rv8tP5MyEz+s/ys/jcwMP67/LT+NzAw/rP8rP5MyEz8="),
+"format": 34359742487,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A"),
+"material": SubResource("StandardMaterial3D_ybdrb"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("QP9/PgAAAAAAAEC+QP9/PgAAAD8AAIA+QP9/PgAAAD8AAEC+QP9/PgAAAAAAAIA+gAFAvgAAAAAAAIA+gAFAvgAAAD8AAEC+gAFAvgAAAD8AAIA+gAFAvgAAAAAAAEC+QP9/PgAAAD8AAIA+gAFAvgAAAD8AAEC+QP9/PgAAAD8AAEC+gAFAvgAAAD8AAIA+QP9/PgAAAAAAAEC+gAFAvgAAAAAAAIA+QP9/PgAAAAAAAIA+gAFAvgAAAAAAAEC+QP9/PgAAAAAAAIA+gAFAvgAAAD8AAIA+QP9/PgAAAD8AAIA+gAFAvgAAAAAAAIA+gAFAvgAAAAAAAEC+QP9/PgAAAD8AAEC+gAFAvgAAAD8AAEC+QP9/PgAAAAAAAEC+AACgPsD+Pz4AAYC9AACgPgAAAD8A/H89AACgPgAAAD8AAYC9AACgPsD+Pz4A/H89AACgPgAAAD8A/H89QP9/PgAAAD8AAYC9AACgPgAAAD8AAYC9QP9/PgAAAD8A/H89AACgPsD+Pz4AAYC9QP9/PsD+Pz4A/H89AACgPsD+Pz4A/H89QP9/PsD+Pz4AAYC9AACgPsD+Pz4A/H89QP9/PgAAAD8A/H89AACgPgAAAD8A/H89QP9/PsD+Pz4A/H89QP9/PsD+Pz4AAYC9AACgPgAAAD8AAYC9QP9/PgAAAD8AAYC9AACgPsD+Pz4AAYC9AACAvsD/vz6A/f89AACAvgAAAD8AAEC2AACAvgAAAD+A/f89AACAvsD/vz4AAEC2gAFAvgAAAD+A/f89AACAvgAAAD8AAEC2gAFAvgAAAD8AAEC2AACAvgAAAD+A/f89gAFAvsD/vz4AAEC2AACAvsD/vz6A/f89gAFAvsD/vz6A/f89AACAvsD/vz4AAEC2gAFAvsD/vz6A/f89AACAvgAAAD+A/f89gAFAvgAAAD+A/f89AACAvsD/vz6A/f89AACAvsD/vz4AAEC2gAFAvgAAAD8AAEC2AACAvgAAAD8AAEC2gAFAvsD/vz4AAEC2/f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//vwCAAQD+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/vwEA/38AgP+//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/78=")
+}]
+
+[node name="TreePartsMeadowOakTallStump" type="Node3D" unique_id=328634781]
+metadata/asset_id = "tree_parts/meadow_oak_tall_stump"
+metadata/original_scene = "res://assets/models/trees/gltf/meadow_oak_tall_stump.gltf"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1324304605]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=557927438]
+
+[node name="meadow_oak_tall_stump_0" type="MeshInstance3D" parent="Body/Model" unique_id=556887866]
+mesh = SubResource("ArrayMesh_oepd0")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1528289052]
+shape = ExtResource("2_m7v4k")

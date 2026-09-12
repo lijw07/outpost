@@ -1,0 +1,43 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/trees/textures/meadow_oak_leaning.png" id="1_ow88y"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/tree_parts/meadow_oak_leaning_stump.res" id="2_77lak"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wons"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_ow88y")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wcbsu"]
+_surfaces = [{
+"aabb": AABB(-0.3125, 0, -0.25, 0.5625, 0.5, 0.5),
+"attribute_data": PackedByteArray("sP6vPrD/Lz+Q/o8+kP8PP7D+rz6Q/w8/kP6PPrD/Lz/w/u8+sP8vP9D+zz6Q/w8/8P7vPpD/Dz/Q/s8+sP8vPwDxfz0A+f89AAAAAAAAAAAA8X89AAAAAAAAAAAA+f89+Px3PuD/Xz+4/Dc+wP8/P/j8dz7A/z8/uPw3PuD/Xz/Q/s8+sP8vP7D+rz6Q/w8/0P7PPpD/Dz+w/q8+sP8vP5D+jz6w/y8/4PxfPpD/Dz+Q/o8+kP8PP+D8Xz6w/y8/jP6LPuD/Xz+E/oM+zP9LP4z+iz7M/0s/hP6DPuD/Xz+I/Ac+AOH/PAD5/z0AAAAAiPwHPgAAAAAA+f89AOH/PNj+1z7w/28/1P7TPuj/Zz/Y/tc+6P9nP9T+0z7w/28/hP6DPuD/Xz8A/X8+zP9LP4T+gz7M/0s/AP1/PuD/Xz8A/X8+4P9fP/j8dz7M/0s/AP1/Psz/Sz/4/Hc+4P9fPw=="),
+"format": 34359742487,
+"index_count": 66,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkA"),
+"material": SubResource("StandardMaterial3D_5wons"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AACAPgAAAAAAAIC+AACAPgAAAD8AAIA+AACAPgAAAD8AAIC+AACAPgAAAAAAAIA+wACAvgAAAAAAAIA+wACAvgAAAD8AAIC+wACAvgAAAD8AAIA+wACAvgAAAAAAAIC+AACAPgAAAD8AAIA+wACAvgAAAD8AAIC+AACAPgAAAD8AAIC+wACAvgAAAD8AAIA+AACAPgAAAAAAAIC+wACAvgAAAAAAAIA+AACAPgAAAAAAAIA+wACAvgAAAAAAAIC+AACAPgAAAAAAAIA+wACAvgAAAD8AAIA+AACAPgAAAD8AAIA+wACAvgAAAAAAAIA+wACAvgAAAAAAAIC+AACAPgAAAD8AAIC+wACAvgAAAD8AAIC+AACAPgAAAAAAAIC+AACgvsD+Pz4A/X89AACgvgAAAD+AAoC9AACgvgAAAD8A/X89AACgvsD+Pz6AAoC9wACAvgAAAD8A/X89AACgvgAAAD+AAoC9wACAvgAAAD+AAoC9AACgvgAAAD8A/X89wACAvsD+Pz6AAoC9AACgvsD+Pz4A/X89wACAvsD+Pz4A/X89AACgvsD+Pz6AAoC9wACAvsD+Pz4A/X89AACgvgAAAD8A/X89wACAvgAAAD8A/X89AACgvsD+Pz4A/X89AACgvsD+Pz6AAoC9wACAvgAAAD+AAoC9AACgvgAAAD+AAoC9wACAvsD+Pz6AAoC9/f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//vwCAAQD+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/vw==")
+}]
+
+[node name="TreePartsMeadowOakLeaningStump" type="Node3D" unique_id=2011615399]
+metadata/asset_id = "tree_parts/meadow_oak_leaning_stump"
+metadata/original_scene = "res://assets/models/trees/gltf/meadow_oak_leaning_stump.gltf"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1797117827]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1781747954]
+
+[node name="meadow_oak_leaning_stump_0" type="MeshInstance3D" parent="Body/Model" unique_id=1343416977]
+mesh = SubResource("ArrayMesh_wcbsu")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1050159449]
+shape = ExtResource("2_77lak")

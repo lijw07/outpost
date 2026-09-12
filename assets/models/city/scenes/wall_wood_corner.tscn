@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_wood_corner.gltf" id="1_dedlk"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_wood_corner.res" id="2_pgb10"]
+
+[node name="WallWoodCorner" type="Node3D" unique_id=139280576]
+metadata/asset_id = "wall_wood_corner"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1786046367]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=41389611 instance=ExtResource("1_dedlk")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=335917638]
+shape = ExtResource("2_pgb10")

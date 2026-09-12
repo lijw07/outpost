@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/trash_bag.gltf" id="1_jwv1c"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/trash_bag.res" id="2_ey72w"]
+
+[node name="TrashBag" type="Node3D" unique_id=906712470]
+metadata/asset_id = "trash_bag"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1662199220]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=92272824 instance=ExtResource("1_jwv1c")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=541919885]
+shape = ExtResource("2_ey72w")

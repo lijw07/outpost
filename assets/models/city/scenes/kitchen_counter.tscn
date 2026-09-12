@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/kitchen_counter.gltf" id="1_sydul"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/kitchen_counter.res" id="2_6va6m"]
+
+[node name="KitchenCounter" type="Node3D" unique_id=1893563245]
+metadata/asset_id = "kitchen_counter"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=804595308]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1096738150 instance=ExtResource("1_sydul")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1010101773]
+shape = ExtResource("2_6va6m")

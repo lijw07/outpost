@@ -1,0 +1,1685 @@
+{
+	"assets": [
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "blocks",
+			"id": "blocks/dirt_block",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/blocks/dirt_block.tscn",
+			"source_scene": "res://assets/models/blocks/scenes/dirt_block.tscn",
+			"triangles": 10
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "blocks",
+			"id": "blocks/grass_block",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/blocks/grass_block.tscn",
+			"source_scene": "res://assets/models/blocks/scenes/grass_block.tscn",
+			"triangles": 10
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "blocks",
+			"id": "blocks/grass_flowers_block",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/blocks/grass_flowers_block.tscn",
+			"source_scene": "res://assets/models/blocks/scenes/grass_flowers_block.tscn",
+			"triangles": 10
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "blocks",
+			"id": "blocks/sand_block",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/blocks/sand_block.tscn",
+			"source_scene": "res://assets/models/blocks/scenes/sand_block.tscn",
+			"triangles": 10
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "blocks",
+			"id": "blocks/stone_block",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/blocks/stone_block.tscn",
+			"source_scene": "res://assets/models/blocks/scenes/stone_block.tscn",
+			"triangles": 10
+		},
+		{
+			"bounds_model_units": [
+				[
+					-36.0,
+					0.0,
+					-32.0
+				],
+				[
+					32.0,
+					84.0,
+					28.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak.tscn",
+			"triangles": 1906
+		},
+		{
+			"bounds_model_units": [
+				[
+					-36.0,
+					0.0,
+					-32.0
+				],
+				[
+					32.0,
+					84.0,
+					28.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak_1",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak_1.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak_1.tscn",
+			"triangles": 1906
+		},
+		{
+			"bounds_model_units": [
+				[
+					-36.0,
+					0.0,
+					-32.0
+				],
+				[
+					36.0,
+					72.0,
+					28.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak_broad",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak_broad.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak_broad.tscn",
+			"triangles": 1682
+		},
+		{
+			"bounds_model_units": [
+				[
+					-28.0,
+					0.0,
+					-28.0
+				],
+				[
+					44.0,
+					84.0,
+					20.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak_leaning",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak_leaning.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak_leaning.tscn",
+			"triangles": 1260
+		},
+		{
+			"bounds_model_units": [
+				[
+					-28.0,
+					0.0,
+					-28.0
+				],
+				[
+					24.0,
+					112.0,
+					20.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak_tall",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak_tall.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak_tall.tscn",
+			"triangles": 1440
+		},
+		{
+			"bounds_model_units": [
+				[
+					-24.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					56.0,
+					20.0
+				]
+			],
+			"category": "trees",
+			"id": "trees/meadow_oak_young",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/trees/meadow_oak_young.tscn",
+			"source_scene": "res://assets/models/trees/scenes/meadow_oak_young.tscn",
+			"triangles": 610
+		},
+		{
+			"bounds_model_units": [
+				[
+					-11.0,
+					0.0,
+					-12.0
+				],
+				[
+					9.0,
+					11.0,
+					11.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/boulder_large",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/boulder_large.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/boulder_large.tscn",
+			"triangles": 2280
+		},
+		{
+			"bounds_model_units": [
+				[
+					-7.0,
+					0.0,
+					-9.0
+				],
+				[
+					10.0,
+					9.0,
+					7.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/boulder_mossy",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/boulder_mossy.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/boulder_mossy.tscn",
+			"triangles": 1184
+		},
+		{
+			"bounds_model_units": [
+				[
+					-5.0,
+					0.0,
+					-6.0
+				],
+				[
+					5.0,
+					6.0,
+					5.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/boulder_small",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/boulder_small.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/boulder_small.tscn",
+			"triangles": 612
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-11.0
+				],
+				[
+					14.0,
+					1.0,
+					15.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/pebbles",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/pebbles.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/pebbles.tscn",
+			"triangles": 60
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-6.0
+				],
+				[
+					8.0,
+					2.0,
+					6.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/rock_flat",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/rock_flat.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/rock_flat.tscn",
+			"triangles": 414
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-6.0
+				],
+				[
+					6.0,
+					5.0,
+					5.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/rock_mossy",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/rock_mossy.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/rock_mossy.tscn",
+			"triangles": 542
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-6.0
+				],
+				[
+					7.0,
+					4.0,
+					6.0
+				]
+			],
+			"category": "rocks",
+			"id": "rocks/rock_pile",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/rocks/rock_pile.tscn",
+			"source_scene": "res://assets/models/rocks/scenes/rock_pile.tscn",
+			"triangles": 440
+		},
+		{
+			"bounds_model_units": [
+				[
+					-13.0,
+					0.0,
+					-11.0
+				],
+				[
+					11.0,
+					18.0,
+					10.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/bush_berry",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/bush_berry.tscn",
+			"source_scene": "res://assets/models/plants/scenes/bush_berry.tscn",
+			"triangles": 1226
+		},
+		{
+			"bounds_model_units": [
+				[
+					-15.0,
+					0.0,
+					-13.0
+				],
+				[
+					13.0,
+					19.0,
+					9.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/bush_round",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/bush_round.tscn",
+			"source_scene": "res://assets/models/plants/scenes/bush_round.tscn",
+			"triangles": 1250
+		},
+		{
+			"bounds_model_units": [
+				[
+					-19.0,
+					0.0,
+					-11.0
+				],
+				[
+					17.0,
+					16.0,
+					7.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/bush_wide",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/bush_wide.tscn",
+			"source_scene": "res://assets/models/plants/scenes/bush_wide.tscn",
+			"triangles": 1352
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-7.0
+				],
+				[
+					8.0,
+					6.0,
+					9.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/fern",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/fern.tscn",
+			"source_scene": "res://assets/models/plants/scenes/fern.tscn",
+			"triangles": 912
+		},
+		{
+			"bounds_model_units": [
+				[
+					-13.0,
+					0.0,
+					-12.0
+				],
+				[
+					11.0,
+					6.0,
+					9.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/flower_patch",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/flower_patch.tscn",
+			"source_scene": "res://assets/models/plants/scenes/flower_patch.tscn",
+			"triangles": 320
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-6.0
+				],
+				[
+					8.0,
+					5.0,
+					6.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/flowers_daisy",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/flowers_daisy.tscn",
+			"source_scene": "res://assets/models/plants/scenes/flowers_daisy.tscn",
+			"triangles": 544
+		},
+		{
+			"bounds_model_units": [
+				[
+					-5.0,
+					0.0,
+					-4.0
+				],
+				[
+					5.0,
+					10.0,
+					6.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/flowers_lavender",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/flowers_lavender.tscn",
+			"source_scene": "res://assets/models/plants/scenes/flowers_lavender.tscn",
+			"triangles": 590
+		},
+		{
+			"bounds_model_units": [
+				[
+					-14.0,
+					0.0,
+					-11.0
+				],
+				[
+					11.0,
+					5.0,
+					13.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/grass_tufts",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/grass_tufts.tscn",
+			"source_scene": "res://assets/models/plants/scenes/grass_tufts.tscn",
+			"triangles": 420
+		},
+		{
+			"bounds_model_units": [
+				[
+					-12.0,
+					0.0,
+					-11.0
+				],
+				[
+					10.0,
+					5.0,
+					10.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/grass_tufts_b",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/grass_tufts_b.tscn",
+			"source_scene": "res://assets/models/plants/scenes/grass_tufts_b.tscn",
+			"triangles": 460
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-5.0
+				],
+				[
+					5.0,
+					14.0,
+					5.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/reeds",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/reeds.tscn",
+			"source_scene": "res://assets/models/plants/scenes/reeds.tscn",
+			"triangles": 428
+		},
+		{
+			"bounds_model_units": [
+				[
+					-7.0,
+					0.0,
+					-7.0
+				],
+				[
+					7.0,
+					12.0,
+					8.0
+				]
+			],
+			"category": "plants",
+			"id": "plants/tall_grass",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/plants/tall_grass.tscn",
+			"source_scene": "res://assets/models/plants/scenes/tall_grass.tscn",
+			"triangles": 942
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-5.0
+				],
+				[
+					7.0,
+					7.0,
+					7.0
+				]
+			],
+			"category": "mushrooms",
+			"id": "mushrooms/mushroom_cluster",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/mushrooms/mushroom_cluster.tscn",
+			"source_scene": "res://assets/models/mushrooms/scenes/mushroom_cluster.tscn",
+			"triangles": 248
+		},
+		{
+			"bounds_model_units": [
+				[
+					-7.0,
+					0.0,
+					-5.0
+				],
+				[
+					8.0,
+					9.0,
+					6.0
+				]
+			],
+			"category": "mushrooms",
+			"id": "mushrooms/mushroom_toadstool",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/mushrooms/mushroom_toadstool.tscn",
+			"source_scene": "res://assets/models/mushrooms/scenes/mushroom_toadstool.tscn",
+			"triangles": 324
+		},
+		{
+			"bounds_model_units": [
+				[
+					-5.0,
+					0.0,
+					-7.0
+				],
+				[
+					7.0,
+					8.0,
+					7.0
+				]
+			],
+			"category": "mushrooms",
+			"id": "mushrooms/stump_brackets",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/mushrooms/stump_brackets.tscn",
+			"source_scene": "res://assets/models/mushrooms/scenes/stump_brackets.tscn",
+			"triangles": 470
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-8.0
+				],
+				[
+					16.0,
+					28.0,
+					8.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/barricade_spikes",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/barricade_spikes.tscn",
+			"source_scene": "res://assets/models/structures/scenes/barricade_spikes.tscn",
+			"triangles": 2112
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-2.0
+				],
+				[
+					8.0,
+					28.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/door",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/door.tscn",
+			"source_scene": "res://assets/models/structures/scenes/door.tscn",
+			"triangles": 158
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-2.0
+				],
+				[
+					16.0,
+					16.0,
+					2.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/fence",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/fence.tscn",
+			"source_scene": "res://assets/models/structures/scenes/fence.tscn",
+			"triangles": 68
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-2.0
+				],
+				[
+					8.0,
+					16.0,
+					2.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/fence_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/fence_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/fence_16.tscn",
+			"triangles": 46
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					-2.0,
+					-16.0
+				],
+				[
+					16.0,
+					0.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/floor",
+			"placement": {
+				"anchor": "surface",
+				"source_y_translation": -2.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/floor.tscn",
+			"source_scene": "res://assets/models/structures/scenes/floor.tscn",
+			"triangles": 52
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					-2.0,
+					-8.0
+				],
+				[
+					8.0,
+					0.0,
+					8.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/floor_16",
+			"placement": {
+				"anchor": "surface",
+				"source_y_translation": -2.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/floor_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/floor_16.tscn",
+			"triangles": 28
+		},
+		{
+			"bounds_model_units": [
+				[
+					-32.0,
+					0.0,
+					-3.0
+				],
+				[
+					32.0,
+					36.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/gate",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/gate.tscn",
+			"source_scene": "res://assets/models/structures/scenes/gate.tscn",
+			"triangles": 400
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-1.0
+				],
+				[
+					6.0,
+					32.0,
+					1.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/ladder",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/ladder.tscn",
+			"source_scene": "res://assets/models/structures/scenes/ladder.tscn",
+			"triangles": 72
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-5.0
+				],
+				[
+					16.0,
+					39.0,
+					4.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/palisade",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/palisade.tscn",
+			"source_scene": "res://assets/models/structures/scenes/palisade.tscn",
+			"triangles": 320
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-5.0
+				],
+				[
+					8.0,
+					38.0,
+					4.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/palisade_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/palisade_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/palisade_16.tscn",
+			"triangles": 204
+		},
+		{
+			"bounds_model_units": [
+				[
+					-3.0,
+					0.0,
+					-3.0
+				],
+				[
+					3.0,
+					32.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/pillar",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/pillar.tscn",
+			"source_scene": "res://assets/models/structures/scenes/pillar.tscn",
+			"triangles": 32
+		},
+		{
+			"bounds_model_units": [
+				[
+					-3.0,
+					0.0,
+					-3.0
+				],
+				[
+					3.0,
+					16.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/pillar_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/pillar_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/pillar_16.tscn",
+			"triangles": 32
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_corner_inner",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_corner_inner.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_corner_inner.tscn",
+			"triangles": 178
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_corner_inner_straw",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_corner_inner_straw.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_corner_inner_straw.tscn",
+			"triangles": 178
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_corner_outer",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_corner_outer.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_corner_outer.tscn",
+			"triangles": 166
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_corner_outer_straw",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_corner_outer_straw.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_corner_outer_straw.tscn",
+			"triangles": 166
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-6.0
+				],
+				[
+					16.0,
+					5.0,
+					6.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_ridge",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_ridge.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_ridge.tscn",
+			"triangles": 32
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-6.0
+				],
+				[
+					16.0,
+					5.0,
+					6.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_ridge_straw",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_ridge_straw.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_ridge_straw.tscn",
+			"triangles": 32
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_slope",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_slope.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_slope.tscn",
+			"triangles": 96
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-16.0
+				],
+				[
+					8.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_slope_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_slope_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_slope_16.tscn",
+			"triangles": 96
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-16.0
+				],
+				[
+					8.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_slope_16_straw",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_slope_16_straw.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_slope_16_straw.tscn",
+			"triangles": 96
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					16.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/roof_slope_straw",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/roof_slope_straw.tscn",
+			"source_scene": "res://assets/models/structures/scenes/roof_slope_straw.tscn",
+			"triangles": 96
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					32.0,
+					16.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/stairs",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/stairs.tscn",
+			"source_scene": "res://assets/models/structures/scenes/stairs.tscn",
+			"triangles": 280
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-3.0
+				],
+				[
+					16.0,
+					32.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall.tscn",
+			"triangles": 104
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-3.0
+				],
+				[
+					8.0,
+					32.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_16.tscn",
+			"triangles": 74
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-3.0
+				],
+				[
+					16.0,
+					32.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_door_frame",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_door_frame.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_door_frame.tscn",
+			"triangles": 138
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-3.0
+				],
+				[
+					16.0,
+					16.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_gable",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_gable.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_gable.tscn",
+			"triangles": 98
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-3.0
+				],
+				[
+					16.0,
+					16.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_half",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_half.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_half.tscn",
+			"triangles": 82
+		},
+		{
+			"bounds_model_units": [
+				[
+					-8.0,
+					0.0,
+					-3.0
+				],
+				[
+					8.0,
+					16.0,
+					3.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_half_16",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_half_16.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_half_16.tscn",
+			"triangles": 52
+		},
+		{
+			"bounds_model_units": [
+				[
+					-16.0,
+					0.0,
+					-3.0
+				],
+				[
+					16.0,
+					32.0,
+					4.0
+				]
+			],
+			"category": "structures",
+			"id": "structures/wall_window",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/structures/wall_window.tscn",
+			"source_scene": "res://assets/models/structures/scenes/wall_window.tscn",
+			"triangles": 254
+		},
+		{
+			"bounds_model_units": [
+				[
+					-6.0,
+					0.0,
+					-5.0
+				],
+				[
+					6.0,
+					8.0,
+					6.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_broad_stump",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_broad_stump.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_broad_stump.gltf",
+			"triangles": 42
+		},
+		{
+			"bounds_model_units": [
+				[
+					-36.0,
+					0.0,
+					-32.0
+				],
+				[
+					36.0,
+					64.0,
+					28.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_broad_top",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_broad_top.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_broad_top.gltf",
+			"triangles": 1640
+		},
+		{
+			"bounds_model_units": [
+				[
+					-5.0,
+					0.0,
+					-4.0
+				],
+				[
+					4.0,
+					8.0,
+					4.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_leaning_stump",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_leaning_stump.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_leaning_stump.gltf",
+			"triangles": 22
+		},
+		{
+			"bounds_model_units": [
+				[
+					-28.0,
+					0.0,
+					-28.0
+				],
+				[
+					44.0,
+					76.0,
+					20.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_leaning_top",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_leaning_top.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_leaning_top.gltf",
+			"triangles": 1238
+		},
+		{
+			"bounds_model_units": [
+				[
+					-5.0,
+					0.0,
+					-5.0
+				],
+				[
+					5.0,
+					8.0,
+					5.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_stump",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_stump.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_stump.gltf",
+			"triangles": 52
+		},
+		{
+			"bounds_model_units": [
+				[
+					-4.0,
+					0.0,
+					-3.0
+				],
+				[
+					5.0,
+					8.0,
+					4.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_tall_stump",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_tall_stump.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_tall_stump.gltf",
+			"triangles": 32
+		},
+		{
+			"bounds_model_units": [
+				[
+					-28.0,
+					0.0,
+					-28.0
+				],
+				[
+					24.0,
+					104.0,
+					20.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_tall_top",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_tall_top.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_tall_top.gltf",
+			"triangles": 1408
+		},
+		{
+			"bounds_model_units": [
+				[
+					-36.0,
+					0.0,
+					-32.0
+				],
+				[
+					32.0,
+					76.0,
+					28.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_top",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_top.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_top.gltf",
+			"triangles": 1854
+		},
+		{
+			"bounds_model_units": [
+				[
+					-2.0,
+					0.0,
+					-2.0
+				],
+				[
+					4.0,
+					8.0,
+					3.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_young_stump",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_young_stump.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_young_stump.gltf",
+			"triangles": 22
+		},
+		{
+			"bounds_model_units": [
+				[
+					-24.0,
+					0.0,
+					-16.0
+				],
+				[
+					16.0,
+					48.0,
+					20.0
+				]
+			],
+			"category": "tree_parts",
+			"id": "tree_parts/meadow_oak_young_top",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/tree_parts/meadow_oak_young_top.tscn",
+			"source_scene": "res://assets/models/trees/gltf/meadow_oak_young_top.gltf",
+			"triangles": 588
+		},
+		{
+			"bounds_model_units": [
+				[
+					-32.984001159668,
+					0.0,
+					-33.0
+				],
+				[
+					32.984001159668,
+					48.0,
+					41.9540252685547
+				]
+			],
+			"category": "assemblies",
+			"id": "assemblies/test_house",
+			"placement": {
+				"anchor": "base",
+				"source_y_translation": 0.0
+			},
+			"scene": "res://assets/models/test_library/scenes/assemblies/test_house.tscn",
+			"source_scene": "res://assets/testHouse.tscn",
+			"triangles": 2046
+		}
+	],
+	"errors": [],
+	"passed": true
+}

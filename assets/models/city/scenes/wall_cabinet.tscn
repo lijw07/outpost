@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_cabinet.gltf" id="1_jptvu"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_cabinet.res" id="2_pig8m"]
+
+[node name="WallCabinet" type="Node3D" unique_id=316937221]
+metadata/asset_id = "wall_cabinet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1421065288]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=228281970 instance=ExtResource("1_jptvu")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=423270606]
+shape = ExtResource("2_pig8m")

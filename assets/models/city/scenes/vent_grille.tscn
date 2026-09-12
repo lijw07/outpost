@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/vent_grille.gltf" id="1_5gxww"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/vent_grille.res" id="2_gnhhf"]
+
+[node name="VentGrille" type="Node3D" unique_id=290339093]
+metadata/asset_id = "vent_grille"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1619561164]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=748514611 instance=ExtResource("1_5gxww")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1930587261]
+shape = ExtResource("2_gnhhf")

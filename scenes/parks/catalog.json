@@ -1,0 +1,69 @@
+{
+	"parks": [
+		{
+			"id": "meadow_commons",
+			"scene": "res://scenes/parks/meadow_commons.tscn",
+			"tiles": [
+				12,
+				8
+			],
+			"title": "Meadow Commons",
+			"world_size": [
+				24,
+				16
+			]
+		},
+		{
+			"id": "pocket_garden",
+			"scene": "res://scenes/parks/pocket_garden.tscn",
+			"tiles": [
+				6,
+				5
+			],
+			"title": "Pocket Garden",
+			"world_size": [
+				12,
+				10
+			]
+		},
+		{
+			"id": "picnic_grove",
+			"scene": "res://scenes/parks/picnic_grove.tscn",
+			"tiles": [
+				8,
+				6
+			],
+			"title": "Picnic Grove",
+			"world_size": [
+				16,
+				12
+			]
+		},
+		{
+			"id": "wildflower_walk",
+			"scene": "res://scenes/parks/wildflower_walk.tscn",
+			"tiles": [
+				10,
+				4
+			],
+			"title": "Wildflower Walk",
+			"world_size": [
+				20,
+				8
+			]
+		},
+		{
+			"id": "woodland_retreat",
+			"scene": "res://scenes/parks/woodland_retreat.tscn",
+			"tiles": [
+				8,
+				8
+			],
+			"title": "Woodland Retreat",
+			"world_size": [
+				16,
+				16
+			]
+		}
+	]
+}

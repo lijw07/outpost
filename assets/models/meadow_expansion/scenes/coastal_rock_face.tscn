@@ -1,0 +1,66 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/meadow_expansion/gltf/coastal_rock_face_0.png" id="1_tiwft"]
+[ext_resource type="Texture2D" path="res://assets/models/meadow_expansion/gltf/coastal_rock_face_1.png" id="2_upeep"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tinm6"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_tiwft")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_do217"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_upeep")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qttwd"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/"),
+"format": 34359742487,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": SubResource("StandardMaterial3D_tinm6"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/AACAP7D/rz8AAIC/AACAvwAAAAAAAIA/AACAP7D/rz8AAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAP7D/rz8AAIC/kP8PP/D/7z8AAIC/AACAvwAAAAAAAIA/kP8PP/D/7z8AAIA/AACAP7D/rz8AAIA/AACAvwAAAAAAAIC/kP8PP/D/7z8AAIC/oAKgvgAAAEAAAIC/AACAvwAAAAAAAIA/oAKgvgAAAEAAAIA/kP8PP/D/7z8AAIA/AACAvwAAAAAAAIC/oAKgvgAAAEAAAIC/AACAv8D/vz8AAIC/AACAvwAAAAAAAIA/AACAv8D/vz8AAIA/oAKgvgAAAEAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIA/AACAPwAAAAAAAIC/AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAP7D/rz8AAIA/AACAP7D/rz8AAIC/AACAPwAAAAAAAIA/AACAP7D/rz8AAIC/kP8PP/D/7z8AAIA/kP8PP/D/7z8AAIC/AACAP7D/rz8AAIA/kP8PP/D/7z8AAIC/oAKgvgAAAEAAAIA/oAKgvgAAAEAAAIC/kP8PP/D/7z8AAIA/oAKgvgAAAEAAAIC/AACAv8D/vz8AAIA/AACAv8D/vz8AAIC/oAKgvgAAAEAAAIA/AACAv8D/vz8AAIC/AACAvwAAAAAAAIA/AACAvwAAAAAAAIC/AACAv8D/vz8AAIA//f/7/9jL7SX9//v/2MvtJf3/+//Yy+0l+n//f/r//z/6f/9/+v//P/p//3/6//8//f/7/yy6Fx39//v/LLoXHf3/+/8suhcd/3//f9jL7CX/f/9/2MvsJf9//3/Yy+wl/P/7/72gYBD8//v/vaBgEPz/+/+9oGAQ/3//fy26Fx3/f/9/LboXHf9//38tuhcd/v/+//9/AAD+//7//38AAP7//v//fwAA/3//f72gXxD/f/9/vaBfEP9//3+9oF8QAoAAAP7//z8CgAAA/v//PwKAAAD+//8/AoAAAP7//z/6/wGA/X8CAPr/AYD9fwIA+v8BgP1/AgD6/wGA/X8CAEDEurtDRN4dQMS6u0NE3h1AxLq7Q0TeHUDEurtDRN4d/o/97/8PADj+j/3v/w8AOP6P/e//DwA4/o/97/8PADgaShnK4zXzWhpKGcrjNfNaGkoZyuM181oaShnK4zXzWgIA+X8CgP5/AgD5fwKA/n8CAPl/AoD+fwIA+X8CgP5/")
+}, {
+"aabb": AABB(-1, 0.8125, -1, 2, 0.375, 0.375),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8="),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_do217"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AACAvwAAUD8AAIC/0P9PPwAAUD8AAIC/AACAPwAAiD8AAIC/AACAvwAAUD8AACC/AACAPwAAiD8AACC/0P9PPwAAUD8AACC/AACAvwAAUD8AAIC/AACAPwAAiD8AAIC/wAFAvwAAmD8AAIC/AACAvwAAUD8AACC/wAFAvwAAmD8AACC/AACAPwAAiD8AACC/AACAvwAAUD8AAIC/0P9PPwAAUD8AACC/0P9PPwAAUD8AAIC/AACAvwAAUD8AACC/0P9PPwAAUD8AAIC/AACAPwAAiD8AACC/AACAPwAAiD8AAIC/0P9PPwAAUD8AACC/AACAPwAAiD8AAIC/wAFAvwAAmD8AACC/wAFAvwAAmD8AAIC/AACAPwAAiD8AACC/wAFAvwAAmD8AAIC/AACAvwAAUD8AACC/AACAvwAAUD8AAIC/wAFAvwAAmD8AACC//v/7/8Xx5Dj+//v/xfHkOP7/+//F8eQ4+n//f/r//z/6f/9/+v//P/p//3/6//8//f/7/zGzmhn9//v/MbOaGf3/+/8xs5oZ/3//f8Xx4jj/f/9/xfHiOP9//3/F8eI4AoAAAP7//z8CgAAA/v//PwKAAAD+//8/AoAAAP7//z8kySZJ2LZtGyTJJknYtm0bJMkmSdi2bRskySZJ2LZtG4WIdfeICLw7hYh194gIvDuFiHX3iAi8O4WIdfeICLw7MzMys8tMZmYzMzKzy0xmZjMzMrPLTGZmMzMys8tMZmY=")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j2w1e"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, 1, 1.375, -1, -1, 0, 1, 1, 1.375, 1, 1, 0, 1, -1, 0, -1, 1, 1.375, -1, 0.5625, 1.875, -1, -1, 0, 1, 0.5625, 1.875, 1, 1, 1.375, 1, -1, 0, -1, 0.5625, 1.875, -1, -0.3125, 2, -1, -1, 0, 1, -0.3125, 2, 1, 0.5625, 1.875, 1, -1, 0, -1, -0.3125, 2, -1, -1, 1.5, -1, -1, 0, 1, -1, 1.5, 1, -0.3125, 2, 1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, 1, 1, 0, -1, 1, 1.375, 1, 1, 1.375, -1, 1, 0, -1, 1, 0, 1, 1, 1.375, 1, 1, 1.375, -1, 0.5625, 1.875, 1, 0.5625, 1.875, -1, 1, 1.375, -1, 1, 1.375, 1, 0.5625, 1.875, 1, 0.5625, 1.875, -1, -0.3125, 2, 1, -0.3125, 2, -1, 0.5625, 1.875, -1, 0.5625, 1.875, 1, -0.3125, 2, 1, -0.3125, 2, -1, -1, 1.5, 1, -1, 1.5, -1, -0.3125, 2, -1, -0.3125, 2, 1, -1, 1.5, 1, -1, 1.5, -1, -1, 0, 1, -1, 0, -1, -1, 1.5, -1, -1, 1.5, 1, -1, 0, 1, -1, 0.8125, -1, 0.8125, 0.8125, -1, 1, 1.0625, -1, -1, 0.8125, -0.625, 1, 1.0625, -0.625, 0.8125, 0.8125, -0.625, -1, 0.8125, -1, 1, 1.0625, -1, -0.75, 1.1875, -1, -1, 0.8125, -0.625, -0.75, 1.1875, -0.625, 1, 1.0625, -0.625, -1, 0.8125, -1, 0.8125, 0.8125, -0.625, 0.8125, 0.8125, -1, -1, 0.8125, -1, -1, 0.8125, -0.625, 0.8125, 0.8125, -0.625, 0.8125, 0.8125, -1, 1, 1.0625, -0.625, 1, 1.0625, -1, 0.8125, 0.8125, -1, 0.8125, 0.8125, -0.625, 1, 1.0625, -0.625, 1, 1.0625, -1, -0.75, 1.1875, -0.625, -0.75, 1.1875, -1, 1, 1.0625, -1, 1, 1.0625, -0.625, -0.75, 1.1875, -0.625, -0.75, 1.1875, -1, -1, 0.8125, -0.625, -1, 0.8125, -1, -0.75, 1.1875, -1, -0.75, 1.1875, -0.625, -1, 0.8125, -0.625)
+backface_collision = true
+
+[node name="CoastalRockFace" type="Node3D" unique_id=1308820022]
+metadata/asset_id = "coastal_rock_face"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="Visual" type="MeshInstance3D" parent="." unique_id=1065199330]
+mesh = SubResource("ArrayMesh_qttwd")
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1357332662]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1681640568]
+shape = SubResource("ConcavePolygonShape3D_j2w1e")

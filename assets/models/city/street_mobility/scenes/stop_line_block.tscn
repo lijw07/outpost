@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/vehicles/street_fixture.gd" id="1_knr0e"]
+[ext_resource type="PackedScene" path="res://assets/models/city/street_mobility/gltf/stop_line_block.gltf" id="2_3w7n0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mpqp0"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, -1, -1, 2, 1, -1, 0, -1, -1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, 1, -1, 0, 1, 1, 0, 1, -1, 0, -1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 2, 1, 1, 2, 1, -1, 0, 1, -1, 0, 1, 1, 2, 1, 1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1)
+backface_collision = true
+
+[node name="StopLineBlock" type="Node3D" unique_id=982907526]
+script = ExtResource("1_knr0e")
+fixture_id = "stop_line_block"
+metadata/asset_id = "stop_line_block"
+metadata/source = "res://assets/models/city/street_mobility/blockbench/stop_line_block.bbmodel"
+
+[node name="Model" type="Node3D" parent="." unique_id=1848477363 instance=ExtResource("2_3w7n0")]
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=100037717]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1895403204]
+shape = SubResource("ConcavePolygonShape3D_mpqp0")

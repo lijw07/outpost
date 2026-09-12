@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/shelf.gltf" id="1_wwh2g"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/shelf.res" id="2_clk3i"]
+
+[node name="Shelf" type="Node3D" unique_id=394030388]
+metadata/asset_id = "shelf"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1834609839]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1359985074 instance=ExtResource("1_wwh2g")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=364604377]
+shape = ExtResource("2_clk3i")

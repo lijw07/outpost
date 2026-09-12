@@ -1,0 +1,515 @@
+{
+  "passed": true,
+  "assets": [
+    {
+      "id": "sedan",
+      "bounds": [
+        [
+          -17.4,
+          0,
+          -33.25
+        ],
+        [
+          17.4,
+          29,
+          33
+        ]
+      ],
+      "animations": 15,
+      "passed": true
+    },
+    {
+      "id": "van",
+      "bounds": [
+        [
+          -18.4,
+          0,
+          -36.25
+        ],
+        [
+          18.4,
+          35,
+          36
+        ]
+      ],
+      "animations": 15,
+      "passed": true
+    },
+    {
+      "id": "ambulance",
+      "bounds": [
+        [
+          -19.4,
+          0,
+          -39.25
+        ],
+        [
+          19.4,
+          41,
+          39
+        ]
+      ],
+      "animations": 15,
+      "passed": true
+    },
+    {
+      "id": "bus",
+      "bounds": [
+        [
+          -20.4,
+          0,
+          -61.25
+        ],
+        [
+          20.4,
+          42,
+          60.5
+        ]
+      ],
+      "animations": 15,
+      "passed": true
+    },
+    {
+      "id": "forklift",
+      "bounds": [
+        [
+          -14.899999999999999,
+          0,
+          -44
+        ],
+        [
+          14.9,
+          42,
+          19
+        ]
+      ],
+      "animations": 17,
+      "passed": true
+    },
+    {
+      "id": "stop_sign",
+      "bounds": [
+        [
+          -10,
+          0,
+          -3
+        ],
+        [
+          10,
+          50,
+          3
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "street_light",
+      "bounds": [
+        [
+          -4.3,
+          0,
+          -4.3
+        ],
+        [
+          4.3,
+          64,
+          4.3
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "street_light_double",
+      "bounds": [
+        [
+          -14.3,
+          0,
+          -4.3
+        ],
+        [
+          14.3,
+          64,
+          4.3
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "bus_stop_sign",
+      "bounds": [
+        [
+          -7,
+          0,
+          -2
+        ],
+        [
+          7,
+          57,
+          2
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "bus_stop_shelter",
+      "bounds": [
+        [
+          -33,
+          0,
+          -13
+        ],
+        [
+          33,
+          46,
+          13
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "trash_can",
+      "bounds": [
+        [
+          -6,
+          0,
+          -6
+        ],
+        [
+          6,
+          18.5,
+          6
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "wheelie_bin",
+      "bounds": [
+        [
+          -7.5,
+          0,
+          -6.5
+        ],
+        [
+          7.5,
+          23,
+          8
+        ]
+      ],
+      "animations": 2,
+      "passed": true
+    },
+    {
+      "id": "fire_hydrant",
+      "bounds": [
+        [
+          -6,
+          0,
+          -4
+        ],
+        [
+          6,
+          21,
+          4
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "traffic_cone",
+      "bounds": [
+        [
+          -5,
+          0,
+          -5
+        ],
+        [
+          5,
+          11,
+          5
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "street_bollard",
+      "bounds": [
+        [
+          -3,
+          0,
+          -3
+        ],
+        [
+          3,
+          20,
+          3
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "traffic_signal",
+      "bounds": [
+        [
+          -3,
+          0,
+          -6
+        ],
+        [
+          23,
+          64,
+          3
+        ]
+      ],
+      "animations": 3,
+      "passed": true
+    },
+    {
+      "id": "street_bench",
+      "bounds": [
+        [
+          -18,
+          0,
+          -5
+        ],
+        [
+          18,
+          23,
+          5.5
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "hedge_planter",
+      "bounds": [
+        [
+          -16,
+          0,
+          -6
+        ],
+        [
+          16,
+          20,
+          6
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "flower_planter",
+      "bounds": [
+        [
+          -16,
+          0,
+          -6
+        ],
+        [
+          16,
+          16.5,
+          6
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "iron_fence",
+      "bounds": [
+        [
+          -15.7,
+          0,
+          -1.2
+        ],
+        [
+          15.7,
+          26,
+          1.2
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "crosswalk_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "stop_line_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "bus_lane_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "parking_bay_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "tactile_paving_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "asphalt_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "sidewalk_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "center_line_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "sidewalk_curb_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    },
+    {
+      "id": "sidewalk_corner_block",
+      "bounds": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "animations": 0,
+      "passed": true
+    }
+  ]
+}

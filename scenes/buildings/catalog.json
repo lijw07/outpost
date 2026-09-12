@@ -1,0 +1,839 @@
+{
+	"buildings": [
+		{
+			"entry": [
+				5.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				12.0,
+				10.0
+			],
+			"id": "cedar_cottage",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Living room",
+					"point": [
+						5.0,
+						0.0,
+						2.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Kitchen",
+					"point": [
+						3.0,
+						0.0,
+						7.2
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Bedroom",
+					"point": [
+						9.0,
+						0.0,
+						6.8
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Bathroom",
+					"point": [
+						10.0,
+						0.0,
+						2.4
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/cedar_cottage.tscn",
+			"title": "Cedar Cottage"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				16.0,
+				14.0
+			],
+			"id": "maple_family_house",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Lounge",
+					"point": [
+						7.0,
+						0.0,
+						2.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Dining room",
+					"point": [
+						7.0,
+						0.0,
+						5.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Kitchen",
+					"point": [
+						7.0,
+						0.0,
+						11.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Main bedroom",
+					"point": [
+						11.2,
+						0.0,
+						2.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Bathroom",
+					"point": [
+						12.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Second bedroom",
+					"point": [
+						11.2,
+						0.0,
+						12.5
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/maple_family_house.tscn",
+			"title": "Maple Family House"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 2.0,
+			"footprint": [
+				16.0,
+				16.0
+			],
+			"id": "ash_walkup_apartments",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Flat 1 - Living",
+					"point": [
+						3.0,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Flat 1 - Bedroom",
+					"point": [
+						3.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Flat 1 - Bathroom",
+					"point": [
+						3.0,
+						0.0,
+						13.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Flat 2 - Living",
+					"point": [
+						13.0,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Flat 2 - Bedroom",
+					"point": [
+						13.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Flat 2 - Bathroom",
+					"point": [
+						13.0,
+						0.0,
+						13.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 3 - Living",
+					"point": [
+						3.0,
+						4.0,
+						11.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 3 - Bedroom",
+					"point": [
+						3.0,
+						4.0,
+						1.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 3 - Bathroom",
+					"point": [
+						3.0,
+						4.0,
+						5.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 4 - Living",
+					"point": [
+						13.0,
+						4.0,
+						11.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 4 - Bedroom",
+					"point": [
+						13.0,
+						4.0,
+						1.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Flat 4 - Bathroom",
+					"point": [
+						13.0,
+						4.0,
+						5.0
+					]
+				},
+				{
+					"level": 1.0,
+					"name": "Upper landing",
+					"point": [
+						8.0,
+						4.0,
+						15.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Entry hall",
+					"point": [
+						8.0,
+						0.0,
+						2.0
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/ash_walkup_apartments.tscn",
+			"title": "Ash Walk-up Apartments"
+		},
+		{
+			"entry": [
+				9.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				20.0,
+				16.0
+			],
+			"id": "courtyard_apartments",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Studio 1",
+					"point": [
+						3.0,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 1 washroom",
+					"point": [
+						4.0,
+						0.0,
+						6.6
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 2",
+					"point": [
+						3.0,
+						0.0,
+						11.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 2 washroom",
+					"point": [
+						4.0,
+						0.0,
+						14.6
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 3",
+					"point": [
+						17.0,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 3 washroom",
+					"point": [
+						16.0,
+						0.0,
+						6.6
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 4",
+					"point": [
+						17.0,
+						0.0,
+						11.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Studio 4 washroom",
+					"point": [
+						16.0,
+						0.0,
+						14.6
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Shared laundry",
+					"point": [
+						10.0,
+						0.0,
+						12.0
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/courtyard_apartments.tscn",
+			"title": "Courtyard Apartments"
+		},
+		{
+			"entry": [
+				5.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				14.0,
+				12.0
+			],
+			"id": "corner_grocery",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Shop aisles",
+					"point": [
+						5.0,
+						0.0,
+						4.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Cold goods",
+					"point": [
+						11.0,
+						0.0,
+						4.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Stockroom",
+					"point": [
+						7.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Staff hall",
+					"point": [
+						11.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Washroom",
+					"point": [
+						12.0,
+						0.0,
+						10.5
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/corner_grocery.tscn",
+			"title": "Corner Grocery"
+		},
+		{
+			"entry": [
+				9.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				20.0,
+				18.0
+			],
+			"id": "morrow_hospital",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Reception and waiting",
+					"point": [
+						6.5,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Pharmacy",
+					"point": [
+						6.5,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Staff break room",
+					"point": [
+						6.0,
+						0.0,
+						14.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Accessible washroom",
+					"point": [
+						2.8,
+						0.0,
+						14.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Emergency and triage",
+					"point": [
+						17.0,
+						0.0,
+						2.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Treatment bay A",
+					"point": [
+						13.0,
+						0.0,
+						8.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Treatment bay B",
+					"point": [
+						18.0,
+						0.0,
+						6.8
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Patient ward",
+					"point": [
+						13.0,
+						0.0,
+						14.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Ward bedside route",
+					"point": [
+						17.0,
+						0.0,
+						12.7
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/morrow_hospital.tscn",
+			"title": "Morrow Community Hospital"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				16.0,
+				10.0
+			],
+			"id": "ash_street_diner",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Dining area",
+					"point": [
+						12.0,
+						0.0,
+						3.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Counter service",
+					"point": [
+						11.0,
+						0.0,
+						5.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Kitchen",
+					"point": [
+						13.0,
+						0.0,
+						7.5
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/ash_street_diner.tscn",
+			"title": "Ash Street Diner"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				16.0,
+				14.0
+			],
+			"id": "lantern_restaurant",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Dining room",
+					"point": [
+						13.0,
+						0.0,
+						4.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Kitchen",
+					"point": [
+						10.0,
+						0.0,
+						10.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Cloakroom",
+					"point": [
+						2.8,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Washroom",
+					"point": [
+						2.0,
+						0.0,
+						11.0
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/lantern_restaurant.tscn",
+			"title": "The Lantern Restaurant"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				14.0,
+				10.0
+			],
+			"id": "fuel_stop",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Convenience store",
+					"point": [
+						8.0,
+						0.0,
+						4.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Stockroom",
+					"point": [
+						6.0,
+						0.0,
+						7.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Washroom",
+					"point": [
+						12.0,
+						0.0,
+						7.5
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/fuel_stop.tscn",
+			"title": "Fuel Stop Gas Station"
+		},
+		{
+			"entry": [
+				9.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				20.0,
+				16.0
+			],
+			"id": "oakwood_school",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Classroom A West",
+					"point": [
+						7.0,
+						0.0,
+						3.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Classroom B West",
+					"point": [
+						7.0,
+						0.0,
+						9.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Classroom A East",
+					"point": [
+						19.0,
+						0.0,
+						3.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Classroom B East",
+					"point": [
+						19.0,
+						0.0,
+						9.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Staff office",
+					"point": [
+						7.0,
+						0.0,
+						14.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Washroom",
+					"point": [
+						2.0,
+						0.0,
+						13.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Library",
+					"point": [
+						13.2,
+						0.0,
+						13.5
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "School hallway",
+					"point": [
+						10.0,
+						0.0,
+						8.0
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/oakwood_school.tscn",
+			"title": "Oakwood School"
+		},
+		{
+			"entry": [
+				7.0,
+				0.0,
+				-0.125
+			],
+			"floors": 1.0,
+			"footprint": [
+				18.0,
+				16.0
+			],
+			"id": "district_police_station",
+			"rooms": [
+				{
+					"level": 0.0,
+					"name": "Public reception",
+					"point": [
+						4.0,
+						0.0,
+						2.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Interview room",
+					"point": [
+						4.7,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Evidence storage",
+					"point": [
+						4.5,
+						0.0,
+						13.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Briefing room",
+					"point": [
+						11.5,
+						0.0,
+						5.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Holding corridor",
+					"point": [
+						13.0,
+						0.0,
+						9.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Holding cell A",
+					"point": [
+						11.1,
+						0.0,
+						12.0
+					]
+				},
+				{
+					"level": 0.0,
+					"name": "Holding cell B",
+					"point": [
+						15.1,
+						0.0,
+						12.0
+					]
+				}
+			],
+			"scene": "res://scenes/buildings/district_police_station.tscn",
+			"title": "District Police Station"
+		}
+	]
+}

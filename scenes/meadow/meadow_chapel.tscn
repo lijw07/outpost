@@ -1,0 +1,183 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_roof_tile.tscn" id="1_6djos"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/boathouse_roof_slope.tscn" id="2_gyxsd"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_plaster_window.tscn" id="3_4goss"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_double_glass_door_open.tscn" id="4_p50qu"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_wall_brick.tscn" id="5_2ubqy"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_plaster_solid.tscn" id="6_s3gqm"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/church_belfry.tscn" id="7_sqkiw"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/church_spire.tscn" id="8_gd1sk"]
+
+[node name="chapel_assembly" type="Node3D" unique_id=76249132]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 84, 0, -41)
+
+[node name="mall_roof_tile_1570" type="Node3D" parent="." unique_id=1667042068 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1875, -2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1571" type="Node3D" parent="." unique_id=1143518753 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -2)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1572" type="Node3D" parent="." unique_id=1478998474 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1875, 0)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1573" type="Node3D" parent="." unique_id=12215870 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1574" type="Node3D" parent="." unique_id=1762721024 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1875, 2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1575" type="Node3D" parent="." unique_id=1452833778 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 2)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1576" type="Node3D" parent="." unique_id=288585176 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1875, -2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1577" type="Node3D" parent="." unique_id=1342135620 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 2, -2)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1578" type="Node3D" parent="." unique_id=1699711592 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1875, 0)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1579" type="Node3D" parent="." unique_id=793420932 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 2, 0)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1580" type="Node3D" parent="." unique_id=1742373060 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.1875, 2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="boathouse_roof_slope_1581" type="Node3D" parent="." unique_id=822798724 instance=ExtResource("2_gyxsd")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 2, 2)
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_wall_plaster_window_1582" type="Node3D" parent="." unique_id=797928288 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, -2)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_window_1583" type="Node3D" parent="." unique_id=770919759 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -2)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_window_1584" type="Node3D" parent="." unique_id=1669101137 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 0)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_window_1585" type="Node3D" parent="." unique_id=1994586284 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 0)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_window_1586" type="Node3D" parent="." unique_id=801433641 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 2)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_window_1587" type="Node3D" parent="." unique_id=2002558006 instance=ExtResource("3_4goss")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 2)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_double_glass_door_open_1588" type="Node3D" parent="." unique_id=1140968224 instance=ExtResource("4_p50qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+metadata/asset_id = "mall_double_glass_door_open"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1589" type="Node3D" parent="." unique_id=1726429396 instance=ExtResource("5_2ubqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_wall_plaster_solid_1590" type="Node3D" parent="." unique_id=1069847191 instance=ExtResource("6_s3gqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="city_wall_plaster_solid_1591" type="Node3D" parent="." unique_id=909950154 instance=ExtResource("6_s3gqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_roof_tile_1592" type="Node3D" parent="." unique_id=808029893 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5625, -2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1593" type="Node3D" parent="." unique_id=928576730 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75, -2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1594" type="Node3D" parent="." unique_id=2026673219 instance=ExtResource("1_6djos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9375, -2)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="church_belfry_1595" type="Node3D" parent="." unique_id=1280543733 instance=ExtResource("7_sqkiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.125, -2)
+metadata/asset_id = "church_belfry"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="church_spire_1596" type="Node3D" parent="." unique_id=1992541894 instance=ExtResource("8_gd1sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
+metadata/asset_id = "church_spire"
+metadata/tile_units = 32
+metadata/tile_size = 2.0

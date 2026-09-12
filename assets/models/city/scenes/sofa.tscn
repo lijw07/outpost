@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sofa.gltf" id="1_mp3q2"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sofa.res" id="2_wyg5r"]
+
+[node name="Sofa" type="Node3D" unique_id=1062680898]
+metadata/asset_id = "sofa"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=639300547]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=160756075 instance=ExtResource("1_mp3q2")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=72297154]
+shape = ExtResource("2_wyg5r")

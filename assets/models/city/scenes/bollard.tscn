@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/bollard.gltf" id="1_8u8pf"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/bollard.res" id="2_lil0i"]
+
+[node name="Bollard" type="Node3D" unique_id=18068608]
+metadata/asset_id = "bollard"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=379761887]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=352804787 instance=ExtResource("1_8u8pf")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1090720906]
+shape = ExtResource("2_lil0i")

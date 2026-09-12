@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/door_metal.gltf" id="1_157il"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/door_metal.res" id="2_ywtys"]
+
+[node name="DoorMetal" type="Node3D" unique_id=249490163]
+metadata/asset_id = "door_metal"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Hinge" type="AnimatableBody3D" parent="." unique_id=296884538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5625, 0, 0)
+sync_to_physics = false
+metadata/closed_angle_degrees = 0.0
+metadata/open_angle_degrees = 90.0
+
+[node name="Model" type="Node3D" parent="Hinge" unique_id=393173294 instance=ExtResource("1_157il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5625, 0, 0)
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Hinge" unique_id=585530415]
+shape = ExtResource("2_ywtys")

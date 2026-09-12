@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/gondola_stocked.gltf" id="1_snpyd"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/gondola_stocked.res" id="2_5dpf3"]
+
+[node name="GondolaStocked" type="Node3D" unique_id=615460968]
+metadata/asset_id = "gondola_stocked"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1900539966]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=728780420 instance=ExtResource("1_snpyd")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=749251734]
+shape = ExtResource("2_5dpf3")

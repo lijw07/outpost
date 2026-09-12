@@ -1,0 +1,369 @@
+{
+  "assets": [
+    {
+      "id": "blocks/dirt_block",
+      "category": "blocks",
+      "source_scene": "res://assets/models/blocks/scenes/dirt_block.tscn"
+    },
+    {
+      "id": "blocks/grass_block",
+      "category": "blocks",
+      "source_scene": "res://assets/models/blocks/scenes/grass_block.tscn"
+    },
+    {
+      "id": "blocks/grass_flowers_block",
+      "category": "blocks",
+      "source_scene": "res://assets/models/blocks/scenes/grass_flowers_block.tscn"
+    },
+    {
+      "id": "blocks/sand_block",
+      "category": "blocks",
+      "source_scene": "res://assets/models/blocks/scenes/sand_block.tscn"
+    },
+    {
+      "id": "blocks/stone_block",
+      "category": "blocks",
+      "source_scene": "res://assets/models/blocks/scenes/stone_block.tscn"
+    },
+    {
+      "id": "trees/meadow_oak",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak.tscn"
+    },
+    {
+      "id": "trees/meadow_oak_1",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak_1.tscn"
+    },
+    {
+      "id": "trees/meadow_oak_broad",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak_broad.tscn"
+    },
+    {
+      "id": "trees/meadow_oak_leaning",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak_leaning.tscn"
+    },
+    {
+      "id": "trees/meadow_oak_tall",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak_tall.tscn"
+    },
+    {
+      "id": "trees/meadow_oak_young",
+      "category": "trees",
+      "source_scene": "res://assets/models/trees/scenes/meadow_oak_young.tscn"
+    },
+    {
+      "id": "rocks/boulder_large",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/boulder_large.tscn"
+    },
+    {
+      "id": "rocks/boulder_mossy",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/boulder_mossy.tscn"
+    },
+    {
+      "id": "rocks/boulder_small",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/boulder_small.tscn"
+    },
+    {
+      "id": "rocks/pebbles",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/pebbles.tscn"
+    },
+    {
+      "id": "rocks/rock_flat",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/rock_flat.tscn"
+    },
+    {
+      "id": "rocks/rock_mossy",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/rock_mossy.tscn"
+    },
+    {
+      "id": "rocks/rock_pile",
+      "category": "rocks",
+      "source_scene": "res://assets/models/rocks/scenes/rock_pile.tscn"
+    },
+    {
+      "id": "plants/bush_berry",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/bush_berry.tscn"
+    },
+    {
+      "id": "plants/bush_round",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/bush_round.tscn"
+    },
+    {
+      "id": "plants/bush_wide",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/bush_wide.tscn"
+    },
+    {
+      "id": "plants/fern",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/fern.tscn"
+    },
+    {
+      "id": "plants/flower_patch",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/flower_patch.tscn"
+    },
+    {
+      "id": "plants/flowers_daisy",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/flowers_daisy.tscn"
+    },
+    {
+      "id": "plants/flowers_lavender",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/flowers_lavender.tscn"
+    },
+    {
+      "id": "plants/grass_tufts",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/grass_tufts.tscn"
+    },
+    {
+      "id": "plants/grass_tufts_b",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/grass_tufts_b.tscn"
+    },
+    {
+      "id": "plants/reeds",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/reeds.tscn"
+    },
+    {
+      "id": "plants/tall_grass",
+      "category": "plants",
+      "source_scene": "res://assets/models/plants/scenes/tall_grass.tscn"
+    },
+    {
+      "id": "mushrooms/mushroom_cluster",
+      "category": "mushrooms",
+      "source_scene": "res://assets/models/mushrooms/scenes/mushroom_cluster.tscn"
+    },
+    {
+      "id": "mushrooms/mushroom_toadstool",
+      "category": "mushrooms",
+      "source_scene": "res://assets/models/mushrooms/scenes/mushroom_toadstool.tscn"
+    },
+    {
+      "id": "mushrooms/stump_brackets",
+      "category": "mushrooms",
+      "source_scene": "res://assets/models/mushrooms/scenes/stump_brackets.tscn"
+    },
+    {
+      "id": "structures/barricade_spikes",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/barricade_spikes.tscn"
+    },
+    {
+      "id": "structures/door",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/door.tscn"
+    },
+    {
+      "id": "structures/fence",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/fence.tscn"
+    },
+    {
+      "id": "structures/fence_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/fence_16.tscn"
+    },
+    {
+      "id": "structures/floor",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/floor.tscn"
+    },
+    {
+      "id": "structures/floor_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/floor_16.tscn"
+    },
+    {
+      "id": "structures/gate",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/gate.tscn"
+    },
+    {
+      "id": "structures/ladder",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/ladder.tscn"
+    },
+    {
+      "id": "structures/palisade",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/palisade.tscn"
+    },
+    {
+      "id": "structures/palisade_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/palisade_16.tscn"
+    },
+    {
+      "id": "structures/pillar",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/pillar.tscn"
+    },
+    {
+      "id": "structures/pillar_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/pillar_16.tscn"
+    },
+    {
+      "id": "structures/roof_corner_inner",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_corner_inner.tscn"
+    },
+    {
+      "id": "structures/roof_corner_inner_straw",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_corner_inner_straw.tscn"
+    },
+    {
+      "id": "structures/roof_corner_outer",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_corner_outer.tscn"
+    },
+    {
+      "id": "structures/roof_corner_outer_straw",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_corner_outer_straw.tscn"
+    },
+    {
+      "id": "structures/roof_ridge",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_ridge.tscn"
+    },
+    {
+      "id": "structures/roof_ridge_straw",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_ridge_straw.tscn"
+    },
+    {
+      "id": "structures/roof_slope",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_slope.tscn"
+    },
+    {
+      "id": "structures/roof_slope_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_slope_16.tscn"
+    },
+    {
+      "id": "structures/roof_slope_16_straw",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_slope_16_straw.tscn"
+    },
+    {
+      "id": "structures/roof_slope_straw",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/roof_slope_straw.tscn"
+    },
+    {
+      "id": "structures/stairs",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/stairs.tscn"
+    },
+    {
+      "id": "structures/wall",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall.tscn"
+    },
+    {
+      "id": "structures/wall_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_16.tscn"
+    },
+    {
+      "id": "structures/wall_door_frame",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_door_frame.tscn"
+    },
+    {
+      "id": "structures/wall_gable",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_gable.tscn"
+    },
+    {
+      "id": "structures/wall_half",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_half.tscn"
+    },
+    {
+      "id": "structures/wall_half_16",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_half_16.tscn"
+    },
+    {
+      "id": "structures/wall_window",
+      "category": "structures",
+      "source_scene": "res://assets/models/structures/scenes/wall_window.tscn"
+    },
+    {
+      "id": "tree_parts/meadow_oak_broad_stump",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_broad_stump.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_broad_top",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_broad_top.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_leaning_stump",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_leaning_stump.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_leaning_top",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_leaning_top.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_stump",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_stump.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_tall_stump",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_tall_stump.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_tall_top",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_tall_top.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_top",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_top.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_young_stump",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_young_stump.gltf"
+    },
+    {
+      "id": "tree_parts/meadow_oak_young_top",
+      "category": "tree_parts",
+      "source_scene": "res://assets/models/trees/gltf/meadow_oak_young_top.gltf"
+    },
+    {
+      "id": "assemblies/test_house",
+      "category": "assemblies",
+      "source_scene": "res://assets/testHouse.tscn"
+    }
+  ]
+}

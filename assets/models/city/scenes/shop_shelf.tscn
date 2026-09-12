@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/shop_shelf.gltf" id="1_ubdbw"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/shop_shelf.res" id="2_em1l6"]
+
+[node name="ShopShelf" type="Node3D" unique_id=689389821]
+metadata/asset_id = "shop_shelf"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1711455633]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1127276432 instance=ExtResource("1_ubdbw")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1923403294]
+shape = ExtResource("2_em1l6")

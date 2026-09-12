@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_wood_solid.gltf" id="1_s3uk4"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_wood_solid.res" id="2_oi6f0"]
+
+[node name="WallWoodSolid" type="Node3D" unique_id=1478508559]
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1369182594]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1356261957 instance=ExtResource("1_s3uk4")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1945431215]
+shape = ExtResource("2_oi6f0")

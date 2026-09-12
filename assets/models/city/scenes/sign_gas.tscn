@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sign_gas.gltf" id="1_tei34"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sign_gas.res" id="2_5o5bk"]
+
+[node name="SignGas" type="Node3D" unique_id=1145167369]
+metadata/asset_id = "sign_gas"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=866179311]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1378000441 instance=ExtResource("1_tei34")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2059078367]
+shape = ExtResource("2_5o5bk")

@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/towel_rail.gltf" id="1_wmqqr"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/towel_rail.res" id="2_gva0c"]
+
+[node name="TowelRail" type="Node3D" unique_id=2034794310]
+metadata/asset_id = "towel_rail"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=130511781]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=123005736 instance=ExtResource("1_wmqqr")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1797300767]
+shape = ExtResource("2_gva0c")

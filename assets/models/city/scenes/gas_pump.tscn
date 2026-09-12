@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/gas_pump.gltf" id="1_f2353"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/gas_pump.res" id="2_wn1oh"]
+
+[node name="GasPump" type="Node3D" unique_id=666112669]
+metadata/asset_id = "gas_pump"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1481724816]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1746239302 instance=ExtResource("1_f2353")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1722620770]
+shape = ExtResource("2_wn1oh")

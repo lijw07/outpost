@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_plaster_corner.gltf" id="1_56q75"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_plaster_corner.res" id="2_cfvj1"]
+
+[node name="WallPlasterCorner" type="Node3D" unique_id=1996454628]
+metadata/asset_id = "wall_plaster_corner"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1277384522]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=833622362 instance=ExtResource("1_56q75")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=877393124]
+shape = ExtResource("2_cfvj1")

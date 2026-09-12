@@ -1,0 +1,1113 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_roof_tile.tscn" id="1_j0rm6"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_storefront_glass.tscn" id="2_iu40y"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_upper_window.tscn" id="3_tl6ov"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_wall_brick.tscn" id="4_hsrjh"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_cornice_straight.tscn" id="5_gxm5v"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/shop_awning.tscn" id="6_yu4b7"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_double_glass_door_open.tscn" id="7_bfix4"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/sign_cafe.tscn" id="8_3tm4g"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/window_flower_box.tscn" id="9_55h0s"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/mall_hvac.tscn" id="10_xx5e1"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/menu_a_board.tscn" id="11_c6i4k"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/flower_pot_terracotta.tscn" id="12_1xfju"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/shop_display_shelf.tscn" id="13_m8ucm"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/shop_clothing_rack.tscn" id="14_qdsxv"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/sign_books.tscn" id="15_rsqtc"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/sign_fashion.tscn" id="16_6g3bd"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/cafe_round_table.tscn" id="17_etdm1"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/umbrella_ochre.tscn" id="18_r8obu"]
+[ext_resource type="PackedScene" path="res://assets/models/meadow_expansion/scenes/cafe_chair.tscn" id="19_l3idp"]
+
+[node name="retail_lane_assembly" type="Node3D" unique_id=740208501]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -53, 0, -8)
+
+[node name="mall_roof_tile_0949" type="Node3D" parent="." unique_id=1667042068 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0950" type="Node3D" parent="." unique_id=4150750 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0951" type="Node3D" parent="." unique_id=1203745264 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0952" type="Node3D" parent="." unique_id=1434365761 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0953" type="Node3D" parent="." unique_id=761190540 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0954" type="Node3D" parent="." unique_id=1536191699 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0955" type="Node3D" parent="." unique_id=760034064 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0956" type="Node3D" parent="." unique_id=104983655 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0957" type="Node3D" parent="." unique_id=46137918 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0958" type="Node3D" parent="." unique_id=489568583 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0959" type="Node3D" parent="." unique_id=2111892792 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0960" type="Node3D" parent="." unique_id=667333654 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0961" type="Node3D" parent="." unique_id=1887903554 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0962" type="Node3D" parent="." unique_id=1801576373 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0963" type="Node3D" parent="." unique_id=1268633588 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0964" type="Node3D" parent="." unique_id=781212507 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0965" type="Node3D" parent="." unique_id=1574394576 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_0966" type="Node3D" parent="." unique_id=952481982 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_storefront_glass_0967" type="Node3D" parent="." unique_id=1780695745 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_0968" type="Node3D" parent="." unique_id=837513174 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0969" type="Node3D" parent="." unique_id=1726429396 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0970" type="Node3D" parent="." unique_id=801178083 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_0971" type="Node3D" parent="." unique_id=1278031574 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_0972" type="Node3D" parent="." unique_id=420231335 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_double_glass_door_open_0973" type="Node3D" parent="." unique_id=1140968224 instance=ExtResource("7_bfix4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+metadata/asset_id = "mall_double_glass_door_open"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_0974" type="Node3D" parent="." unique_id=1845260801 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0975" type="Node3D" parent="." unique_id=1154768933 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0976" type="Node3D" parent="." unique_id=106300076 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_0977" type="Node3D" parent="." unique_id=1171331098 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_0978" type="Node3D" parent="." unique_id=683697157 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_storefront_glass_0979" type="Node3D" parent="." unique_id=906891415 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_0980" type="Node3D" parent="." unique_id=633448137 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0981" type="Node3D" parent="." unique_id=327122845 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0982" type="Node3D" parent="." unique_id=1378782343 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_0983" type="Node3D" parent="." unique_id=1420388326 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_0984" type="Node3D" parent="." unique_id=1305061044 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_wall_brick_0985" type="Node3D" parent="." unique_id=2115613766 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0986" type="Node3D" parent="." unique_id=379234724 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0987" type="Node3D" parent="." unique_id=1287295172 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0988" type="Node3D" parent="." unique_id=1747989086 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0989" type="Node3D" parent="." unique_id=2098637237 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0990" type="Node3D" parent="." unique_id=1072017061 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0991" type="Node3D" parent="." unique_id=881629105 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0992" type="Node3D" parent="." unique_id=1342995783 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0993" type="Node3D" parent="." unique_id=46750710 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0994" type="Node3D" parent="." unique_id=792876427 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0995" type="Node3D" parent="." unique_id=1728842882 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_0996" type="Node3D" parent="." unique_id=559509487 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="sign_cafe_0997" type="Node3D" parent="." unique_id=264025680 instance=ExtResource("8_3tm4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.875, -2.25)
+metadata/asset_id = "sign_cafe"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="window_flower_box_0998" type="Node3D" parent="." unique_id=1909127548 instance=ExtResource("9_55h0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2.1875, -2.25)
+metadata/asset_id = "window_flower_box"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_hvac_0999" type="Node3D" parent="." unique_id=757127669 instance=ExtResource("10_xx5e1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4.1875, 1.875)
+metadata/asset_id = "mall_hvac"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="menu_a_board_1000" type="Node3D" parent="." unique_id=561608933 instance=ExtResource("11_c6i4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4375, 0, -3.1875)
+metadata/asset_id = "menu_a_board"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1001" type="Node3D" parent="." unique_id=1590551820 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.125, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1002" type="Node3D" parent="." unique_id=281309146 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_display_shelf_1003" type="Node3D" parent="." unique_id=20866711 instance=ExtResource("13_m8ucm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5625, 0, -1)
+metadata/asset_id = "shop_display_shelf"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_clothing_rack_1004" type="Node3D" parent="." unique_id=1783720174 instance=ExtResource("14_qdsxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4375, 0, 1)
+metadata/asset_id = "shop_clothing_rack"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1005" type="Node3D" parent="." unique_id=1330147322 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1006" type="Node3D" parent="." unique_id=243116857 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1007" type="Node3D" parent="." unique_id=770673635 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1008" type="Node3D" parent="." unique_id=1408697726 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1009" type="Node3D" parent="." unique_id=2050013009 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1010" type="Node3D" parent="." unique_id=546316228 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1011" type="Node3D" parent="." unique_id=5538211 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1012" type="Node3D" parent="." unique_id=1842588655 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1013" type="Node3D" parent="." unique_id=13555347 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1014" type="Node3D" parent="." unique_id=335197596 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1015" type="Node3D" parent="." unique_id=948011342 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1016" type="Node3D" parent="." unique_id=1684253817 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1017" type="Node3D" parent="." unique_id=693523516 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1018" type="Node3D" parent="." unique_id=1469482431 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1019" type="Node3D" parent="." unique_id=1134552068 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1020" type="Node3D" parent="." unique_id=504799526 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1021" type="Node3D" parent="." unique_id=107337346 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1022" type="Node3D" parent="." unique_id=2109607814 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_storefront_glass_1023" type="Node3D" parent="." unique_id=1523518299 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1024" type="Node3D" parent="." unique_id=940518490 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1025" type="Node3D" parent="." unique_id=853720692 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1026" type="Node3D" parent="." unique_id=2000566304 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1027" type="Node3D" parent="." unique_id=572287833 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1028" type="Node3D" parent="." unique_id=322570598 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_double_glass_door_open_1029" type="Node3D" parent="." unique_id=1214429281 instance=ExtResource("7_bfix4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+metadata/asset_id = "mall_double_glass_door_open"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1030" type="Node3D" parent="." unique_id=787820938 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1031" type="Node3D" parent="." unique_id=953620582 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1032" type="Node3D" parent="." unique_id=1368554365 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1033" type="Node3D" parent="." unique_id=1435482977 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1034" type="Node3D" parent="." unique_id=1284816293 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_storefront_glass_1035" type="Node3D" parent="." unique_id=1226474075 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1036" type="Node3D" parent="." unique_id=213763302 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1037" type="Node3D" parent="." unique_id=17590974 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1038" type="Node3D" parent="." unique_id=1838311447 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1039" type="Node3D" parent="." unique_id=1174869137 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1040" type="Node3D" parent="." unique_id=1877485644 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_wall_brick_1041" type="Node3D" parent="." unique_id=964698780 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1042" type="Node3D" parent="." unique_id=134118163 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1043" type="Node3D" parent="." unique_id=85490524 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1044" type="Node3D" parent="." unique_id=1314598770 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1045" type="Node3D" parent="." unique_id=1054755987 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1046" type="Node3D" parent="." unique_id=713100264 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1047" type="Node3D" parent="." unique_id=1257059288 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1048" type="Node3D" parent="." unique_id=1893404195 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1049" type="Node3D" parent="." unique_id=631312692 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1050" type="Node3D" parent="." unique_id=487899506 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1051" type="Node3D" parent="." unique_id=772123756 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1052" type="Node3D" parent="." unique_id=1030307654 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="sign_books_1053" type="Node3D" parent="." unique_id=855201009 instance=ExtResource("15_rsqtc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.875, -2.25)
+metadata/asset_id = "sign_books"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="window_flower_box_1054" type="Node3D" parent="." unique_id=572542350 instance=ExtResource("9_55h0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.1875, -2.25)
+metadata/asset_id = "window_flower_box"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_hvac_1055" type="Node3D" parent="." unique_id=918247894 instance=ExtResource("10_xx5e1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1875, 1.875)
+metadata/asset_id = "mall_hvac"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="menu_a_board_1056" type="Node3D" parent="." unique_id=1747784155 instance=ExtResource("11_c6i4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5625, 0, -3.1875)
+metadata/asset_id = "menu_a_board"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1057" type="Node3D" parent="." unique_id=524115949 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.125, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1058" type="Node3D" parent="." unique_id=787627657 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.125, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_display_shelf_1059" type="Node3D" parent="." unique_id=441959821 instance=ExtResource("13_m8ucm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5625, 0, -1)
+metadata/asset_id = "shop_display_shelf"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_clothing_rack_1060" type="Node3D" parent="." unique_id=1949886327 instance=ExtResource("14_qdsxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5625, 0, 1)
+metadata/asset_id = "shop_clothing_rack"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1061" type="Node3D" parent="." unique_id=1095492040 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1062" type="Node3D" parent="." unique_id=1464428840 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1063" type="Node3D" parent="." unique_id=2012057796 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1064" type="Node3D" parent="." unique_id=250569770 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1065" type="Node3D" parent="." unique_id=1698412931 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1066" type="Node3D" parent="." unique_id=96677300 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1067" type="Node3D" parent="." unique_id=693334656 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1068" type="Node3D" parent="." unique_id=1647411093 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1069" type="Node3D" parent="." unique_id=1226843995 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1070" type="Node3D" parent="." unique_id=605781579 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1071" type="Node3D" parent="." unique_id=867426361 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1072" type="Node3D" parent="." unique_id=1351041915 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1073" type="Node3D" parent="." unique_id=890963502 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.1875, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1074" type="Node3D" parent="." unique_id=1713780868 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1075" type="Node3D" parent="." unique_id=2016650500 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.1875, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1076" type="Node3D" parent="." unique_id=673671836 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 1)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1077" type="Node3D" parent="." unique_id=545934195 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.1875, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_roof_tile_1078" type="Node3D" parent="." unique_id=633306710 instance=ExtResource("1_j0rm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 3)
+metadata/asset_id = "mall_roof_tile"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_storefront_glass_1079" type="Node3D" parent="." unique_id=135485827 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1080" type="Node3D" parent="." unique_id=1783430179 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1081" type="Node3D" parent="." unique_id=1861885287 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1082" type="Node3D" parent="." unique_id=949361514 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1083" type="Node3D" parent="." unique_id=530142682 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1084" type="Node3D" parent="." unique_id=1984868089 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_double_glass_door_open_1085" type="Node3D" parent="." unique_id=1024600584 instance=ExtResource("7_bfix4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+metadata/asset_id = "mall_double_glass_door_open"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1086" type="Node3D" parent="." unique_id=288227900 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1087" type="Node3D" parent="." unique_id=366204534 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1088" type="Node3D" parent="." unique_id=325082599 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1089" type="Node3D" parent="." unique_id=1286148789 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1090" type="Node3D" parent="." unique_id=2106831546 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_storefront_glass_1091" type="Node3D" parent="." unique_id=1411142895 instance=ExtResource("2_iu40y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+metadata/asset_id = "mall_storefront_glass"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_upper_window_1092" type="Node3D" parent="." unique_id=1126184646 instance=ExtResource("3_tl6ov")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -2)
+metadata/asset_id = "mall_upper_window"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1093" type="Node3D" parent="." unique_id=1673562240 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1094" type="Node3D" parent="." unique_id=131401305 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 4)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_cornice_straight_1095" type="Node3D" parent="." unique_id=321116615 instance=ExtResource("5_gxm5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 3.6875, -2.125)
+metadata/asset_id = "mall_cornice_straight"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="city_shop_awning_1096" type="Node3D" parent="." unique_id=359147944 instance=ExtResource("6_yu4b7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.6875, -2.1875)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="mall_wall_brick_1097" type="Node3D" parent="." unique_id=441086738 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1098" type="Node3D" parent="." unique_id=790861562 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1099" type="Node3D" parent="." unique_id=799204599 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1100" type="Node3D" parent="." unique_id=1217039798 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1101" type="Node3D" parent="." unique_id=1458615331 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1102" type="Node3D" parent="." unique_id=1440157844 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1103" type="Node3D" parent="." unique_id=53038719 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1104" type="Node3D" parent="." unique_id=1494958980 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 2, -1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1105" type="Node3D" parent="." unique_id=1495363207 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1106" type="Node3D" parent="." unique_id=1092384711 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 2, 1)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1107" type="Node3D" parent="." unique_id=274926312 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_wall_brick_1108" type="Node3D" parent="." unique_id=182769990 instance=ExtResource("4_hsrjh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 2, 3)
+metadata/asset_id = "mall_wall_brick"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="sign_fashion_1109" type="Node3D" parent="." unique_id=2101217231 instance=ExtResource("16_6g3bd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.875, -2.25)
+metadata/asset_id = "sign_fashion"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="window_flower_box_1110" type="Node3D" parent="." unique_id=597799723 instance=ExtResource("9_55h0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.1875, -2.25)
+metadata/asset_id = "window_flower_box"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="mall_hvac_1111" type="Node3D" parent="." unique_id=355184990 instance=ExtResource("10_xx5e1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4.1875, 1.875)
+metadata/asset_id = "mall_hvac"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="menu_a_board_1112" type="Node3D" parent="." unique_id=554424984 instance=ExtResource("11_c6i4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5625, 0, -3.1875)
+metadata/asset_id = "menu_a_board"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1113" type="Node3D" parent="." unique_id=1653526716 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="flower_pot_terracotta_1114" type="Node3D" parent="." unique_id=1386282974 instance=ExtResource("12_1xfju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.125, 0, -2.8125)
+metadata/asset_id = "flower_pot_terracotta"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_display_shelf_1115" type="Node3D" parent="." unique_id=2059172571 instance=ExtResource("13_m8ucm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4375, 0, -1)
+metadata/asset_id = "shop_display_shelf"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="shop_clothing_rack_1116" type="Node3D" parent="." unique_id=530227472 instance=ExtResource("14_qdsxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5625, 0, 1)
+metadata/asset_id = "shop_clothing_rack"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_round_table_1117" type="Node3D" parent="." unique_id=1593389880 instance=ExtResource("17_etdm1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -4.5)
+metadata/asset_id = "cafe_round_table"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="umbrella_ochre_1118" type="Node3D" parent="." unique_id=871384126 instance=ExtResource("18_r8obu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.9375, -4.5)
+metadata/asset_id = "umbrella_ochre"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1119" type="Node3D" parent="." unique_id=581228995 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1120" type="Node3D" parent="." unique_id=897662785 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_round_table_1121" type="Node3D" parent="." unique_id=311848505 instance=ExtResource("17_etdm1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.5)
+metadata/asset_id = "cafe_round_table"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="umbrella_ochre_1122" type="Node3D" parent="." unique_id=214687148 instance=ExtResource("18_r8obu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9375, -4.5)
+metadata/asset_id = "umbrella_ochre"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1123" type="Node3D" parent="." unique_id=939982075 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1124" type="Node3D" parent="." unique_id=574100196 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_round_table_1125" type="Node3D" parent="." unique_id=951359317 instance=ExtResource("17_etdm1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4.5)
+metadata/asset_id = "cafe_round_table"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="umbrella_ochre_1126" type="Node3D" parent="." unique_id=2096176856 instance=ExtResource("18_r8obu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.9375, -4.5)
+metadata/asset_id = "umbrella_ochre"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1127" type="Node3D" parent="." unique_id=1905072043 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="cafe_chair_1128" type="Node3D" parent="." unique_id=2070258417 instance=ExtResource("19_l3idp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -4.5)
+metadata/asset_id = "cafe_chair"
+metadata/tile_units = 32
+metadata/tile_size = 2.0

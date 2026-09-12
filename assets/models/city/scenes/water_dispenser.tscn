@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/water_dispenser.gltf" id="1_484wj"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/water_dispenser.res" id="2_i2387"]
+
+[node name="WaterDispenser" type="Node3D" unique_id=617187303]
+metadata/asset_id = "water_dispenser"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=518831373]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=284033590 instance=ExtResource("1_484wj")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1149974336]
+shape = ExtResource("2_i2387")

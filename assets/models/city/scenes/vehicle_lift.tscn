@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/vehicle_lift.gltf" id="1_lekvw"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/vehicle_lift.res" id="2_pjvtu"]
+
+[node name="VehicleLift" type="Node3D" unique_id=953742892]
+metadata/asset_id = "vehicle_lift"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1840238106]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=147228831 instance=ExtResource("1_lekvw")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1339029891]
+shape = ExtResource("2_pjvtu")

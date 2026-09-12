@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/break_table.gltf" id="1_chah7"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/break_table.res" id="2_7ip6t"]
+
+[node name="BreakTable" type="Node3D" unique_id=1571053727]
+metadata/asset_id = "break_table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1530022259]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1287328452 instance=ExtResource("1_chah7")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=967277735]
+shape = ExtResource("2_7ip6t")

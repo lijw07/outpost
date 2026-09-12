@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/vehicles/street_fixture.gd" id="1_oy8qa"]
+[ext_resource type="PackedScene" path="res://assets/models/city/street_mobility/gltf/asphalt_block.gltf" id="2_u2qm1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i8du0"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, -1, -1, 2, 1, -1, 0, -1, -1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, 1, -1, 0, 1, 1, 0, 1, -1, 0, -1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 2, 1, 1, 2, 1, -1, 0, 1, -1, 0, 1, 1, 2, 1, 1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1)
+backface_collision = true
+
+[node name="AsphaltBlock" type="Node3D" unique_id=858899102]
+script = ExtResource("1_oy8qa")
+fixture_id = "asphalt_block"
+metadata/asset_id = "asphalt_block"
+metadata/source = "res://assets/models/city/street_mobility/blockbench/asphalt_block.bbmodel"
+
+[node name="Model" type="Node3D" parent="." unique_id=811928429 instance=ExtResource("2_u2qm1")]
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1955182088]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2069599315]
+shape = SubResource("ConcavePolygonShape3D_i8du0")

@@ -1,0 +1,43 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/shared/textures/terrain_atlas.png" id="1_4emdw"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/blocks/dirt_block.res" id="2_fp2k2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqeqb"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_4emdw")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tks1l"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("AACAP4yiCz8A//8+uiy6PgAAgD+6LLo+AP//PoyiCz8AAIA/jKILPwD//z66LLo+AACAP7osuj4A//8+jKILPwD//z6Mogs/AAAAALosuj4A//8+uiy6PgAAAACMogs/AACAP4yiCz8A//8+uiy6PgAAgD+6LLo+AP//PoyiCz8AAIA/jKILPwD//z66LLo+AACAP7osuj4A//8+jKILPw=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_eqeqb"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AACAPwAAAAAAAIC/AACAPwAAAEAAAIA/AACAPwAAAEAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIA/AACAvwAAAEAAAIC/AACAvwAAAEAAAIA/AACAvwAAAAAAAIC/AACAPwAAAEAAAIA/AACAvwAAAEAAAIC/AACAPwAAAEAAAIC/AACAvwAAAEAAAIA/AACAPwAAAAAAAIA/AACAvwAAAEAAAIA/AACAPwAAAEAAAIA/AACAvwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAEAAAIC/AACAvwAAAEAAAIC/AACAPwAAAAAAAIC//f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/vw==")
+}]
+
+[node name="BlocksDirtBlock" type="Node3D" unique_id=855655037]
+metadata/asset_id = "blocks/dirt_block"
+metadata/original_scene = "res://assets/models/blocks/scenes/dirt_block.tscn"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1921556689]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=581113573]
+
+[node name="dirt_block_0" type="MeshInstance3D" parent="Body/Model" unique_id=1279385797]
+mesh = SubResource("ArrayMesh_tks1l")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=914201607]
+shape = ExtResource("2_fp2k2")

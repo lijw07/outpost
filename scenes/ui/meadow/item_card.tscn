@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/meadow/item_card.gd" id="1"]
+
+[ext_resource type="Theme" path="res://assets/ui/meadow/meadow_theme.tres" id="2"]
+
+[node name="ItemCard" type="Button"]
+custom_minimum_size = Vector2(154, 132)
+theme = ExtResource("2")
+script = ExtResource("1")

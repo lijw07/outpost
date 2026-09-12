@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/roof_vent.gltf" id="1_ilo4q"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/roof_vent.res" id="2_bknnq"]
+
+[node name="RoofVent" type="Node3D" unique_id=413572787]
+metadata/asset_id = "roof_vent"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1841192270]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=557085981 instance=ExtResource("1_ilo4q")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1012598279]
+shape = ExtResource("2_bknnq")

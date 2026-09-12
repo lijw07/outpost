@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/bookcase.gltf" id="1_nkid6"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/bookcase.res" id="2_y25fj"]
+
+[node name="Bookcase" type="Node3D" unique_id=1835669070]
+metadata/asset_id = "bookcase"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1339134784]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1101782840 instance=ExtResource("1_nkid6")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1391963249]
+shape = ExtResource("2_y25fj")

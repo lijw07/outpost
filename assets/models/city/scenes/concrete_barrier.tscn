@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/concrete_barrier.gltf" id="1_eyc7a"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/concrete_barrier.res" id="2_5eeho"]
+
+[node name="ConcreteBarrier" type="Node3D" unique_id=512213119]
+metadata/asset_id = "concrete_barrier"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=274694156]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1526332478 instance=ExtResource("1_eyc7a")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=162302735]
+shape = ExtResource("2_5eeho")

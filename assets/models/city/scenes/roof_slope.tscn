@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/roof_slope.gltf" id="1_ecapy"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/roof_slope.res" id="2_134lf"]
+
+[node name="RoofSlope" type="Node3D" unique_id=146735376]
+metadata/asset_id = "roof_slope"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1544075220]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=2089070079 instance=ExtResource("1_ecapy")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=422022473]
+shape = ExtResource("2_134lf")

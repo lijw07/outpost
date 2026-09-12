@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_plaster_half.gltf" id="1_s0rjf"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_plaster_half.res" id="2_f8fwn"]
+
+[node name="WallPlasterHalf" type="Node3D" unique_id=444600671]
+metadata/asset_id = "wall_plaster_half"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=609140611]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1706608264 instance=ExtResource("1_s0rjf")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=523054352]
+shape = ExtResource("2_f8fwn")

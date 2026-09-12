@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/curb_corner.gltf" id="1_a5vnh"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/curb_corner.res" id="2_yufkr"]
+
+[node name="CurbCorner" type="Node3D" unique_id=516448757]
+metadata/asset_id = "curb_corner"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1270572492]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1965072229 instance=ExtResource("1_a5vnh")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2074853416]
+shape = ExtResource("2_yufkr")

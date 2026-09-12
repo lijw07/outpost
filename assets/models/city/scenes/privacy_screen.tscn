@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/privacy_screen.gltf" id="1_b4kvj"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/privacy_screen.res" id="2_6iat6"]
+
+[node name="PrivacyScreen" type="Node3D" unique_id=849787455]
+metadata/asset_id = "privacy_screen"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=677220422]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=437540312 instance=ExtResource("1_b4kvj")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1925787772]
+shape = ExtResource("2_6iat6")

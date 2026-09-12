@@ -1,0 +1,3606 @@
+{
+  "tile_pixels": 32,
+  "tile_size_godot": 2,
+  "assets": [
+    {
+      "id": "curb_straight",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/curb_straight.gltf",
+      "scene": "res://assets/models/city/scenes/curb_straight.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          4,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "curb_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/curb_corner.gltf",
+      "scene": "res://assets/models/city/scenes/curb_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          4,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_solid",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_solid.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_solid.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_window",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_window.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_window.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "open_window": true
+      }
+    },
+    {
+      "id": "wall_brick_door",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_door.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_door.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_half",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_half.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_half.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          16,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_corner.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_broken",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_broken.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_broken.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          30,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_plaster_solid",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_solid.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_solid.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_plaster_window",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_window.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_window.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "open_window": true
+      }
+    },
+    {
+      "id": "wall_plaster_door",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_door.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_door.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "doorway_wood",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/doorway_wood.gltf",
+      "scene": "res://assets/models/city/scenes/doorway_wood.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "frame base at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "hinge": [
+          -9.75,
+          0,
+          0
+        ],
+        "hinge_group": "door_leaf",
+        "opening_units": [
+          20,
+          29.5
+        ],
+        "unified_doorway": true
+      }
+    },
+    {
+      "id": "wall_plaster_half",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_half.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_half.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          16,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_plaster_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_corner.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_plaster_broken",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_plaster_broken.gltf",
+      "scene": "res://assets/models/city/scenes/wall_plaster_broken.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          30,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_wood_solid",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_wood_solid.gltf",
+      "scene": "res://assets/models/city/scenes/wall_wood_solid.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_wood_window",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_wood_window.gltf",
+      "scene": "res://assets/models/city/scenes/wall_wood_window.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "open_window": true
+      }
+    },
+    {
+      "id": "wall_wood_half",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_wood_half.gltf",
+      "scene": "res://assets/models/city/scenes/wall_wood_half.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          16,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_wood_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_wood_corner.gltf",
+      "scene": "res://assets/models/city/scenes/wall_wood_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_wood_broken",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_wood_broken.gltf",
+      "scene": "res://assets/models/city/scenes/wall_wood_broken.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          30,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "door_metal",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/door_metal.gltf",
+      "scene": "res://assets/models/city/scenes/door_metal.tscn",
+      "bounds_model_units": [
+        [
+          -9,
+          0,
+          -2
+        ],
+        [
+          9,
+          28,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "hinge": [
+          -9,
+          0,
+          0
+        ],
+        "opening_units": [
+          20,
+          29
+        ]
+      }
+    },
+    {
+      "id": "window_boards",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/window_boards.gltf",
+      "scene": "res://assets/models/city/scenes/window_boards.tscn",
+      "bounds_model_units": [
+        [
+          -13,
+          0,
+          -4
+        ],
+        [
+          13,
+          10,
+          -2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -13
+      }
+    },
+    {
+      "id": "roof_flat",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/roof_flat.gltf",
+      "scene": "res://assets/models/city/scenes/roof_flat.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          3,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "roof_edge",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/roof_edge.gltf",
+      "scene": "res://assets/models/city/scenes/roof_edge.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -16.0
+        ],
+        [
+          16.0,
+          8,
+          16.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "roof_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/roof_corner.gltf",
+      "scene": "res://assets/models/city/scenes/roof_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -16.0
+        ],
+        [
+          16.0,
+          8,
+          16.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "roof_slope",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/roof_slope.gltf",
+      "scene": "res://assets/models/city/scenes/roof_slope.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -16
+        ],
+        [
+          16,
+          16,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "stairs",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/stairs.gltf",
+      "scene": "res://assets/models/city/scenes/stairs.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -32
+        ],
+        [
+          14,
+          44,
+          32
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "entry_steps",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/entry_steps.gltf",
+      "scene": "res://assets/models/city/scenes/entry_steps.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -12
+        ],
+        [
+          14,
+          6,
+          12
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "pillar",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/pillar.gltf",
+      "scene": "res://assets/models/city/scenes/pillar.tscn",
+      "bounds_model_units": [
+        [
+          -3,
+          0,
+          -3
+        ],
+        [
+          3,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "garage_frame",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/garage_frame.gltf",
+      "scene": "res://assets/models/city/scenes/garage_frame.tscn",
+      "bounds_model_units": [
+        [
+          -32,
+          0,
+          -3
+        ],
+        [
+          32,
+          48,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "garage_shutter",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/garage_shutter.gltf",
+      "scene": "res://assets/models/city/scenes/garage_shutter.tscn",
+      "bounds_model_units": [
+        [
+          -27,
+          0,
+          -1
+        ],
+        [
+          27,
+          39.5,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "garage_shutter_rolled",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/garage_shutter_rolled.gltf",
+      "scene": "res://assets/models/city/scenes/garage_shutter_rolled.tscn",
+      "bounds_model_units": [
+        [
+          -27,
+          0,
+          -3
+        ],
+        [
+          27,
+          5,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "fence",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/fence.gltf",
+      "scene": "res://assets/models/city/scenes/fence.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          24,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "fence_gate",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/fence_gate.gltf",
+      "scene": "res://assets/models/city/scenes/fence_gate.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -2
+        ],
+        [
+          16.0,
+          24,
+          1.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "table",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/table.gltf",
+      "scene": "res://assets/models/city/scenes/table.tscn",
+      "bounds_model_units": [
+        [
+          -12.0,
+          0,
+          -10.0
+        ],
+        [
+          12.0,
+          17,
+          10.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "desk",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/desk.gltf",
+      "scene": "res://assets/models/city/scenes/desk.tscn",
+      "bounds_model_units": [
+        [
+          -14.0,
+          0,
+          -7.0
+        ],
+        [
+          14.0,
+          17,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "workbench",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/workbench.gltf",
+      "scene": "res://assets/models/city/scenes/workbench.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -8.0
+        ],
+        [
+          16.0,
+          17,
+          8.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "break_table",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/break_table.gltf",
+      "scene": "res://assets/models/city/scenes/break_table.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -12.0
+        ],
+        [
+          16.0,
+          17,
+          12.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "chair",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/chair.gltf",
+      "scene": "res://assets/models/city/scenes/chair.tscn",
+      "bounds_model_units": [
+        [
+          -6,
+          0,
+          -6
+        ],
+        [
+          6,
+          24,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "waiting_chair",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/waiting_chair.gltf",
+      "scene": "res://assets/models/city/scenes/waiting_chair.tscn",
+      "bounds_model_units": [
+        [
+          -6.0,
+          0,
+          -6.0
+        ],
+        [
+          6.0,
+          24,
+          6.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "sofa",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sofa.gltf",
+      "scene": "res://assets/models/city/scenes/sofa.tscn",
+      "bounds_model_units": [
+        [
+          -22,
+          0,
+          -10
+        ],
+        [
+          22,
+          20,
+          11
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -2
+      }
+    },
+    {
+      "id": "bed",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bed.gltf",
+      "scene": "res://assets/models/city/scenes/bed.tscn",
+      "bounds_model_units": [
+        [
+          -13,
+          0,
+          -28
+        ],
+        [
+          13,
+          23,
+          27
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wardrobe",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/wardrobe.gltf",
+      "scene": "res://assets/models/city/scenes/wardrobe.tscn",
+      "bounds_model_units": [
+        [
+          -13,
+          0,
+          -10
+        ],
+        [
+          13,
+          32,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "shelf",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/shelf.gltf",
+      "scene": "res://assets/models/city/scenes/shelf.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -7
+        ],
+        [
+          14,
+          32,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "kitchen_counter",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/kitchen_counter.gltf",
+      "scene": "res://assets/models/city/scenes/kitchen_counter.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -10
+        ],
+        [
+          16,
+          18,
+          9
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "sink_counter",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sink_counter.gltf",
+      "scene": "res://assets/models/city/scenes/sink_counter.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -10.0
+        ],
+        [
+          16.0,
+          24,
+          9.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "stove",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/stove.gltf",
+      "scene": "res://assets/models/city/scenes/stove.tscn",
+      "bounds_model_units": [
+        [
+          -12,
+          0,
+          -9.5
+        ],
+        [
+          12,
+          19,
+          9
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "fridge",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/fridge.gltf",
+      "scene": "res://assets/models/city/scenes/fridge.tscn",
+      "bounds_model_units": [
+        [
+          -11,
+          0,
+          -12
+        ],
+        [
+          11,
+          32,
+          10
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "toilet",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/toilet.gltf",
+      "scene": "res://assets/models/city/scenes/toilet.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -9
+        ],
+        [
+          7,
+          20,
+          12
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bath_sink",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bath_sink.gltf",
+      "scene": "res://assets/models/city/scenes/bath_sink.tscn",
+      "bounds_model_units": [
+        [
+          -9,
+          0,
+          -6
+        ],
+        [
+          9,
+          22,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bathtub",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bathtub.gltf",
+      "scene": "res://assets/models/city/scenes/bathtub.tscn",
+      "bounds_model_units": [
+        [
+          -13,
+          0,
+          -25
+        ],
+        [
+          13,
+          14,
+          25
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "shop_shelf",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/shop_shelf.gltf",
+      "scene": "res://assets/models/city/scenes/shop_shelf.tscn",
+      "bounds_model_units": [
+        [
+          -14.0,
+          0,
+          -7.0
+        ],
+        [
+          14.0,
+          32,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "medicine_cabinet",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/medicine_cabinet.gltf",
+      "scene": "res://assets/models/city/scenes/medicine_cabinet.tscn",
+      "bounds_model_units": [
+        [
+          -14.0,
+          0,
+          -7.0
+        ],
+        [
+          14.0,
+          32,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "parts_shelf",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/parts_shelf.gltf",
+      "scene": "res://assets/models/city/scenes/parts_shelf.tscn",
+      "bounds_model_units": [
+        [
+          -14.0,
+          0,
+          -7.0
+        ],
+        [
+          14.0,
+          32,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "checkout_counter",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/checkout_counter.gltf",
+      "scene": "res://assets/models/city/scenes/checkout_counter.tscn",
+      "bounds_model_units": [
+        [
+          -24,
+          0,
+          -10
+        ],
+        [
+          24,
+          19.25,
+          10
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "register",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/register.gltf",
+      "scene": "res://assets/models/city/scenes/register.tscn",
+      "bounds_model_units": [
+        [
+          -5,
+          0,
+          -4
+        ],
+        [
+          5,
+          10,
+          4
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "display_fridge",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/display_fridge.gltf",
+      "scene": "res://assets/models/city/scenes/display_fridge.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -11
+        ],
+        [
+          16,
+          32,
+          10
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "reception_desk",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/reception_desk.gltf",
+      "scene": "res://assets/models/city/scenes/reception_desk.tscn",
+      "bounds_model_units": [
+        [
+          -24.0,
+          0,
+          -10.0
+        ],
+        [
+          24.0,
+          25,
+          10.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "exam_bed",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/exam_bed.gltf",
+      "scene": "res://assets/models/city/scenes/exam_bed.tscn",
+      "bounds_model_units": [
+        [
+          -12,
+          0,
+          -24
+        ],
+        [
+          12,
+          21,
+          24
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "privacy_screen",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/privacy_screen.gltf",
+      "scene": "res://assets/models/city/scenes/privacy_screen.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -5
+        ],
+        [
+          16,
+          30,
+          5
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "locker",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/locker.gltf",
+      "scene": "res://assets/models/city/scenes/locker.tscn",
+      "bounds_model_units": [
+        [
+          -8,
+          0,
+          -9
+        ],
+        [
+          8,
+          32,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "mailboxes",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/mailboxes.gltf",
+      "scene": "res://assets/models/city/scenes/mailboxes.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -5.25
+        ],
+        [
+          14,
+          20,
+          4
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "crate",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/crate.gltf",
+      "scene": "res://assets/models/city/scenes/crate.tscn",
+      "bounds_model_units": [
+        [
+          -10.5,
+          0,
+          -10.5
+        ],
+        [
+          10.5,
+          20,
+          10.5
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "cardboard_box",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/cardboard_box.gltf",
+      "scene": "res://assets/models/city/scenes/cardboard_box.tscn",
+      "bounds_model_units": [
+        [
+          -7.0,
+          0,
+          -7.0
+        ],
+        [
+          7.0,
+          12.125,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "barrel",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/barrel.gltf",
+      "scene": "res://assets/models/city/scenes/barrel.tscn",
+      "bounds_model_units": [
+        [
+          -7.5,
+          0,
+          -7.5
+        ],
+        [
+          7.5,
+          22,
+          7.5
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "trash_bag",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/trash_bag.gltf",
+      "scene": "res://assets/models/city/scenes/trash_bag.tscn",
+      "bounds_model_units": [
+        [
+          -6.0,
+          0,
+          -6.0
+        ],
+        [
+          6.0,
+          16,
+          6.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "pallet",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/pallet.gltf",
+      "scene": "res://assets/models/city/scenes/pallet.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -14
+        ],
+        [
+          14,
+          5,
+          14
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "storage_rack",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/storage_rack.gltf",
+      "scene": "res://assets/models/city/scenes/storage_rack.tscn",
+      "bounds_model_units": [
+        [
+          -30,
+          0,
+          -12
+        ],
+        [
+          30,
+          48,
+          12
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "tool_chest",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/tool_chest.gltf",
+      "scene": "res://assets/models/city/scenes/tool_chest.tscn",
+      "bounds_model_units": [
+        [
+          -13,
+          0,
+          -10
+        ],
+        [
+          13,
+          22,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "tire",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/tire.gltf",
+      "scene": "res://assets/models/city/scenes/tire.tscn",
+      "bounds_model_units": [
+        [
+          -3.0,
+          0.0,
+          -7.0
+        ],
+        [
+          3.3000000000000003,
+          14.0,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "vehicle_lift",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/vehicle_lift.gltf",
+      "scene": "res://assets/models/city/scenes/vehicle_lift.tscn",
+      "bounds_model_units": [
+        [
+          -22,
+          0,
+          -24
+        ],
+        [
+          22,
+          44,
+          24
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "dumpster",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/dumpster.gltf",
+      "scene": "res://assets/models/city/scenes/dumpster.tscn",
+      "bounds_model_units": [
+        [
+          -19,
+          0,
+          -13
+        ],
+        [
+          19,
+          29,
+          13
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bench",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bench.gltf",
+      "scene": "res://assets/models/city/scenes/bench.tscn",
+      "bounds_model_units": [
+        [
+          -20,
+          0,
+          -6.0
+        ],
+        [
+          20,
+          24,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "broken_bench",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/broken_bench.gltf",
+      "scene": "res://assets/models/city/scenes/broken_bench.tscn",
+      "bounds_model_units": [
+        [
+          -20,
+          0,
+          -6.0
+        ],
+        [
+          20,
+          24,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "street_lamp",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/street_lamp.gltf",
+      "scene": "res://assets/models/city/scenes/street_lamp.tscn",
+      "bounds_model_units": [
+        [
+          -4,
+          0,
+          -4
+        ],
+        [
+          20,
+          68,
+          4
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "signpost",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/signpost.gltf",
+      "scene": "res://assets/models/city/scenes/signpost.tscn",
+      "bounds_model_units": [
+        [
+          -11,
+          0,
+          -2
+        ],
+        [
+          11,
+          36,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "concrete_barrier",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/concrete_barrier.gltf",
+      "scene": "res://assets/models/city/scenes/concrete_barrier.tscn",
+      "bounds_model_units": [
+        [
+          -24,
+          0,
+          -6
+        ],
+        [
+          24,
+          18,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "drain",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/drain.gltf",
+      "scene": "res://assets/models/city/scenes/drain.tscn",
+      "bounds_model_units": [
+        [
+          -10,
+          0,
+          -6
+        ],
+        [
+          10,
+          1.125,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "manhole",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/manhole.gltf",
+      "scene": "res://assets/models/city/scenes/manhole.tscn",
+      "bounds_model_units": [
+        [
+          -9,
+          0,
+          -9
+        ],
+        [
+          9,
+          1.25,
+          9
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "roof_vent",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/roof_vent.gltf",
+      "scene": "res://assets/models/city/scenes/roof_vent.tscn",
+      "bounds_model_units": [
+        [
+          -8,
+          0,
+          -8
+        ],
+        [
+          8,
+          12,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "rubble",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/rubble.gltf",
+      "scene": "res://assets/models/city/scenes/rubble.tscn",
+      "bounds_model_units": [
+        [
+          -12,
+          0,
+          -8
+        ],
+        [
+          16,
+          8,
+          15
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "weeds",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/weeds.gltf",
+      "scene": "res://assets/models/city/scenes/weeds.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -2
+        ],
+        [
+          7,
+          9,
+          4
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "dead_tree",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/dead_tree.gltf",
+      "scene": "res://assets/models/city/scenes/dead_tree.tscn",
+      "bounds_model_units": [
+        [
+          -15,
+          0,
+          -3
+        ],
+        [
+          16,
+          44,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "dry_fountain",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/dry_fountain.gltf",
+      "scene": "res://assets/models/city/scenes/dry_fountain.tscn",
+      "bounds_model_units": [
+        [
+          -28,
+          0,
+          -28
+        ],
+        [
+          28,
+          36,
+          28
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "gas_pump",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/gas_pump.gltf",
+      "scene": "res://assets/models/city/scenes/gas_pump.tscn",
+      "bounds_model_units": [
+        [
+          -10,
+          0,
+          -7
+        ],
+        [
+          10,
+          29,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "gas_canopy",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/gas_canopy.gltf",
+      "scene": "res://assets/models/city/scenes/gas_canopy.tscn",
+      "bounds_model_units": [
+        [
+          -64,
+          0,
+          -33
+        ],
+        [
+          64,
+          60,
+          32
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bus_shelter",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bus_shelter.gltf",
+      "scene": "res://assets/models/city/scenes/bus_shelter.tscn",
+      "bounds_model_units": [
+        [
+          -34,
+          0,
+          -16
+        ],
+        [
+          34,
+          39,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "shop_awning",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/shop_awning.gltf",
+      "scene": "res://assets/models/city/scenes/shop_awning.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -12
+        ],
+        [
+          16,
+          2,
+          12
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "sign_panel",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_panel.gltf",
+      "scene": "res://assets/models/city/scenes/sign_panel.tscn",
+      "bounds_model_units": [
+        [
+          -24,
+          0,
+          -1
+        ],
+        [
+          24,
+          12,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "clinic_sign",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/clinic_sign.gltf",
+      "scene": "res://assets/models/city/scenes/clinic_sign.tscn",
+      "bounds_model_units": [
+        [
+          -10,
+          0,
+          -1.5
+        ],
+        [
+          10,
+          20,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "sedan",
+      "category": "vehicle",
+      "model": "res://assets/models/city/gltf/sedan.gltf",
+      "scene": "res://assets/models/city/scenes/sedan.tscn",
+      "bounds_model_units": [
+        [
+          -17.4,
+          0.0,
+          -33.25
+        ],
+        [
+          17.4,
+          29,
+          33
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "van",
+      "category": "vehicle",
+      "model": "res://assets/models/city/gltf/van.gltf",
+      "scene": "res://assets/models/city/scenes/van.tscn",
+      "bounds_model_units": [
+        [
+          -18.4,
+          0.0,
+          -36.25
+        ],
+        [
+          18.4,
+          35,
+          36
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "ambulance",
+      "category": "vehicle",
+      "model": "res://assets/models/city/gltf/ambulance.gltf",
+      "scene": "res://assets/models/city/scenes/ambulance.tscn",
+      "bounds_model_units": [
+        [
+          -19.4,
+          0.0,
+          -39.25
+        ],
+        [
+          19.4,
+          41,
+          39
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "bus",
+      "category": "vehicle",
+      "model": "res://assets/models/city/gltf/bus.gltf",
+      "scene": "res://assets/models/city/scenes/bus.tscn",
+      "bounds_model_units": [
+        [
+          -20.4,
+          0.0,
+          -61.25
+        ],
+        [
+          20.4,
+          42.0,
+          60.5
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "forklift",
+      "category": "vehicle",
+      "model": "res://assets/models/city/gltf/forklift.gltf",
+      "scene": "res://assets/models/city/scenes/forklift.tscn",
+      "bounds_model_units": [
+        [
+          -14.899999999999999,
+          0,
+          -44
+        ],
+        [
+          14.9,
+          42,
+          19.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "stair_railing",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/stair_railing.gltf",
+      "scene": "res://assets/models/city/scenes/stair_railing.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          14,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_cabinet",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/wall_cabinet.gltf",
+      "scene": "res://assets/models/city/scenes/wall_cabinet.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -8
+        ],
+        [
+          16,
+          18,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "tool_set",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/tool_set.gltf",
+      "scene": "res://assets/models/city/scenes/tool_set.tscn",
+      "bounds_model_units": [
+        [
+          -12,
+          0,
+          -2
+        ],
+        [
+          12,
+          18,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "garden_tools",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/garden_tools.gltf",
+      "scene": "res://assets/models/city/scenes/garden_tools.tscn",
+      "bounds_model_units": [
+        [
+          -4,
+          0,
+          -1
+        ],
+        [
+          4,
+          27,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "tire_stack",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/tire_stack.gltf",
+      "scene": "res://assets/models/city/scenes/tire_stack.tscn",
+      "bounds_model_units": [
+        [
+          -8.0,
+          0.0,
+          -8.0
+        ],
+        [
+          8.0,
+          17.225,
+          8.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.5
+      }
+    },
+    {
+      "id": "rug",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/rug.gltf",
+      "scene": "res://assets/models/city/scenes/rug.tscn",
+      "bounds_model_units": [
+        [
+          -32,
+          0,
+          -24
+        ],
+        [
+          32,
+          0.3,
+          24
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "coffee_table",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/coffee_table.gltf",
+      "scene": "res://assets/models/city/scenes/coffee_table.tscn",
+      "bounds_model_units": [
+        [
+          -12.0,
+          0.0,
+          -10.0
+        ],
+        [
+          12.0,
+          14.0,
+          10.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "tv_console",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/tv_console.gltf",
+      "scene": "res://assets/models/city/scenes/tv_console.tscn",
+      "bounds_model_units": [
+        [
+          -22,
+          0,
+          -7.25
+        ],
+        [
+          22,
+          28,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "nightstand",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/nightstand.gltf",
+      "scene": "res://assets/models/city/scenes/nightstand.tscn",
+      "bounds_model_units": [
+        [
+          -6,
+          0,
+          -7
+        ],
+        [
+          6,
+          23,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bookcase",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bookcase.gltf",
+      "scene": "res://assets/models/city/scenes/bookcase.tscn",
+      "bounds_model_units": [
+        [
+          -14.0,
+          0,
+          -7.0
+        ],
+        [
+          14.0,
+          32,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "coat_rack",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/coat_rack.gltf",
+      "scene": "res://assets/models/city/scenes/coat_rack.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -5
+        ],
+        [
+          8,
+          29,
+          5
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "laundry_basket",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/laundry_basket.gltf",
+      "scene": "res://assets/models/city/scenes/laundry_basket.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -7
+        ],
+        [
+          7,
+          13,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bath_mirror",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bath_mirror.gltf",
+      "scene": "res://assets/models/city/scenes/bath_mirror.tscn",
+      "bounds_model_units": [
+        [
+          -9,
+          0,
+          -1.25
+        ],
+        [
+          9,
+          18,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "towel_rail",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/towel_rail.gltf",
+      "scene": "res://assets/models/city/scenes/towel_rail.tscn",
+      "bounds_model_units": [
+        [
+          -8,
+          0,
+          -1.5
+        ],
+        [
+          8,
+          8,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "desk_items",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/desk_items.gltf",
+      "scene": "res://assets/models/city/scenes/desk_items.tscn",
+      "bounds_model_units": [
+        [
+          -9,
+          0,
+          -5
+        ],
+        [
+          9,
+          5,
+          7
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "dishes",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/dishes.gltf",
+      "scene": "res://assets/models/city/scenes/dishes.tscn",
+      "bounds_model_units": [
+        [
+          -4.0,
+          0.0,
+          -4.0
+        ],
+        [
+          4.0,
+          1.5999999999999999,
+          4.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": -0.0
+      }
+    },
+    {
+      "id": "gondola_stocked",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/gondola_stocked.gltf",
+      "scene": "res://assets/models/city/scenes/gondola_stocked.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -9
+        ],
+        [
+          14,
+          25,
+          9
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "produce_bin",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/produce_bin.gltf",
+      "scene": "res://assets/models/city/scenes/produce_bin.tscn",
+      "bounds_model_units": [
+        [
+          -14,
+          0,
+          -12
+        ],
+        [
+          14,
+          17,
+          12
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "medical_trolley",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/medical_trolley.gltf",
+      "scene": "res://assets/models/city/scenes/medical_trolley.tscn",
+      "bounds_model_units": [
+        [
+          -16.0,
+          0,
+          -8.0
+        ],
+        [
+          16.0,
+          23,
+          8.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "iv_stand",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/iv_stand.gltf",
+      "scene": "res://assets/models/city/scenes/iv_stand.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -2
+        ],
+        [
+          7,
+          28,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "water_dispenser",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/water_dispenser.gltf",
+      "scene": "res://assets/models/city/scenes/water_dispenser.tscn",
+      "bounds_model_units": [
+        [
+          -6,
+          0,
+          -7
+        ],
+        [
+          6,
+          29.8,
+          6
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "filing_cabinet",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/filing_cabinet.gltf",
+      "scene": "res://assets/models/city/scenes/filing_cabinet.tscn",
+      "bounds_model_units": [
+        [
+          -8.0,
+          0,
+          -9.0
+        ],
+        [
+          8.0,
+          32,
+          7.0
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "open_crate",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/open_crate.gltf",
+      "scene": "res://assets/models/city/scenes/open_crate.tscn",
+      "bounds_model_units": [
+        [
+          -11,
+          0,
+          -11
+        ],
+        [
+          11,
+          14,
+          11
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "workbench_tools",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/workbench_tools.gltf",
+      "scene": "res://assets/models/city/scenes/workbench_tools.tscn",
+      "bounds_model_units": [
+        [
+          -12.0,
+          0,
+          -9
+        ],
+        [
+          15,
+          9,
+          10
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "bollard",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/bollard.gltf",
+      "scene": "res://assets/models/city/scenes/bollard.tscn",
+      "bounds_model_units": [
+        [
+          -4,
+          0,
+          -4
+        ],
+        [
+          4,
+          20,
+          4
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "vent_grille",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/vent_grille.gltf",
+      "scene": "res://assets/models/city/scenes/vent_grille.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -1.25
+        ],
+        [
+          7,
+          10,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_clock",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/wall_clock.gltf",
+      "scene": "res://assets/models/city/scenes/wall_clock.tscn",
+      "bounds_model_units": [
+        [
+          -5,
+          0,
+          -1.5
+        ],
+        [
+          5,
+          10,
+          1
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "entry_mat",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/entry_mat.gltf",
+      "scene": "res://assets/models/city/scenes/entry_mat.tscn",
+      "bounds_model_units": [
+        [
+          -12,
+          0,
+          -8
+        ],
+        [
+          12,
+          0.3,
+          8
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "rubble_heap",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/rubble_heap.gltf",
+      "scene": "res://assets/models/city/scenes/rubble_heap.tscn",
+      "bounds_model_units": [
+        [
+          -22,
+          0,
+          -18
+        ],
+        [
+          20,
+          8,
+          18
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "lumber_stack",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/lumber_stack.gltf",
+      "scene": "res://assets/models/city/scenes/lumber_stack.tscn",
+      "bounds_model_units": [
+        [
+          -7,
+          0,
+          -22
+        ],
+        [
+          12,
+          8,
+          22
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "sign_grocery",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_grocery.gltf",
+      "scene": "res://assets/models/city/scenes/sign_grocery.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "sign_clinic",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_clinic.gltf",
+      "scene": "res://assets/models/city/scenes/sign_clinic.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "sign_garage",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_garage.gltf",
+      "scene": "res://assets/models/city/scenes/sign_garage.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "sign_gas",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_gas.gltf",
+      "scene": "res://assets/models/city/scenes/sign_gas.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "sign_warehouse",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_warehouse.gltf",
+      "scene": "res://assets/models/city/scenes/sign_warehouse.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "sign_apartments",
+      "category": "prop",
+      "model": "res://assets/models/city/gltf/sign_apartments.gltf",
+      "scene": "res://assets/models/city/scenes/sign_apartments.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          16,
+          18,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 6
+      }
+    },
+    {
+      "id": "wall_brick_red_solid",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_solid.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_solid.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_red_door",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_door.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_door.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_red_window",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_window.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_window.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "open_window": true
+      }
+    },
+    {
+      "id": "wall_brick_red_half",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_half.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_half.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          16,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_red_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_corner.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_brick_red_broken",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_brick_red_broken.gltf",
+      "scene": "res://assets/models/city/scenes/wall_brick_red_broken.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          30,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_corrugated_solid",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_solid.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_solid.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_corrugated_door",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_door.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_door.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_corrugated_window",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_window.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_window.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -3
+        ],
+        [
+          16,
+          32,
+          3
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0,
+        "open_window": true
+      }
+    },
+    {
+      "id": "wall_corrugated_half",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_half.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_half.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          16,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_corrugated_corner",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_corner.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_corner.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    },
+    {
+      "id": "wall_corrugated_broken",
+      "category": "construction",
+      "model": "res://assets/models/city/gltf/wall_corrugated_broken.gltf",
+      "scene": "res://assets/models/city/scenes/wall_corrugated_broken.tscn",
+      "bounds_model_units": [
+        [
+          -16,
+          0,
+          -2
+        ],
+        [
+          16,
+          30,
+          2
+        ]
+      ],
+      "placement": {
+        "origin": "lowest support at Y=0",
+        "anchor": "base",
+        "units_per_tile": 32,
+        "texture_pixels_per_unit": 1,
+        "source_y_translation": 0
+      }
+    }
+  ]
+}

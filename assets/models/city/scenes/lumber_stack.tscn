@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/lumber_stack.gltf" id="1_lo06r"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/lumber_stack.res" id="2_jgvum"]
+
+[node name="LumberStack" type="Node3D" unique_id=1879659417]
+metadata/asset_id = "lumber_stack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1855323535]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1130433868 instance=ExtResource("1_lo06r")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1213224107]
+shape = ExtResource("2_jgvum")

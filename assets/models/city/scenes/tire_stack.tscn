@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/tire_stack.gltf" id="1_uh25p"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/tire_stack.res" id="2_qim5o"]
+
+[node name="TireStack" type="Node3D" unique_id=352551205]
+metadata/asset_id = "tire_stack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1016329109]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=741410767 instance=ExtResource("1_uh25p")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=253232995]
+shape = ExtResource("2_qim5o")

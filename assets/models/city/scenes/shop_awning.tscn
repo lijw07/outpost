@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/shop_awning.gltf" id="1_6lgtm"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/shop_awning.res" id="2_7u2ry"]
+
+[node name="ShopAwning" type="Node3D" unique_id=420231335]
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=303969009]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=2067201957 instance=ExtResource("1_6lgtm")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1550307163]
+shape = ExtResource("2_7u2ry")

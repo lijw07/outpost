@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/street_lamp.gltf" id="1_qdhso"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/street_lamp.res" id="2_rfhpb"]
+
+[node name="StreetLamp" type="Node3D" unique_id=554752997]
+metadata/asset_id = "street_lamp"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1426900923]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=951299086 instance=ExtResource("1_qdhso")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=749453049]
+shape = ExtResource("2_rfhpb")

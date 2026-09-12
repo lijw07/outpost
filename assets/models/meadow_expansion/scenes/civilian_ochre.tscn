@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/models/meadow_expansion/textures/civilian_ochre_front_0.png" id="1_jdbl3"]
+
+[node name="CivilianOchre" type="Node3D" unique_id=317328238]
+metadata/asset_id = "civilian_ochre"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="Sprite" type="Sprite3D" parent="." unique_id=1125738712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+pixel_size = 0.0625
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_jdbl3")

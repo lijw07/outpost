@@ -1,0 +1,1088 @@
+{
+	"assets": [
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_edge.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"sidewalk",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0625
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_outer_corner.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"sidewalk",
+				"",
+				"",
+				"sidewalk",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0625
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_inner_corner.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"sidewalk"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0625
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_strip.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"",
+				"sidewalk",
+				"",
+				"sidewalk",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0625
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_end",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_end.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"sidewalk",
+				"sidewalk",
+				"",
+				"sidewalk",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_end.tscn",
+			"shape": "end",
+			"top_y": 2.0625
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_sidewalk_island",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_sidewalk_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_island.bbmodel",
+			"neighbor": "sidewalk",
+			"neighbors": [
+				"sidewalk",
+				"sidewalk",
+				"sidewalk",
+				"sidewalk",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_sidewalk_island.tscn",
+			"shape": "island",
+			"top_y": 2.0625
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_edge.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_outer_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_inner_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"grass"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_strip.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_end",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_end.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_grass_island",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_grass_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_grass_island.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"grass",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_grass_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_edge.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_outer_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_inner_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"grass"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_strip.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_end",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_end.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "sand",
+			"id": "sand_to_grass_island",
+			"model": "res://assets/models/blocks/transitions/gltf/sand_to_grass_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sand_to_grass_island.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"grass",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sand_to_grass_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_edge.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_outer_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_inner_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"grass"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_strip.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_end",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_end.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "gravel",
+			"id": "gravel_to_grass_island",
+			"model": "res://assets/models/blocks/transitions/gltf/gravel_to_grass_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/gravel_to_grass_island.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"grass",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/gravel_to_grass_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_edge.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_outer_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_inner_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"grass"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_strip.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_end",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_end.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_grass_island",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_grass_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_island.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"grass",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_grass_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_edge.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_outer_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_inner_corner.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"grass"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_strip.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_end",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_end.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "sidewalk",
+			"id": "sidewalk_to_grass_island",
+			"model": "res://assets/models/blocks/transitions/gltf/sidewalk_to_grass_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/sidewalk_to_grass_island.bbmodel",
+			"neighbor": "grass",
+			"neighbors": [
+				"grass",
+				"grass",
+				"grass",
+				"grass",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/sidewalk_to_grass_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_edge.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"dirt",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_outer_corner.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"dirt",
+				"",
+				"",
+				"dirt",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_inner_corner.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"dirt"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_strip.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"",
+				"dirt",
+				"",
+				"dirt",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_end",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_end.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"dirt",
+				"dirt",
+				"",
+				"dirt",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_dirt_island",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_dirt_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_island.bbmodel",
+			"neighbor": "dirt",
+			"neighbors": [
+				"dirt",
+				"dirt",
+				"dirt",
+				"dirt",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_dirt_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_edge.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"gravel",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_outer_corner.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"gravel",
+				"",
+				"",
+				"gravel",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_inner_corner.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"gravel"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_strip.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"",
+				"gravel",
+				"",
+				"gravel",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_end",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_end.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"gravel",
+				"gravel",
+				"",
+				"gravel",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "road_asphalt",
+			"id": "road_asphalt_to_gravel_island",
+			"model": "res://assets/models/blocks/transitions/gltf/road_asphalt_to_gravel_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_island.bbmodel",
+			"neighbor": "gravel",
+			"neighbors": [
+				"gravel",
+				"gravel",
+				"gravel",
+				"gravel",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/road_asphalt_to_gravel_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_edge",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_edge.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_edge.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"sand",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_edge.tscn",
+			"shape": "edge",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_outer_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_outer_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_outer_corner.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"sand",
+				"",
+				"",
+				"sand",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_outer_corner.tscn",
+			"shape": "outer_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_inner_corner",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_inner_corner.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_inner_corner.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"sand"
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_inner_corner.tscn",
+			"shape": "inner_corner",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_strip",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_strip.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_strip.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"",
+				"sand",
+				"",
+				"sand",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_strip.tscn",
+			"shape": "strip",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_end",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_end.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_end.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"sand",
+				"sand",
+				"",
+				"sand",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_end.tscn",
+			"shape": "end",
+			"top_y": 2.0
+		},
+		{
+			"base": "dirt",
+			"id": "dirt_to_sand_island",
+			"model": "res://assets/models/blocks/transitions/gltf/dirt_to_sand_island.gltf",
+			"native": "res://assets/models/blocks/transitions/blockbench/dirt_to_sand_island.bbmodel",
+			"neighbor": "sand",
+			"neighbors": [
+				"sand",
+				"sand",
+				"sand",
+				"sand",
+				"",
+				"",
+				"",
+				""
+			],
+			"scene": "res://assets/models/blocks/transitions/scenes/dirt_to_sand_island.tscn",
+			"shape": "island",
+			"top_y": 2.0
+		}
+	],
+	"orientation": "edge faces -Z; outer corner -Z/-X; inner corner -X/-Z diagonal; rotate in 90 degree steps",
+	"origin": "base Y=0",
+	"tile_pixels": 32,
+	"tile_units": 2
+}

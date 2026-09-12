@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_wood_window.gltf" id="1_rrtiq"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_wood_window.res" id="2_qth7r"]
+
+[node name="WallWoodWindow" type="Node3D" unique_id=544979050]
+metadata/asset_id = "wall_wood_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1764849712]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=838380461 instance=ExtResource("1_rrtiq")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=390527829]
+shape = ExtResource("2_qth7r")

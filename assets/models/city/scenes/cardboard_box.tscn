@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/cardboard_box.gltf" id="1_a6vet"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/cardboard_box.res" id="2_ueu54"]
+
+[node name="CardboardBox" type="Node3D" unique_id=1548814400]
+metadata/asset_id = "cardboard_box"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=497380440]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=978843951 instance=ExtResource("1_a6vet")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1722586386]
+shape = ExtResource("2_ueu54")

@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/wall_brick_red_corner.gltf" id="1_4c2wi"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/wall_brick_red_corner.res" id="2_qtmdj"]
+
+[node name="WallBrickRedCorner" type="Node3D" unique_id=1066890935]
+metadata/asset_id = "wall_brick_red_corner"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=11945805]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=81788102 instance=ExtResource("1_4c2wi")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1201390166]
+shape = ExtResource("2_qtmdj")

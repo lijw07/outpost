@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/exam_bed.gltf" id="1_7whi5"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/exam_bed.res" id="2_d5sw8"]
+
+[node name="ExamBed" type="Node3D" unique_id=635984320]
+metadata/asset_id = "exam_bed"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1321029443]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=498929296 instance=ExtResource("1_7whi5")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1126695906]
+shape = ExtResource("2_d5sw8")

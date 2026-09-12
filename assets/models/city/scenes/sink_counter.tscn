@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sink_counter.gltf" id="1_kiqjx"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sink_counter.res" id="2_spixq"]
+
+[node name="SinkCounter" type="Node3D" unique_id=769064522]
+metadata/asset_id = "sink_counter"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1336452463]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=83646000 instance=ExtResource("1_kiqjx")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1627168480]
+shape = ExtResource("2_spixq")

@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sign_grocery.gltf" id="1_a8kwa"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sign_grocery.res" id="2_rulvs"]
+
+[node name="SignGrocery" type="Node3D" unique_id=368535701]
+metadata/asset_id = "sign_grocery"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=452848152]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1962514600 instance=ExtResource("1_a8kwa")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=613673364]
+shape = ExtResource("2_rulvs")

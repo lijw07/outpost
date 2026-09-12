@@ -1,0 +1,156 @@
+{
+	"assets": [
+		{
+			"clips_sampled": 15,
+			"id": "sedan",
+			"imported": true
+		},
+		{
+			"clips_sampled": 15,
+			"id": "van",
+			"imported": true
+		},
+		{
+			"clips_sampled": 15,
+			"id": "ambulance",
+			"imported": true
+		},
+		{
+			"clips_sampled": 15,
+			"id": "bus",
+			"imported": true
+		},
+		{
+			"clips_sampled": 17,
+			"id": "forklift",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "stop_sign",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "street_light",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "street_light_double",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "bus_stop_sign",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "bus_stop_shelter",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "trash_can",
+			"imported": true
+		},
+		{
+			"clips_sampled": 2,
+			"id": "wheelie_bin",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "fire_hydrant",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "traffic_cone",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "street_bollard",
+			"imported": true
+		},
+		{
+			"clips_sampled": 3,
+			"id": "traffic_signal",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "street_bench",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "hedge_planter",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "flower_planter",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "iron_fence",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "crosswalk_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "stop_line_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "bus_lane_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "parking_bay_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "tactile_paving_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "asphalt_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "sidewalk_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "center_line_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "sidewalk_curb_block",
+			"imported": true
+		},
+		{
+			"clips_sampled": 0,
+			"id": "sidewalk_corner_block",
+			"imported": true
+		}
+	],
+	"failures": [],
+	"passed": true
+}

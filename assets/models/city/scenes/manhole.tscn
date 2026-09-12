@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/manhole.gltf" id="1_8niim"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/manhole.res" id="2_hotow"]
+
+[node name="Manhole" type="Node3D" unique_id=687995652]
+metadata/asset_id = "manhole"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=426976147]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=660226564 instance=ExtResource("1_8niim")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1626078253]
+shape = ExtResource("2_hotow")

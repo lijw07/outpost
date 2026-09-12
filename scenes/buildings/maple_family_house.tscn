@@ -1,0 +1,1528 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/buildings/modular_building.gd" id="1_usxma"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_wood_block.tscn" id="2_7oj6l"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_carpet_block.tscn" id="3_8kfxo"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_bath_tile_block.tscn" id="4_3455p"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_plaster_window.tscn" id="5_yeysk"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_plaster_solid.tscn" id="6_ljb0m"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/doorway_wood.tscn" id="7_7akab"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_wood_solid.tscn" id="8_0wx4q"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/wood.png" id="9_8kfxo"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/entry_mat.tscn" id="9_bowl8"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/coat_rack.tscn" id="10_78k3k"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/wood_dark.png" id="10_3455p"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/sofa.tscn" id="11_xp3ur"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/rug.tscn" id="12_ks6ej"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/coffee_table.tscn" id="13_uyn1m"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/dishes.tscn" id="14_ebp12"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/tv_console.tscn" id="15_apmo1"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/table.tscn" id="16_abf28"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/chair.tscn" id="17_fec3i"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/fridge.tscn" id="18_3r283"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/sink_counter.tscn" id="19_pyx0u"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/stove.tscn" id="20_gykts"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bed.tscn" id="21_e62r3"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/nightstand.tscn" id="22_fk8c5"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wardrobe.tscn" id="23_ojwdm"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/toilet.tscn" id="24_a48f6"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bath_sink.tscn" id="25_hpyor"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bathtub.tscn" id="26_u65yo"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/desk.tscn" id="27_slbil"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/desk_items.tscn" id="28_nougw"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bookcase.tscn" id="29_4gabv"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/laundry_basket.tscn" id="30_418bs"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bench.tscn" id="31_bc34u"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/garden_tools.tscn" id="32_ofgi4"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/sidewalk_block.tscn" id="33_budv3"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/shop_awning.tscn" id="34_b6m7v"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/pillar.tscn" id="35_spkfi"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_cabinet.tscn" id="36_2gyap"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bath_mirror.tscn" id="37_6slax"]
+[ext_resource type="FontFile" path="res://assets/ui/font/outpost_pixel.ttf" id="38_bxly8"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/roof.png" id="39_f6n0o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ge76s"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_8kfxo")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yeysk"]
+_surfaces = [{
+"aabb": AABB(-0.8125, 0, -0.125, 1.6875, 2, 0.25),
+"attribute_data": PackedByteArray("AAAAPwAAgD0AAHA/AAAAPgAAcD8AAIA9AADAPSVJkjsAAAA/AACAPQAAcD8AAIA9AADAPSVJkjsAAHA/AACAPQAAcD8AAAAAAADAPSVJkjsAAHA/AAAAAAAAwD0AAAAAAADAPQAAAD4AAHA/AAAAPgAAAD8AAIA9AADAPQAAAD4AAAA/AACAPQAAwD0AAIA9AADAPQAAgD0AAAA/AACAPQAAwD0lSZI7AAAAPwAAgD0AAHA/AAAAAAAAcD8AAIA9AADAPW7b9j0AAAA/AACAPQAAcD8AAIA9AADAPW7b9j0AAHA/AACAPQAAcD8AAAA+AADAPW7b9j0AAHA/AAAAPgAAwD0AAAA+AADAPQAAgD3NzFw+MzPTPQAAwD1u2/Y9AADAPQAAAAAAAHA/AAAAAM3MXD4zM9M9AADAPQAAAADNzFw+MzPTPQAAwD0AAIA9AADAPSVJEj0AAHA/AACAPwAAcD8AAAAAAADAPSVJEj0AAHA/AAAAAAAAwD0AAAAAAADAPQAAgD8AAHA/AACAPwAAwD0lSRI9AADAPW7bdj8AAHA/AAAAAAAAcD8AAIA/AADAPW7bdj8AAHA/AACAPwAAwD0AAIA/AADAPQAAAAAAAHA/AAAAAAAAwD1u23Y/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_ge76s"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAAAAAABgPwAAAAAAAAA+AABgPwAAAAAAAAAAAABQvwAAAADAtu29AAAAAAAAAAAAAAAAAABgPwAAAAAAAAAAAABQvwAAAADAtu29AABgPwAAAAAAAAAAAABgPwAAAAAAAAC+AABQvwAAAADAtu29AABgPwAAAAAAAAC+AABQvwAAAAAAAAC+AABQvwAAAAAAAAA+AABgPwAAAAAAAAA+AAAAAAAAAAAAAAAAAABQvwAAAAAAAAA+AAAAAAAAAAAAAAAAAABQvwAAAAAAAAAAAABQvwAAAAAAAAAAAAAAAAAAAAAAAAAAAABQvwAAAADAtu29AAAAAAAAAEAAAAAAAABgPwAAAEAAAAC+AABgPwAAAEAAAAAAAABQvwAAAEDAtu09AAAAAAAAAEAAAAAAAABgPwAAAEAAAAAAAABQvwAAAEDAtu09AABgPwAAAEAAAAAAAABgPwAAAEAAAAA+AABQvwAAAEDAtu09AABgPwAAAEAAAAA+AABQvwAAAEAAAAA+AABQvwAAAEAAAAAAoJkRvwAAAECAZqY9AABQvwAAAEDAtu09AABQvwAAAEAAAAC+AABgPwAAAEAAAAC+oJkRvwAAAECAZqY9AABQvwAAAEAAAAC+oJkRvwAAAECAZqY9AABQvwAAAEAAAAAAAABQv27b9j8AAAC+AABgPwAAAAAAAAC+AABgPwAAAEAAAAC+AABQv27b9j8AAAC+AABgPwAAAEAAAAC+AABQvwAAAEAAAAC+AABQvwAAAAAAAAC+AABgPwAAAAAAAAC+AABQv27b9j8AAAC+AABQvyVJkj0AAAA+AABgPwAAAEAAAAA+AABgPwAAAAAAAAA+AABQvyVJkj0AAAA+AABgPwAAAAAAAAA+AABQvwAAAAAAAAA+AABQvwAAAEAAAAA+AABgPwAAAEAAAAA+AABQvyVJkj0AAAA+/38AAAAA/7//f/8/qipUlf9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/7//fwAAAAD/v/+/AABUVamq/38AAAAA/7//vwAAVFWpqv+/AABUVamq/3+qKkkSkaT/f/8/qipUlf9/AAAAAP+//3+qKkkSkaT/fwAAAAD/v/9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//3///wAA/7//v///qipUlf9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9//79UVamq/3///wAA/7//f/+/VFWpqv9//79UVamq/3///wAA/7//f///AAD/v/9///8AAP+/qar//0kSkaT/v///qipUlf9///8AAP+/qar//0kSkaT/f///AAD/v/9///8AAP+///////9/AID/vwAAVFWpqv+///+qKlSV//////9/AID/v///qipUlamq//9JEpGk/78AAFRVqar/vwAAVFWpqv//////fwCA/3//f/9/AID/f/+/VFWpqv9//z+qKlSV/3//f/9/AID/f/8/qipUlf9/qipJEpGk/3//v1RVqar/f/+/VFWpqv9//3//fwCA")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y0un"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("10_3455p")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ljb0m"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AABAPgAAgD8AAAAAAAAAAAAAQD4AAAAAAABAPgAAgD8AAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAIA9AACAPwAAgD0AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD0AAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD0AAAAA"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_8y0un"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AACAvwAAAAAAAEA+AACAvwAAAAAAAEC+AACAvwAAAEAAAEC+AACAvwAAAEAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAEC+AACAvwAAAEAAAEC+AACAvwAAAAAAAEC+AABgvwAAAAAAAEC+AACAvwAAAAAAAEA+AABgvwAAAEAAAEA+AABgvwAAAAAAAEA+AACAvwAAAAAAAEA+AACAvwAAAEAAAEA+AABgvwAAAEAAAEA+/z//f6qqqaoAAP+/VFWpqv8//3+qqqmq/z//f6qqqaoAAP+/VFWpqgAA/79UVamqAAD/v1RVqar//////38AgP//////fwCAAAD/v1RVqaoAAP+/VFWpqv//////fwCA/z//f6qqqar/f/9//38AgP9//3//fwCA/z//f6qqqar/P/9/qqqpqv9//3//fwCA")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1nw8t"]
+_surfaces = [{
+"aabb": AABB(0.875, 0, -0.1875, 0.125, 2, 0.375),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQADAAQAAwAFAAQAAQAEAAYABwABAAYABAAIAAYABwAGAAgABAAFAAgAAwAJAAUACQAIAAUACQAHAAgACQAKAAcACQALAAoA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AABgPwAAAAAAAAC+AABgPwAAAEAAAEC+AABgPwAAAEAAAAC+AABgPwAAAAAAAEC+AACAPwAAAAAAAEC+AACAPwAAAAAAAEA+AACAPwAAAEAAAEC+AABgPwAAAEAAAEA+AACAPwAAAEAAAEA+AABgPwAAAAAAAEA+AABgPwAAAEAAAAA+AABgPwAAAAAAAAA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q8d68"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(0.875, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AAAAPQAAgD8AAAAAAAAAAAAAAD0AAAAAAAAAAAAAgD8AAEA+AACAPwAAID4AAAAAAABAPgAAAAAAACA+AACAPwAAAAAAAIA/AABAPgAAAAAAAAAAAAAAAAAAQD4AAIA/AAAAAAAAAAAAAIA9AABAPgAAgD0AAAAAAAAAAAAAQD4AAAAAAABAPgAAgD0AAAAAAACAPQAAQD4AAAAAAAAAAAAAAAAAAAAAAACAPQAAgD8AAIA9AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_8y0un"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AABgPwAAAAAAAAC+AABgPwAAAEAAAEC+AABgPwAAAEAAAAC+AABgPwAAAAAAAEC+AABgPwAAAAAAAEA+AABgPwAAAEAAAAA+AABgPwAAAEAAAEA+AABgPwAAAAAAAAA+AACAPwAAAAAAAEC+AACAPwAAAEAAAEA+AACAPwAAAEAAAEC+AACAPwAAAAAAAEA+AABgPwAAAAAAAEC+AACAPwAAAAAAAEA+AACAPwAAAAAAAEC+AABgPwAAAAAAAEA+AABgPwAAAEAAAEA+AACAPwAAAEAAAEC+AACAPwAAAEAAAEA+AABgPwAAAEAAAEC+AABgPwAAAEAAAEC+AACAPwAAAAAAAEC+AACAPwAAAEAAAEC+AABgPwAAAAAAAEC+AABgPwAAAAAAAEA+AACAPwAAAEAAAEA+AACAPwAAAAAAAEA+AABgPwAAAEAAAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v////3//f/8/////f/9//z////9//3//P////3//f/8//38AAP///z//fwAA////P/9/AAD///8//38AAP///z//f///////v/9///////+//3///////7//f///////v/////////8//////////z//////////P/////////8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1nw8t")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7akab"]
+data = PackedVector3Array(0, 0, 0, 0.875, 0, 0.125, 0.875, 0, 0, -0.8125, 0, -0.116099834, 0, 0, 0, 0.875, 0, 0, -0.8125, 0, -0.116099834, 0.875, 0, 0, 0.875, 0, -0.125, -0.8125, 0, -0.116099834, 0.875, 0, -0.125, -0.8125, 0, -0.125, -0.8125, 0, 0.125, 0.875, 0, 0.125, 0, 0, 0, -0.8125, 0, 0.125, 0, 0, 0, -0.8125, 0, 0, -0.8125, 0, 0, 0, 0, 0, -0.8125, 0, -0.116099834, 0, 2, 0, 0.875, 2, -0.125, 0.875, 2, 0, -0.8125, 2, 0.116099834, 0, 2, 0, 0.875, 2, 0, -0.8125, 2, 0.116099834, 0.875, 2, 0, 0.875, 2, 0.125, -0.8125, 2, 0.116099834, 0.875, 2, 0.125, -0.8125, 2, 0.125, -0.8125, 2, 0, -0.5688, 2, 0.08129978, -0.8125, 2, 0.116099834, -0.8125, 2, -0.125, 0.875, 2, -0.125, -0.5688, 2, 0.08129978, -0.8125, 2, -0.125, -0.5688, 2, 0.08129978, -0.8125, 2, 0, -0.8125, 1.9286, -0.125, 0.875, 0, -0.125, 0.875, 2, -0.125, -0.8125, 1.9286, -0.125, 0.875, 2, -0.125, -0.8125, 2, -0.125, -0.8125, 0, -0.125, 0.875, 0, -0.125, -0.8125, 1.9286, -0.125, -0.8125, 0.0714, 0.125, 0.875, 2, 0.125, 0.875, 0, 0.125, -0.8125, 0.0714, 0.125, 0.875, 0, 0.125, -0.8125, 0, 0.125, -0.8125, 2, 0.125, 0.875, 2, 0.125, -0.8125, 0.0714, 0.125, -1, 0, 0.1875, -1, 2, -0.1875, -1, 2, 0.1875, -1, 0, 0.1875, -1, 0, -0.1875, -1, 2, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -1, 0, -0.1875, -0.875, 0, -0.1875, -1, 0, 0.1875, -0.875, 2, 0.1875, -0.875, 0, 0.1875, -1, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, 0.1875, 0.875, 0, -0.125, 0.875, 2, -0.1875, 0.875, 2, -0.125, 0.875, 0, -0.125, 0.875, 0, -0.1875, 0.875, 2, -0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.125, 0.875, 2, 0.1875, 0.875, 0, 0.1875, 0.875, 0, 0.125, 0.875, 2, 0.125, 1, 0, -0.1875, 1, 2, 0.1875, 1, 2, -0.1875, 1, 0, -0.1875, 1, 0, 0.1875, 1, 2, 0.1875, 0.875, 0, -0.1875, 1, 0, 0.1875, 1, 0, -0.1875, 0.875, 0, -0.1875, 0.875, 0, 0.1875, 1, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, -0.1875, 1, 2, 0.1875, 0.875, 2, 0.1875, 0.875, 2, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 1, 0, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 0.875, 0, -0.1875, 1, 0, -0.1875, 0.875, 0, 0.1875, 1, 2, 0.1875, 1, 0, 0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, 0.1875)
+backface_collision = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0wx4q"]
+_surfaces = [{
+"aabb": AABB(-0.875, 0, -0.125, 1.75, 2, 0.25),
+"attribute_data": PackedByteArray("AACAPQAAAAAAAHA/AAAAPgAAcD8AAAAAAADAPQAAAD4AAHA/AAAAPs3MXD4zM7M8AADAPQAAAD7NzFw+MzOzPAAAwD0AAIA9AACAPQAAAAAAAIA9AACAPQAAwD0AAIA9AACAPQAAAAAAAMA9AACAPc3MXD4zM7M8AAAAPwAAgD0AAHA/AAAAAAAAcD8AAIA9AADAPW7b9j0AAAA/AACAPQAAcD8AAIA9AADAPW7b9j0AAHA/AACAPQAAcD8AAAA+AADAPW7b9j0AAHA/AAAAPgAAwD0AAAA+AACAPQAAgD0AAIA9AAAAAAAAcD8AAAAAAACAPQAAgD0AAHA/AAAAAAAAAD8AAIA9AADAPQAAgD0AAAA/AACAPQAAwD1u2/Y9AACAPQAAAAAAAHA/AACAPwAAcD8AAAAAAACAPQAAAAAAAIA9AACAPwAAcD8AAIA/AADAPW7bdj8AAHA/AAAAAAAAcD8AAIA/AADAPW7bdj8AAHA/AACAPwAAwD0AAIA/AADAPQAAAAAAAHA/AAAAAAAAwD1u23Y/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_ge76s"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 51,
+"vertex_data": PackedByteArray("AABgvwAAAAAAAAC+AABgPwAAAAAAAAA+AABgPwAAAAAAAAC+AABQvwAAAAAAAAA+AABgPwAAAAAAAAA+oJkRvwAAAACAZqa9AABQvwAAAAAAAAA+oJkRvwAAAACAZqa9AABQvwAAAAAAAAAAAABgvwAAAAAAAAC+AABgvwAAAAAAAAAAAABQvwAAAAAAAAAAAABgvwAAAAAAAAC+AABQvwAAAAAAAAAAoJkRvwAAAACAZqa9AAAAAAAAAEAAAAAAAABgPwAAAEAAAAC+AABgPwAAAEAAAAAAAABQvwAAAEAAt+09AAAAAAAAAEAAAAAAAABgPwAAAEAAAAAAAABQvwAAAEAAt+09AABgPwAAAEAAAAAAAABgPwAAAEAAAAA+AABQvwAAAEAAt+09AABgPwAAAEAAAAA+AABQvwAAAEAAAAA+AABgvwAAAEAAAAAAAABgvwAAAEAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAAAAABgPwAAAEAAAAC+AAAAAAAAAEAAAAAAAABQvwAAAEAAAAAAAAAAAAAAAEAAAAAAAABQvwAAAEAAt+09AABgvwAAAEAAAAC+AABgPwAAAAAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAC+AABgvwAAAAAAAAC+AABgPwAAAAAAAAC+AABQvyVJkj0AAAA+AABgPwAAAEAAAAA+AABgPwAAAAAAAAA+AABQvyVJkj0AAAA+AABgPwAAAAAAAAA+AABQvwAAAAAAAAA+AABQvwAAAEAAAAA+AABgPwAAAEAAAAA+AABQvyVJkj0AAAA+/58AAGInErv/f/8/qipUlVTVAAC2bW2b/3+qKkkSkaT/f/8/qipUlf9/AAAAAP+//3+qKkkSkaT/fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v/9/AAAAAP+//3///wAA/7//n///2AlOrP9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9//79UVamq/3///wAA/7//f/+/VFWpqv9//79UVamq/3///wAA/79U1f//JEkkif+f///YCU6s/3///wAA/7//n///2AlOrP9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+/VNX//yRJJIlU1QAAtm1tm/+f///YCU6sVNX//yRJJIn/nwAAYicSu1TVAAC2bW2b/3//f/9/AID/f/+/VFWpqv9//z+qKlSV/3//f/9/AID/f/8/qipUlf9/qipJEpGk/3//v1RVqar/f/+/VFWpqv9//3//fwCA")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bowl8"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AABAPgAAgD8AAAAAAAAAAAAAQD4AAAAAAABAPgAAgD8AAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAIA9AACAPwAAgD0AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD0AAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD0AAAAA"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_8y0un"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AACAvwAAAAAAAEA+AACAvwAAAAAAAEC+AACAvwAAAEAAAEC+AACAvwAAAEAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAEC+AACAvwAAAEAAAEC+AACAvwAAAAAAAEC+AABgvwAAAAAAAEC+AACAvwAAAAAAAEA+AABgvwAAAEAAAEA+AABgvwAAAAAAAEA+AACAvwAAAAAAAEA+AACAvwAAAEAAAEA+AABgvwAAAEAAAEA+/z//f6qqqaoAAP+/VFWpqv8//3+qqqmq/z//f6qqqaoAAP+/VFWpqgAA/79UVamqAAD/v1RVqar//////38AgP//////fwCAAAD/v1RVqaoAAP+/VFWpqv//////fwCA/z//f6qqqar/f/9//38AgP9//3//fwCA/z//f6qqqar/P/9/qqqpqv9//3//fwCA")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_78k3k"]
+data = PackedVector3Array(-0.875, 0, -0.125, 0.875, 0, 0.125, 0.875, 0, -0.125, -0.8125, 0, 0.125, 0.875, 0, 0.125, -0.5688, 0, -0.08129978, -0.8125, 0, 0.125, -0.5688, 0, -0.08129978, -0.8125, 0, 0, -0.875, 0, -0.125, -0.875, 0, 0, -0.8125, 0, 0, -0.875, 0, -0.125, -0.8125, 0, 0, -0.5688, 0, -0.08129978, 0, 2, 0, 0.875, 2, -0.125, 0.875, 2, 0, -0.8125, 2, 0.11610031, 0, 2, 0, 0.875, 2, 0, -0.8125, 2, 0.11610031, 0.875, 2, 0, 0.875, 2, 0.125, -0.8125, 2, 0.11610031, 0.875, 2, 0.125, -0.8125, 2, 0.125, -0.875, 2, 0, -0.875, 2, -0.125, 0.875, 2, -0.125, -0.875, 2, 0, 0.875, 2, -0.125, 0, 2, 0, -0.8125, 2, 0, 0, 2, 0, -0.8125, 2, 0.11610031, -0.875, 2, -0.125, 0.875, 0, -0.125, 0.875, 2, -0.125, -0.875, 2, -0.125, -0.875, 0, -0.125, 0.875, 0, -0.125, -0.8125, 0.0714, 0.125, 0.875, 2, 0.125, 0.875, 0, 0.125, -0.8125, 0.0714, 0.125, 0.875, 0, 0.125, -0.8125, 0, 0.125, -0.8125, 2, 0.125, 0.875, 2, 0.125, -0.8125, 0.0714, 0.125, -1, 0, 0.1875, -1, 2, -0.1875, -1, 2, 0.1875, -1, 0, 0.1875, -1, 0, -0.1875, -1, 2, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -1, 0, -0.1875, -0.875, 0, -0.1875, -1, 0, 0.1875, -0.875, 2, 0.1875, -0.875, 0, 0.1875, -1, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, 0.1875, 0.875, 0, -0.125, 0.875, 2, -0.1875, 0.875, 2, -0.125, 0.875, 0, -0.125, 0.875, 0, -0.1875, 0.875, 2, -0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.125, 0.875, 2, 0.1875, 0.875, 0, 0.1875, 0.875, 0, 0.125, 0.875, 2, 0.125, 1, 0, -0.1875, 1, 2, 0.1875, 1, 2, -0.1875, 1, 0, -0.1875, 1, 0, 0.1875, 1, 2, 0.1875, 0.875, 0, -0.1875, 1, 0, 0.1875, 1, 0, -0.1875, 0.875, 0, -0.1875, 0.875, 0, 0.1875, 1, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, -0.1875, 1, 2, 0.1875, 0.875, 2, 0.1875, 0.875, 2, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 1, 0, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 0.875, 0, -0.1875, 1, 0, -0.1875, 0.875, 0, 0.1875, 1, 2, 0.1875, 1, 0, 0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, 0.1875)
+backface_collision = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xp3ur"]
+_surfaces = [{
+"aabb": AABB(-0.875, 0, -0.125, 1.75, 2, 0.25),
+"attribute_data": PackedByteArray("AACAPQAAAAAAAAA/AACAPQAAcD8AAIA9AACAPQAAAAAAAHA/AACAPQAAcD8AAAAAAAAAPwAAgD0AAGg/btv2PQAAaD8AAIA9AACAPQAAAAAAAIA9AACAPQAAAD8AAIA9AACAPQAAgD0AAIA9AAAAPgAAaD8AAAA+AACAPQAAgD0AAGg/AAAAPgAAaD9u2/Y9AACAPQAAgD0AAGg/btv2PQAAAD8AAIA9AACAPQAAAD7NzEg/MzOzPAAAaD8AAIA9AACAPQAAAD4AAGg/AACAPQAAaD8AAAA+zcxIPzMzszwAAHA/AAAAAAAAcD8AAIA9zcxIPzMzszwAAHA/AACAPQAAaD8AAIA9AACAPQAAAD4AAIA9AAAAAAAAcD8AAAAAAACAPQAAAAAAAHA/AACAPwAAcD8AAAAAAACAPQAAAAAAAIA9AACAPwAAcD8AAIA/AACAPQAAgD8AAGg/JUkSPQAAaD8AAIA/AACAPQAAgD8AAIA9AAAAAAAAaD8AAAAAAACAPQAAgD8AAGg/AAAAAAAAaD8lSRI9"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_ge76s"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 51,
+"vertex_data": PackedByteArray("AABgvwAAAAAAAAC+AAAAAAAAAAAAAAAAAABgPwAAAAAAAAAAAABgvwAAAAAAAAC+AABgPwAAAAAAAAAAAABgPwAAAAAAAAC+AAAAAAAAAAAAAAAAAABQPwAAAAAAt+09AABQPwAAAAAAAAAAAABgvwAAAAAAAAC+AABgvwAAAAAAAAAAAAAAAAAAAAAAAAAAAABgvwAAAAAAAAAAAABgvwAAAAAAAAA+AABQPwAAAAAAAAA+AABgvwAAAAAAAAAAAABQPwAAAAAAAAA+AABQPwAAAAAAt+09AABgvwAAAAAAAAAAAABQPwAAAAAAt+09AAAAAAAAAAAAAAAAAABgvwAAAEAAAAA+oJkRPwAAAECAZqa9AABQPwAAAEAAAAAAAABgvwAAAEAAAAA+AABQPwAAAEAAAAAAAABQPwAAAEAAAAA+oJkRPwAAAECAZqa9AABgPwAAAEAAAAC+AABgPwAAAEAAAAAAoJkRPwAAAECAZqa9AABgPwAAAEAAAAAAAABQPwAAAEAAAAAAAABgvwAAAEAAAAA+AABgvwAAAEAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAC+AABgPwAAAAAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAC+AABgvwAAAAAAAAC+AABgPwAAAAAAAAC+AABgvwAAAAAAAAA+AABQP27b9j8AAAA+AABQPwAAAAAAAAA+AABgvwAAAAAAAAA+AABgvwAAAEAAAAA+AABQPwAAAEAAAAA+AABgvwAAAAAAAAA+AABQPwAAAEAAAAA+AABQP27b9j8AAAA+/58AAGInErv/fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v1TVAAC2bW2b/38AAAAA/7//fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v/9/AAAAAP+//38AAAAA/7//f/9fnVjrhP9/qipJEpGk/38AAAAA/7//f6oqSRKRpP9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//3//32InErv/f///AAD/v/9///8AAP+//3//32InErv/f///AAD/v/9/qqq2bW2b/3///wAA/7+pqv//SRKRpP9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3//32InErtU1f//JEkkiamq//9JEpGkVNX//yRJJIlU1QAAtm1tm6mq//9JEpGkVNX//yRJJIn/nwAAYicSu1TVAAC2bW2b/3//X51Y64T/f/9//38AgP9/qipJEpGk/3//X51Y64T/f//fYicSu/9/qqq2bW2b/3//X51Y64T/f6qqtm1tm/9//3//fwCA")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jxf2v"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUAAAACAAUAAQAGAAMAAQAEAAYABgAHAAMABgAIAAcABAAJAAYABAAAAAkAAAAFAAkACgAJAAUACgAFAAsA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AABgvwAAAEAAAEC+AACAvwAAAAAAAEC+AABgvwAAAEAAAEA+AABgvwAAAAAAAEC+AABgvwAAAEAAAAC+AABgvwAAAAAAAAC+AABgvwAAAAAAAEA+AABgvwAAAAAAAAA+AABgvwAAAEAAAAA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wtuwu"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AABAPgAAgD8AAAAAAAAAAAAAQD4AAAAAAAAAAAAAgD8AAAAAAACAPwAAAD0AAAAAAAAAAAAAAAAAAAA9AACAPwAAID4AAIA/AABAPgAAAAAAACA+AAAAAAAAQD4AAIA/AAAAAAAAAAAAAIA9AABAPgAAgD0AAAAAAAAAAAAAQD4AAAAAAABAPgAAgD0AAAAAAACAPQAAQD4AAAAAAAAAAAAAAAAAAAAAAACAPQAAgD8AAIA9AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_8y0un"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AACAvwAAAAAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAAC+AABgvwAAAEAAAEC+AABgvwAAAAAAAAC+AABgvwAAAAAAAAA+AABgvwAAAEAAAEA+AABgvwAAAEAAAAA+AABgvwAAAAAAAEA+AACAvwAAAAAAAEC+AABgvwAAAAAAAEA+AABgvwAAAAAAAEC+AACAvwAAAAAAAEA+AACAvwAAAEAAAEA+AABgvwAAAEAAAEC+AABgvwAAAEAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAEC+AACAvwAAAAAAAEC+AACAvwAAAAAAAEA+AABgvwAAAEAAAEA+AABgvwAAAAAAAEA+AACAvwAAAEAAAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P////3//f/8/////f/9//z////9//3//P////3//f/8//38AAP///z//fwAA////P/9/AAD///8//38AAP///z//f///////v/9///////+//3///////7//f///////v/////////8//////////z//////////P/////////8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jxf2v")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ks6ej"]
+_surfaces = [{
+"aabb": AABB(0.875, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAEA+AAAAAAAAAAAAAAAAAAAAAAAAgD8AAEA+AACAPwAAQD4AAAAAAAAAAAAAAAAAAIA9AACAPwAAgD0AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD0AAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD0AAAAA"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_8y0un"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACAPwAAAAAAAEC+AACAPwAAAEAAAEA+AACAPwAAAEAAAEC+AACAPwAAAAAAAEC+AACAPwAAAAAAAEA+AACAPwAAAEAAAEA+AABgPwAAAEAAAEC+AACAPwAAAAAAAEC+AACAPwAAAEAAAEC+AABgPwAAAEAAAEC+AABgPwAAAAAAAEC+AACAPwAAAAAAAEC+AABgPwAAAAAAAEA+AACAPwAAAEAAAEA+AACAPwAAAAAAAEA+AABgPwAAAAAAAEA+AABgPwAAAEAAAEA+AACAPwAAAEAAAEA+////v6qqqar/v/9/VFWpqv///7+qqqmq////v6qqqar/v/9/VFWpqv+//39UVamq//////9/AID///+/qqqpqv///7+qqqmq//////9/AID//////38AgP///7+qqqmq/3//f/9/AID/v/9/VFWpqv+//39UVamq/3//f/9/AID/f/9//38AgP+//39UVamq")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uyn1m"]
+data = PackedVector3Array(-0.875, 0, -0.125, 0, 0, 0, 0.875, 0, 0, -0.875, 0, -0.125, 0.875, 0, 0, 0.875, 0, -0.125, 0, 0, 0, 0.8125, 0, 0.11610031, 0.8125, 0, 0, -0.875, 0, -0.125, -0.875, 0, 0, 0, 0, 0, -0.875, 0, 0, -0.875, 0, 0.125, 0.8125, 0, 0.125, -0.875, 0, 0, 0.8125, 0, 0.125, 0.8125, 0, 0.11610031, -0.875, 0, 0, 0.8125, 0, 0.11610031, 0, 0, 0, -0.875, 2, 0.125, 0.5688, 2, -0.08129978, 0.8125, 2, 0, -0.875, 2, 0.125, 0.8125, 2, 0, 0.8125, 2, 0.125, 0.5688, 2, -0.08129978, 0.875, 2, -0.125, 0.875, 2, 0, 0.5688, 2, -0.08129978, 0.875, 2, 0, 0.8125, 2, 0, -0.875, 2, 0.125, -0.875, 2, -0.125, 0.875, 2, -0.125, -0.875, 2, -0.125, 0.875, 0, -0.125, 0.875, 2, -0.125, -0.875, 2, -0.125, -0.875, 0, -0.125, 0.875, 0, -0.125, -0.875, 0, 0.125, 0.8125, 1.9286, 0.125, 0.8125, 0, 0.125, -0.875, 0, 0.125, -0.875, 2, 0.125, 0.8125, 2, 0.125, -0.875, 0, 0.125, 0.8125, 2, 0.125, 0.8125, 1.9286, 0.125, -1, 0, 0.1875, -1, 2, -0.1875, -1, 2, 0.1875, -1, 0, 0.1875, -1, 0, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.125, -0.875, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 0, -0.125, -0.875, 2, -0.125, -0.875, 0, 0.125, -0.875, 2, 0.1875, -0.875, 2, 0.125, -0.875, 0, 0.125, -0.875, 0, 0.1875, -0.875, 2, 0.1875, -1, 0, -0.1875, -0.875, 0, 0.1875, -0.875, 0, -0.1875, -1, 0, -0.1875, -1, 0, 0.1875, -0.875, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, -0.1875, -0.875, 2, 0.1875, -1, 2, 0.1875, -1, 2, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -1, 0, -0.1875, -0.875, 0, -0.1875, -1, 0, 0.1875, -0.875, 2, 0.1875, -0.875, 0, 0.1875, -1, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, 0.1875, 1, 0, -0.1875, 1, 2, 0.1875, 1, 2, -0.1875, 1, 0, -0.1875, 1, 0, 0.1875, 1, 2, 0.1875, 0.875, 2, -0.1875, 1, 0, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 0.875, 0, -0.1875, 1, 0, -0.1875, 0.875, 0, 0.1875, 1, 2, 0.1875, 1, 0, 0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, 0.1875)
+backface_collision = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbrp0"]
+cull_mode = 2
+albedo_texture = ExtResource("39_f6n0o")
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u4dha"]
+_surfaces = [{
+"aabb": AABB(-0.4, 2.005, -0.4, 16.8, 2.7199998, 14.799999),
+"attribute_data": PackedByteArray("zcxMvs3MTL4AAIBAZmbmQAAAgEDNzEy+zcxMvs3MTL7NzEy+ZmbmQAAAgEBmZuZAAACAQM3MTL4zMwNBZmbmQDMzA0HNzEy+AACAQM3MTL4AAIBAZmbmQDMzA0FmZuZAzcxMvo/CdTMAAIBAehSuPzMzA0GPwnUzMzMDQY/CdTMAAIBAehSuP83MTL6PwnUz"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_jbrp0"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("zczMvuxRAEDNzMy+AAAAQTMzl0BmZmZBAAAAQTMzl0DNzMy+zczMvuxRAEDNzMy+zczMvuxRAEBmZmZBAAAAQTMzl0BmZmZBAAAAQTMzl0DNzMy+MzODQexRAEBmZmZBMzODQexRAEDNzMy+AAAAQTMzl0DNzMy+AAAAQTMzl0BmZmZBMzODQexRAEBmZmZBzczMvuxRAEDNzMy+AAAAQTMzl0DNzMy+MzODQexRAEDNzMy+MzODQexRAEBmZmZBAAAAQTMzl0BmZmZBzczMvuxRAEBmZmZBaJbJOg4jLqI5qHkJyjCAtoZ2OShxAcyuaJbJOg4jLqIZynMR+WXQozmoeQnKMIC2hnY5KHEBzK42RWkW9C6lwYtuGkrhKa+RhnY5KHEBzK45qHkJyjCAtjZFaRb0LqXBaJbJOg4jLqKGdjkocQHMrotuGkrhKa+RNkVpFvQupcE5qHkJyjCAthnKcxH5ZdCj")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vq1vw"]
+data = PackedVector3Array(-0.39999998, 2.0049999, -0.39999998, 8, 4.725, 14.4, 8, 4.725, -0.39999998, -0.39999998, 2.0049999, -0.39999998, -0.39999998, 2.0049999, 14.4, 8, 4.725, 14.4, 8, 4.725, -0.39999998, 16.4, 2.0049999, 14.4, 16.4, 2.0049999, -0.39999998, 8, 4.725, -0.39999998, 8, 4.725, 14.4, 16.4, 2.0049999, 14.4, -0.39999998, 2.0049999, -0.39999998, 8, 4.725, -0.39999998, 16.4, 2.0049999, -0.39999998, 16.4, 2.0049999, 14.4, 8, 4.725, 14.4, -0.39999998, 2.0049999, 14.4)
+backface_collision = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kg1wx"]
+size = Vector3(16, 4, 14)
+
+[node name="MapleFamilyHouse" type="Node3D" unique_id=621777072]
+script = ExtResource("1_usxma")
+building_title = "Maple Family House"
+metadata/building_id = "maple_family_house"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="Floors" type="Node3D" parent="." unique_id=389181873]
+
+[node name="Level0" type="Node3D" parent="Floors" unique_id=919839451]
+
+[node name="Foundation" type="Node3D" parent="Floors/Level0" unique_id=1460224008]
+
+[node name="FloorWood_001" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1580776606 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_002" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1369478552 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_003" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1530003999 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_004" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1421281903 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_005" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1009768672 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_006" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1919912648 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 11)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_007" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1826375585 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 13)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_008" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1390071062 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_009" type="Node3D" parent="Floors/Level0/Foundation" unique_id=608608126 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_010" type="Node3D" parent="Floors/Level0/Foundation" unique_id=269872804 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_011" type="Node3D" parent="Floors/Level0/Foundation" unique_id=2077764622 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_012" type="Node3D" parent="Floors/Level0/Foundation" unique_id=82310640 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_013" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1264766875 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 11)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_014" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1312738117 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 13)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_015" type="Node3D" parent="Floors/Level0/Foundation" unique_id=943687582 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_016" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1063599317 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_017" type="Node3D" parent="Floors/Level0/Foundation" unique_id=314702929 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_018" type="Node3D" parent="Floors/Level0/Foundation" unique_id=452070188 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_019" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1292261274 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_020" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1490144494 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 11)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_021" type="Node3D" parent="Floors/Level0/Foundation" unique_id=551376387 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 13)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_022" type="Node3D" parent="Floors/Level0/Foundation" unique_id=196991583 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_023" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1709961934 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_024" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1065762332 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_025" type="Node3D" parent="Floors/Level0/Foundation" unique_id=870368974 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_026" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1931023415 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_027" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1995992851 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 11)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_028" type="Node3D" parent="Floors/Level0/Foundation" unique_id=918407817 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 13)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_029" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1311381933 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_030" type="Node3D" parent="Floors/Level0/Foundation" unique_id=296966468 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_031" type="Node3D" parent="Floors/Level0/Foundation" unique_id=764028181 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_032" type="Node3D" parent="Floors/Level0/Foundation" unique_id=577421722 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_033" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1712809658 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_034" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1427605493 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 11)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_035" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1890790989 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 13)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_036" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1191289649 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 1)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_037" type="Node3D" parent="Floors/Level0/Foundation" unique_id=555442234 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 3)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_038" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1064537248 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 5)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_039" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1167960566 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 7)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_040" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1589136013 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 9)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_041" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1145146918 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 11)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_042" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1609092015 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 13)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_043" type="Node3D" parent="Floors/Level0/Foundation" unique_id=2070204168 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 1)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_044" type="Node3D" parent="Floors/Level0/Foundation" unique_id=278180305 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 3)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_045" type="Node3D" parent="Floors/Level0/Foundation" unique_id=9045409 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 5)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_046" type="Node3D" parent="Floors/Level0/Foundation" unique_id=864576797 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 7)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_047" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1551444952 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 9)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_048" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1012137205 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 11)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_049" type="Node3D" parent="Floors/Level0/Foundation" unique_id=121869813 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 13)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_050" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1055914893 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 1)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_051" type="Node3D" parent="Floors/Level0/Foundation" unique_id=309821469 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 3)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_052" type="Node3D" parent="Floors/Level0/Foundation" unique_id=384972096 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 5)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_053" type="Node3D" parent="Floors/Level0/Foundation" unique_id=717358072 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 7)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_054" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1433982982 instance=ExtResource("4_3455p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 9)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_055" type="Node3D" parent="Floors/Level0/Foundation" unique_id=101108980 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 11)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorCarpet_056" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1952014067 instance=ExtResource("3_8kfxo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 13)
+metadata/asset_id = "floor_carpet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Walls" type="Node3D" parent="Floors/Level0" unique_id=1889390447]
+
+[node name="WallPlasterWindow_057" type="Node3D" parent="Floors/Level0/Walls" unique_id=797928288 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_058" type="Node3D" parent="Floors/Level0/Walls" unique_id=1537778365 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_059" type="Node3D" parent="Floors/Level0/Walls" unique_id=1069847191 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_060" type="Node3D" parent="Floors/Level0/Walls" unique_id=854633572 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 14.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_061" type="Node3D" parent="Floors/Level0/Walls" unique_id=1749062568 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -0.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_062" type="Node3D" parent="Floors/Level0/Walls" unique_id=180594430 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_063" type="Node3D" parent="Floors/Level0/Walls" unique_id=1147785438 instance=ExtResource("7_7akab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -0.125)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallPlasterSolid_064" type="Node3D" parent="Floors/Level0/Walls" unique_id=949143879 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 14.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_065" type="Node3D" parent="Floors/Level0/Walls" unique_id=546377646 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -0.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_066" type="Node3D" parent="Floors/Level0/Walls" unique_id=1222863553 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_067" type="Node3D" parent="Floors/Level0/Walls" unique_id=90223171 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -0.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_068" type="Node3D" parent="Floors/Level0/Walls" unique_id=1477224764 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 14.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_069" type="Node3D" parent="Floors/Level0/Walls" unique_id=963536524 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -0.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_070" type="Node3D" parent="Floors/Level0/Walls" unique_id=585647021 instance=ExtResource("5_yeysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 14.125)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_071" type="Node3D" parent="Floors/Level0/Walls" unique_id=1524459578 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -0.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_072" type="Node3D" parent="Floors/Level0/Walls" unique_id=63006643 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 14.125)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_073" type="Node3D" parent="Floors/Level0/Walls" unique_id=2045449105 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 1)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_074" type="Node3D" parent="Floors/Level0/Walls" unique_id=19767152 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 1)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_075" type="Node3D" parent="Floors/Level0/Walls" unique_id=1729662538 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 3)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_076" type="Node3D" parent="Floors/Level0/Walls" unique_id=1135949249 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 3)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_077" type="Node3D" parent="Floors/Level0/Walls" unique_id=328892573 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 5)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_078" type="Node3D" parent="Floors/Level0/Walls" unique_id=206060682 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 5)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_079" type="Node3D" parent="Floors/Level0/Walls" unique_id=852050280 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 7)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_080" type="Node3D" parent="Floors/Level0/Walls" unique_id=1026420871 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 7)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_081" type="Node3D" parent="Floors/Level0/Walls" unique_id=226045762 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 9)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_082" type="Node3D" parent="Floors/Level0/Walls" unique_id=1697090430 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 9)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_083" type="Node3D" parent="Floors/Level0/Walls" unique_id=1167069237 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 11)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_084" type="Node3D" parent="Floors/Level0/Walls" unique_id=583092389 instance=ExtResource("6_ljb0m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 11)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_085" type="Node3D" parent="Floors/Level0/Walls" unique_id=1067626912 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 13)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterWindow_086" type="Node3D" parent="Floors/Level0/Walls" unique_id=318655845 instance=ExtResource("5_yeysk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 13)
+metadata/asset_id = "wall_plaster_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_097" type="Node3D" parent="Floors/Level0/Walls" unique_id=1478508559 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 1)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_098" type="Node3D" parent="Floors/Level0/Walls" unique_id=188283816 instance=ExtResource("7_7akab")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 3)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallWoodSolid_099" type="Node3D" parent="Floors/Level0/Walls" unique_id=1292822730 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 5)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_100" type="Node3D" parent="Floors/Level0/Walls" unique_id=2114974515 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 7)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_101" type="Node3D" parent="Floors/Level0/Walls" unique_id=1772317348 instance=ExtResource("7_7akab")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 9)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallWoodSolid_102" type="Node3D" parent="Floors/Level0/Walls" unique_id=359131681 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 11)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_103" type="Node3D" parent="Floors/Level0/Walls" unique_id=759086557 instance=ExtResource("7_7akab")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10, 0, 13)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallWoodSolid_104" type="Node3D" parent="Floors/Level0/Walls" unique_id=852425087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 6)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+metadata/module_source = "res://assets/models/city/scenes/wall_wood_solid.tscn"
+
+[node name="Body" type="StaticBody3D" parent="Floors/Level0/Walls/WallWoodSolid_104" unique_id=1369182594]
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body" unique_id=1356261957]
+
+[node name="wall2" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body/Model" unique_id=1122355845]
+
+[node name="wall" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body/Model/wall2" unique_id=841427629]
+mesh = SubResource("ArrayMesh_yeysk")
+
+[node name="post3" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body/Model" unique_id=1185223662]
+
+[node name="post" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body/Model/post3" unique_id=434109689]
+mesh = SubResource("ArrayMesh_ljb0m")
+
+[node name="post2" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body/Model/post3" unique_id=867827457]
+mesh = SubResource("ArrayMesh_q8d68")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/WallWoodSolid_104/Body" unique_id=1945431215]
+shape = SubResource("ConcavePolygonShape3D_7akab")
+
+[node name="WallWoodSolid_105" type="Node3D" parent="Floors/Level0/Walls" unique_id=1020971354 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 6)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_106" type="Node3D" parent="Floors/Level0/Walls" unique_id=376082301 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 6)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_107" type="Node3D" parent="Floors/Level0/Walls" unique_id=2083503291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+metadata/module_source = "res://assets/models/city/scenes/wall_wood_solid.tscn"
+
+[node name="Body" type="StaticBody3D" parent="Floors/Level0/Walls/WallWoodSolid_107" unique_id=1040029297]
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body" unique_id=933850330]
+
+[node name="wall2" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body/Model" unique_id=1047028267]
+
+[node name="wall" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body/Model/wall2" unique_id=1765515546]
+mesh = SubResource("ArrayMesh_0wx4q")
+
+[node name="post3" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body/Model" unique_id=234830209]
+
+[node name="post" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body/Model/post3" unique_id=1095768928]
+mesh = SubResource("ArrayMesh_bowl8")
+
+[node name="post2" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body/Model/post3" unique_id=1792274645]
+mesh = SubResource("ArrayMesh_q8d68")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/WallWoodSolid_107/Body" unique_id=1154103973]
+shape = SubResource("ConcavePolygonShape3D_78k3k")
+
+[node name="WallWoodSolid_108" type="Node3D" parent="Floors/Level0/Walls" unique_id=1010057194 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_109" type="Node3D" parent="Floors/Level0/Walls" unique_id=585122222 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_110" type="Node3D" parent="Floors/Level0/Walls" unique_id=1576648677 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_111" type="Node3D" parent="Floors/Level0/Walls" unique_id=1728275280 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_112" type="Node3D" parent="Floors/Level0/Walls" unique_id=341807018 instance=ExtResource("8_0wx4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_113" type="Node3D" parent="Floors/Level0/Walls" unique_id=1734883487 instance=ExtResource("7_7akab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 10)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallWoodSolid_114" type="Node3D" parent="Floors/Level0/Walls" unique_id=1200224351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+metadata/module_source = "res://assets/models/city/scenes/wall_wood_solid.tscn"
+
+[node name="Body" type="StaticBody3D" parent="Floors/Level0/Walls/WallWoodSolid_114" unique_id=258148588]
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body" unique_id=1268259762]
+
+[node name="wall2" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body/Model" unique_id=1471877116]
+
+[node name="wall" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body/Model/wall2" unique_id=1295212061]
+mesh = SubResource("ArrayMesh_xp3ur")
+
+[node name="post3" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body/Model" unique_id=790359999]
+
+[node name="post" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body/Model/post3" unique_id=1427280221]
+mesh = SubResource("ArrayMesh_wtuwu")
+
+[node name="post2" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body/Model/post3" unique_id=1094372633]
+mesh = SubResource("ArrayMesh_ks6ej")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/WallWoodSolid_114/Body" unique_id=407965620]
+shape = SubResource("ConcavePolygonShape3D_uyn1m")
+
+[node name="Furniture" type="Node3D" parent="Floors/Level0" unique_id=1619948887]
+
+[node name="EntryMat_087" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1457830225 instance=ExtResource("9_bowl8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.005, 0.8)
+metadata/asset_id = "entry_mat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="CoatRack_096" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1167760884 instance=ExtResource("10_78k3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1.5)
+metadata/asset_id = "coat_rack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sofa_115" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1062680898 instance=ExtResource("11_xp3ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 5.3)
+metadata/asset_id = "sofa"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Rug_116" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1186094838 instance=ExtResource("12_ks6ej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.004, 3.3)
+metadata/asset_id = "rug"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="CoffeeTable_117" type="Node3D" parent="Floors/Level0/Furniture" unique_id=140159683 instance=ExtResource("13_uyn1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.023, 3.3)
+metadata/asset_id = "coffee_table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_118" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1472934980 instance=ExtResource("14_ebp12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.9, 3.3)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="TvConsole_119" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1774499840 instance=ExtResource("15_apmo1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8, 0, 4)
+metadata/asset_id = "tv_console"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_120" type="Node3D" parent="Floors/Level0/Furniture" unique_id=613271705 instance=ExtResource("16_abf28")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 7)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_121" type="Node3D" parent="Floors/Level0/Furniture" unique_id=334345843 instance=ExtResource("14_ebp12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.065, 7)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_122" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1572588086 instance=ExtResource("17_fec3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5.65)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_123" type="Node3D" parent="Floors/Level0/Furniture" unique_id=130213434 instance=ExtResource("17_fec3i")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7, 0, 8.35)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Fridge_124" type="Node3D" parent="Floors/Level0/Furniture" unique_id=839006835 instance=ExtResource("18_3r283")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 13.1)
+metadata/asset_id = "fridge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="SinkCounter_125" type="Node3D" parent="Floors/Level0/Furniture" unique_id=769064522 instance=ExtResource("19_pyx0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 13.1)
+metadata/asset_id = "sink_counter"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Stove_126" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1101854014 instance=ExtResource("20_gykts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2, 0, 13.1)
+metadata/asset_id = "stove"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Bed_128" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1360583284 instance=ExtResource("21_e62r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 3)
+metadata/asset_id = "bed"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Nightstand_129" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1593711571 instance=ExtResource("22_fk8c5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6, 0, 3.9)
+metadata/asset_id = "nightstand"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Wardrobe_130" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1483934833 instance=ExtResource("23_ojwdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 0, 5.2)
+metadata/asset_id = "wardrobe"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Bed_131" type="Node3D" parent="Floors/Level0/Furniture" unique_id=33578791 instance=ExtResource("21_e62r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 12)
+metadata/asset_id = "bed"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Nightstand_132" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1949742415 instance=ExtResource("22_fk8c5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6, 0, 12.9)
+metadata/asset_id = "nightstand"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Wardrobe_133" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1683304274 instance=ExtResource("23_ojwdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 0, 10.7)
+metadata/asset_id = "wardrobe"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Toilet_134" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1353694959 instance=ExtResource("24_a48f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 7.1)
+metadata/asset_id = "toilet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="BathSink_135" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1340248202 instance=ExtResource("25_hpyor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 7.1)
+metadata/asset_id = "bath_sink"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Bathtub_137" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1927420971 instance=ExtResource("26_u65yo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 8)
+metadata/asset_id = "bathtub"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Desk_138" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1042788284 instance=ExtResource("27_slbil")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 8.8)
+metadata/asset_id = "desk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DeskItems_139" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1540578202 instance=ExtResource("28_nougw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.065, 8.8)
+metadata/asset_id = "desk_items"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Bookcase_140" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1835669070 instance=ExtResource("29_4gabv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8, 0, 7)
+metadata/asset_id = "bookcase"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="LaundryBasket_141" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1728211422 instance=ExtResource("30_418bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 9.3)
+metadata/asset_id = "laundry_basket"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Bench_154" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1775701866 instance=ExtResource("31_bc34u")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -3)
+metadata/asset_id = "bench"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="GardenTools_155" type="Node3D" parent="Floors/Level0/Furniture" unique_id=2130965434 instance=ExtResource("32_ofgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8, 0, -0.5)
+metadata/asset_id = "garden_tools"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Exterior" type="Node3D" parent="Floors/Level0" unique_id=213420878]
+
+[node name="Sidewalk_088" type="Node3D" parent="Floors/Level0/Exterior" unique_id=299179058 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_089" type="Node3D" parent="Floors/Level0/Exterior" unique_id=684855674 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_090" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1197935425 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_091" type="Node3D" parent="Floors/Level0/Exterior" unique_id=87970919 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_092" type="Node3D" parent="Floors/Level0/Exterior" unique_id=93834095 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_093" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1982572163 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_094" type="Node3D" parent="Floors/Level0/Exterior" unique_id=11276677 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_095" type="Node3D" parent="Floors/Level0/Exterior" unique_id=130021070 instance=ExtResource("33_budv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_142" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1750224641 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ShopAwning_143" type="Node3D" parent="Floors/Level0/Exterior" unique_id=420231335 instance=ExtResource("34_b6m7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.15, -2.7)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_144" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1041536175 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ShopAwning_145" type="Node3D" parent="Floors/Level0/Exterior" unique_id=2105513630 instance=ExtResource("34_b6m7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.15, -2.7)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_146" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1130014137 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, -3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ShopAwning_147" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1072731354 instance=ExtResource("34_b6m7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.15, -2.7)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_148" type="Node3D" parent="Floors/Level0/Exterior" unique_id=615246275 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, -3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ShopAwning_149" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1134475590 instance=ExtResource("34_b6m7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.15, -2.7)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_150" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1480001295 instance=ExtResource("2_7oj6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, -3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ShopAwning_151" type="Node3D" parent="Floors/Level0/Exterior" unique_id=585745777 instance=ExtResource("34_b6m7v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.15, -2.7)
+metadata/asset_id = "shop_awning"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Pillar_152" type="Node3D" parent="Floors/Level0/Exterior" unique_id=362460044 instance=ExtResource("35_spkfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3.7)
+metadata/asset_id = "pillar"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Pillar_153" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1144273532 instance=ExtResource("35_spkfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -3.7)
+metadata/asset_id = "pillar"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Details" type="Node3D" parent="Floors/Level0" unique_id=1954771089]
+
+[node name="WallCabinet_127" type="Node3D" parent="Floors/Level0/Details" unique_id=316937221 instance=ExtResource("36_2gyap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 1.3, 13.1)
+metadata/asset_id = "wall_cabinet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="BathMirror_136" type="Node3D" parent="Floors/Level0/Details" unique_id=370350550 instance=ExtResource("37_6slax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.2, 7.55)
+metadata/asset_id = "bath_mirror"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FacadeSign155" type="Label3D" parent="Floors/Level0" unique_id=618404305]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7, 2.35, -0.46)
+pixel_size = 0.014
+texture_filter = 0
+modulate = Color(0.87058824, 0.827451, 0.6862745, 1)
+outline_modulate = Color(0.16078432, 0.18039216, 0.14509805, 1)
+text = "MAPLE HOUSE"
+font = ExtResource("38_bxly8")
+outline_size = 8
+
+[node name="Rooms" type="Node3D" parent="." unique_id=933431569]
+
+[node name="Lounge" type="Marker3D" parent="Rooms" unique_id=143656405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+metadata/floor = 0.0
+
+[node name="Dining room" type="Marker3D" parent="Rooms" unique_id=1629365618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5)
+metadata/floor = 0.0
+
+[node name="Kitchen" type="Marker3D" parent="Rooms" unique_id=1038892683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 11.5)
+metadata/floor = 0.0
+
+[node name="Main bedroom" type="Marker3D" parent="Rooms" unique_id=810198466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 0, 2)
+metadata/floor = 0.0
+
+[node name="Bathroom" type="Marker3D" parent="Rooms" unique_id=380006847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 9)
+metadata/floor = 0.0
+
+[node name="Second bedroom" type="Marker3D" parent="Rooms" unique_id=1496539675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 0, 12.5)
+metadata/floor = 0.0
+
+[node name="Entrance" type="Marker3D" parent="." unique_id=1564858389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2.125)
+
+[node name="Roof" type="Node3D" parent="." unique_id=1767865517]
+
+[node name="PitchedRoof" type="StaticBody3D" parent="Roof" unique_id=2082186856]
+
+[node name="@MeshInstance3D@9" type="MeshInstance3D" parent="Roof/PitchedRoof" unique_id=595574004]
+mesh = SubResource("ArrayMesh_u4dha")
+
+[node name="@CollisionShape3D@10" type="CollisionShape3D" parent="Roof/PitchedRoof" unique_id=613564529]
+shape = SubResource("ConcavePolygonShape3D_vq1vw")
+
+[node name="InteriorArea" type="Area3D" parent="." unique_id=712667185]
+collision_layer = 0
+
+[node name="InteriorBounds" type="CollisionShape3D" parent="InteriorArea" unique_id=690119802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 7)
+shape = SubResource("BoxShape3D_kg1wx")

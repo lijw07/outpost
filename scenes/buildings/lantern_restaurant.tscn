@@ -1,0 +1,2693 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/buildings/modular_building.gd" id="1_owswc"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_wood_block.tscn" id="2_5o65n"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_bath_tile_block.tscn" id="3_ldpte"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_tile_block.tscn" id="4_stecm"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_brick_red_window.tscn" id="5_k2opv"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_brick_red_solid.tscn" id="6_suva2"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/doorway_wood.tscn" id="7_8t12d"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_plaster_solid.tscn" id="8_q0n4t"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_wood_solid.tscn" id="9_4w3pt"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/wood.png" id="9_k2opv"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/entry_mat.tscn" id="10_k8yxd"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/wood_dark.png" id="10_suva2"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/metal.png" id="11_8t12d"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/coat_rack.tscn" id="11_uej1k"]
+[ext_resource type="Texture2D" path="res://assets/models/city/textures/brass.png" id="12_q0n4t"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/table.tscn" id="12_ri0lb"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/dishes.tscn" id="13_o0ipe"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/chair.tscn" id="14_v62t2"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/reception_desk.tscn" id="15_1gx5r"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/shelf.tscn" id="16_mfil7"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/fridge.tscn" id="17_nk2pn"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/sink_counter.tscn" id="18_bi2sh"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/stove.tscn" id="19_aphbl"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/workbench.tscn" id="20_c1m3j"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/storage_rack.tscn" id="21_4g1t4"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/toilet.tscn" id="22_xylsy"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bath_sink.tscn" id="23_ax1ib"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/sidewalk_block.tscn" id="24_wm8ct"]
+[ext_resource type="PackedScene" path="res://assets/models/blocks/scenes/floor_shop_tile_block.tscn" id="25_1eprv"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/fence.tscn" id="26_588ak"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/street_lamp.tscn" id="27_4moa1"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/wall_cabinet.tscn" id="28_pbykx"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/bath_mirror.tscn" id="29_xb1np"]
+[ext_resource type="FontFile" path="res://assets/ui/font/outpost_pixel.ttf" id="30_h1c34"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/roof_edge.tscn" id="31_nw2b8"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/roof_flat.tscn" id="32_um5i2"]
+[ext_resource type="PackedScene" path="res://assets/models/city/scenes/roof_vent.tscn" id="33_2t5qm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpymb"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_k2opv")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_75rjd"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.125, 0.375, 2, 0.25),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAACAAUAAAAFAAYAAAAHAAEABwAAAAgAAQAHAAkAAQAJAAoABwAIAAsACwAIAAwACwAMAA0A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAAA+AACAvwAAAEAAAAC+AACAvwAAAEAAAAA+AAAgvwAAAEAAAAC+AAAgvwAAAEAAAAA+AABAvwAAAEAAAAA+AABAvwAAAAAAAAA+AACAvwAAAAAAAAC+AAAgvwAAAAAAAAA+AABAvwAAAAAAAAC+AABAvwAAAEAAAAC+AAAgvwAAAAAAAAC+AAAgvwAA7D8AAAA+AAAgvwAA7D8AAAC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yffbd"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.125, 0.375, 2, 0.25),
+"attribute_data": PackedByteArray("AAAAPgAAgD8AAAAAAAAAAAAAAD4AAAAAAAAAAAAAgD8AAAAAAACAPwAAAD4AAKA9AAAAAAAAoD0AAAA+AACAPwAAAAAAAAAAAABAPgAAAD4AAEA+AAAAAAAAAAAAAAA+AAAAAAAAAD4AAEA+AAAAAAAAQD4AAAA+AAAAAAAAAAAAAAAAAAAAAAAAAD4AAIA/AAAAPgAAAAAAAAAAAACAPwAAAAAAAIA/AAAAPgAAAAAAAAA+AACAPwAAAAAAAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAAA+AACAvwAAAEAAAAC+AACAvwAAAEAAAAA+AACAvwAAAAAAAAC+AAAgvwAAAAAAAAC+AAAgvwAA7D8AAAA+AAAgvwAA7D8AAAC+AAAgvwAAAAAAAAA+AACAvwAAAAAAAAC+AAAgvwAAAAAAAAA+AAAgvwAAAAAAAAC+AACAvwAAAAAAAAA+AACAvwAAAEAAAAA+AAAgvwAAAEAAAAC+AAAgvwAAAEAAAAA+AACAvwAAAEAAAAC+AACAvwAAAEAAAAC+AABAvwAAAAAAAAC+AABAvwAAAEAAAAC+AACAvwAAAAAAAAC+AACAvwAAAAAAAAA+AABAvwAAAEAAAAA+AABAvwAAAAAAAAA+AACAvwAAAEAAAAA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_75rjd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b05fc"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("10_suva2")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fc4gf"]
+_surfaces = [{
+"aabb": AABB(-0.75, 0, -0.1875, 0.125, 1.875, 0.0625),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQAAQADAAUAAwAEAAUAAQAFAAYABQAEAAcABQAHAAYA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AABAvwAAAAAAAAC+AABAvwAA8D8AAEC+AABAvwAA8D8AAAC+AABAvwAAAAAAAEC+AAAgvwAAAAAAAAC+AAAgvwAAAAAAAEC+AAAgvwAA8D8AAEC+AAAgvwAA8D8AAAC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mq8al"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.75, 0, -0.1875, 0.125, 1.875, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAcD8AAAAAAAAAAAAAAD0AAAAAAAAAAAAAcD8AAAAAAABwPwAAAD0AAAAAAAAAAAAAAAAAAAA9AABwPwAAAAAAAAAAAACAPQAAAD0AAIA9AAAAAAAAAAAAAAA9AAAAAAAAAAAAAIA9AABwPwAAgD0AAAAAAAAAAAAAcD8="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AABAvwAAAAAAAAC+AABAvwAA8D8AAEC+AABAvwAA8D8AAAC+AABAvwAAAAAAAEC+AAAgvwAAAAAAAEC+AAAgvwAA8D8AAAC+AAAgvwAA8D8AAEC+AAAgvwAAAAAAAAC+AABAvwAAAAAAAEC+AAAgvwAAAAAAAAC+AAAgvwAAAAAAAEC+AABAvwAAAAAAAAC+AABAvwAA8D8AAEC+AAAgvwAAAAAAAEC+AAAgvwAA8D8AAEC+AABAvwAAAAAAAEC+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//////////z//////////P/////////8//////////z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fc4gf")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c3lc8"]
+_surfaces = [{
+"aabb": AABB(-0.75, 0, 0.125, 0.125, 1.875, 0.0625),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAwAAAAUAAAAEAAUAAwAFAAYABgAFAAQABgAEAAcA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AABAvwAAAAAAAEA+AABAvwAA8D8AAAA+AABAvwAA8D8AAEA+AABAvwAAAAAAAAA+AAAgvwAA8D8AAEA+AAAgvwAAAAAAAEA+AAAgvwAAAAAAAAA+AAAgvwAA8D8AAAA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yiy58"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.75, 0, 0.125, 0.125, 1.875, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAcD8AAAAAAAAAAAAAAD0AAAAAAAAAAAAAcD8AAAAAAABwPwAAAD0AAAAAAAAAAAAAAAAAAAA9AABwPwAAAAAAAAAAAACAPQAAAD0AAIA9AAAAAAAAAAAAAAA9AAAAAAAAcD8AAIA9AAAAAAAAgD0AAHA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AABAvwAAAAAAAEA+AABAvwAA8D8AAAA+AABAvwAA8D8AAEA+AABAvwAAAAAAAAA+AAAgvwAAAAAAAAA+AAAgvwAA8D8AAEA+AAAgvwAA8D8AAAA+AAAgvwAAAAAAAEA+AABAvwAAAAAAAAA+AAAgvwAAAAAAAEA+AAAgvwAAAAAAAAA+AABAvwAAAAAAAEA+AABAvwAAAAAAAEA+AAAgvwAA8D8AAEA+AAAgvwAAAAAAAEA+AABAvwAA8D8AAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c3lc8")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4w3pt"]
+_surfaces = [{
+"aabb": AABB(0.625, 0, -0.125, 0.375, 2, 0.25),
+"attribute_data": PackedByteArray("AAAAPgAAgD8AAAAAAACgPQAAAD4AAKA9AAAAPgAAgD8AAAAAAACAPwAAAAAAAKA9AAAAAAAAgD8AAAA+AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAA+AACAPwAAAD4AAAAAAAAAAAAAAACxE/s9dmKnPQAAAD4AAIA9AAAAAAAAAAAAAAA+AACAPQAAAD4AAAAAsRP7PXZipz0AAAA+q6qqPQAAAD4AAIA9AAAAAAAAAAAAAAAAAACAPQAAwD0AAIA9AAAAAAAAgD0AAAAAAAAAPgAAAD4AAAA+AAAAAAAAgD0AAAA+AAAAPgAAAD6rqqo9AAAAAAAAgD0AAAA+q6qqPQAAwD0AAIA9AAAAAAAAAD4AAMA9AACAPQAAAD4AAIA9AAAAAAAAAD4AAAA+AACAPQAAAD4AAAA+AADAPQAAgD0AAAA+q6oqPQAAAD4AAIA9AAAAAAAAAD4AAAAAAACAPQAAwD0AAIA9AAAAAAAAgD0AAAAAAAAAAAAAAD4AAAAAAAAAAAAAgD0AAAA+AAAAAAAAAD6rqio9AAAAAAAAgD0AAAA+q6oqPQAAwD0AAIA9AACAPQAAAAAAAEA+AACAPwAAQD4AAAAAAACAPQAAAAAAAIA9AACAPwAAQD4AAIA/AACAPQAAgD8AAEA+AAAAAAAAQD4AAIA/AACAPQAAgD8AAIA9AAAAAAAAQD4AAAAA"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_vpymb"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 66,
+"vertex_data": PackedByteArray("AAAgPwAAAAAAAAA+AAAgPwAA7D8AAAC+AAAgPwAA7D8AAAA+AAAgPwAAAAAAAAA+AAAgPwAAAAAAAAC+AAAgPwAA7D8AAAC+AACAPwAAAADg//+9AACAPwAAAEAAAAA+AACAPwAAAEDg//+9AACAPwAAAADg//+9AACAPwAAAAAAAAA+AACAPwAAAEAAAAA+AAAgPwAAAAAAAAC+8MRePwAAAAAAih09AABgPwAAAAAAAIA0AAAgPwAAAAAAAAC+AABgPwAAAAAAAIA0AABgPwAAAADg//+98MRePwAAAAAAih09AABgPwAAAACAqio9AABgPwAAAAAAAIA0AAAgPwAAAAAAAAC+AAAgPwAAAAAAAAAAAABQPwAAAAAAAAAAAAAgPwAAAAAAAAAAAAAgPwAAAAAAAAA+AABgPwAAAAAAAAA+AAAgPwAAAAAAAAAAAABgPwAAAAAAAAA+AABgPwAAAACAqio9AAAgPwAAAAAAAAAAAABgPwAAAACAqio9AABQPwAAAAAAAAAAAAAgPwAAAEAAAAA+AABQPwAAAEAAAAAAAABgPwAAAEAAAIA0AAAgPwAAAEAAAAA+AABgPwAAAEAAAIA0AABgPwAAAEAAAAA+AABQPwAAAEAAAAAAAABgPwAAAECAqiq9AABgPwAAAEAAAIA0AAAgPwAAAEAAAAA+AAAgPwAAAEAAAAAAAABQPwAAAEAAAAAAAAAgPwAAAEAAAAAAAAAgPwAAAEAAAAC+AABgPwAAAEDg//+9AAAgPwAAAEAAAAAAAABgPwAAAEDg//+9AABgPwAAAECAqiq9AAAgPwAAAEAAAAAAAABgPwAAAECAqiq9AABQPwAAAEAAAAAAAABAPwAAAEAAAAC+AACAPwAAAADg//+9AACAPwAAAEDg//+9AABAPwAAAEAAAAC+AABAPwAAAAAAAAC+AACAPwAAAADg//+9AABAPwAAAAAAAAA+AACAPwAAAEAAAAA+AACAPwAAAAAAAAA+AABAPwAAAAAAAAA+AABAPwAAAEAAAAA+AACAPwAAAEAAAAA+qipUVbZtSNIAAP9//3//vwAA/3//f/+/qipUVbZtSNL/X/8fYifEzgAA/3//f/+/////v6qqqqr/v/9/VFWpqv///7+qqqqq////v6qqqqr/v/9/VFWpqv+//39UVamq/1//H2InxM7/fwAAAAD/v/9/AAAAAP+//1//H2InxM7/fwAAAAD/v/9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//1//H2InxM7/fwAAAAD/v/9/AAAAAP+//38AAAAA/7+qKlRVtm1I0v9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+////+//9/AID///+/qqqqqv///7+qqqqq///+//9/AID///7//38AgP///7+qqqqq/3//f/9/AID/v/9/VFWpqv+//39UVamq/3//f/9/AID/f/9//38AgP+//39UVamq")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_edk5r"]
+_surfaces = [{
+"aabb": AABB(0.625, 0, -0.1875, 0.125, 1.875, 0.0625),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQAAQADAAUAAwAEAAUAAQAFAAYABQAEAAcABQAHAAYA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPwAAAAAAAAC+AAAgPwAA8D8AAEC+AAAgPwAA8D8AAAC+AAAgPwAAAAAAAEC+AABAPwAAAAAAAAC+AABAPwAAAAAAAEC+AABAPwAA8D8AAEC+AABAPwAA8D8AAAC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bkh0y"]
+resource_name = "blockbench_export_mesh5"
+_surfaces = [{
+"aabb": AABB(0.625, 0, -0.1875, 0.125, 1.875, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAcD8AAAAAAAAAAAAAAD0AAAAAAAAAAAAAcD8AAAAAAABwPwAAAD0AAAAAAAAAAAAAAAAAAAA9AABwPwAAAAAAAAAAAACAPQAAAD0AAIA9AAAAAAAAAAAAAAA9AAAAAAAAAAAAAIA9AABwPwAAgD0AAAAAAAAAAAAAcD8="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAgPwAAAAAAAAC+AAAgPwAA8D8AAEC+AAAgPwAA8D8AAAC+AAAgPwAAAAAAAEC+AABAPwAAAAAAAEC+AABAPwAA8D8AAAC+AABAPwAA8D8AAEC+AABAPwAAAAAAAAC+AAAgPwAAAAAAAEC+AABAPwAAAAAAAAC+AABAPwAAAAAAAEC+AAAgPwAAAAAAAAC+AAAgPwAA8D8AAEC+AABAPwAAAAAAAEC+AABAPwAA8D8AAEC+AAAgPwAAAAAAAEC+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//////////z//////////P/////////8//////////z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_edk5r")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w2fth"]
+_surfaces = [{
+"aabb": AABB(0.625, 0, 0.125, 0.125, 1.875, 0.0625),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAwAAAAUAAAAEAAUAAwAFAAYABgAFAAQABgAEAAcA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPwAAAAAAAEA+AAAgPwAA8D8AAAA+AAAgPwAA8D8AAEA+AAAgPwAAAAAAAAA+AABAPwAA8D8AAEA+AABAPwAAAAAAAEA+AABAPwAAAAAAAAA+AABAPwAA8D8AAAA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_26j2h"]
+resource_name = "blockbench_export_mesh6"
+_surfaces = [{
+"aabb": AABB(0.625, 0, 0.125, 0.125, 1.875, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAcD8AAAAAAAAAAAAAAD0AAAAAAAAAAAAAcD8AAAAAAABwPwAAAD0AAAAAAAAAAAAAAAAAAAA9AABwPwAAAAAAAAAAAACAPQAAAD0AAIA9AAAAAAAAAAAAAAA9AAAAAAAAcD8AAIA9AAAAAAAAgD0AAHA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAgPwAAAAAAAEA+AAAgPwAA8D8AAAA+AAAgPwAA8D8AAEA+AAAgPwAAAAAAAAA+AABAPwAAAAAAAAA+AABAPwAA8D8AAEA+AABAPwAA8D8AAAA+AABAPwAAAAAAAEA+AAAgPwAAAAAAAAA+AABAPwAAAAAAAEA+AABAPwAAAAAAAAA+AAAgPwAAAAAAAEA+AAAgPwAAAAAAAEA+AABAPwAA8D8AAEA+AABAPwAAAAAAAEA+AAAgPwAA8D8AAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_w2fth")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qjss4"]
+_surfaces = [{
+"aabb": AABB(-0.625, 1.84375, -0.125, 1.25, 0.15625, 0.25),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIAAwACAAQAAAAFAAEABQAGAAEABQAHAAYACAAJAAoACAALAAkA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAgvwAA7D8AAAC+AAAgPwAA7D8AAAA+AAAgPwAA7D8AAAC+AAAgvwAA8D8AAAC+AAAgPwAA8D8AAAC+AAAgvwAA7D8AAAA+AAAgPwAA8D8AAAA+AAAgvwAA8D8AAAA+AAAgvwAAAEAAAAA+AAAgPwAAAEAAAAC+AAAgPwAAAEAAAAA+AAAgvwAAAEAAAAC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n64xk"]
+resource_name = "blockbench_export_mesh7"
+_surfaces = [{
+"aabb": AABB(-0.625, 1.84375, -0.125, 1.25, 0.15625, 0.25),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAACA/AAAAPgAAID8AAAAAAAAAAAAAAD4AAAAAAAAAPgAAID8AAAAAAAAgPwAAAD4AAAAAAAAAAAAAAAAAAIA9AAAgPwAAoD0AACA/AACAPQAAAAAAAKA9AAAAAAAAoD0AACA/AACAPQAAID8AAKA9AAAAAAAAgD0="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAgvwAA7D8AAAC+AAAgPwAA7D8AAAA+AAAgPwAA7D8AAAC+AAAgvwAA7D8AAAA+AAAgvwAAAEAAAAA+AAAgPwAAAEAAAAC+AAAgPwAAAEAAAAA+AAAgvwAAAEAAAAC+AAAgvwAA8D8AAAC+AAAgPwAA7D8AAAC+AAAgPwAA8D8AAAC+AAAgvwAA7D8AAAC+AAAgvwAA7D8AAAA+AAAgPwAA8D8AAAA+AAAgPwAA7D8AAAA+AAAgvwAA8D8AAAA+/38AAP///z//fwAA////P/9/AAD///8//38AAP///z//f///////v/9///////+//3///////7//f///////v/////////8//////////z//////////P/////////8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qjss4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2j1k4"]
+_surfaces = [{
+"aabb": AABB(-0.75, 1.875, -0.1875, 1.5, 0.125, 0.0625),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQADAAQAAgABAAUAAQAEAAUAAgAFAAYABAAGAAUABAAHAAYACAAJAAoACAALAAkA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AABAvwAA8D8AAAC+AABAvwAAAEAAAEC+AABAvwAAAEAAAAC+AABAvwAA8D8AAEC+AABAPwAA8D8AAEC+AABAPwAAAEAAAEC+AABAPwAAAEAAAAC+AABAPwAA8D8AAAC+AAAgvwAA8D8AAEC+AAAgPwAA8D8AAAC+AAAgPwAA8D8AAEC+AAAgvwAA8D8AAAC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n2pkr"]
+resource_name = "blockbench_export_mesh8"
+_surfaces = [{
+"aabb": AABB(-0.75, 1.875, -0.1875, 1.5, 0.125, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAgD0AAAAAAAAAAAAAAD0AAAAAAAAAAAAAgD0AAAAAAACAPQAAAD0AAAAAAAAAAAAAAAAAAAA9AACAPQAAgD0AAAAAAAAwPwAAAD0AADA/AAAAAAAAgD0AAAA9AAAAAAAAAD0AAEA/AAAAAAAAQD8AAAA9AAAAAAAAAAAAAAAAAAAAAAAAQD8AAIA9AABAPwAAAAAAAAAAAACAPQ=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AABAvwAA8D8AAAC+AABAvwAAAEAAAEC+AABAvwAAAEAAAAC+AABAvwAA8D8AAEC+AABAPwAA8D8AAEC+AABAPwAAAEAAAAC+AABAPwAAAEAAAEC+AABAPwAA8D8AAAC+AAAgvwAA8D8AAEC+AAAgPwAA8D8AAAC+AAAgPwAA8D8AAEC+AAAgvwAA8D8AAAC+AABAvwAAAEAAAAC+AABAPwAAAEAAAEC+AABAPwAAAEAAAAC+AABAvwAAAEAAAEC+AABAvwAAAEAAAEC+AABAPwAA8D8AAEC+AABAPwAAAEAAAEC+AABAvwAA8D8AAEC+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2j1k4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_74x2r"]
+_surfaces = [{
+"aabb": AABB(-0.75, 1.875, 0.125, 1.5, 0.125, 0.0625),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQAAAACAAUAAgAEAAUAAAAFAAYABwAFAAQABwAGAAUACAAJAAoACAALAAkA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AABAvwAA8D8AAEA+AABAvwAAAEAAAAA+AABAvwAAAEAAAEA+AABAvwAA8D8AAAA+AABAPwAAAEAAAAA+AABAPwAAAEAAAEA+AABAPwAA8D8AAEA+AABAPwAA8D8AAAA+AAAgvwAA8D8AAAA+AAAgPwAA8D8AAEA+AAAgPwAA8D8AAAA+AAAgvwAA8D8AAEA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sa6ul"]
+resource_name = "blockbench_export_mesh9"
+_surfaces = [{
+"aabb": AABB(-0.75, 1.875, 0.125, 1.5, 0.125, 0.0625),
+"attribute_data": PackedByteArray("AAAAPQAAgD0AAAAAAAAAAAAAAD0AAAAAAAAAAAAAgD0AAAAAAACAPQAAAD0AAAAAAAAAAAAAAAAAAAA9AACAPQAAgD0AAAAAAAAwPwAAAD0AADA/AAAAAAAAgD0AAAA9AAAAAAAAAD0AAEA/AAAAAAAAQD8AAAA9AAAAAAAAAAAAAAAAAACAPQAAQD8AAAAAAABAPwAAgD0AAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AABAvwAA8D8AAEA+AABAvwAAAEAAAAA+AABAvwAAAEAAAEA+AABAvwAA8D8AAAA+AABAPwAA8D8AAAA+AABAPwAAAEAAAEA+AABAPwAAAEAAAAA+AABAPwAA8D8AAEA+AAAgvwAA8D8AAAA+AAAgPwAA8D8AAEA+AAAgPwAA8D8AAAA+AAAgvwAA8D8AAEA+AABAvwAAAEAAAEA+AABAPwAAAEAAAAA+AABAPwAAAEAAAEA+AABAvwAAAEAAAAA+AABAvwAA8D8AAEA+AABAPwAAAEAAAEA+AABAPwAA8D8AAEA+AABAvwAAAEAAAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//f/9/////v/9//3////+//3//f////7//f/9/////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_74x2r")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k8yxd"]
+data = PackedVector3Array(-1, 0, 0.125, -1, 2, -0.125, -1, 2, 0.125, -1, 0, 0.125, -1, 0, -0.125, -1, 2, -0.125, -0.625, 0, -0.125, -0.625, 1.8438, 0.125, -0.625, 1.8438, -0.125, -0.625, 0, -0.125, -0.625, 0, 0.125, -0.625, 1.8438, 0.125, -1, 0, -0.125, -0.625, 0, 0.125, -0.625, 0, -0.125, -1, 0, -0.125, -1, 0, 0.125, -0.625, 0, 0.125, -1, 2, 0.125, -0.625, 2, -0.125, -0.625, 2, 0.125, -1, 2, 0.125, -1, 2, -0.125, -0.625, 2, -0.125, -1, 2, -0.125, -0.75, 0, -0.125, -0.75, 2, -0.125, -1, 2, -0.125, -1, 0, -0.125, -0.75, 0, -0.125, -1, 0, 0.125, -0.75, 2, 0.125, -0.75, 0, 0.125, -1, 0, 0.125, -1, 2, 0.125, -0.75, 2, 0.125, -0.75, 0, -0.125, -0.75, 1.875, -0.1875, -0.75, 1.875, -0.125, -0.75, 0, -0.125, -0.75, 0, -0.1875, -0.75, 1.875, -0.1875, -0.625, 0, -0.1875, -0.625, 1.875, -0.125, -0.625, 1.875, -0.1875, -0.625, 0, -0.1875, -0.625, 0, -0.125, -0.625, 1.875, -0.125, -0.75, 0, -0.1875, -0.625, 0, -0.125, -0.625, 0, -0.1875, -0.75, 0, -0.1875, -0.75, 0, -0.125, -0.625, 0, -0.125, -0.75, 1.875, -0.1875, -0.625, 0, -0.1875, -0.625, 1.875, -0.1875, -0.75, 1.875, -0.1875, -0.75, 0, -0.1875, -0.625, 0, -0.1875, -0.75, 0, 0.1875, -0.75, 1.875, 0.125, -0.75, 1.875, 0.1875, -0.75, 0, 0.1875, -0.75, 0, 0.125, -0.75, 1.875, 0.125, -0.625, 0, 0.125, -0.625, 1.875, 0.1875, -0.625, 1.875, 0.125, -0.625, 0, 0.125, -0.625, 0, 0.1875, -0.625, 1.875, 0.1875, -0.75, 0, 0.125, -0.625, 0, 0.1875, -0.625, 0, 0.125, -0.75, 0, 0.125, -0.75, 0, 0.1875, -0.625, 0, 0.1875, -0.75, 0, 0.1875, -0.625, 1.875, 0.1875, -0.625, 0, 0.1875, -0.75, 0, 0.1875, -0.75, 1.875, 0.1875, -0.625, 1.875, 0.1875, 0.625, 0, 0.125, 0.625, 1.8438, -0.125, 0.625, 1.8438, 0.125, 0.625, 0, 0.125, 0.625, 0, -0.125, 0.625, 1.8438, -0.125, 1, 0, -0.12499976, 1, 2, 0.125, 1, 2, -0.12499976, 1, 0, -0.12499976, 1, 0, 0.125, 1, 2, 0.125, 0.625, 0, -0.125, 0.87020016, 0, 0.038499832, 0.875, 0, 2.3841858e-07, 0.625, 0, -0.125, 0.875, 0, 2.3841858e-07, 0.875, 0, -0.12499976, 0.87020016, 0, 0.038499832, 0.875, 0, 0.041699886, 0.875, 0, 2.3841858e-07, 0.625, 0, -0.125, 0.625, 0, 0, 0.8125, 0, 0, 0.625, 0, 0, 0.625, 0, 0.125, 0.875, 0, 0.125, 0.625, 0, 0, 0.875, 0, 0.125, 0.875, 0, 0.041699886, 0.625, 0, 0, 0.875, 0, 0.041699886, 0.8125, 0, 0, 0.625, 2, 0.125, 0.8125, 2, 0, 0.875, 2, 2.3841858e-07, 0.625, 2, 0.125, 0.875, 2, 2.3841858e-07, 0.875, 2, 0.125, 0.8125, 2, 0, 0.875, 2, -0.041699886, 0.875, 2, 2.3841858e-07, 0.625, 2, 0.125, 0.625, 2, 0, 0.8125, 2, 0, 0.625, 2, 0, 0.625, 2, -0.125, 0.875, 2, -0.12499976, 0.625, 2, 0, 0.875, 2, -0.12499976, 0.875, 2, -0.041699886, 0.625, 2, 0, 0.875, 2, -0.041699886, 0.8125, 2, 0, 0.75, 2, -0.125, 1, 0, -0.12499976, 1, 2, -0.12499976, 0.75, 2, -0.125, 0.75, 0, -0.125, 1, 0, -0.12499976, 0.75, 0, 0.125, 1, 2, 0.125, 1, 0, 0.125, 0.75, 0, 0.125, 0.75, 2, 0.125, 1, 2, 0.125, 0.625, 0, -0.125, 0.625, 1.875, -0.1875, 0.625, 1.875, -0.125, 0.625, 0, -0.125, 0.625, 0, -0.1875, 0.625, 1.875, -0.1875, 0.75, 0, -0.1875, 0.75, 1.875, -0.125, 0.75, 1.875, -0.1875, 0.75, 0, -0.1875, 0.75, 0, -0.125, 0.75, 1.875, -0.125, 0.625, 0, -0.1875, 0.75, 0, -0.125, 0.75, 0, -0.1875, 0.625, 0, -0.1875, 0.625, 0, -0.125, 0.75, 0, -0.125, 0.625, 1.875, -0.1875, 0.75, 0, -0.1875, 0.75, 1.875, -0.1875, 0.625, 1.875, -0.1875, 0.625, 0, -0.1875, 0.75, 0, -0.1875, 0.625, 0, 0.1875, 0.625, 1.875, 0.125, 0.625, 1.875, 0.1875, 0.625, 0, 0.1875, 0.625, 0, 0.125, 0.625, 1.875, 0.125, 0.75, 0, 0.125, 0.75, 1.875, 0.1875, 0.75, 1.875, 0.125, 0.75, 0, 0.125, 0.75, 0, 0.1875, 0.75, 1.875, 0.1875, 0.625, 0, 0.125, 0.75, 0, 0.1875, 0.75, 0, 0.125, 0.625, 0, 0.125, 0.625, 0, 0.1875, 0.75, 0, 0.1875, 0.625, 0, 0.1875, 0.75, 1.875, 0.1875, 0.75, 0, 0.1875, 0.625, 0, 0.1875, 0.625, 1.875, 0.1875, 0.75, 1.875, 0.1875, -0.625, 1.8438, -0.125, 0.625, 1.8438, 0.125, 0.625, 1.8438, -0.125, -0.625, 1.8438, -0.125, -0.625, 1.8438, 0.125, 0.625, 1.8438, 0.125, -0.625, 2, 0.125, 0.625, 2, -0.125, 0.625, 2, 0.125, -0.625, 2, 0.125, -0.625, 2, -0.125, 0.625, 2, -0.125, -0.625, 1.875, -0.125, 0.625, 1.8438, -0.125, 0.625, 1.875, -0.125, -0.625, 1.875, -0.125, -0.625, 1.8438, -0.125, 0.625, 1.8438, -0.125, -0.625, 1.8438, 0.125, 0.625, 1.875, 0.125, 0.625, 1.8438, 0.125, -0.625, 1.8438, 0.125, -0.625, 1.875, 0.125, 0.625, 1.875, 0.125, -0.75, 1.875, -0.125, -0.75, 2, -0.1875, -0.75, 2, -0.125, -0.75, 1.875, -0.125, -0.75, 1.875, -0.1875, -0.75, 2, -0.1875, 0.75, 1.875, -0.1875, 0.75, 2, -0.125, 0.75, 2, -0.1875, 0.75, 1.875, -0.1875, 0.75, 1.875, -0.125, 0.75, 2, -0.125, -0.625, 1.875, -0.1875, 0.625, 1.875, -0.125, 0.625, 1.875, -0.1875, -0.625, 1.875, -0.1875, -0.625, 1.875, -0.125, 0.625, 1.875, -0.125, -0.75, 2, -0.125, 0.75, 2, -0.1875, 0.75, 2, -0.125, -0.75, 2, -0.125, -0.75, 2, -0.1875, 0.75, 2, -0.1875, -0.75, 2, -0.1875, 0.75, 1.875, -0.1875, 0.75, 2, -0.1875, -0.75, 2, -0.1875, -0.75, 1.875, -0.1875, 0.75, 1.875, -0.1875, -0.75, 1.875, 0.1875, -0.75, 2, 0.125, -0.75, 2, 0.1875, -0.75, 1.875, 0.1875, -0.75, 1.875, 0.125, -0.75, 2, 0.125, 0.75, 1.875, 0.125, 0.75, 2, 0.1875, 0.75, 2, 0.125, 0.75, 1.875, 0.125, 0.75, 1.875, 0.1875, 0.75, 2, 0.1875, -0.625, 1.875, 0.125, 0.625, 1.875, 0.1875, 0.625, 1.875, 0.125, -0.625, 1.875, 0.125, -0.625, 1.875, 0.1875, 0.625, 1.875, 0.1875, -0.75, 2, 0.1875, 0.75, 2, 0.125, 0.75, 2, 0.1875, -0.75, 2, 0.1875, -0.75, 2, 0.125, 0.75, 2, 0.125, -0.75, 1.875, 0.1875, 0.75, 2, 0.1875, 0.75, 1.875, 0.1875, -0.75, 1.875, 0.1875, -0.75, 2, 0.1875, 0.75, 2, 0.1875)
+backface_collision = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dhmav"]
+_surfaces = [{
+"aabb": AABB(-0.609375, 0.0078125, -0.0625, 0.125, 1.8203125, 0.125),
+"format": 34359742465,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAQADAAQAAQAEAAUAAAAGAAEAAgABAAcABQAIAAcAAgAHAAkAAAACAAkABQAKAAgAAAAJAAsABgALAAgABgAAAAsADAAGAAoADAAKAA0ADgAPABAADgARAA8AEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8A"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("AAAcvwAAADwAAIA9AAAcvwAA6j8AAIC9AAAcvwAA6j8AAIA9AAAcvwAA0D8AAIC9AAAMvwAA0D8AAIC9AAAMvwAA6j8AAIC9AAAcvwAAADwAAIC9AAD4vgAA6j8AAIC9AAD4vgAAADwAAIC9AAD4vgAA6j8AAIA9AAAMvwAAADwAAIC9AAD4vgAAADwAAIA9AAAcvwAAgD4AAIC9AAAMvwAAgD4AAIC9AAD4vgAAKD4AAIC9AAD4vgAAWD8AACC9AAD4vgAAWD8AAIC9AAD4vgAAKD4AACC9AAD4vgAAKD4AACA9AAD4vgAAWD8AAIA9AAD4vgAAWD8AACA9AAD4vgAAKD4AAIA9AAD4vgAAeD8AAIC9AAD4vgAA1j8AACC9AAD4vgAA1j8AAIC9AAD4vgAAeD8AACC9AAD4vgAAeD8AACA9AAD4vgAA1j8AAIA9AAD4vgAA1j8AACA9AAD4vgAAeD8AAIA9AAAcvwAAuD8AAIC9AAAMvwAA4D4AAIC9AAAMvwAAuD8AAIC9AAAcvwAA4D4AAIC9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fg8e8"]
+resource_name = "blockbench_export_mesh10"
+_surfaces = [{
+"aabb": AABB(-0.609375, 0.0078125, -0.0625, 0.125, 1.8203125, 0.125),
+"attribute_data": PackedByteArray("AABpPwAAgD0AAAAAAAAAAAAAAAAAAIA9AABpPwAAAAAAAFU/AAAAAAAA/D4AAEA8AAD8PgAAAAAAAFU/AABAPAAAVT8AAFA9AAD8PgAAgD0AAPw+AABQPQAAVT8AAIA9AADcPgAAAAAAAKA9AABAPAAAoD0AAAAAAADcPgAAQDwAANw+AABQPQAAoD0AAIA9AACgPQAAUD0AANw+AACAPQAAAAAAAAAAAACAPQAAgD0AAAAAAACAPQAAgD0AAAAAAACAPQAAAAAAAAAAAACAPQAAgD0AAIA9AAAAAAAAAAAAAAAAAAAAPQAAaT8AAIA9AAAAAAAAgD0AAGk/AAAAPQAASj8AAAAAAABpPwAAAD0AAEo/AAAAPQAAaT8AAAAAAABIPgAAAAAAADI/AAAAPQAASD4AAAA9AAAyPwAAAAAAAAAAAAAAAAAA0D0AAAA9AAAAAAAAAD0AANA9AAAAAAAAaT8AAAAAAAAAAAAAgD0AAGk/AACAPQAAAAAAAAAA"),
+"format": 34359742487,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAAcvwAAADwAAIA9AAAcvwAA6j8AAIC9AAAcvwAA6j8AAIA9AAAcvwAAADwAAIC9AAD4vgAAKD4AAIC9AAD4vgAAWD8AACC9AAD4vgAAWD8AAIC9AAD4vgAAKD4AACC9AAD4vgAAKD4AACA9AAD4vgAAWD8AAIA9AAD4vgAAWD8AACA9AAD4vgAAKD4AAIA9AAD4vgAAeD8AAIC9AAD4vgAA1j8AACC9AAD4vgAA1j8AAIC9AAD4vgAAeD8AACC9AAD4vgAAeD8AACA9AAD4vgAA1j8AAIA9AAD4vgAA1j8AACA9AAD4vgAAeD8AAIA9AAAcvwAAADwAAIC9AAD4vgAAADwAAIA9AAD4vgAAADwAAIC9AAAcvwAAADwAAIA9AAAcvwAA6j8AAIA9AAD4vgAA6j8AAIC9AAD4vgAA6j8AAIA9AAAcvwAA6j8AAIC9AAAMvwAA6j8AAIC9AAD4vgAAADwAAIC9AAD4vgAA6j8AAIC9AAAMvwAAADwAAIC9AAAcvwAAgD4AAIC9AAAMvwAAADwAAIC9AAAMvwAAgD4AAIC9AAAcvwAAADwAAIC9AAAcvwAAuD8AAIC9AAAMvwAA4D4AAIC9AAAMvwAAuD8AAIC9AAAcvwAA4D4AAIC9AAAcvwAA6j8AAIC9AAAMvwAA0D8AAIC9AAAMvwAA6j8AAIC9AAAcvwAA0D8AAIC9AAAcvwAAADwAAIA9AAD4vgAA6j8AAIA9AAD4vgAAADwAAIA9AAAcvwAA6j8AAIA9AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n////9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//3////9//z//f////3//P/9/////f/8//3////9//z///////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dhmav")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a7438"]
+_surfaces = [{
+"aabb": AABB(0.484375, 0.0078125, -0.0625, 0.125, 1.8203125, 0.125),
+"format": 34359742465,
+"index_count": 90,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEwASABEAEwAUABIAFQAQABIAFQAWABAAFwAWABgAFwAZABYAFAAZABoAGgAbABUAGgAcABsAFAAdABkAHQAeABAAEAAeABEAHQAfAB4AIAARAB4AIAAhABEAIgAhACMAIgAkACEAHwATACQAHwAkACUAJQAmACAAJQAnACYA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAD4PgAAKD4AACC9AAD4PgAAWD8AAIC9AAD4PgAAWD8AACC9AAD4PgAAKD4AAIC9AAD4PgAAKD4AAIA9AAD4PgAAWD8AACA9AAD4PgAAWD8AAIA9AAD4PgAAKD4AACA9AAD4PgAAeD8AACC9AAD4PgAA1j8AAIC9AAD4PgAA1j8AACC9AAD4PgAAeD8AAIC9AAD4PgAAeD8AAIA9AAD4PgAA1j8AACA9AAD4PgAA1j8AAIA9AAD4PgAAeD8AACA9AAAcPwAAADwAAIC9AAAcPwAA6j8AAIA9AAAcPwAA6j8AAIC9AAD4PgAA6j8AAIA9AAD4PgAA6j8AAIC9ZmYWPwAA6j8AAIC9ZmYWPwAAADwAAIC9mpn5PgAAQD8AAIC9ZmYWPwAAQD8AAIC9mpn5PgAAADwAAIC9mpn5PgAA6j8AAIC9ZmYWPwAAgD8AAIC9mpn5PgAAgD8AAIC9AAD4PgAAADwAAIC9AAAcPwAAADwAAIA9AAD4PgAAADwAAIA9ZmYWPwAAADwAAIA9ZmYWPwAA6j8AAIA9mpn5PgAAgD8AAIA9ZmYWPwAAgD8AAIA9mpn5PgAA6j8AAIA9mpn5PgAAADwAAIA9ZmYWPwAAQD8AAIA9mpn5PgAAQD8AAIA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pipy5"]
+resource_name = "blockbench_export_mesh11"
+_surfaces = [{
+"aabb": AABB(0.484375, 0.0078125, -0.0625, 0.125, 1.8203125, 0.125),
+"attribute_data": PackedByteArray("AABVPwAAQDwAAPw+AAAAAAAA/D4AAEA8AABVPwAAAAAAAFU/AACAPQAA/D4AAFA9AAD8PgAAgD0AAFU/AABQPQAA3D4AAEA8AACgPQAAAAAAAKA9AABAPAAA3D4AAAAAAADcPgAAgD0AAKA9AABQPQAAoD0AAIA9AADcPgAAUD0AAGk/AAAAAAAAAAAAAIA9AAAAAAAAAAAAAGk/AACAPQAAAAAAAAAAAACAPQAAgD0AAAAAAACAPQAAgD0AAAAAAACAPQAAAAAAAAAAAACAPQAAgD0AAIA9AAAAAAAAAAAAAAAAAAAAAAAAaT8AzMw6AAAAAADMzDoAAGk/AAAAAAAAAAAwM1M9AABpPwAAgD0AAAAAAACAPQAAaT8wM1M9AAAKPwDMzDoAAGk/MDNTPQAACj8wM1M9AABpPwDMzDoAAAAAAMzMOgAA1D4wM1M9AAAAADAzUz0AANQ+AMzMOgAAaT8AAAAAAAAAAADMzDoAAGk/AMzMOgAAAAAAAAAAAABpPzAzUz0AAAAAAACAPQAAaT8AAIA9AAAAADAzUz0AAGk/AMzMOgAACj8wM1M9AABpPzAzUz0AAAo/AMzMOgAA1D4AzMw6AAAAADAzUz0AANQ+MDNTPQAAAAAAzMw6"),
+"format": 34359742487,
+"index_count": 90,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("AAD4PgAAKD4AACC9AAD4PgAAWD8AAIC9AAD4PgAAWD8AACC9AAD4PgAAKD4AAIC9AAD4PgAAKD4AAIA9AAD4PgAAWD8AACA9AAD4PgAAWD8AAIA9AAD4PgAAKD4AACA9AAD4PgAAeD8AACC9AAD4PgAA1j8AAIC9AAD4PgAA1j8AACC9AAD4PgAAeD8AAIC9AAD4PgAAeD8AAIA9AAD4PgAA1j8AACA9AAD4PgAA1j8AAIA9AAD4PgAAeD8AACA9AAAcPwAAADwAAIC9AAAcPwAA6j8AAIA9AAAcPwAA6j8AAIC9AAAcPwAAADwAAIA9AAD4PgAAADwAAIC9AAAcPwAAADwAAIA9AAAcPwAAADwAAIC9AAD4PgAAADwAAIA9AAD4PgAA6j8AAIA9AAAcPwAA6j8AAIC9AAAcPwAA6j8AAIA9AAD4PgAA6j8AAIC9AAD4PgAA6j8AAIC9mpn5PgAAADwAAIC9mpn5PgAA6j8AAIC9AAD4PgAAADwAAIC9ZmYWPwAA6j8AAIC9AAAcPwAAADwAAIC9AAAcPwAA6j8AAIC9ZmYWPwAAADwAAIC9mpn5PgAAQD8AAIC9ZmYWPwAAADwAAIC9ZmYWPwAAQD8AAIC9mpn5PgAAADwAAIC9mpn5PgAA6j8AAIC9ZmYWPwAAgD8AAIC9ZmYWPwAA6j8AAIC9mpn5PgAAgD8AAIC9AAD4PgAAADwAAIA9mpn5PgAA6j8AAIA9mpn5PgAAADwAAIA9AAD4PgAA6j8AAIA9ZmYWPwAAADwAAIA9AAAcPwAA6j8AAIA9AAAcPwAAADwAAIA9ZmYWPwAA6j8AAIA9mpn5PgAAADwAAIA9ZmYWPwAAQD8AAIA9ZmYWPwAAADwAAIA9mpn5PgAAQD8AAIA9mpn5PgAAgD8AAIA9ZmYWPwAA6j8AAIA9ZmYWPwAAgD8AAIA9mpn5PgAA6j8AAIA9AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n////9//38AgP///3//fwCA////f/9/AID///9//38AgP9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//3////9//z//f////3//P/9/////f/8//3////9//z///////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_a7438")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x8mvu"]
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.0078125, -0.0625, 0.96875, 0.15625, 0.125),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABAACAAYAAwAHAAUACAAEAAkACAAJAAoACwAGAAwACwANAAYABwAOAA8ABwAQAA4AEQASAAUAEQATABIA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD4vgAAADwAAIC9AAD4PgAAADwAAIA9AAD4PgAAADwAAIC9AAD4vgAAADwAAIA9AAD4vgAAKD4AAIC9AAD4PgAAKD4AAIA9AAD4PgAAKD4AAIC9AAD4vgAAKD4AAIA9AAD4vgAAKD4AACC9AAAgvQAAKD4AAIC9AAAgvQAAKD4AACC9AAAgPQAAKD4AACC9AAD4PgAAKD4AACC9AAAgPQAAKD4AAIC9AAAgvQAAKD4AACA9AAAgvQAAKD4AAIA9AAD4vgAAKD4AACA9AAAgPQAAKD4AAIA9AAD4PgAAKD4AACA9AAAgPQAAKD4AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bd7pg"]
+resource_name = "blockbench_export_mesh12"
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.0078125, -0.0625, 0.96875, 0.15625, 0.125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA9AAD4PgAAAAAAAPg+AACAPQAAAAAAAEA8AAAAAAAAAAAAAGQ+AABAPAAAZD4AAAAAAAAAAAAAgD0AAAAAAABQPQAAZD4AAIA9AABkPgAAUD0AAAAAAABAPAAAhj4AAAAAAAD4PgAAQDwAAPg+AAAAAAAAhj4AAIA9AACGPgAAUD0AAPg+AACAPQAA+D4AAFA9AACGPgAAAAAAAAAAAACgPQAA+D4AAAAAAAD4PgAAoD0AAAAAAACgPQAAAAAAAAAAAAD4PgAAoD0AAPg+AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AAD4vgAAADwAAIC9AAD4PgAAADwAAIA9AAD4PgAAADwAAIC9AAD4vgAAADwAAIA9AAD4vgAAKD4AACC9AAAgvQAAKD4AAIC9AAAgvQAAKD4AACC9AAD4vgAAKD4AAIC9AAD4vgAAKD4AAIA9AAAgvQAAKD4AACA9AAAgvQAAKD4AAIA9AAD4vgAAKD4AACA9AAAgPQAAKD4AACC9AAD4PgAAKD4AAIC9AAD4PgAAKD4AACC9AAAgPQAAKD4AAIC9AAAgPQAAKD4AAIA9AAD4PgAAKD4AACA9AAD4PgAAKD4AAIA9AAAgPQAAKD4AACA9AAD4vgAAKD4AAIC9AAD4PgAAADwAAIC9AAD4PgAAKD4AAIC9AAD4vgAAADwAAIC9AAD4vgAAADwAAIA9AAD4PgAAKD4AAIA9AAD4PgAAADwAAIA9AAD4vgAAKD4AAIA9/38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P///////fwCA//////9/AID//////38AgP//////fwCA/3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x8mvu")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iu0i1"]
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.84375, -0.0625, 0.96875, 0.125, 0.125),
+"format": 34359742465,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAEAAUABgAFAAcACAAJAAoACAALAAkACwAMAAkACwANAAwADQAOAAwADQAPAA4AEAARABIAEAATABEAFAAQABIAFAASABUAFgAUABUAFgAVABcAGAAZABoAGAAbABkAGwAcABkAGwAdABwAHQAeABwAHQAfAB4A"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAD4vgAAWD8AAIC9AAAgvQAAWD8AACC9AAAgvQAAWD8AAIC9AAD4vgAAWD8AACC9AAD4vgAAeD8AAIC9AAAgvQAAeD8AAIC9AAD4vgAAeD8AACC9AAAgvQAAeD8AACC9AAD4vgAAWD8AACA9AAAgvQAAWD8AAIA9AAAgvQAAWD8AACA9AAD4vgAAWD8AAIA9AAAgvQAAeD8AAIA9AAD4vgAAeD8AAIA9AAAgvQAAeD8AACA9AAD4vgAAeD8AACA9AAAgPQAAWD8AAIC9AAD4PgAAWD8AACC9AAD4PgAAWD8AAIC9AAAgPQAAWD8AACC9AAAgPQAAeD8AAIC9AAD4PgAAeD8AAIC9AAAgPQAAeD8AACC9AAD4PgAAeD8AACC9AAAgPQAAWD8AACA9AAD4PgAAWD8AAIA9AAD4PgAAWD8AACA9AAAgPQAAWD8AAIA9AAD4PgAAeD8AAIA9AAAgPQAAeD8AAIA9AAD4PgAAeD8AACA9AAAgPQAAeD8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_plr4k"]
+resource_name = "blockbench_export_mesh13"
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.84375, -0.0625, 0.96875, 0.125, 0.125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAEA8AABkPgAAAAAAAGQ+AABAPAAAAAAAAFA9AAAAAAAAgD0AAGQ+AABQPQAAZD4AAIA9AAAAAAAAAAAAAIY+AABAPAAA+D4AAAAAAAD4PgAAQDwAAIY+AABQPQAAhj4AAIA9AAD4PgAAUD0AAPg+AACAPQAAhj4AAEA8AAAAAAAAAAAAAGQ+AABAPAAAZD4AAAAAAAAAAAAAgD0AAAAAAABQPQAAZD4AAIA9AABkPgAAUD0AAAAAAABAPAAAhj4AAAAAAAD4PgAAQDwAAPg+AAAAAAAAhj4AAIA9AACGPgAAUD0AAPg+AACAPQAA+D4AAFA9AACGPgAAAAAAAAAAAACAPQAAZD4AAAAAAABkPgAAgD0AAAAAAAAAAAAAhj4AAIA9AAD4PgAAAAAAAPg+AACAPQAAhj4AAIA9AAAAAAAAAAAAAGQ+AACAPQAAZD4AAAAAAAAAAAAAgD0AAIY+AAAAAAAA+D4AAIA9AAD4PgAAAAAAAIY+"),
+"format": 34359742487,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAD4vgAAWD8AAIC9AAAgvQAAWD8AACC9AAAgvQAAWD8AAIC9AAD4vgAAWD8AACC9AAD4vgAAWD8AACA9AAAgvQAAWD8AAIA9AAAgvQAAWD8AACA9AAD4vgAAWD8AAIA9AAAgPQAAWD8AAIC9AAD4PgAAWD8AACC9AAD4PgAAWD8AAIC9AAAgPQAAWD8AACC9AAAgPQAAWD8AACA9AAD4PgAAWD8AAIA9AAD4PgAAWD8AACA9AAAgPQAAWD8AAIA9AAD4vgAAeD8AACC9AAAgvQAAeD8AAIC9AAAgvQAAeD8AACC9AAD4vgAAeD8AAIC9AAD4vgAAeD8AAIA9AAAgvQAAeD8AACA9AAAgvQAAeD8AAIA9AAD4vgAAeD8AACA9AAAgPQAAeD8AACC9AAD4PgAAeD8AAIC9AAD4PgAAeD8AACC9AAAgPQAAeD8AAIC9AAAgPQAAeD8AAIA9AAD4PgAAeD8AACA9AAD4PgAAeD8AAIA9AAAgPQAAeD8AACA9AAD4vgAAeD8AAIC9AAAgvQAAWD8AAIC9AAAgvQAAeD8AAIC9AAD4vgAAWD8AAIC9AAAgPQAAeD8AAIC9AAD4PgAAWD8AAIC9AAD4PgAAeD8AAIC9AAAgPQAAWD8AAIC9AAD4vgAAWD8AAIA9AAAgvQAAeD8AAIA9AAAgvQAAWD8AAIA9AAD4vgAAeD8AAIA9AAAgPQAAWD8AAIA9AAD4PgAAeD8AAIA9AAD4PgAAWD8AAIA9AAAgPQAAeD8AAIA9/38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P/9/////f/8//3////9//z//f////3//P///////fwCA//////9/AID//////38AgP//////fwCA//////9/AID//////38AgP//////fwCA//////9/AID/f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+f/9//3//f/5/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iu0i1")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jyifh"]
+_surfaces = [{
+"aabb": AABB(-0.484375, 1.671875, -0.0625, 0.96875, 0.15625, 0.125),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAUABAAFAAYABwAEAAYABwAGAAgACQAHAAgACQAIAAoACwAMAAUACwANAAwADgAKAA8ADgAQAAoAEQAJABIAEQASABMA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD4vgAA1j8AAIC9AAAgvQAA1j8AACC9AAAgvQAA1j8AAIC9AAD4vgAA1j8AACC9AAD4vgAA6j8AAIC9AAD4PgAA1j8AAIC9AAD4PgAA6j8AAIC9AAD4vgAA6j8AAIA9AAD4PgAA6j8AAIA9AAD4vgAA1j8AAIA9AAD4PgAA1j8AAIA9AAAgPQAA1j8AAIC9AAD4PgAA1j8AACC9AAAgPQAA1j8AACC9AAAgPQAA1j8AACA9AAD4PgAA1j8AACA9AAAgPQAA1j8AAIA9AAD4vgAA1j8AACA9AAAgvQAA1j8AAIA9AAAgvQAA1j8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x5kli"]
+resource_name = "blockbench_export_mesh14"
+_surfaces = [{
+"aabb": AABB(-0.484375, 1.671875, -0.0625, 0.96875, 0.15625, 0.125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAEA8AABkPgAAAAAAAGQ+AABAPAAAAAAAAFA9AAAAAAAAgD0AAGQ+AABQPQAAZD4AAIA9AAAAAAAAAAAAAIY+AABAPAAA+D4AAAAAAAD4PgAAQDwAAIY+AABQPQAAhj4AAIA9AAD4PgAAUD0AAPg+AACAPQAAhj4AAIA9AAAAAAAAAAAAAPg+AACAPQAA+D4AAAAAAAAAAAAAAAAAAAAAAACgPQAA+D4AAAAAAAD4PgAAoD0AAAAAAACgPQAAAAAAAAAAAAD4PgAAoD0AAPg+AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AAD4vgAA1j8AAIC9AAAgvQAA1j8AACC9AAAgvQAA1j8AAIC9AAD4vgAA1j8AACC9AAD4vgAA1j8AACA9AAAgvQAA1j8AAIA9AAAgvQAA1j8AACA9AAD4vgAA1j8AAIA9AAAgPQAA1j8AAIC9AAD4PgAA1j8AACC9AAD4PgAA1j8AAIC9AAAgPQAA1j8AACC9AAAgPQAA1j8AACA9AAD4PgAA1j8AAIA9AAD4PgAA1j8AACA9AAAgPQAA1j8AAIA9AAD4vgAA6j8AAIA9AAD4PgAA6j8AAIC9AAD4PgAA6j8AAIA9AAD4vgAA6j8AAIC9AAD4vgAA6j8AAIC9AAD4PgAA1j8AAIC9AAD4PgAA6j8AAIC9AAD4vgAA1j8AAIC9AAD4vgAA1j8AAIA9AAD4PgAA6j8AAIA9AAD4PgAA1j8AAIA9AAD4vgAA6j8AAIA9/38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7//f////3//P/9/////f/8//3////9//z//f////3//P///////fwCA//////9/AID//////38AgP//////fwCA/3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jyifh")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kwhxd"]
+_surfaces = [{
+"aabb": AABB(-0.0390625, 0.1640625, -0.0625, 0.078125, 1.5078125, 0.125),
+"format": 34359742465,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAUABAAFAAYABQAHAAgABQAJAAcACgAEAAsACgAMAAQADQAOAAYADQAPAA4AEAARABIAEAATABEAEAAUABUAEAAVABYAFwAYABQAFwAZABgAGgAWABsAGgAbABwAHQAVAB4AHQAfABUA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AAAgvQAAKD4AACC9AAAgvQAAWD8AAIC9AAAgvQAAWD8AACC9AAAgvQAAKD4AAIC9AAAgvQAA1j8AAIC9AAAgPQAAKD4AAIC9AAAgPQAA1j8AAIC9AAAgPQAAWD8AACC9AAAgPQAAWD8AAIC9AAAgPQAAKD4AACC9AAAgvQAAeD8AACC9AAAgvQAA1j8AACC9AAAgvQAAeD8AAIC9AAAgPQAAeD8AAIC9AAAgPQAA1j8AACC9AAAgPQAAeD8AACC9AAAgvQAAKD4AAIA9AAAgvQAAWD8AACA9AAAgvQAAWD8AAIA9AAAgvQAAKD4AACA9AAAgvQAA1j8AAIA9AAAgPQAA1j8AAIA9AAAgPQAAKD4AAIA9AAAgvQAAeD8AAIA9AAAgvQAA1j8AACA9AAAgvQAAeD8AACA9AAAgPQAAKD4AACA9AAAgPQAAWD8AAIA9AAAgPQAAWD8AACA9AAAgPQAAeD8AACA9AAAgPQAA1j8AACA9AAAgPQAAeD8AAIA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j0s2m"]
+resource_name = "blockbench_export_mesh15"
+_surfaces = [{
+"aabb": AABB(-0.0390625, 0.1640625, -0.0625, 0.078125, 1.5078125, 0.125),
+"attribute_data": PackedByteArray("AABBPwAAQDwAANQ+AAAAAAAA1D4AAEA8AABBPwAAAAAAAEE/AACAPQAA1D4AAFA9AADUPgAAgD0AAEE/AABQPQAAtD4AAEA8AAAAAAAAAAAAAAAAAABAPAAAtD4AAAAAAAC0PgAAgD0AAAAAAABQPQAAAAAAAIA9AAC0PgAAUD0AAEE/AAAAAAAA1D4AAEA8AADUPgAAAAAAAEE/AABAPAAAQT8AAFA9AADUPgAAgD0AANQ+AABQPQAAQT8AAIA9AAC0PgAAAAAAAAAAAABAPAAAAAAAAAAAAAC0PgAAQDwAALQ+AABQPQAAAAAAAIA9AAAAAAAAUD0AALQ+AACAPQAAAAAAAAAAAABBPwAAID0AAAAAAAAgPQAAQT8AAAAAAABBPwAAAAAAAAAAAAAgPQAAQT8AACA9AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUA"),
+"material": SubResource("StandardMaterial3D_b05fc"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAAgvQAAKD4AACC9AAAgvQAAWD8AAIC9AAAgvQAAWD8AACC9AAAgvQAAKD4AAIC9AAAgvQAAKD4AAIA9AAAgvQAAWD8AACA9AAAgvQAAWD8AAIA9AAAgvQAAKD4AACA9AAAgvQAAeD8AACC9AAAgvQAA1j8AAIC9AAAgvQAA1j8AACC9AAAgvQAAeD8AAIC9AAAgvQAAeD8AAIA9AAAgvQAA1j8AACA9AAAgvQAA1j8AAIA9AAAgvQAAeD8AACA9AAAgPQAAKD4AAIC9AAAgPQAAWD8AACC9AAAgPQAAWD8AAIC9AAAgPQAAKD4AACC9AAAgPQAAKD4AACA9AAAgPQAAWD8AAIA9AAAgPQAAWD8AACA9AAAgPQAAKD4AAIA9AAAgPQAAeD8AAIC9AAAgPQAA1j8AACC9AAAgPQAA1j8AAIC9AAAgPQAAeD8AACC9AAAgPQAAeD8AACA9AAAgPQAA1j8AAIA9AAAgPQAA1j8AACA9AAAgPQAAeD8AAIA9AAAgvQAA1j8AAIC9AAAgPQAAKD4AAIC9AAAgPQAA1j8AAIC9AAAgvQAAKD4AAIC9AAAgvQAAKD4AAIA9AAAgPQAA1j8AAIA9AAAgPQAAKD4AAIA9AAAgvQAA1j8AAIA9AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n8AAP9//3/+fwAA/3//f/5/AAD/f/9//n////9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP//////fwCA//////9/AID//////38AgP//////fwCA/3//f/9//n//f/9//3/+f/9//3//f/5//3//f/9//n8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kwhxd")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ks0ao"]
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.1640625, -0.0390625, 0.4453125, 0.6796875, 0.078125),
+"format": 34359742465,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD4vgAAWD8AACC9AAAgvQAAKD4AACC9AAAgvQAAWD8AACC9AAD4vgAAKD4AACC9AAD4vgAAKD4AACA9AAAgvQAAWD8AACA9AAAgvQAAKD4AACA9AAD4vgAAWD8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nw5f7"]
+resource_name = "blockbench_export_mesh16"
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.1640625, -0.0390625, 0.4453125, 0.6796875, 0.078125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAK4+AABkPgAAAAAAAGQ+AACuPgAAAAAAAK4+AAAAAAAAAAAAAGQ+AACuPgAAZD4AAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD4vgAAWD8AACC9AAAgvQAAKD4AACC9AAAgvQAAWD8AACC9AAD4vgAAKD4AACC9AAD4vgAAKD4AACA9AAAgvQAAWD8AACA9AAAgvQAAKD4AACA9AAD4vgAAWD8AACA9//////9/AID//////38AgP//////fwCA//////9/AID/f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+fw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ks0ao")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yhi1q"]
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.96875, -0.0390625, 0.4453125, 0.703125, 0.078125),
+"format": 34359742465,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD4vgAA1j8AACC9AAAgvQAAeD8AACC9AAAgvQAA1j8AACC9AAD4vgAAeD8AACC9AAD4vgAAeD8AACA9AAAgvQAA1j8AACA9AAAgvQAAeD8AACA9AAD4vgAA1j8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w4a8j"]
+resource_name = "blockbench_export_mesh17"
+_surfaces = [{
+"aabb": AABB(-0.484375, 0.96875, -0.0390625, 0.4453125, 0.703125, 0.078125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAALQ+AABkPgAAAAAAAGQ+AAC0PgAAAAAAALQ+AAAAAAAAAAAAAGQ+AAC0PgAAZD4AAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD4vgAA1j8AACC9AAAgvQAAeD8AACC9AAAgvQAA1j8AACC9AAD4vgAAeD8AACC9AAD4vgAAeD8AACA9AAAgvQAA1j8AACA9AAAgvQAAeD8AACA9AAD4vgAA1j8AACA9//////9/AID//////38AgP//////fwCA//////9/AID/f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+fw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yhi1q")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sw2pv"]
+_surfaces = [{
+"aabb": AABB(0.0390625, 0.1640625, -0.0390625, 0.4453125, 0.6796875, 0.078125),
+"format": 34359742465,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPQAAWD8AACC9AAD4PgAAKD4AACC9AAD4PgAAWD8AACC9AAAgPQAAKD4AACC9AAAgPQAAKD4AACA9AAD4PgAAWD8AACA9AAD4PgAAKD4AACA9AAAgPQAAWD8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xk8fj"]
+resource_name = "blockbench_export_mesh18"
+_surfaces = [{
+"aabb": AABB(0.0390625, 0.1640625, -0.0390625, 0.4453125, 0.6796875, 0.078125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAK4+AABkPgAAAAAAAGQ+AACuPgAAAAAAAK4+AAAAAAAAAAAAAGQ+AACuPgAAZD4AAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPQAAWD8AACC9AAD4PgAAKD4AACC9AAD4PgAAWD8AACC9AAAgPQAAKD4AACC9AAAgPQAAKD4AACA9AAD4PgAAWD8AACA9AAD4PgAAKD4AACA9AAAgPQAAWD8AACA9//////9/AID//////38AgP//////fwCA//////9/AID/f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+fw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sw2pv")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dkht0"]
+_surfaces = [{
+"aabb": AABB(0.0390625, 0.96875, -0.0390625, 0.4453125, 0.703125, 0.078125),
+"format": 34359742465,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPQAA1j8AACC9AAD4PgAAeD8AACC9AAD4PgAA1j8AACC9AAAgPQAAeD8AACC9AAAgPQAAeD8AACA9AAD4PgAA1j8AACA9AAD4PgAAeD8AACA9AAAgPQAA1j8AACA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8y7r7"]
+resource_name = "blockbench_export_mesh19"
+_surfaces = [{
+"aabb": AABB(0.0390625, 0.96875, -0.0390625, 0.4453125, 0.703125, 0.078125),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAALQ+AABkPgAAAAAAAGQ+AAC0PgAAAAAAALQ+AAAAAAAAAAAAAGQ+AAC0PgAAZD4AAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_vpymb"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAgPQAA1j8AACC9AAD4PgAAeD8AACC9AAD4PgAA1j8AACC9AAAgPQAAeD8AACC9AAAgPQAAeD8AACA9AAD4PgAA1j8AACA9AAD4PgAAeD8AACA9AAAgPQAA1j8AACA9//////9/AID//////38AgP//////fwCA//////9/AID/f/9//3/+f/9//3//f/5//3//f/9//n//f/9//3/+fw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dkht0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fibq6"]
+resource_name = "material_2"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("11_8t12d")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o4rkf"]
+_surfaces = [{
+"aabb": AABB(0.4875, 0.75, -0.09375, 0.099999964, 0.25, 0.03125),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABQAAAAYAAQAHAAgAAQAIAAkACgAEAAMACgAGAAQACQAKAAMABQAGAAoACQALAAoADAAFAAsADAALAA0A"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("mpn5PgAAQD8AAIC9mpn5PgAAgD8AAMC9mpn5PgAAgD8AAIC9ZmYWPwAAgD8AAMC9ZmYWPwAAgD8AAIC9mpn5PgAAQD8AAMC9ZmYWPwAAQD8AAIC9mpn5PgAAaD8AAMC9ZmYOPwAAaD8AAMC9ZmYOPwAAgD8AAMC9ZmYWPwAAQD8AAMC9ZmYOPwAAQD8AAMC9mpn5PgAAXD8AAMC9ZmYOPwAAXD8AAMC9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0cgsa"]
+resource_name = "blockbench_export_mesh20"
+_surfaces = [{
+"aabb": AABB(0.4875, 0.75, -0.09375, 0.099999964, 0.25, 0.03125),
+"attribute_data": PackedByteArray("AACAPAAAAD4AAAAAAAAAAAAAgDwAAAAAAAAAAAAAAD4AAAAAAAAAPgAAgDwAAAAAAAAAAAAAAAAAAIA8AAAAPgAAAAAAAAAAzcxMPQAAgDzNzEw9AAAAAAAAAAAAAIA8AAAAAAAAgDzNzEw9AAAAAM3MTD0AAIA8AAAAAAAAAADNzAw9AAAAAM3MTD0AAAA+zcxMPQAAAADNzAw9AAAAPgAAAAAAAJA9zcwMPQAAAD7NzAw9AACQPQAAAAAAAAA+AAAAAAAAAADNzAw9AABAPc3MDD0AAAAAAAAAAAAAQD0="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_fibq6"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("mpn5PgAAQD8AAIC9mpn5PgAAgD8AAMC9mpn5PgAAgD8AAIC9mpn5PgAAQD8AAMC9ZmYWPwAAQD8AAMC9ZmYWPwAAgD8AAIC9ZmYWPwAAgD8AAMC9ZmYWPwAAQD8AAIC9mpn5PgAAQD8AAMC9ZmYWPwAAQD8AAIC9ZmYWPwAAQD8AAMC9mpn5PgAAQD8AAIC9mpn5PgAAgD8AAIC9ZmYWPwAAgD8AAMC9ZmYWPwAAgD8AAIC9mpn5PgAAgD8AAMC9ZmYOPwAAgD8AAMC9ZmYWPwAAQD8AAMC9ZmYWPwAAgD8AAMC9ZmYOPwAAQD8AAMC9mpn5PgAAXD8AAMC9ZmYOPwAAQD8AAMC9ZmYOPwAAXD8AAMC9mpn5PgAAQD8AAMC9mpn5PgAAgD8AAMC9ZmYOPwAAaD8AAMC9ZmYOPwAAgD8AAMC9mpn5PgAAaD8AAMC9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////P/////////8//////////z//////////P/////////8//////////z//////////P/////////8//////////z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o4rkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51hr8"]
+resource_name = "material_3"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("12_q0n4t")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h4p6s"]
+_surfaces = [{
+"aabb": AABB(0.359375, 0.859375, -0.140625, 0.19687498, 0.046875, 0.046875),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAADAAQAAgABAAUAAgAFAAYAAAAHAAEABwAAAAgAAQAJAAUAAQAHAAkACQAGAAUABwAIAAkACQAIAAYA"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("AAC4PgAAXD8AAMC9AAC4PgAAaD8AABC+AAC4PgAAaD8AAMC9mpn5PgAAaD8AAMC9mpn5PgAAXD8AAMC9ZmYOPwAAaD8AABC+ZmYOPwAAaD8AAMC9AAC4PgAAXD8AABC+ZmYOPwAAXD8AAMC9ZmYOPwAAXD8AABC+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_oclkd"]
+resource_name = "blockbench_export_mesh21"
+_surfaces = [{
+"aabb": AABB(0.359375, 0.859375, -0.140625, 0.19687498, 0.046875, 0.046875),
+"attribute_data": PackedByteArray("AADAPAAAwDwAAAAAAAAAAAAAwDwAAAAAAAAAAAAAwDwAAAAAAADAPAAAwDwAAAAAAAAAAAAAAAAAAMA8AADAPAAAAAAAAAAAmpnJPQAAwDyamck9AAAAAAAAAAAAAMA8AAAAAAAAwDyamck9AAAAAJqZyT0AAMA8AAAAAAAAAAAAAAAAAAAAAJqZyT0AAMA8mpnJPQAAAAAAAAAAAADAPAAAAAAAAMA8MzODPQAAAAAzM4M9AADAPAAAAAAAAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_51hr8"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAC4PgAAXD8AAMC9AAC4PgAAaD8AABC+AAC4PgAAaD8AAMC9AAC4PgAAXD8AABC+ZmYOPwAAXD8AABC+ZmYOPwAAaD8AAMC9ZmYOPwAAaD8AABC+ZmYOPwAAXD8AAMC9AAC4PgAAXD8AABC+ZmYOPwAAXD8AAMC9ZmYOPwAAXD8AABC+AAC4PgAAXD8AAMC9AAC4PgAAaD8AAMC9ZmYOPwAAaD8AABC+ZmYOPwAAaD8AAMC9AAC4PgAAaD8AABC+AAC4PgAAaD8AABC+ZmYOPwAAXD8AABC+ZmYOPwAAaD8AABC+AAC4PgAAXD8AABC+AAC4PgAAXD8AAMC9mpn5PgAAaD8AAMC9mpn5PgAAXD8AAMC9AAC4PgAAaD8AAMC9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_h4p6s")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1wbvw"]
+_surfaces = [{
+"aabb": AABB(0.4875, 0.75, 0.0625, 0.099999964, 0.25, 0.03125),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABgAFAAMABAAHAAYABgAHAAUABAAAAAcACAAFAAcAAAAJAAgAAAAKAAkACAALAAUADAACAAsADAALAA0A"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("mpn5PgAAQD8AAMA9mpn5PgAAgD8AAIA9mpn5PgAAgD8AAMA9ZmYWPwAAgD8AAIA9mpn5PgAAQD8AAIA9ZmYWPwAAgD8AAMA9ZmYWPwAAQD8AAIA9ZmYWPwAAQD8AAMA9ZmYOPwAAQD8AAMA9ZmYOPwAAXD8AAMA9mpn5PgAAXD8AAMA9ZmYOPwAAgD8AAMA9mpn5PgAAaD8AAMA9ZmYOPwAAaD8AAMA9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r48mf"]
+resource_name = "blockbench_export_mesh22"
+_surfaces = [{
+"aabb": AABB(0.4875, 0.75, 0.0625, 0.099999964, 0.25, 0.03125),
+"attribute_data": PackedByteArray("AACAPAAAAD4AAAAAAAAAAAAAgDwAAAAAAAAAAAAAAD4AAAAAAAAAPgAAgDwAAAAAAAAAAAAAAAAAAIA8AAAAPgAAAAAAAAAAzcxMPQAAgDzNzEw9AAAAAAAAAAAAAIA8AAAAAAAAgDzNzEw9AAAAAM3MTD0AAIA8AAAAAAAAAADNzAw9AAAAPs3MTD0AAAAAzcxMPQAAAD7NzAw9AAAAAAAAAAAAAAA+zcwMPQAAkD3NzAw9AAAAPgAAAAAAAJA9AAAAAAAAQD3NzAw9AAAAAM3MDD0AAEA9AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_fibq6"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("mpn5PgAAQD8AAMA9mpn5PgAAgD8AAIA9mpn5PgAAgD8AAMA9mpn5PgAAQD8AAIA9ZmYWPwAAQD8AAIA9ZmYWPwAAgD8AAMA9ZmYWPwAAgD8AAIA9ZmYWPwAAQD8AAMA9mpn5PgAAQD8AAIA9ZmYWPwAAQD8AAMA9ZmYWPwAAQD8AAIA9mpn5PgAAQD8AAMA9mpn5PgAAgD8AAMA9ZmYWPwAAgD8AAIA9ZmYWPwAAgD8AAMA9mpn5PgAAgD8AAIA9ZmYOPwAAQD8AAMA9ZmYWPwAAgD8AAMA9ZmYWPwAAQD8AAMA9ZmYOPwAAgD8AAMA9mpn5PgAAQD8AAMA9ZmYOPwAAXD8AAMA9ZmYOPwAAQD8AAMA9mpn5PgAAXD8AAMA9mpn5PgAAaD8AAMA9ZmYOPwAAgD8AAMA9ZmYOPwAAaD8AAMA9mpn5PgAAgD8AAMA9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1wbvw")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l654q"]
+_surfaces = [{
+"aabb": AABB(0.359375, 0.859375, 0.09375, 0.19687498, 0.046875, 0.046875),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAQAAQAFAAMAAAAFAAEAAgABAAYABQAAAAcABQAHAAgAAAACAAkAAgAGAAkAAAAJAAcACAAJAAYACAAHAAkA"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("AAC4PgAAXD8AABA+AAC4PgAAaD8AAMA9AAC4PgAAaD8AABA+mpn5PgAAXD8AAMA9mpn5PgAAaD8AAMA9AAC4PgAAXD8AAMA9ZmYOPwAAaD8AAMA9ZmYOPwAAXD8AABA+ZmYOPwAAXD8AAMA9ZmYOPwAAaD8AABA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ies28"]
+resource_name = "blockbench_export_mesh23"
+_surfaces = [{
+"aabb": AABB(0.359375, 0.859375, 0.09375, 0.19687498, 0.046875, 0.046875),
+"attribute_data": PackedByteArray("AADAPAAAwDwAAAAAAAAAAAAAwDwAAAAAAAAAAAAAwDwAAAAAAADAPAAAwDwAAAAAAAAAAAAAAAAAAMA8AADAPAAAAAAAAAAAmpnJPQAAwDyamck9AAAAAAAAAAAAAMA8AAAAAAAAwDyamck9AAAAAJqZyT0AAMA8AAAAAAAAAAAAAAAAAAAAADMzgz0AAMA8MzODPQAAAAAAAAAAAADAPAAAAAAAAMA8mpnJPQAAAACamck9AADAPAAAAAAAAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_51hr8"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAC4PgAAXD8AABA+AAC4PgAAaD8AAMA9AAC4PgAAaD8AABA+AAC4PgAAXD8AAMA9ZmYOPwAAXD8AAMA9ZmYOPwAAaD8AABA+ZmYOPwAAaD8AAMA9ZmYOPwAAXD8AABA+AAC4PgAAXD8AAMA9ZmYOPwAAXD8AABA+ZmYOPwAAXD8AAMA9AAC4PgAAXD8AABA+AAC4PgAAaD8AABA+ZmYOPwAAaD8AAMA9ZmYOPwAAaD8AABA+AAC4PgAAaD8AAMA9AAC4PgAAaD8AAMA9mpn5PgAAXD8AAMA9mpn5PgAAaD8AAMA9AAC4PgAAXD8AAMA9AAC4PgAAXD8AABA+ZmYOPwAAaD8AABA+ZmYOPwAAXD8AABA+AAC4PgAAaD8AABA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_l654q")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ows24"]
+_surfaces = [{
+"aabb": AABB(-0.609375, 0.25, -0.09375, 0.0625, 0.1875, 0.03125),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABQAAAAYAAQAHAAMAAQAFAAcABwAEAAMABQAGAAcABwAGAAQA"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAcvwAAgD4AAIC9AAAcvwAA4D4AAMC9AAAcvwAA4D4AAIC9AAAMvwAA4D4AAMC9AAAMvwAA4D4AAIC9AAAcvwAAgD4AAMC9AAAMvwAAgD4AAIC9AAAMvwAAgD4AAMC9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ob3r7"]
+resource_name = "blockbench_export_mesh24"
+_surfaces = [{
+"aabb": AABB(-0.609375, 0.25, -0.09375, 0.0625, 0.1875, 0.03125),
+"attribute_data": PackedByteArray("AACAPAAAwD0AAAAAAAAAAAAAgDwAAAAAAAAAAAAAwD0AAAAAAADAPQAAgDwAAAAAAAAAAAAAAAAAAIA8AADAPQAAAAAAAAAAAAAAPQAAgDwAAAA9AAAAAAAAAAAAAIA8AAAAAAAAgDwAAAA9AAAAAAAAAD0AAIA8AAAAAAAAAAAAAAAAAAAAAAAAAD0AAMA9AAAAPQAAAAAAAAAAAADAPQ=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_fibq6"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAcvwAAgD4AAIC9AAAcvwAA4D4AAMC9AAAcvwAA4D4AAIC9AAAcvwAAgD4AAMC9AAAMvwAAgD4AAMC9AAAMvwAA4D4AAIC9AAAMvwAA4D4AAMC9AAAMvwAAgD4AAIC9AAAcvwAAgD4AAMC9AAAMvwAAgD4AAIC9AAAMvwAAgD4AAMC9AAAcvwAAgD4AAIC9AAAcvwAA4D4AAIC9AAAMvwAA4D4AAMC9AAAMvwAA4D4AAIC9AAAcvwAA4D4AAMC9AAAcvwAA4D4AAMC9AAAMvwAAgD4AAMC9AAAMvwAA4D4AAMC9AAAcvwAAgD4AAMC9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ows24")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nfx1l"]
+_surfaces = [{
+"aabb": AABB(-0.609375, 1.4375, -0.09375, 0.0625, 0.1875, 0.03125),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABQAAAAYAAQAHAAMAAQAFAAcABwAEAAMABQAGAAcABwAGAAQA"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAcvwAAuD8AAIC9AAAcvwAA0D8AAMC9AAAcvwAA0D8AAIC9AAAMvwAA0D8AAMC9AAAMvwAA0D8AAIC9AAAcvwAAuD8AAMC9AAAMvwAAuD8AAIC9AAAMvwAAuD8AAMC9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5igau"]
+resource_name = "blockbench_export_mesh25"
+_surfaces = [{
+"aabb": AABB(-0.609375, 1.4375, -0.09375, 0.0625, 0.1875, 0.03125),
+"attribute_data": PackedByteArray("AACAPAAAwD0AAAAAAAAAAAAAgDwAAAAAAAAAAAAAwD0AAAAAAADAPQAAgDwAAAAAAAAAAAAAAAAAAIA8AADAPQAAAAAAAAAAAAAAPQAAgDwAAAA9AAAAAAAAAAAAAIA8AAAAAAAAgDwAAAA9AAAAAAAAAD0AAIA8AAAAAAAAAAAAAAAAAAAAAAAAAD0AAMA9AAAAPQAAAAAAAAAAAADAPQ=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_fibq6"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAcvwAAuD8AAIC9AAAcvwAA0D8AAMC9AAAcvwAA0D8AAIC9AAAcvwAAuD8AAMC9AAAMvwAAuD8AAMC9AAAMvwAA0D8AAIC9AAAMvwAA0D8AAMC9AAAMvwAAuD8AAIC9AAAcvwAAuD8AAMC9AAAMvwAAuD8AAIC9AAAMvwAAuD8AAMC9AAAcvwAAuD8AAIC9AAAcvwAA0D8AAIC9AAAMvwAA0D8AAMC9AAAMvwAA0D8AAIC9AAAcvwAA0D8AAMC9AAAcvwAA0D8AAMC9AAAMvwAAuD8AAMC9AAAMvwAA0D8AAMC9AAAcvwAAuD8AAMC9AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9/AAD///8//38AAP///z//fwAA////P/9/AAD///8//3///////7//f///////v/9///////+//3///////7//////////P/////////8//////////z//////////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nfx1l")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uej1k"]
+data = PackedVector3Array(-2.4795532e-05, 0.0078, 0.0625, -2.4795532e-05, 1.8281, -0.0625, -2.4795532e-05, 1.8281, 0.0625, -2.4795532e-05, 0.0078, 0.0625, -2.4795532e-05, 0.0078, -0.0625, -2.4795532e-05, 1.8281, -0.0625, 0.124975204, 0.16409999, -0.0625, 0.124975204, 0.8438, -0.03909993, 0.124975204, 0.8438, -0.0625, 0.124975204, 0.16409999, -0.0625, 0.124975204, 0.16409999, -0.03909993, 0.124975204, 0.8438, -0.03909993, 0.124975204, 0.16409999, 0.03910017, 0.124975204, 0.8438, 0.0625, 0.124975204, 0.8438, 0.03910017, 0.124975204, 0.16409999, 0.03910017, 0.124975204, 0.16409999, 0.0625, 0.124975204, 0.8438, 0.0625, 0.124975204, 0.96879995, -0.0625, 0.124975204, 1.6718999, -0.03909993, 0.124975204, 1.6718999, -0.0625, 0.124975204, 0.96879995, -0.0625, 0.124975204, 0.96879995, -0.03909993, 0.124975204, 1.6718999, -0.03909993, 0.124975204, 0.96879995, 0.03910017, 0.124975204, 1.6718999, 0.0625, 0.124975204, 1.6718999, 0.03910017, 0.124975204, 0.96879995, 0.03910017, 0.124975204, 0.96879995, 0.0625, 0.124975204, 1.6718999, 0.0625, -2.4795532e-05, 0.0078, -0.0625, 0.124975204, 0.0078, 0.0625, 0.124975204, 0.0078, -0.0625, -2.4795532e-05, 0.0078, -0.0625, -2.4795532e-05, 0.0078, 0.0625, 0.124975204, 0.0078, 0.0625, -2.4795532e-05, 1.8281, 0.0625, 0.124975204, 1.8281, -0.0625, 0.124975204, 1.8281, 0.0625, -2.4795532e-05, 1.8281, 0.0625, -2.4795532e-05, 1.8281, -0.0625, 0.124975204, 1.8281, -0.0625, 0.062475204, 1.8281, -0.0625, 0.124975204, 0.0078, -0.0625, 0.124975204, 1.8281, -0.0625, 0.062475204, 1.8281, -0.0625, 0.062475204, 0.0078, -0.0625, 0.124975204, 0.0078, -0.0625, -2.4795532e-05, 0.25, -0.0625, 0.062475204, 0.0078, -0.0625, 0.062475204, 0.25, -0.0625, -2.4795532e-05, 0.25, -0.0625, -2.4795532e-05, 0.0078, -0.0625, 0.062475204, 0.0078, -0.0625, -2.4795532e-05, 1.4375, -0.0625, 0.062475204, 0.4375, -0.0625, 0.062475204, 1.4375, -0.0625, -2.4795532e-05, 1.4375, -0.0625, -2.4795532e-05, 0.4375, -0.0625, 0.062475204, 0.4375, -0.0625, -2.4795532e-05, 1.8281, -0.0625, 0.062475204, 1.625, -0.0625, 0.062475204, 1.8281, -0.0625, -2.4795532e-05, 1.8281, -0.0625, -2.4795532e-05, 1.625, -0.0625, 0.062475204, 1.625, -0.0625, -2.4795532e-05, 0.0078, 0.0625, 0.124975204, 1.8281, 0.0625, 0.124975204, 0.0078, 0.0625, -2.4795532e-05, 0.0078, 0.0625, -2.4795532e-05, 1.8281, 0.0625, 0.124975204, 1.8281, 0.0625, 1.0937748, 0.16409999, -0.03909993, 1.0937748, 0.8438, -0.0625, 1.0937748, 0.8438, -0.03909993, 1.0937748, 0.16409999, -0.03909993, 1.0937748, 0.16409999, -0.0625, 1.0937748, 0.8438, -0.0625, 1.0937748, 0.16409999, 0.0625, 1.0937748, 0.8438, 0.03910017, 1.0937748, 0.8438, 0.0625, 1.0937748, 0.16409999, 0.0625, 1.0937748, 0.16409999, 0.03910017, 1.0937748, 0.8438, 0.03910017, 1.0937748, 0.96879995, -0.03909993, 1.0937748, 1.6718999, -0.0625, 1.0937748, 1.6718999, -0.03909993, 1.0937748, 0.96879995, -0.03909993, 1.0937748, 0.96879995, -0.0625, 1.0937748, 1.6718999, -0.0625, 1.0937748, 0.96879995, 0.0625, 1.0937748, 1.6718999, 0.03910017, 1.0937748, 1.6718999, 0.0625, 1.0937748, 0.96879995, 0.0625, 1.0937748, 0.96879995, 0.03910017, 1.0937748, 1.6718999, 0.03910017, 1.2187748, 0.0078, -0.0625, 1.2187748, 1.8281, 0.0625, 1.2187748, 1.8281, -0.0625, 1.2187748, 0.0078, -0.0625, 1.2187748, 0.0078, 0.0625, 1.2187748, 1.8281, 0.0625, 1.0937748, 0.0078, -0.0625, 1.2187748, 0.0078, 0.0625, 1.2187748, 0.0078, -0.0625, 1.0937748, 0.0078, -0.0625, 1.0937748, 0.0078, 0.0625, 1.2187748, 0.0078, 0.0625, 1.0937748, 1.8281, 0.0625, 1.2187748, 1.8281, -0.0625, 1.2187748, 1.8281, 0.0625, 1.0937748, 1.8281, 0.0625, 1.0937748, 1.8281, -0.0625, 1.2187748, 1.8281, -0.0625, 1.0937748, 1.8281, -0.0625, 1.0968752, 0.0078, -0.0625, 1.0968752, 1.8281, -0.0625, 1.0937748, 1.8281, -0.0625, 1.0937748, 0.0078, -0.0625, 1.0968752, 0.0078, -0.0625, 1.1968746, 1.8281, -0.0625, 1.2187748, 0.0078, -0.0625, 1.2187748, 1.8281, -0.0625, 1.1968746, 1.8281, -0.0625, 1.1968746, 0.0078, -0.0625, 1.2187748, 0.0078, -0.0625, 1.0968752, 0.75, -0.0625, 1.1968746, 0.0078, -0.0625, 1.1968746, 0.75, -0.0625, 1.0968752, 0.75, -0.0625, 1.0968752, 0.0078, -0.0625, 1.1968746, 0.0078, -0.0625, 1.0968752, 1.8281, -0.0625, 1.1968746, 1, -0.0625, 1.1968746, 1.8281, -0.0625, 1.0968752, 1.8281, -0.0625, 1.0968752, 1, -0.0625, 1.1968746, 1, -0.0625, 1.0937748, 0.0078, 0.0625, 1.0968752, 1.8281, 0.0625, 1.0968752, 0.0078, 0.0625, 1.0937748, 0.0078, 0.0625, 1.0937748, 1.8281, 0.0625, 1.0968752, 1.8281, 0.0625, 1.1968746, 0.0078, 0.0625, 1.2187748, 1.8281, 0.0625, 1.2187748, 0.0078, 0.0625, 1.1968746, 0.0078, 0.0625, 1.1968746, 1.8281, 0.0625, 1.2187748, 1.8281, 0.0625, 1.0968752, 0.0078, 0.0625, 1.1968746, 0.75, 0.0625, 1.1968746, 0.0078, 0.0625, 1.0968752, 0.0078, 0.0625, 1.0968752, 0.75, 0.0625, 1.1968746, 0.75, 0.0625, 1.0968752, 1, 0.0625, 1.1968746, 1.8281, 0.0625, 1.1968746, 1, 0.0625, 1.0968752, 1, 0.0625, 1.0968752, 1.8281, 0.0625, 1.1968746, 1.8281, 0.0625, 0.124975204, 0.0078, -0.0625, 1.0937748, 0.0078, 0.0625, 1.0937748, 0.0078, -0.0625, 0.124975204, 0.0078, -0.0625, 0.124975204, 0.0078, 0.0625, 1.0937748, 0.0078, 0.0625, 0.124975204, 0.16409999, -0.03909993, 0.5702753, 0.16409999, -0.0625, 0.5702753, 0.16409999, -0.03909993, 0.124975204, 0.16409999, -0.03909993, 0.124975204, 0.16409999, -0.0625, 0.5702753, 0.16409999, -0.0625, 0.124975204, 0.16409999, 0.0625, 0.5702753, 0.16409999, 0.03910017, 0.5702753, 0.16409999, 0.0625, 0.124975204, 0.16409999, 0.0625, 0.124975204, 0.16409999, 0.03910017, 0.5702753, 0.16409999, 0.03910017, 0.6484747, 0.16409999, -0.03909993, 1.0937748, 0.16409999, -0.0625, 1.0937748, 0.16409999, -0.03909993, 0.6484747, 0.16409999, -0.03909993, 0.6484747, 0.16409999, -0.0625, 1.0937748, 0.16409999, -0.0625, 0.6484747, 0.16409999, 0.0625, 1.0937748, 0.16409999, 0.03910017, 1.0937748, 0.16409999, 0.0625, 0.6484747, 0.16409999, 0.0625, 0.6484747, 0.16409999, 0.03910017, 1.0937748, 0.16409999, 0.03910017, 0.124975204, 0.16409999, -0.0625, 1.0937748, 0.0078, -0.0625, 1.0937748, 0.16409999, -0.0625, 0.124975204, 0.16409999, -0.0625, 0.124975204, 0.0078, -0.0625, 1.0937748, 0.0078, -0.0625, 0.124975204, 0.0078, 0.0625, 1.0937748, 0.16409999, 0.0625, 1.0937748, 0.0078, 0.0625, 0.124975204, 0.0078, 0.0625, 0.124975204, 0.16409999, 0.0625, 1.0937748, 0.16409999, 0.0625, 0.124975204, 0.8438, -0.0625, 0.5702753, 0.8438, -0.03909993, 0.5702753, 0.8438, -0.0625, 0.124975204, 0.8438, -0.0625, 0.124975204, 0.8438, -0.03909993, 0.5702753, 0.8438, -0.03909993, 0.124975204, 0.8438, 0.03910017, 0.5702753, 0.8438, 0.0625, 0.5702753, 0.8438, 0.03910017, 0.124975204, 0.8438, 0.03910017, 0.124975204, 0.8438, 0.0625, 0.5702753, 0.8438, 0.0625, 0.6484747, 0.8438, -0.0625, 1.0937748, 0.8438, -0.03909993, 1.0937748, 0.8438, -0.0625, 0.6484747, 0.8438, -0.0625, 0.6484747, 0.8438, -0.03909993, 1.0937748, 0.8438, -0.03909993, 0.6484747, 0.8438, 0.03910017, 1.0937748, 0.8438, 0.0625, 1.0937748, 0.8438, 0.03910017, 0.6484747, 0.8438, 0.03910017, 0.6484747, 0.8438, 0.0625, 1.0937748, 0.8438, 0.0625, 0.124975204, 0.96879995, -0.03909993, 0.5702753, 0.96879995, -0.0625, 0.5702753, 0.96879995, -0.03909993, 0.124975204, 0.96879995, -0.03909993, 0.124975204, 0.96879995, -0.0625, 0.5702753, 0.96879995, -0.0625, 0.124975204, 0.96879995, 0.0625, 0.5702753, 0.96879995, 0.03910017, 0.5702753, 0.96879995, 0.0625, 0.124975204, 0.96879995, 0.0625, 0.124975204, 0.96879995, 0.03910017, 0.5702753, 0.96879995, 0.03910017, 0.6484747, 0.96879995, -0.03909993, 1.0937748, 0.96879995, -0.0625, 1.0937748, 0.96879995, -0.03909993, 0.6484747, 0.96879995, -0.03909993, 0.6484747, 0.96879995, -0.0625, 1.0937748, 0.96879995, -0.0625, 0.6484747, 0.96879995, 0.0625, 1.0937748, 0.96879995, 0.03910017, 1.0937748, 0.96879995, 0.0625, 0.6484747, 0.96879995, 0.0625, 0.6484747, 0.96879995, 0.03910017, 1.0937748, 0.96879995, 0.03910017, 0.124975204, 0.96879995, -0.0625, 0.5702753, 0.8438, -0.0625, 0.5702753, 0.96879995, -0.0625, 0.124975204, 0.96879995, -0.0625, 0.124975204, 0.8438, -0.0625, 0.5702753, 0.8438, -0.0625, 0.6484747, 0.96879995, -0.0625, 1.0937748, 0.8438, -0.0625, 1.0937748, 0.96879995, -0.0625, 0.6484747, 0.96879995, -0.0625, 0.6484747, 0.8438, -0.0625, 1.0937748, 0.8438, -0.0625, 0.124975204, 0.8438, 0.0625, 0.5702753, 0.96879995, 0.0625, 0.5702753, 0.8438, 0.0625, 0.124975204, 0.8438, 0.0625, 0.124975204, 0.96879995, 0.0625, 0.5702753, 0.96879995, 0.0625, 0.6484747, 0.8438, 0.0625, 1.0937748, 0.96879995, 0.0625, 1.0937748, 0.8438, 0.0625, 0.6484747, 0.8438, 0.0625, 0.6484747, 0.96879995, 0.0625, 1.0937748, 0.96879995, 0.0625, 0.124975204, 1.6718999, -0.0625, 0.5702753, 1.6718999, -0.03909993, 0.5702753, 1.6718999, -0.0625, 0.124975204, 1.6718999, -0.0625, 0.124975204, 1.6718999, -0.03909993, 0.5702753, 1.6718999, -0.03909993, 0.124975204, 1.6718999, 0.03910017, 0.5702753, 1.6718999, 0.0625, 0.5702753, 1.6718999, 0.03910017, 0.124975204, 1.6718999, 0.03910017, 0.124975204, 1.6718999, 0.0625, 0.5702753, 1.6718999, 0.0625, 0.6484747, 1.6718999, -0.0625, 1.0937748, 1.6718999, -0.03909993, 1.0937748, 1.6718999, -0.0625, 0.6484747, 1.6718999, -0.0625, 0.6484747, 1.6718999, -0.03909993, 1.0937748, 1.6718999, -0.03909993, 0.6484747, 1.6718999, 0.03910017, 1.0937748, 1.6718999, 0.0625, 1.0937748, 1.6718999, 0.03910017, 0.6484747, 1.6718999, 0.03910017, 0.6484747, 1.6718999, 0.0625, 1.0937748, 1.6718999, 0.0625, 0.124975204, 1.8281, 0.0625, 1.0937748, 1.8281, -0.0625, 1.0937748, 1.8281, 0.0625, 0.124975204, 1.8281, 0.0625, 0.124975204, 1.8281, -0.0625, 1.0937748, 1.8281, -0.0625, 0.124975204, 1.8281, -0.0625, 1.0937748, 1.6718999, -0.0625, 1.0937748, 1.8281, -0.0625, 0.124975204, 1.8281, -0.0625, 0.124975204, 1.6718999, -0.0625, 1.0937748, 1.6718999, -0.0625, 0.124975204, 1.6718999, 0.0625, 1.0937748, 1.8281, 0.0625, 1.0937748, 1.6718999, 0.0625, 0.124975204, 1.6718999, 0.0625, 0.124975204, 1.8281, 0.0625, 1.0937748, 1.8281, 0.0625, 0.5702753, 0.16409999, -0.03909993, 0.5702753, 0.8438, -0.0625, 0.5702753, 0.8438, -0.03909993, 0.5702753, 0.16409999, -0.03909993, 0.5702753, 0.16409999, -0.0625, 0.5702753, 0.8438, -0.0625, 0.5702753, 0.16409999, 0.0625, 0.5702753, 0.8438, 0.03910017, 0.5702753, 0.8438, 0.0625, 0.5702753, 0.16409999, 0.0625, 0.5702753, 0.16409999, 0.03910017, 0.5702753, 0.8438, 0.03910017, 0.5702753, 0.96879995, -0.03909993, 0.5702753, 1.6718999, -0.0625, 0.5702753, 1.6718999, -0.03909993, 0.5702753, 0.96879995, -0.03909993, 0.5702753, 0.96879995, -0.0625, 0.5702753, 1.6718999, -0.0625, 0.5702753, 0.96879995, 0.0625, 0.5702753, 1.6718999, 0.03910017, 0.5702753, 1.6718999, 0.0625, 0.5702753, 0.96879995, 0.0625, 0.5702753, 0.96879995, 0.03910017, 0.5702753, 1.6718999, 0.03910017, 0.6484747, 0.16409999, -0.0625, 0.6484747, 0.8438, -0.03909993, 0.6484747, 0.8438, -0.0625, 0.6484747, 0.16409999, -0.0625, 0.6484747, 0.16409999, -0.03909993, 0.6484747, 0.8438, -0.03909993, 0.6484747, 0.16409999, 0.03910017, 0.6484747, 0.8438, 0.0625, 0.6484747, 0.8438, 0.03910017, 0.6484747, 0.16409999, 0.03910017, 0.6484747, 0.16409999, 0.0625, 0.6484747, 0.8438, 0.0625, 0.6484747, 0.96879995, -0.0625, 0.6484747, 1.6718999, -0.03909993, 0.6484747, 1.6718999, -0.0625, 0.6484747, 0.96879995, -0.0625, 0.6484747, 0.96879995, -0.03909993, 0.6484747, 1.6718999, -0.03909993, 0.6484747, 0.96879995, 0.03910017, 0.6484747, 1.6718999, 0.0625, 0.6484747, 1.6718999, 0.03910017, 0.6484747, 0.96879995, 0.03910017, 0.6484747, 0.96879995, 0.0625, 0.6484747, 1.6718999, 0.0625, 0.5702753, 1.6718999, -0.0625, 0.6484747, 0.16409999, -0.0625, 0.6484747, 1.6718999, -0.0625, 0.5702753, 1.6718999, -0.0625, 0.5702753, 0.16409999, -0.0625, 0.6484747, 0.16409999, -0.0625, 0.5702753, 0.16409999, 0.0625, 0.6484747, 1.6718999, 0.0625, 0.6484747, 0.16409999, 0.0625, 0.5702753, 0.16409999, 0.0625, 0.5702753, 1.6718999, 0.0625, 0.6484747, 1.6718999, 0.0625, 0.124975204, 0.8438, -0.03909993, 0.5702753, 0.16409999, -0.03909993, 0.5702753, 0.8438, -0.03909993, 0.124975204, 0.8438, -0.03909993, 0.124975204, 0.16409999, -0.03909993, 0.5702753, 0.16409999, -0.03909993, 0.124975204, 0.16409999, 0.03910017, 0.5702753, 0.8438, 0.03910017, 0.5702753, 0.16409999, 0.03910017, 0.124975204, 0.16409999, 0.03910017, 0.124975204, 0.8438, 0.03910017, 0.5702753, 0.8438, 0.03910017, 0.124975204, 1.6718999, -0.03909993, 0.5702753, 0.96879995, -0.03909993, 0.5702753, 1.6718999, -0.03909993, 0.124975204, 1.6718999, -0.03909993, 0.124975204, 0.96879995, -0.03909993, 0.5702753, 0.96879995, -0.03909993, 0.124975204, 0.96879995, 0.03910017, 0.5702753, 1.6718999, 0.03910017, 0.5702753, 0.96879995, 0.03910017, 0.124975204, 0.96879995, 0.03910017, 0.124975204, 1.6718999, 0.03910017, 0.5702753, 1.6718999, 0.03910017, 0.6484747, 0.8438, -0.03909993, 1.0937748, 0.16409999, -0.03909993, 1.0937748, 0.8438, -0.03909993, 0.6484747, 0.8438, -0.03909993, 0.6484747, 0.16409999, -0.03909993, 1.0937748, 0.16409999, -0.03909993, 0.6484747, 0.16409999, 0.03910017, 1.0937748, 0.8438, 0.03910017, 1.0937748, 0.16409999, 0.03910017, 0.6484747, 0.16409999, 0.03910017, 0.6484747, 0.8438, 0.03910017, 1.0937748, 0.8438, 0.03910017, 0.6484747, 1.6718999, -0.03909993, 1.0937748, 0.96879995, -0.03909993, 1.0937748, 1.6718999, -0.03909993, 0.6484747, 1.6718999, -0.03909993, 0.6484747, 0.96879995, -0.03909993, 1.0937748, 0.96879995, -0.03909993, 0.6484747, 0.96879995, 0.03910017, 1.0937748, 1.6718999, 0.03910017, 1.0937748, 0.96879995, 0.03910017, 0.6484747, 0.96879995, 0.03910017, 0.6484747, 1.6718999, 0.03910017, 1.0937748, 1.6718999, 0.03910017, 1.0968752, 0.75, -0.0625, 1.0968752, 1, -0.09380007, 1.0968752, 1, -0.0625, 1.0968752, 0.75, -0.0625, 1.0968752, 0.75, -0.09380007, 1.0968752, 1, -0.09380007, 1.1968746, 0.75, -0.09380007, 1.1968746, 1, -0.0625, 1.1968746, 1, -0.09380007, 1.1968746, 0.75, -0.09380007, 1.1968746, 0.75, -0.0625, 1.1968746, 1, -0.0625, 1.0968752, 0.75, -0.09380007, 1.1968746, 0.75, -0.0625, 1.1968746, 0.75, -0.09380007, 1.0968752, 0.75, -0.09380007, 1.0968752, 0.75, -0.0625, 1.1968746, 0.75, -0.0625, 1.0968752, 1, -0.0625, 1.1968746, 1, -0.09380007, 1.1968746, 1, -0.0625, 1.0968752, 1, -0.0625, 1.0968752, 1, -0.09380007, 1.1968746, 1, -0.09380007, 1.165575, 1, -0.09380007, 1.1968746, 0.75, -0.09380007, 1.1968746, 1, -0.09380007, 1.165575, 1, -0.09380007, 1.165575, 0.75, -0.09380007, 1.1968746, 0.75, -0.09380007, 1.0968752, 0.8594, -0.09380007, 1.165575, 0.75, -0.09380007, 1.165575, 0.8594, -0.09380007, 1.0968752, 0.8594, -0.09380007, 1.0968752, 0.75, -0.09380007, 1.165575, 0.75, -0.09380007, 1.0968752, 1, -0.09380007, 1.165575, 0.90629995, -0.09380007, 1.165575, 1, -0.09380007, 1.0968752, 1, -0.09380007, 1.0968752, 0.90629995, -0.09380007, 1.165575, 0.90629995, -0.09380007, 0.9687748, 0.8594, -0.09380007, 0.9687748, 0.90629995, -0.14059997, 0.9687748, 0.90629995, -0.09380007, 0.9687748, 0.8594, -0.09380007, 0.9687748, 0.8594, -0.14059997, 0.9687748, 0.90629995, -0.14059997, 1.165575, 0.8594, -0.14059997, 1.165575, 0.90629995, -0.09380007, 1.165575, 0.90629995, -0.14059997, 1.165575, 0.8594, -0.14059997, 1.165575, 0.8594, -0.09380007, 1.165575, 0.90629995, -0.09380007, 0.9687748, 0.8594, -0.14059997, 1.165575, 0.8594, -0.09380007, 1.165575, 0.8594, -0.14059997, 0.9687748, 0.8594, -0.14059997, 0.9687748, 0.8594, -0.09380007, 1.165575, 0.8594, -0.09380007, 0.9687748, 0.90629995, -0.09380007, 1.165575, 0.90629995, -0.14059997, 1.165575, 0.90629995, -0.09380007, 0.9687748, 0.90629995, -0.09380007, 0.9687748, 0.90629995, -0.14059997, 1.165575, 0.90629995, -0.14059997, 0.9687748, 0.90629995, -0.14059997, 1.165575, 0.8594, -0.14059997, 1.165575, 0.90629995, -0.14059997, 0.9687748, 0.90629995, -0.14059997, 0.9687748, 0.8594, -0.14059997, 1.165575, 0.8594, -0.14059997, 0.9687748, 0.8594, -0.09380007, 1.0968752, 0.90629995, -0.09380007, 1.0968752, 0.8594, -0.09380007, 0.9687748, 0.8594, -0.09380007, 0.9687748, 0.90629995, -0.09380007, 1.0968752, 0.90629995, -0.09380007, 1.0968752, 0.75, 0.09380007, 1.0968752, 1, 0.0625, 1.0968752, 1, 0.09380007, 1.0968752, 0.75, 0.09380007, 1.0968752, 0.75, 0.0625, 1.0968752, 1, 0.0625, 1.1968746, 0.75, 0.0625, 1.1968746, 1, 0.09380007, 1.1968746, 1, 0.0625, 1.1968746, 0.75, 0.0625, 1.1968746, 0.75, 0.09380007, 1.1968746, 1, 0.09380007, 1.0968752, 0.75, 0.0625, 1.1968746, 0.75, 0.09380007, 1.1968746, 0.75, 0.0625, 1.0968752, 0.75, 0.0625, 1.0968752, 0.75, 0.09380007, 1.1968746, 0.75, 0.09380007, 1.0968752, 1, 0.09380007, 1.1968746, 1, 0.0625, 1.1968746, 1, 0.09380007, 1.0968752, 1, 0.09380007, 1.0968752, 1, 0.0625, 1.1968746, 1, 0.0625, 1.165575, 0.75, 0.09380007, 1.1968746, 1, 0.09380007, 1.1968746, 0.75, 0.09380007, 1.165575, 0.75, 0.09380007, 1.165575, 1, 0.09380007, 1.1968746, 1, 0.09380007, 1.0968752, 0.75, 0.09380007, 1.165575, 0.8594, 0.09380007, 1.165575, 0.75, 0.09380007, 1.0968752, 0.75, 0.09380007, 1.0968752, 0.8594, 0.09380007, 1.165575, 0.8594, 0.09380007, 1.0968752, 0.90629995, 0.09380007, 1.165575, 1, 0.09380007, 1.165575, 0.90629995, 0.09380007, 1.0968752, 0.90629995, 0.09380007, 1.0968752, 1, 0.09380007, 1.165575, 1, 0.09380007, 0.9687748, 0.8594, 0.1406002, 0.9687748, 0.90629995, 0.09380007, 0.9687748, 0.90629995, 0.1406002, 0.9687748, 0.8594, 0.1406002, 0.9687748, 0.8594, 0.09380007, 0.9687748, 0.90629995, 0.09380007, 1.165575, 0.8594, 0.09380007, 1.165575, 0.90629995, 0.1406002, 1.165575, 0.90629995, 0.09380007, 1.165575, 0.8594, 0.09380007, 1.165575, 0.8594, 0.1406002, 1.165575, 0.90629995, 0.1406002, 0.9687748, 0.8594, 0.09380007, 1.165575, 0.8594, 0.1406002, 1.165575, 0.8594, 0.09380007, 0.9687748, 0.8594, 0.09380007, 0.9687748, 0.8594, 0.1406002, 1.165575, 0.8594, 0.1406002, 0.9687748, 0.90629995, 0.1406002, 1.165575, 0.90629995, 0.09380007, 1.165575, 0.90629995, 0.1406002, 0.9687748, 0.90629995, 0.1406002, 0.9687748, 0.90629995, 0.09380007, 1.165575, 0.90629995, 0.09380007, 0.9687748, 0.90629995, 0.09380007, 1.0968752, 0.8594, 0.09380007, 1.0968752, 0.90629995, 0.09380007, 0.9687748, 0.90629995, 0.09380007, 0.9687748, 0.8594, 0.09380007, 1.0968752, 0.8594, 0.09380007, 0.9687748, 0.8594, 0.1406002, 1.165575, 0.90629995, 0.1406002, 1.165575, 0.8594, 0.1406002, 0.9687748, 0.8594, 0.1406002, 0.9687748, 0.90629995, 0.1406002, 1.165575, 0.90629995, 0.1406002, -2.4795532e-05, 0.25, -0.0625, -2.4795532e-05, 0.4375, -0.09380007, -2.4795532e-05, 0.4375, -0.0625, -2.4795532e-05, 0.25, -0.0625, -2.4795532e-05, 0.25, -0.09380007, -2.4795532e-05, 0.4375, -0.09380007, 0.062475204, 0.25, -0.09380007, 0.062475204, 0.4375, -0.0625, 0.062475204, 0.4375, -0.09380007, 0.062475204, 0.25, -0.09380007, 0.062475204, 0.25, -0.0625, 0.062475204, 0.4375, -0.0625, -2.4795532e-05, 0.25, -0.09380007, 0.062475204, 0.25, -0.0625, 0.062475204, 0.25, -0.09380007, -2.4795532e-05, 0.25, -0.09380007, -2.4795532e-05, 0.25, -0.0625, 0.062475204, 0.25, -0.0625, -2.4795532e-05, 0.4375, -0.0625, 0.062475204, 0.4375, -0.09380007, 0.062475204, 0.4375, -0.0625, -2.4795532e-05, 0.4375, -0.0625, -2.4795532e-05, 0.4375, -0.09380007, 0.062475204, 0.4375, -0.09380007, -2.4795532e-05, 0.4375, -0.09380007, 0.062475204, 0.25, -0.09380007, 0.062475204, 0.4375, -0.09380007, -2.4795532e-05, 0.4375, -0.09380007, -2.4795532e-05, 0.25, -0.09380007, 0.062475204, 0.25, -0.09380007, -2.4795532e-05, 1.4375, -0.0625, -2.4795532e-05, 1.625, -0.09380007, -2.4795532e-05, 1.625, -0.0625, -2.4795532e-05, 1.4375, -0.0625, -2.4795532e-05, 1.4375, -0.09380007, -2.4795532e-05, 1.625, -0.09380007, 0.062475204, 1.4375, -0.09380007, 0.062475204, 1.625, -0.0625, 0.062475204, 1.625, -0.09380007, 0.062475204, 1.4375, -0.09380007, 0.062475204, 1.4375, -0.0625, 0.062475204, 1.625, -0.0625, -2.4795532e-05, 1.4375, -0.09380007, 0.062475204, 1.4375, -0.0625, 0.062475204, 1.4375, -0.09380007, -2.4795532e-05, 1.4375, -0.09380007, -2.4795532e-05, 1.4375, -0.0625, 0.062475204, 1.4375, -0.0625, -2.4795532e-05, 1.625, -0.0625, 0.062475204, 1.625, -0.09380007, 0.062475204, 1.625, -0.0625, -2.4795532e-05, 1.625, -0.0625, -2.4795532e-05, 1.625, -0.09380007, 0.062475204, 1.625, -0.09380007, -2.4795532e-05, 1.625, -0.09380007, 0.062475204, 1.4375, -0.09380007, 0.062475204, 1.625, -0.09380007, -2.4795532e-05, 1.625, -0.09380007, -2.4795532e-05, 1.4375, -0.09380007, 0.062475204, 1.4375, -0.09380007)
+backface_collision = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ge76s"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_k2opv")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ri0lb"]
+_surfaces = [{
+"aabb": AABB(-0.875, 0, -0.125, 1.75, 2, 0.25),
+"attribute_data": PackedByteArray("AACAPQAAAAAAAAA/AACAPQAAcD8AAIA9AACAPQAAAAAAAHA/AACAPQAAcD8AAAAAAAAAPwAAgD0AAGg/btv2PQAAaD8AAIA9AACAPQAAAAAAAIA9AACAPQAAAD8AAIA9AACAPQAAgD0AAIA9AAAAPgAAaD8AAAA+AACAPQAAgD0AAGg/AAAAPgAAaD9u2/Y9AACAPQAAgD0AAGg/btv2PQAAAD8AAIA9AACAPQAAAD7NzEg/MzOzPAAAaD8AAIA9AACAPQAAAD4AAGg/AACAPQAAaD8AAAA+zcxIPzMzszwAAHA/AAAAAAAAcD8AAIA9zcxIPzMzszwAAHA/AACAPQAAaD8AAIA9AACAPQAAAD4AAIA9AAAAAAAAcD8AAAAAAACAPQAAAAAAAHA/AACAPwAAcD8AAAAAAACAPQAAAAAAAIA9AACAPwAAcD8AAIA/AACAPQAAgD8AAGg/JUkSPQAAaD8AAIA/AACAPQAAgD8AAIA9AAAAAAAAaD8AAAAAAACAPQAAgD8AAGg/AAAAAAAAaD8lSRI9"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_ge76s"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 51,
+"vertex_data": PackedByteArray("AABgvwAAAAAAAAC+AAAAAAAAAAAAAAAAAABgPwAAAAAAAAAAAABgvwAAAAAAAAC+AABgPwAAAAAAAAAAAABgPwAAAAAAAAC+AAAAAAAAAAAAAAAAAABQPwAAAAAAt+09AABQPwAAAAAAAAAAAABgvwAAAAAAAAC+AABgvwAAAAAAAAAAAAAAAAAAAAAAAAAAAABgvwAAAAAAAAAAAABgvwAAAAAAAAA+AABQPwAAAAAAAAA+AABgvwAAAAAAAAAAAABQPwAAAAAAAAA+AABQPwAAAAAAt+09AABgvwAAAAAAAAAAAABQPwAAAAAAt+09AAAAAAAAAAAAAAAAAABgvwAAAEAAAAA+mJkRPwAAAECAZqa9AABQPwAAAEAAAAAAAABgvwAAAEAAAAA+AABQPwAAAEAAAAAAAABQPwAAAEAAAAA+mJkRPwAAAECAZqa9AABgPwAAAEAAAAC+AABgPwAAAEAAAAAAmJkRPwAAAECAZqa9AABgPwAAAEAAAAAAAABQPwAAAEAAAAAAAABgvwAAAEAAAAA+AABgvwAAAEAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAC+AABgPwAAAAAAAAC+AABgPwAAAEAAAAC+AABgvwAAAEAAAAC+AABgvwAAAAAAAAC+AABgPwAAAAAAAAC+AABgvwAAAAAAAAA+AABQP27b9j8AAAA+AABQPwAAAAAAAAA+AABgvwAAAAAAAAA+AABgvwAAAEAAAAA+AABQPwAAAEAAAAA+AABgvwAAAAAAAAA+AABQPwAAAEAAAAA+AABQP27b9j8AAAA+/58AAGInErv/fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v1TVAAC2bW2b/38AAAAA/7//fwAAAAD/v/9/AAAAAP+//58AAGInErv/fwAAAAD/v/9/AAAAAP+//38AAAAA/7//f/9fnVjrhP9/qipJEpGk/38AAAAA/7//f6oqSRKRpP9/AAAAAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//3//32InErv/f///AAD/v/9///8AAP+//3//32InErv/f///AAD/v/9/qqq2bW2b/3///wAA/7+pqv//SRKRpP9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3//32InErtU1f//JEkkiamq//9JEpGkVNX//yRJJIlU1QAAtm1tm6mq//9JEpGkVNX//yRJJIn/nwAAYicSu1TVAAC2bW2b/3//X51Y64T/f/9//38AgP9/qipJEpGk/3//X51Y64T/f//fYicSu/9/qqq2bW2b/3//X51Y64T/f6qqtm1tm/9//3//fwCA")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8y0un"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("10_suva2")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jxf2v"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"format": 34359742465,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUAAAACAAUAAQAGAAMAAQAEAAYABgAHAAMABgAIAAcABAAJAAYABAAAAAkAAAAFAAkACgAJAAUACgAFAAsA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AABgvwAAAEAAAEC+AACAvwAAAAAAAEC+AABgvwAAAEAAAEA+AABgvwAAAAAAAEC+AABgvwAAAEAAAAC+AABgvwAAAAAAAAC+AABgvwAAAAAAAEA+AABgvwAAAAAAAAA+AABgvwAAAEAAAAA+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wtuwu"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AABAPgAAgD8AAAAAAAAAAAAAQD4AAAAAAAAAAAAAgD8AAAAAAACAPwAAAD0AAAAAAAAAAAAAAAAAAAA9AACAPwAAID4AAIA/AABAPgAAAAAAACA+AAAAAAAAQD4AAIA/AAAAAAAAAAAAAIA9AABAPgAAgD0AAAAAAAAAAAAAQD4AAAAAAABAPgAAgD0AAAAAAACAPQAAQD4AAAAAAAAAAAAAAAAAAAAAAACAPQAAgD8AAIA9AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAAAA="),
+"format": 34359742487,
+"index_count": 42,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkA"),
+"material": SubResource("StandardMaterial3D_8y0un"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEA+AACAvwAAAAAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAAC+AABgvwAAAEAAAEC+AABgvwAAAAAAAAC+AABgvwAAAAAAAAA+AABgvwAAAEAAAEA+AABgvwAAAEAAAAA+AABgvwAAAAAAAEA+AACAvwAAAAAAAEC+AABgvwAAAAAAAEA+AABgvwAAAAAAAEC+AACAvwAAAAAAAEA+AACAvwAAAEAAAEA+AABgvwAAAEAAAEC+AABgvwAAAEAAAEA+AACAvwAAAEAAAEC+AACAvwAAAEAAAEC+AABgvwAAAAAAAEC+AABgvwAAAEAAAEC+AACAvwAAAAAAAEC+AACAvwAAAAAAAEA+AABgvwAAAEAAAEA+AABgvwAAAAAAAEA+AACAvwAAAEAAAEA+AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//7////9//3//P////3//f/8/////f/9//z////9//3//P////3//f/8/////f/9//z////9//3//P////3//f/8//38AAP///z//fwAA////P/9/AAD///8//38AAP///z//f///////v/9///////+//3///////7//f///////v/////////8//////////z//////////P/////////8//3//f////7//f/9/////v/9//3////+//3//f////78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jxf2v")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o0ipe"]
+_surfaces = [{
+"aabb": AABB(0.875, 0, -0.1875, 0.125, 2, 0.375),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAEA+AAAAAAAAAAAAAAAAAAAAAAAAgD8AAEA+AACAPwAAQD4AAAAAAAAAAAAAAAAAAIA9AACAPwAAgD0AAAAAAAAAAAAAAAAAAAAAAACAPwAAgD0AAIA/AAAAAAAAgD8AAIA9AAAAAAAAgD0AAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD0AAAAA"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_8y0un"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACAPwAAAAAAAEC+AACAPwAAAEAAAEA+AACAPwAAAEAAAEC+AACAPwAAAAAAAEC+AACAPwAAAAAAAEA+AACAPwAAAEAAAEA+AABgPwAAAEAAAEC+AACAPwAAAAAAAEC+AACAPwAAAEAAAEC+AABgPwAAAEAAAEC+AABgPwAAAAAAAEC+AACAPwAAAAAAAEC+AABgPwAAAAAAAEA+AACAPwAAAEAAAEA+AACAPwAAAAAAAEA+AABgPwAAAAAAAEA+AABgPwAAAEAAAEA+AACAPwAAAEAAAEA+////v6qqqar/v/9/VFWpqv///7+qqqmq////v6qqqar/v/9/VFWpqv+//39UVamq//////9/AID///+/qqqpqv///7+qqqmq//////9/AID//////38AgP///7+qqqmq/3//f/9/AID/v/9/VFWpqv+//39UVamq/3//f/9/AID/f/9//38AgP+//39UVamq")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v62t2"]
+data = PackedVector3Array(-0.875, 0, -0.125, 0, 0, 0, 0.875, 0, 0, -0.875, 0, -0.125, 0.875, 0, 0, 0.875, 0, -0.125, 0, 0, 0, 0.8125, 0, 0.11610031, 0.8125, 0, 0, -0.875, 0, -0.125, -0.875, 0, 0, 0, 0, 0, -0.875, 0, 0, -0.875, 0, 0.125, 0.8125, 0, 0.125, -0.875, 0, 0, 0.8125, 0, 0.125, 0.8125, 0, 0.11610031, -0.875, 0, 0, 0.8125, 0, 0.11610031, 0, 0, 0, -0.875, 2, 0.125, 0.56869984, 2, -0.08129978, 0.8125, 2, 0, -0.875, 2, 0.125, 0.8125, 2, 0, 0.8125, 2, 0.125, 0.56869984, 2, -0.08129978, 0.875, 2, -0.125, 0.875, 2, 0, 0.56869984, 2, -0.08129978, 0.875, 2, 0, 0.8125, 2, 0, -0.875, 2, 0.125, -0.875, 2, -0.125, 0.875, 2, -0.125, -0.875, 2, -0.125, 0.875, 0, -0.125, 0.875, 2, -0.125, -0.875, 2, -0.125, -0.875, 0, -0.125, 0.875, 0, -0.125, -0.875, 0, 0.125, 0.8125, 1.9286, 0.125, 0.8125, 0, 0.125, -0.875, 0, 0.125, -0.875, 2, 0.125, 0.8125, 2, 0.125, -0.875, 0, 0.125, 0.8125, 2, 0.125, 0.8125, 1.9286, 0.125, -1, 0, 0.1875, -1, 2, -0.1875, -1, 2, 0.1875, -1, 0, 0.1875, -1, 0, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.125, -0.875, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 0, -0.125, -0.875, 2, -0.125, -0.875, 0, 0.125, -0.875, 2, 0.1875, -0.875, 2, 0.125, -0.875, 0, 0.125, -0.875, 0, 0.1875, -0.875, 2, 0.1875, -1, 0, -0.1875, -0.875, 0, 0.1875, -0.875, 0, -0.1875, -1, 0, -0.1875, -1, 0, 0.1875, -0.875, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, -0.1875, -0.875, 2, 0.1875, -1, 2, 0.1875, -1, 2, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -0.875, 0, -0.1875, -0.875, 2, -0.1875, -1, 2, -0.1875, -1, 0, -0.1875, -0.875, 0, -0.1875, -1, 0, 0.1875, -0.875, 2, 0.1875, -0.875, 0, 0.1875, -1, 0, 0.1875, -1, 2, 0.1875, -0.875, 2, 0.1875, 1, 0, -0.1875, 1, 2, 0.1875, 1, 2, -0.1875, 1, 0, -0.1875, 1, 0, 0.1875, 1, 2, 0.1875, 0.875, 2, -0.1875, 1, 0, -0.1875, 1, 2, -0.1875, 0.875, 2, -0.1875, 0.875, 0, -0.1875, 1, 0, -0.1875, 0.875, 0, 0.1875, 1, 2, 0.1875, 1, 0, 0.1875, 0.875, 0, 0.1875, 0.875, 2, 0.1875, 1, 2, 0.1875)
+backface_collision = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10y3g"]
+size = Vector3(16, 4, 14)
+
+[node name="LanternRestaurant" type="Node3D" unique_id=1266816910]
+script = ExtResource("1_owswc")
+building_title = "The Lantern Restaurant"
+metadata/building_id = "lantern_restaurant"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="Floors" type="Node3D" parent="." unique_id=965751577]
+
+[node name="Level0" type="Node3D" parent="Floors" unique_id=122134837]
+
+[node name="Foundation" type="Node3D" parent="Floors/Level0" unique_id=601582746]
+
+[node name="FloorWood_001" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1580776606 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_002" type="Node3D" parent="Floors/Level0/Foundation" unique_id=799347731 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_003" type="Node3D" parent="Floors/Level0/Foundation" unique_id=461495029 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_004" type="Node3D" parent="Floors/Level0/Foundation" unique_id=701547375 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_005" type="Node3D" parent="Floors/Level0/Foundation" unique_id=628040581 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_006" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1167960566 instance=ExtResource("3_ldpte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 11)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_007" type="Node3D" parent="Floors/Level0/Foundation" unique_id=541357163 instance=ExtResource("3_ldpte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 13)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_008" type="Node3D" parent="Floors/Level0/Foundation" unique_id=18215990 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_009" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1297281332 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_010" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1329085711 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_011" type="Node3D" parent="Floors/Level0/Foundation" unique_id=497149254 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_012" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1317700433 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 9)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_013" type="Node3D" parent="Floors/Level0/Foundation" unique_id=46366800 instance=ExtResource("3_ldpte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 11)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorBathTile_014" type="Node3D" parent="Floors/Level0/Foundation" unique_id=2046314777 instance=ExtResource("3_ldpte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, 13)
+metadata/asset_id = "floor_bath_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_015" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1722425288 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_016" type="Node3D" parent="Floors/Level0/Foundation" unique_id=543782037 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_017" type="Node3D" parent="Floors/Level0/Foundation" unique_id=525695001 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_018" type="Node3D" parent="Floors/Level0/Foundation" unique_id=940054961 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_019" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1274377068 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_020" type="Node3D" parent="Floors/Level0/Foundation" unique_id=237778679 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_021" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1092076780 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_022" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1216171755 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_023" type="Node3D" parent="Floors/Level0/Foundation" unique_id=731189440 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_024" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1853878541 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_025" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1188040382 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_026" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1237750728 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_027" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1038179551 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_028" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1506647793 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_029" type="Node3D" parent="Floors/Level0/Foundation" unique_id=190342968 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_030" type="Node3D" parent="Floors/Level0/Foundation" unique_id=2106123110 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_031" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1585968039 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_032" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1673509537 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_033" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1427621435 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_034" type="Node3D" parent="Floors/Level0/Foundation" unique_id=438830294 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_035" type="Node3D" parent="Floors/Level0/Foundation" unique_id=649713408 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_036" type="Node3D" parent="Floors/Level0/Foundation" unique_id=186717781 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_037" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1797215708 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_038" type="Node3D" parent="Floors/Level0/Foundation" unique_id=471352816 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_039" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1433277213 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_040" type="Node3D" parent="Floors/Level0/Foundation" unique_id=2114254884 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_041" type="Node3D" parent="Floors/Level0/Foundation" unique_id=132034666 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_042" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1938424395 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_043" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1376148926 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_044" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1694504838 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_045" type="Node3D" parent="Floors/Level0/Foundation" unique_id=696288136 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_046" type="Node3D" parent="Floors/Level0/Foundation" unique_id=340204612 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_047" type="Node3D" parent="Floors/Level0/Foundation" unique_id=693998211 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_048" type="Node3D" parent="Floors/Level0/Foundation" unique_id=249881333 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_049" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1977683005 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_050" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1320127601 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 1)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_051" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1442577345 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 3)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_052" type="Node3D" parent="Floors/Level0/Foundation" unique_id=387191525 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 5)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorWood_053" type="Node3D" parent="Floors/Level0/Foundation" unique_id=274659416 instance=ExtResource("2_5o65n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 7)
+metadata/asset_id = "floor_wood"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_054" type="Node3D" parent="Floors/Level0/Foundation" unique_id=1014400011 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 9)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_055" type="Node3D" parent="Floors/Level0/Foundation" unique_id=809674862 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 11)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorTile_056" type="Node3D" parent="Floors/Level0/Foundation" unique_id=943249659 instance=ExtResource("4_stecm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 13)
+metadata/asset_id = "floor_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Walls" type="Node3D" parent="Floors/Level0" unique_id=1804570835]
+
+[node name="WallBrickRedWindow_057" type="Node3D" parent="Floors/Level0/Walls" unique_id=376394392 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_058" type="Node3D" parent="Floors/Level0/Walls" unique_id=1909844953 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_059" type="Node3D" parent="Floors/Level0/Walls" unique_id=1588493659 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_060" type="Node3D" parent="Floors/Level0/Walls" unique_id=1032606068 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 14.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_061" type="Node3D" parent="Floors/Level0/Walls" unique_id=2024250556 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -0.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_062" type="Node3D" parent="Floors/Level0/Walls" unique_id=747673543 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_063" type="Node3D" parent="Floors/Level0/Walls" unique_id=1147785438 instance=ExtResource("7_8t12d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -0.125)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallBrickRedSolid_064" type="Node3D" parent="Floors/Level0/Walls" unique_id=320595877 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 14.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_065" type="Node3D" parent="Floors/Level0/Walls" unique_id=183526560 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -0.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_066" type="Node3D" parent="Floors/Level0/Walls" unique_id=843150227 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_067" type="Node3D" parent="Floors/Level0/Walls" unique_id=844264517 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -0.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_068" type="Node3D" parent="Floors/Level0/Walls" unique_id=325392835 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 14.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_069" type="Node3D" parent="Floors/Level0/Walls" unique_id=1857737891 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -0.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_070" type="Node3D" parent="Floors/Level0/Walls" unique_id=1924227864 instance=ExtResource("5_k2opv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 14.125)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_071" type="Node3D" parent="Floors/Level0/Walls" unique_id=1519826211 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -0.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_072" type="Node3D" parent="Floors/Level0/Walls" unique_id=971167675 instance=ExtResource("6_suva2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 14.125)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_073" type="Node3D" parent="Floors/Level0/Walls" unique_id=1600751488 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 1)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_074" type="Node3D" parent="Floors/Level0/Walls" unique_id=1094996912 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 1)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_075" type="Node3D" parent="Floors/Level0/Walls" unique_id=1092243406 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 3)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_076" type="Node3D" parent="Floors/Level0/Walls" unique_id=811409226 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 3)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_077" type="Node3D" parent="Floors/Level0/Walls" unique_id=1019526900 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 5)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_078" type="Node3D" parent="Floors/Level0/Walls" unique_id=448787401 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 5)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_079" type="Node3D" parent="Floors/Level0/Walls" unique_id=1365625150 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 7)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_080" type="Node3D" parent="Floors/Level0/Walls" unique_id=467914982 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 7)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_081" type="Node3D" parent="Floors/Level0/Walls" unique_id=938322600 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 9)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_082" type="Node3D" parent="Floors/Level0/Walls" unique_id=1240581596 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 9)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_083" type="Node3D" parent="Floors/Level0/Walls" unique_id=1623195982 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 11)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedSolid_084" type="Node3D" parent="Floors/Level0/Walls" unique_id=951648855 instance=ExtResource("6_suva2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 11)
+metadata/asset_id = "wall_brick_red_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_085" type="Node3D" parent="Floors/Level0/Walls" unique_id=1915226828 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.125, 0, 13)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallBrickRedWindow_086" type="Node3D" parent="Floors/Level0/Walls" unique_id=1944327820 instance=ExtResource("5_k2opv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.125, 0, 13)
+metadata/asset_id = "wall_brick_red_window"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_097" type="Node3D" parent="Floors/Level0/Walls" unique_id=1069847191 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_098" type="Node3D" parent="Floors/Level0/Walls" unique_id=1485031650 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_099" type="Node3D" parent="Floors/Level0/Walls" unique_id=1408578303 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_100" type="Node3D" parent="Floors/Level0/Walls" unique_id=249526591 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_101" type="Node3D" parent="Floors/Level0/Walls" unique_id=788164656 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_102" type="Node3D" parent="Floors/Level0/Walls" unique_id=1768932527 instance=ExtResource("7_8t12d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 8)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallPlasterSolid_103" type="Node3D" parent="Floors/Level0/Walls" unique_id=1318906560 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallPlasterSolid_104" type="Node3D" parent="Floors/Level0/Walls" unique_id=286421800 instance=ExtResource("8_q0n4t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 8)
+metadata/asset_id = "wall_plaster_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_105" type="Node3D" parent="Floors/Level0/Walls" unique_id=1469422853]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 9)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+metadata/module_source = "res://assets/models/city/scenes/doorway_wood.tscn"
+
+[node name="Body" type="StaticBody3D" parent="Floors/Level0/Walls/DoorwayWood_105" unique_id=2025472280]
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body" unique_id=1300202905]
+
+[node name="frame_side_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=253025609]
+mesh = SubResource("ArrayMesh_yffbd")
+
+[node name="trim_side_-1_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1665397990]
+mesh = SubResource("ArrayMesh_mq8al")
+
+[node name="trim_side_-1_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1714513738]
+mesh = SubResource("ArrayMesh_yiy58")
+
+[node name="frame_side_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1828451286]
+mesh = SubResource("ArrayMesh_4w3pt")
+
+[node name="trim_side_1_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=2025928229]
+mesh = SubResource("ArrayMesh_bkh0y")
+
+[node name="trim_side_1_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=222633419]
+mesh = SubResource("ArrayMesh_26j2h")
+
+[node name="frame_lintel" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1286082616]
+mesh = SubResource("ArrayMesh_n64xk")
+
+[node name="trim_lintel_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1294498364]
+mesh = SubResource("ArrayMesh_n2pkr")
+
+[node name="trim_lintel_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body/Model" unique_id=1787595463]
+mesh = SubResource("ArrayMesh_sa6ul")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/DoorwayWood_105/Body" unique_id=1302989169]
+shape = SubResource("ConcavePolygonShape3D_k8yxd")
+
+[node name="Hinge" type="AnimatableBody3D" parent="Floors/Level0/Walls/DoorwayWood_105" unique_id=237539451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.609375, 0, 0)
+sync_to_physics = false
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge" unique_id=659497970]
+
+[node name="hinge_stile" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=609453556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_fg8e8")
+
+[node name="latch_stile" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=386853407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_pipy5")
+
+[node name="bottom_rail" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1146190638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_bd7pg")
+
+[node name="middle_rail" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=223246692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_plr4k")
+
+[node name="top_rail" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=2023331490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_x5kli")
+
+[node name="center_mullion" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1413450086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_j0s2m")
+
+[node name="recessed_panel_-7_75_2_625" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1930435865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_nw5f7")
+
+[node name="recessed_panel_-7_75_15_5" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1702229800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_w4a8j")
+
+[node name="recessed_panel_0_625_2_625" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1868636105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_xk8fj")
+
+[node name="recessed_panel_0_625_15_5" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=326887077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_8y7r7")
+
+[node name="handle_plate_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1132747949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_0cgsa")
+
+[node name="handle_lever_-1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=2002127042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_oclkd")
+
+[node name="handle_plate_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1997612760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_r48mf")
+
+[node name="handle_lever_1" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1335276770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_ies28")
+
+[node name="hinge_4" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1523271829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_ob3r7")
+
+[node name="hinge_23" type="MeshInstance3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge/Model" unique_id=1171792363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609375, 0, 0)
+mesh = SubResource("ArrayMesh_5igau")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/DoorwayWood_105/Hinge" unique_id=713475960]
+shape = SubResource("ConcavePolygonShape3D_uej1k")
+
+[node name="WallWoodSolid_106" type="Node3D" parent="Floors/Level0/Walls" unique_id=1478508559 instance=ExtResource("9_4w3pt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 11)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="WallWoodSolid_107" type="Node3D" parent="Floors/Level0/Walls" unique_id=368390949 instance=ExtResource("9_4w3pt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 13)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="DoorwayWood_108" type="Node3D" parent="Floors/Level0/Walls" unique_id=513956872 instance=ExtResource("7_8t12d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 10)
+metadata/asset_id = "doorway_wood"
+metadata/placement_anchor = "base"
+metadata/tile_size = 2.0
+metadata/building_door = true
+
+[node name="WallWoodSolid_109" type="Node3D" parent="Floors/Level0/Walls" unique_id=318402473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 10)
+metadata/asset_id = "wall_wood_solid"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+metadata/module_source = "res://assets/models/city/scenes/wall_wood_solid.tscn"
+
+[node name="Body" type="StaticBody3D" parent="Floors/Level0/Walls/WallWoodSolid_109" unique_id=1369182594]
+
+[node name="Model" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body" unique_id=1356261957]
+
+[node name="wall2" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body/Model" unique_id=1122355845]
+
+[node name="wall" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body/Model/wall2" unique_id=841427629]
+mesh = SubResource("ArrayMesh_ri0lb")
+
+[node name="post3" type="Node3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body/Model" unique_id=1185223662]
+
+[node name="post" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body/Model/post3" unique_id=434109689]
+mesh = SubResource("ArrayMesh_wtuwu")
+
+[node name="post2" type="MeshInstance3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body/Model/post3" unique_id=867827457]
+mesh = SubResource("ArrayMesh_o0ipe")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Floors/Level0/Walls/WallWoodSolid_109/Body" unique_id=1945431215]
+shape = SubResource("ConcavePolygonShape3D_v62t2")
+
+[node name="Furniture" type="Node3D" parent="Floors/Level0" unique_id=1071899257]
+
+[node name="EntryMat_087" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1457830225 instance=ExtResource("10_k8yxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.005, 0.8)
+metadata/asset_id = "entry_mat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="CoatRack_096" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1167760884 instance=ExtResource("11_uej1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1.5)
+metadata/asset_id = "coat_rack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_110" type="Node3D" parent="Floors/Level0/Furniture" unique_id=613271705 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2.5)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_111" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1472934980 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.065, 2.5)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_112" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1572588086 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.15)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_113" type="Node3D" parent="Floors/Level0/Furniture" unique_id=243259340 instance=ExtResource("14_v62t2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, 3.85)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_114" type="Node3D" parent="Floors/Level0/Furniture" unique_id=983594044 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_115" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1769073454 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.065, 6)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_116" type="Node3D" parent="Floors/Level0/Furniture" unique_id=995253304 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4.65)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_117" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1310309636 instance=ExtResource("14_v62t2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, 7.35)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_118" type="Node3D" parent="Floors/Level0/Furniture" unique_id=205532547 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_119" type="Node3D" parent="Floors/Level0/Furniture" unique_id=410238583 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.065, 6)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_120" type="Node3D" parent="Floors/Level0/Furniture" unique_id=516729402 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 4.65)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_121" type="Node3D" parent="Floors/Level0/Furniture" unique_id=897704574 instance=ExtResource("14_v62t2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7, 0, 7.35)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_122" type="Node3D" parent="Floors/Level0/Furniture" unique_id=857487442 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 2.5)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_123" type="Node3D" parent="Floors/Level0/Furniture" unique_id=2041606486 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.065, 2.5)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_124" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1123211559 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1.15)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_125" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1519099411 instance=ExtResource("14_v62t2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11, 0, 3.85)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_126" type="Node3D" parent="Floors/Level0/Furniture" unique_id=613352731 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 6)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_127" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1529458349 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.065, 6)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_128" type="Node3D" parent="Floors/Level0/Furniture" unique_id=590285913 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 4.65)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="ReceptionDesk_129" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1187364279 instance=ExtResource("15_1gx5r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.4, 0, 2)
+metadata/asset_id = "reception_desk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Shelf_130" type="Node3D" parent="Floors/Level0/Furniture" unique_id=394030388 instance=ExtResource("16_mfil7")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.9, 0, 6)
+metadata/asset_id = "shelf"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Fridge_131" type="Node3D" parent="Floors/Level0/Furniture" unique_id=839006835 instance=ExtResource("17_nk2pn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2, 0, 13)
+metadata/asset_id = "fridge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="SinkCounter_132" type="Node3D" parent="Floors/Level0/Furniture" unique_id=769064522 instance=ExtResource("18_bi2sh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2, 0, 13)
+metadata/asset_id = "sink_counter"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Stove_133" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1101854014 instance=ExtResource("19_aphbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2, 0, 13)
+metadata/asset_id = "stove"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Workbench_135" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1289295125 instance=ExtResource("20_c1m3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 13)
+metadata/asset_id = "workbench"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_136" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1966696239 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.065, 13)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="StorageRack_137" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1389279544 instance=ExtResource("21_4g1t4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.8, 0, 10.5)
+metadata/asset_id = "storage_rack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Toilet_138" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1353694959 instance=ExtResource("22_xylsy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 13.1)
+metadata/asset_id = "toilet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="BathSink_139" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1340248202 instance=ExtResource("23_ax1ib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 13.1)
+metadata/asset_id = "bath_sink"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="CoatRack_141" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1267395013 instance=ExtResource("11_uej1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 8.5)
+metadata/asset_id = "coat_rack"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Table_148" type="Node3D" parent="Floors/Level0/Furniture" unique_id=155168932 instance=ExtResource("12_ri0lb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -4)
+metadata/asset_id = "table"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Dishes_149" type="Node3D" parent="Floors/Level0/Furniture" unique_id=1477816428 instance=ExtResource("13_o0ipe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.065, -4)
+metadata/asset_id = "dishes"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_150" type="Node3D" parent="Floors/Level0/Furniture" unique_id=84830913 instance=ExtResource("14_v62t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5.35)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Chair_151" type="Node3D" parent="Floors/Level0/Furniture" unique_id=598884576 instance=ExtResource("14_v62t2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -2.65)
+metadata/asset_id = "chair"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Exterior" type="Node3D" parent="Floors/Level0" unique_id=531051316]
+
+[node name="Sidewalk_088" type="Node3D" parent="Floors/Level0/Exterior" unique_id=299179058 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_089" type="Node3D" parent="Floors/Level0/Exterior" unique_id=95838468 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_090" type="Node3D" parent="Floors/Level0/Exterior" unique_id=984058184 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_091" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1058833166 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_092" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1277731561 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_093" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1088706010 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_094" type="Node3D" parent="Floors/Level0/Exterior" unique_id=2013940606 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Sidewalk_095" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1200055311 instance=ExtResource("24_wm8ct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, -1)
+metadata/asset_id = "sidewalk"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_142" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1640073594 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -3)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_143" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1004558369 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, -5)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_144" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1184898290 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -3)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_145" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1103671524 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -2, -5)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_146" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1419844972 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -3)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FloorShopTile_147" type="Node3D" parent="Floors/Level0/Exterior" unique_id=2017579099 instance=ExtResource("25_1eprv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -5)
+metadata/asset_id = "floor_shop_tile"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/terrain_block = true
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Fence_152" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1502604946 instance=ExtResource("26_588ak")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -4)
+metadata/asset_id = "fence"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Fence_153" type="Node3D" parent="Floors/Level0/Exterior" unique_id=1039865304 instance=ExtResource("26_588ak")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -4)
+metadata/asset_id = "fence"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="StreetLamp_154" type="Node3D" parent="Floors/Level0/Exterior" unique_id=554752997 instance=ExtResource("27_4moa1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, -4)
+metadata/asset_id = "street_lamp"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Details" type="Node3D" parent="Floors/Level0" unique_id=1216402196]
+
+[node name="WallCabinet_134" type="Node3D" parent="Floors/Level0/Details" unique_id=316937221 instance=ExtResource("28_pbykx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2, 1.3, 13)
+metadata/asset_id = "wall_cabinet"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="BathMirror_140" type="Node3D" parent="Floors/Level0/Details" unique_id=370350550 instance=ExtResource("29_xb1np")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.2, 13.55)
+metadata/asset_id = "bath_mirror"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="FacadeSign212" type="Label3D" parent="Floors/Level0" unique_id=1646902396]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 2.4, -0.4)
+pixel_size = 0.014
+texture_filter = 0
+modulate = Color(0.87058824, 0.827451, 0.6862745, 1)
+outline_modulate = Color(0.16078432, 0.18039216, 0.14509805, 1)
+text = "THE LANTERN"
+font = ExtResource("30_h1c34")
+outline_size = 8
+
+[node name="Rooms" type="Node3D" parent="." unique_id=799849065]
+
+[node name="Dining room" type="Marker3D" parent="Rooms" unique_id=1026663337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 4.5)
+metadata/floor = 0.0
+
+[node name="Kitchen" type="Marker3D" parent="Rooms" unique_id=1521082690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+metadata/floor = 0.0
+
+[node name="Cloakroom" type="Marker3D" parent="Rooms" unique_id=633199962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, 9)
+metadata/floor = 0.0
+
+[node name="Washroom" type="Marker3D" parent="Rooms" unique_id=225175731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
+metadata/floor = 0.0
+
+[node name="Entrance" type="Marker3D" parent="." unique_id=323840508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2.125)
+
+[node name="Roof" type="Node3D" parent="." unique_id=766297393]
+
+[node name="RoofEdge_155" type="Node3D" parent="Roof" unique_id=1998372955 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_156" type="Node3D" parent="Roof" unique_id=2082762174 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 3)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_157" type="Node3D" parent="Roof" unique_id=345504857 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 5)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_158" type="Node3D" parent="Roof" unique_id=675253839 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 7)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_159" type="Node3D" parent="Roof" unique_id=756319231 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 9)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_160" type="Node3D" parent="Roof" unique_id=2077398727 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 11)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_161" type="Node3D" parent="Roof" unique_id=159676592 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_162" type="Node3D" parent="Roof" unique_id=1783976710 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_163" type="Node3D" parent="Roof" unique_id=1619610081 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_164" type="Node3D" parent="Roof" unique_id=243264296 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_165" type="Node3D" parent="Roof" unique_id=1014725041 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_166" type="Node3D" parent="Roof" unique_id=1927760908 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_167" type="Node3D" parent="Roof" unique_id=1901531604 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_168" type="Node3D" parent="Roof" unique_id=408030001 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_169" type="Node3D" parent="Roof" unique_id=1281116348 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_170" type="Node3D" parent="Roof" unique_id=2100079694 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_171" type="Node3D" parent="Roof" unique_id=654395681 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_172" type="Node3D" parent="Roof" unique_id=1248147372 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_173" type="Node3D" parent="Roof" unique_id=877187542 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_174" type="Node3D" parent="Roof" unique_id=1259512131 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_175" type="Node3D" parent="Roof" unique_id=362189821 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_176" type="Node3D" parent="Roof" unique_id=1641281500 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_177" type="Node3D" parent="Roof" unique_id=850681263 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_178" type="Node3D" parent="Roof" unique_id=323387829 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_179" type="Node3D" parent="Roof" unique_id=1837588890 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_180" type="Node3D" parent="Roof" unique_id=957395606 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_181" type="Node3D" parent="Roof" unique_id=1309948441 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_182" type="Node3D" parent="Roof" unique_id=408619166 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_183" type="Node3D" parent="Roof" unique_id=1187460069 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_184" type="Node3D" parent="Roof" unique_id=1040248632 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_185" type="Node3D" parent="Roof" unique_id=561188039 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_186" type="Node3D" parent="Roof" unique_id=280112108 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_187" type="Node3D" parent="Roof" unique_id=765448393 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_188" type="Node3D" parent="Roof" unique_id=1984073797 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_189" type="Node3D" parent="Roof" unique_id=1778909014 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_190" type="Node3D" parent="Roof" unique_id=207551108 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_191" type="Node3D" parent="Roof" unique_id=1371843337 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_192" type="Node3D" parent="Roof" unique_id=871977097 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_193" type="Node3D" parent="Roof" unique_id=774892066 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_194" type="Node3D" parent="Roof" unique_id=616337204 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_195" type="Node3D" parent="Roof" unique_id=285201987 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_196" type="Node3D" parent="Roof" unique_id=1161929540 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_197" type="Node3D" parent="Roof" unique_id=1102640943 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_198" type="Node3D" parent="Roof" unique_id=1467423562 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 3)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_199" type="Node3D" parent="Roof" unique_id=1024799443 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 5)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_200" type="Node3D" parent="Roof" unique_id=1853190162 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 7)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_201" type="Node3D" parent="Roof" unique_id=2127085853 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 9)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofFlat_202" type="Node3D" parent="Roof" unique_id=217600387 instance=ExtResource("32_um5i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.005, 11)
+metadata/asset_id = "roof_flat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_203" type="Node3D" parent="Roof" unique_id=362199088 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_204" type="Node3D" parent="Roof" unique_id=2039698801 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 1)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_205" type="Node3D" parent="Roof" unique_id=1702851847 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 3)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_206" type="Node3D" parent="Roof" unique_id=1011248096 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 5)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_207" type="Node3D" parent="Roof" unique_id=13454444 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 7)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_208" type="Node3D" parent="Roof" unique_id=1126060763 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 9)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_209" type="Node3D" parent="Roof" unique_id=1257637877 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 11)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofEdge_210" type="Node3D" parent="Roof" unique_id=1539777940 instance=ExtResource("31_nw2b8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 2.005, 13)
+metadata/asset_id = "roof_edge"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofVent_211" type="Node3D" parent="Roof" unique_id=413572787 instance=ExtResource("33_2t5qm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.1925, 11)
+metadata/asset_id = "roof_vent"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="RoofVent_212" type="Node3D" parent="Roof" unique_id=2061267320 instance=ExtResource("33_2t5qm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.1925, 11)
+metadata/asset_id = "roof_vent"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="InteriorArea" type="Area3D" parent="." unique_id=821045779]
+collision_layer = 0
+
+[node name="InteriorBounds" type="CollisionShape3D" parent="InteriorArea" unique_id=1588798372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 7)
+shape = SubResource("BoxShape3D_10y3g")

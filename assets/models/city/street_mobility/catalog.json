@@ -1,0 +1,547 @@
+{
+  "version": 1,
+  "source": "Created locally in Blockbench from existing Outpost assets and newly authored geometry",
+  "license": "Project-owned source; no third-party assets added",
+  "tile_units": 32,
+  "tile_godot_units": 2,
+  "assets": [
+    {
+      "id": "sedan",
+      "category": "vehicle",
+      "source": "../blockbench/sedan.bbmodel",
+      "forward_axis": "-Z",
+      "wheel_radius": 7,
+      "wheelbase": 38,
+      "steering_axle": "front",
+      "steering_limit_degrees": 25,
+      "root_motion": "Only preview_* clips translate vehicle_root; runtime clips are in place",
+      "elements": 71,
+      "animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "gltf_animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/sedan.tscn"
+    },
+    {
+      "id": "van",
+      "category": "vehicle",
+      "source": "../blockbench/van.bbmodel",
+      "forward_axis": "-Z",
+      "wheel_radius": 7,
+      "wheelbase": 44,
+      "steering_axle": "front",
+      "steering_limit_degrees": 25,
+      "root_motion": "Only preview_* clips translate vehicle_root; runtime clips are in place",
+      "elements": 76,
+      "animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "gltf_animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/van.tscn"
+    },
+    {
+      "id": "ambulance",
+      "category": "vehicle",
+      "source": "../blockbench/ambulance.bbmodel",
+      "forward_axis": "-Z",
+      "wheel_radius": 7,
+      "wheelbase": 50,
+      "steering_axle": "front",
+      "steering_limit_degrees": 25,
+      "root_motion": "Only preview_* clips translate vehicle_root; runtime clips are in place",
+      "elements": 84,
+      "animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "gltf_animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/ambulance.tscn"
+    },
+    {
+      "id": "bus",
+      "category": "vehicle",
+      "source": "../blockbench/bus.bbmodel",
+      "forward_axis": "-Z",
+      "wheel_radius": 7,
+      "wheelbase": 94,
+      "steering_axle": "front",
+      "steering_limit_degrees": 25,
+      "root_motion": "Only preview_* clips translate vehicle_root; runtime clips are in place",
+      "elements": 66,
+      "animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "gltf_animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/bus.tscn"
+    },
+    {
+      "id": "forklift",
+      "category": "vehicle",
+      "source": "../blockbench/forklift.bbmodel",
+      "forward_axis": "-Z",
+      "wheel_radius": 6,
+      "wheelbase": 20,
+      "steering_axle": "rear",
+      "steering_limit_degrees": 25,
+      "root_motion": "Only preview_* clips translate vehicle_root; runtime clips are in place",
+      "elements": 45,
+      "animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right",
+        "fork_raise",
+        "fork_lower"
+      ],
+      "gltf_animations": [
+        "idle",
+        "drive_forward",
+        "reverse",
+        "steer_right",
+        "turn_right",
+        "reverse_turn_right",
+        "steer_left",
+        "turn_left",
+        "reverse_turn_left",
+        "steer_center",
+        "brake",
+        "preview_forward",
+        "preview_reverse",
+        "preview_turn_left",
+        "preview_turn_right",
+        "fork_raise",
+        "fork_lower"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/forklift.tscn"
+    },
+    {
+      "id": "stop_sign",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 3,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/stop_sign.tscn"
+    },
+    {
+      "id": "street_light",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 12,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/street_light.tscn"
+    },
+    {
+      "id": "street_light_double",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 23,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/street_light_double.tscn"
+    },
+    {
+      "id": "bus_stop_sign",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 4,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/bus_stop_sign.tscn"
+    },
+    {
+      "id": "bus_stop_shelter",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 14,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/bus_stop_shelter.tscn"
+    },
+    {
+      "id": "trash_can",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 29,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/trash_can.tscn"
+    },
+    {
+      "id": "wheelie_bin",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 5,
+      "animations": [
+        "lid_open",
+        "lid_close"
+      ],
+      "gltf_animations": [
+        "lid_open",
+        "lid_close"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/wheelie_bin.tscn"
+    },
+    {
+      "id": "fire_hydrant",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 6,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/fire_hydrant.tscn"
+    },
+    {
+      "id": "traffic_cone",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 6,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/traffic_cone.tscn"
+    },
+    {
+      "id": "street_bollard",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 3,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/street_bollard.tscn"
+    },
+    {
+      "id": "traffic_signal",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 10,
+      "animations": [
+        "red",
+        "amber",
+        "green"
+      ],
+      "gltf_animations": [
+        "red",
+        "amber",
+        "green"
+      ],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/traffic_signal.tscn"
+    },
+    {
+      "id": "street_bench",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 15,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/street_bench.tscn"
+    },
+    {
+      "id": "hedge_planter",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 16,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/hedge_planter.tscn"
+    },
+    {
+      "id": "flower_planter",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 31,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/flower_planter.tscn"
+    },
+    {
+      "id": "iron_fence",
+      "category": "street_prop",
+      "anchor": "base_y_0",
+      "elements": 12,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/iron_fence.tscn"
+    },
+    {
+      "id": "crosswalk_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/crosswalk_block.tscn"
+    },
+    {
+      "id": "stop_line_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/stop_line_block.tscn"
+    },
+    {
+      "id": "bus_lane_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/bus_lane_block.tscn"
+    },
+    {
+      "id": "parking_bay_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/parking_bay_block.tscn"
+    },
+    {
+      "id": "tactile_paving_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/tactile_paving_block.tscn"
+    },
+    {
+      "id": "asphalt_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/asphalt_block.tscn"
+    },
+    {
+      "id": "sidewalk_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/sidewalk_block.tscn"
+    },
+    {
+      "id": "center_line_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/center_line_block.tscn"
+    },
+    {
+      "id": "sidewalk_curb_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/sidewalk_curb_block.tscn"
+    },
+    {
+      "id": "sidewalk_corner_block",
+      "category": "terrain",
+      "anchor": "base_y_0",
+      "dimensions": [
+        32,
+        32,
+        32
+      ],
+      "top_surface_y": 32,
+      "elements": 1,
+      "animations": [],
+      "gltf_animations": [],
+      "godot_scene": "res://assets/models/city/street_mobility/scenes/sidewalk_corner_block.tscn"
+    }
+  ]
+}

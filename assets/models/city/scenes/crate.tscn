@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/crate.gltf" id="1_rgkun"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/crate.res" id="2_ow6l5"]
+
+[node name="Crate" type="Node3D" unique_id=1131459911]
+metadata/asset_id = "crate"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1616902973]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1944122168 instance=ExtResource("1_rgkun")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=772142514]
+shape = ExtResource("2_ow6l5")

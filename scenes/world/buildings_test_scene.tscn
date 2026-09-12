@@ -1,0 +1,273 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/buildings/buildings_test_scene.gd" id="1_nmmn2"]
+[ext_resource type="Texture2D" path="res://assets/characters/survivor.png" id="2_fcfj7"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/cedar_cottage.tscn" id="3_k1i47"]
+[ext_resource type="Script" path="res://scripts/buildings/modular_building.gd" id="4_7656j"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/maple_family_house.tscn" id="5_02o7o"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/ash_walkup_apartments.tscn" id="6_67ylv"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/courtyard_apartments.tscn" id="7_hciau"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/corner_grocery.tscn" id="8_q5pym"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/morrow_hospital.tscn" id="9_1ejcg"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/ash_street_diner.tscn" id="10_d7mgw"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/lantern_restaurant.tscn" id="11_vxn3k"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/fuel_stop.tscn" id="12_avoxr"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/oakwood_school.tscn" id="13_xv1ep"]
+[ext_resource type="PackedScene" path="res://scenes/buildings/district_police_station.tscn" id="14_we1n5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_61ron"]
+radius = 0.22
+height = 1.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k00g5"]
+albedo_color = Color(0.2627451, 0.3019608, 0.21960784, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pyt8e"]
+material = SubResource("StandardMaterial3D_k00g5")
+size = Vector2(220, 220)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_twmvu"]
+data = PackedVector3Array(110, 0, 110, -110, 0, 110, 110, 0, -110, -110, 0, 110, -110, 0, -110, 110, 0, -110)
+
+[sub_resource type="Environment" id="Environment_mu5q2"]
+background_mode = 1
+background_color = Color(0.14509805, 0.18039216, 0.16078432, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7372549, 0.77254903, 0.6862745, 1)
+ambient_light_energy = 0.75
+
+[node name="TestScene" type="Control" unique_id=1813804381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_nmmn2")
+
+[node name="PixelView" type="SubViewportContainer" parent="." unique_id=1956526406]
+texture_filter = 1
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="PixelView" unique_id=1338946278]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="PixelView/SubViewport" unique_id=2108839440]
+
+[node name="Player" type="CharacterBody3D" parent="PixelView/SubViewport/World" unique_id=29901712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.72, -3.5)
+floor_snap_length = 0.2
+safe_margin = 0.002
+
+[node name="@CollisionShape3D@200" type="CollisionShape3D" parent="PixelView/SubViewport/World/Player" unique_id=169321875]
+shape = SubResource("CapsuleShape3D_61ron")
+
+[node name="Sprite3D" type="Sprite3D" parent="PixelView/SubViewport/World/Player" unique_id=719789069]
+pixel_size = 0.0625
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_fcfj7")
+hframes = 4
+
+[node name="Sections" type="Node3D" parent="PixelView/SubViewport/World" unique_id=513075806]
+
+[node name="cedar_cottage" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=659867268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.72, -3.5)
+metadata/title = "Cedar Cottage"
+
+[node name="maple_family_house" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=597366759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0.72, -3.5)
+metadata/title = "Maple Family House"
+
+[node name="ash_walkup_apartments" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=639082009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97, 0.72, -3.5)
+metadata/title = "Ash Walk-up Apartments"
+
+[node name="courtyard_apartments" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=1768243174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144, 0.72, -3.5)
+metadata/title = "Courtyard Apartments"
+
+[node name="corner_grocery" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=1127520971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.72, 41.5)
+metadata/title = "Corner Grocery"
+
+[node name="morrow_hospital" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=1667737103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0.72, 41.5)
+metadata/title = "Morrow Community Hospital"
+
+[node name="ash_street_diner" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=1554097864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97, 0.72, 41.5)
+metadata/title = "Ash Street Diner"
+
+[node name="lantern_restaurant" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=2024582029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0.72, 41.5)
+metadata/title = "The Lantern Restaurant"
+
+[node name="fuel_stop" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=1245800307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.72, 86.5)
+metadata/title = "Fuel Stop Gas Station"
+
+[node name="oakwood_school" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=35267089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0.72, 86.5)
+metadata/title = "Oakwood School"
+
+[node name="district_police_station" type="Marker3D" parent="PixelView/SubViewport/World/Sections" unique_id=62553043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97, 0.72, 86.5)
+metadata/title = "District Police Station"
+
+[node name="Buildings" type="Node3D" parent="PixelView/SubViewport/World" unique_id=393158978]
+
+[node name="CedarCottage" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=1744996278 instance=ExtResource("3_k1i47")]
+script = ExtResource("4_7656j")
+building_title = "Cedar Cottage"
+metadata/building_id = "cedar_cottage"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="MapleFamilyHouse" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=621777072 instance=ExtResource("5_02o7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 0)
+script = ExtResource("4_7656j")
+building_title = "Maple Family House"
+metadata/building_id = "maple_family_house"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="AshWalkupApartments" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=749061976 instance=ExtResource("6_67ylv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 0)
+script = ExtResource("4_7656j")
+building_title = "Ash Walk-up Apartments"
+floor_count = 2
+metadata/building_id = "ash_walkup_apartments"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="CourtyardApartments" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=268067476 instance=ExtResource("7_hciau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 0)
+script = ExtResource("4_7656j")
+building_title = "Courtyard Apartments"
+metadata/building_id = "courtyard_apartments"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="CornerGrocery" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=2104551750 instance=ExtResource("8_q5pym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
+script = ExtResource("4_7656j")
+building_title = "Corner Grocery"
+metadata/building_id = "corner_grocery"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="MorrowHospital" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=2104293789 instance=ExtResource("9_1ejcg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 45)
+script = ExtResource("4_7656j")
+building_title = "Morrow Community Hospital"
+metadata/building_id = "morrow_hospital"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="AshStreetDiner" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=505837567 instance=ExtResource("10_d7mgw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 45)
+script = ExtResource("4_7656j")
+building_title = "Ash Street Diner"
+metadata/building_id = "ash_street_diner"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="LanternRestaurant" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=1266816910 instance=ExtResource("11_vxn3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 0, 45)
+script = ExtResource("4_7656j")
+building_title = "The Lantern Restaurant"
+metadata/building_id = "lantern_restaurant"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="FuelStop" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=1331157627 instance=ExtResource("12_avoxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 90)
+script = ExtResource("4_7656j")
+building_title = "Fuel Stop Gas Station"
+metadata/building_id = "fuel_stop"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="OakwoodSchool" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=772872172 instance=ExtResource("13_xv1ep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 90)
+script = ExtResource("4_7656j")
+building_title = "Oakwood School"
+metadata/building_id = "oakwood_school"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="DistrictPoliceStation" type="Node3D" parent="PixelView/SubViewport/World/Buildings" unique_id=784408767 instance=ExtResource("14_we1n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 90)
+script = ExtResource("4_7656j")
+building_title = "District Police Station"
+metadata/building_id = "district_police_station"
+metadata/placement = "Ground-floor walking surface at Y=0; terrain foundation extends down to Y=-2"
+
+[node name="PreviewGround" type="StaticBody3D" parent="PixelView/SubViewport/World" unique_id=1352638093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, -0.03, 50)
+
+[node name="@MeshInstance3D@17" type="MeshInstance3D" parent="PixelView/SubViewport/World/PreviewGround" unique_id=1461057550]
+mesh = SubResource("PlaneMesh_pyt8e")
+
+[node name="@CollisionShape3D@18" type="CollisionShape3D" parent="PixelView/SubViewport/World/PreviewGround" unique_id=31192685]
+shape = SubResource("ConcavePolygonShape3D_twmvu")
+
+[node name="@WorldEnvironment@7" type="WorldEnvironment" parent="PixelView/SubViewport" unique_id=1438413808]
+environment = SubResource("Environment_mu5q2")
+
+[node name="Sun" type="DirectionalLight3D" parent="PixelView/SubViewport" unique_id=365672287]
+transform = Transform3D(0.8480481, 0.43408445, -0.3039492, 0, 0.57357645, 0.81915206, 0.52991927, -0.69468033, 0.48642042, 0, 0, 0)
+light_color = Color(1, 0.9490196, 0.84313726, 1)
+light_energy = 0.85
+shadow_enabled = true
+directional_shadow_max_distance = 65.0
+
+[node name="Camera3D" type="Camera3D" parent="PixelView/SubViewport" unique_id=602622471]
+projection = 1
+current = true
+size = 22.5
+near = 0.2
+far = 110.0
+
+[node name="CollisionOverlay" type="Node3D" parent="PixelView/SubViewport" unique_id=164202291]
+visible = false
+
+[node name="Controls" type="PanelContainer" parent="." unique_id=534810306]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls" unique_id=1534307622]
+layout_mode = 2
+
+[node name="@Label@201" type="Label" parent="Controls/VBoxContainer" unique_id=870267009]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93333334, 0.9098039, 0.79607844, 1)
+theme_override_font_sizes/font_size = 18
+text = "BUILDING TEST SCENE
+WASD walk · Shift sprint · F nearest door
+R preview interiors · Q / E orbit · Wheel zoom"
+
+[node name="SectionPicker" type="OptionButton" parent="Controls/VBoxContainer" unique_id=173565527]
+layout_mode = 2
+selected = 0
+item_count = 11
+popup/item_0/text = "Cedar Cottage"
+popup/item_0/id = 0
+popup/item_1/text = "Maple Family House"
+popup/item_1/id = 1
+popup/item_2/text = "Ash Walk-up Apartments"
+popup/item_2/id = 2
+popup/item_3/text = "Courtyard Apartments"
+popup/item_3/id = 3
+popup/item_4/text = "Corner Grocery"
+popup/item_4/id = 4
+popup/item_5/text = "Morrow Community Hospital"
+popup/item_5/id = 5
+popup/item_6/text = "Ash Street Diner"
+popup/item_6/id = 6
+popup/item_7/text = "The Lantern Restaurant"
+popup/item_7/id = 7
+popup/item_8/text = "Fuel Stop Gas Station"
+popup/item_8/id = 8
+popup/item_9/text = "Oakwood School"
+popup/item_9/id = 9
+popup/item_10/text = "District Police Station"
+popup/item_10/id = 10

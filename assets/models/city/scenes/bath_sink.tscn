@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/bath_sink.gltf" id="1_4wndt"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/bath_sink.res" id="2_b2eo2"]
+
+[node name="BathSink" type="Node3D" unique_id=1340248202]
+metadata/asset_id = "bath_sink"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1935362854]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=944336804 instance=ExtResource("1_4wndt")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=947943830]
+shape = ExtResource("2_b2eo2")

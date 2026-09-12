@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/entry_mat.gltf" id="1_j7kat"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/entry_mat.res" id="2_tmur1"]
+
+[node name="EntryMat" type="Node3D" unique_id=1457830225]
+metadata/asset_id = "entry_mat"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=62747568]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1997241166 instance=ExtResource("1_j7kat")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=86455692]
+shape = ExtResource("2_tmur1")

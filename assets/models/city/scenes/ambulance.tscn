@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/ambulance.gltf" id="1_5t0yg"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/ambulance.res" id="2_oxd7u"]
+
+[node name="Ambulance" type="Node3D" unique_id=1085143810]
+metadata/asset_id = "ambulance"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=862500525]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=673583524 instance=ExtResource("1_5t0yg")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=144912593]
+shape = ExtResource("2_oxd7u")

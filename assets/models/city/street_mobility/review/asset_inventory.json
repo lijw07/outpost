@@ -1,0 +1,2725 @@
+{
+  "existing_models": 271,
+  "libraries": {
+    "assets/models/blocks": 18,
+    "assets/models/blocks/transitions": 54,
+    "assets/models/city": 143,
+    "assets/models/mushrooms": 3,
+    "assets/models/plants": 11,
+    "assets/models/rocks": 7,
+    "assets/models/structures": 30,
+    "assets/models/trees": 5
+  },
+  "models": [
+    {
+      "path": "assets/models/blocks/blockbench/dirt_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_bath_tile_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_carpet_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_clinic_tile_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_concrete_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_concrete_worn_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_shop_tile_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_tile_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/floor_wood_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/blocks/blockbench/grass_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/grass_flowers_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/gravel_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/road_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/road_crossing_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/road_lane_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/sand_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/sidewalk_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/blockbench/stone_block.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_grass_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/dirt_to_sand_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/gravel_to_grass_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_dirt_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_grass_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_gravel_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/road_asphalt_to_sidewalk_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sand_to_grass_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_end.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_inner_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_island.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_outer_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/blocks/transitions/blockbench/sidewalk_to_grass_strip.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/city/blockbench/ambulance.bbmodel",
+      "elements": 84,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "vehicle"
+    },
+    {
+      "path": "assets/models/city/blockbench/barrel.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bath_mirror.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bath_sink.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bathtub.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bed.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bench.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bollard.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bookcase.bbmodel",
+      "elements": 30,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/break_table.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/broken_bench.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/bus.bbmodel",
+      "elements": 66,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "vehicle"
+    },
+    {
+      "path": "assets/models/city/blockbench/bus_shelter.bbmodel",
+      "elements": 13,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/cardboard_box.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/chair.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/checkout_counter.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/clinic_sign.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/coat_rack.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/coffee_table.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/concrete_barrier.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/crate.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/curb_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/curb_straight.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/dead_tree.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/desk.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/desk_items.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/dishes.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/display_fridge.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/door_metal.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/doorway_wood.bbmodel",
+      "elements": 25,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/drain.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/dry_fountain.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/dumpster.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/entry_mat.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/entry_steps.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/exam_bed.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/fence.bbmodel",
+      "elements": 14,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/fence_gate.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/filing_cabinet.bbmodel",
+      "elements": 12,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/forklift.bbmodel",
+      "elements": 45,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "vehicle"
+    },
+    {
+      "path": "assets/models/city/blockbench/fridge.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/garage_frame.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/garage_shutter.bbmodel",
+      "elements": 10,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/garage_shutter_rolled.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/garden_tools.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/gas_canopy.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/gas_pump.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/gondola_stocked.bbmodel",
+      "elements": 40,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/iv_stand.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/kitchen_counter.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/laundry_basket.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/locker.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/lumber_stack.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/mailboxes.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/manhole.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/medical_trolley.bbmodel",
+      "elements": 10,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/medicine_cabinet.bbmodel",
+      "elements": 22,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/nightstand.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/open_crate.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/pallet.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/parts_shelf.bbmodel",
+      "elements": 21,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/pillar.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/privacy_screen.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/produce_bin.bbmodel",
+      "elements": 26,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/reception_desk.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/register.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/roof_corner.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/roof_edge.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/roof_flat.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/roof_slope.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/roof_vent.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/rubble.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/rubble_heap.bbmodel",
+      "elements": 16,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/rug.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sedan.bbmodel",
+      "elements": 71,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "vehicle"
+    },
+    {
+      "path": "assets/models/city/blockbench/shelf.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/shop_awning.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/shop_shelf.bbmodel",
+      "elements": 21,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_apartments.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_clinic.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_garage.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_gas.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_grocery.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_panel.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sign_warehouse.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/signpost.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sink_counter.bbmodel",
+      "elements": 10,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/sofa.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/stair_railing.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/stairs.bbmodel",
+      "elements": 35,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/storage_rack.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/stove.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/street_lamp.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/table.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/tire.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/tire_stack.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/toilet.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/tool_chest.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/tool_set.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/towel_rail.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/trash_bag.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/tv_console.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/van.bbmodel",
+      "elements": 76,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "vehicle"
+    },
+    {
+      "path": "assets/models/city/blockbench/vehicle_lift.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/vent_grille.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/waiting_chair.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_broken.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_door.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_half.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_broken.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_door.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_half.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_solid.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_red_window.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_solid.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_brick_window.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_cabinet.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_clock.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_broken.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_door.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_half.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_solid.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_corrugated_window.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_broken.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_corner.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_door.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_half.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_solid.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_plaster_window.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_wood_broken.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_wood_corner.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_wood_half.bbmodel",
+      "elements": 1,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_wood_solid.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wall_wood_window.bbmodel",
+      "elements": 9,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/wardrobe.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/water_dispenser.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/weeds.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/window_boards.bbmodel",
+      "elements": 2,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "construction"
+    },
+    {
+      "path": "assets/models/city/blockbench/workbench.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/city/blockbench/workbench_tools.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 32,
+        "height": 32
+      },
+      "category": "prop"
+    },
+    {
+      "path": "assets/models/mushrooms/blockbench/mushroom_cluster.bbmodel",
+      "elements": 27,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/mushrooms/blockbench/mushroom_toadstool.bbmodel",
+      "elements": 42,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/mushrooms/blockbench/stump_brackets.bbmodel",
+      "elements": 70,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/bush_berry.bbmodel",
+      "elements": 233,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/bush_round.bbmodel",
+      "elements": 269,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/bush_wide.bbmodel",
+      "elements": 300,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/fern.bbmodel",
+      "elements": 93,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/flower_patch.bbmodel",
+      "elements": 32,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/flowers_daisy.bbmodel",
+      "elements": 61,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/flowers_lavender.bbmodel",
+      "elements": 67,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/grass_tufts.bbmodel",
+      "elements": 42,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/grass_tufts_b.bbmodel",
+      "elements": 46,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/reeds.bbmodel",
+      "elements": 43,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/plants/blockbench/tall_grass.bbmodel",
+      "elements": 103,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/boulder_large.bbmodel",
+      "elements": 663,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/boulder_mossy.bbmodel",
+      "elements": 265,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/boulder_small.bbmodel",
+      "elements": 158,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/pebbles.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/rock_flat.bbmodel",
+      "elements": 80,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/rock_mossy.bbmodel",
+      "elements": 116,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/rocks/blockbench/rock_pile.bbmodel",
+      "elements": 76,
+      "animations": 0,
+      "resolution": {
+        "width": 64,
+        "height": 176
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/barricade_spikes.bbmodel",
+      "elements": 219,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/door.bbmodel",
+      "elements": 16,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/fence.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/fence_16.bbmodel",
+      "elements": 4,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/floor.bbmodel",
+      "elements": 6,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/floor_16.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/gate.bbmodel",
+      "elements": 44,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/ladder.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/palisade.bbmodel",
+      "elements": 32,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/palisade_16.bbmodel",
+      "elements": 20,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/pillar.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/pillar_16.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_corner_inner.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_corner_inner_straw.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_corner_outer.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_corner_outer_straw.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_ridge.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_ridge_straw.bbmodel",
+      "elements": 3,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_slope.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_slope_16.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_slope_16_straw.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/roof_slope_straw.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/stairs.bbmodel",
+      "elements": 24,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall.bbmodel",
+      "elements": 10,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_16.bbmodel",
+      "elements": 7,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_door_frame.bbmodel",
+      "elements": 15,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_gable.bbmodel",
+      "elements": 10,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_half.bbmodel",
+      "elements": 8,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_half_16.bbmodel",
+      "elements": 5,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/structures/blockbench/wall_window.bbmodel",
+      "elements": 29,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 128
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/trees/blockbench/meadow_oak.bbmodel",
+      "elements": 321,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 80
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/trees/blockbench/meadow_oak_broad.bbmodel",
+      "elements": 310,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 80
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/trees/blockbench/meadow_oak_leaning.bbmodel",
+      "elements": 202,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 64
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/trees/blockbench/meadow_oak_tall.bbmodel",
+      "elements": 232,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 80
+      },
+      "category": null
+    },
+    {
+      "path": "assets/models/trees/blockbench/meadow_oak_young.bbmodel",
+      "elements": 101,
+      "animations": 0,
+      "resolution": {
+        "width": 128,
+        "height": 48
+      },
+      "category": null
+    }
+  ]
+}

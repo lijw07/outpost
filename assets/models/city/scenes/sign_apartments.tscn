@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/sign_apartments.gltf" id="1_6kc6q"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/sign_apartments.res" id="2_2ihdb"]
+
+[node name="SignApartments" type="Node3D" unique_id=751738332]
+metadata/asset_id = "sign_apartments"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1745132395]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=330162411 instance=ExtResource("1_6kc6q")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2024790262]
+shape = ExtResource("2_2ihdb")

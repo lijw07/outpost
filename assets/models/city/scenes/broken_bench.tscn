@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/city/gltf/broken_bench.gltf" id="1_ntedq"]
+[ext_resource type="Shape3D" path="res://assets/models/city/collision/broken_bench.res" id="2_2ljpw"]
+
+[node name="BrokenBench" type="Node3D" unique_id=357651347]
+metadata/asset_id = "broken_bench"
+metadata/tile_size = 2.0
+metadata/placement_anchor = "base"
+metadata/collision_source = "all imported mesh triangles with accumulated transforms"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1868446700]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=567494768 instance=ExtResource("1_ntedq")]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=1265889606]
+shape = ExtResource("2_2ljpw")

@@ -1,0 +1,44 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/meadow_expansion/gltf/boathouse_roof_slope_0.png" id="1_6p50m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4s3is"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_6p50m")
+texture_filter = 0
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r0vur"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1, 2),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/"),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgABgAJAAcACgALAAwACgANAAsADgAPABAADgARAA8A"),
+"material": SubResource("StandardMaterial3D_4s3is"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIC/AACAPwAAAAAAAIC/AACAPwAAgD8AAIC/AACAvwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIA/AACAPwAAAAAAAIC/AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIC/AACAPwAAAAAAAIA/AACAPwAAgD8AAIC/AACAvwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAgD8AAIA//v/7/1PVqyr+//v/U9WrKv7/+/9T1asq+n//f/r//z/6f/9/+v//P/p//3/6//8/AoAAAP7//z8CgAAA/v//PwKAAAD+//8/AoAAAP7//z/6/wGA/X8CAPr/AYD9fwIA+v8BgP1/AgD6/wGA/X8CAFVVU9WqKlVVVVVT1aoqVVVVVVPVqipVVVVVU9WqKlVV")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dov4m"]
+data = PackedVector3Array(-1, 0, -1, 1, 0, -1, 1, 1, -1, -1, 0, 1, 1, 1, 1, 1, 0, 1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, 1, 1, 0, -1, 1, 1, 1, 1, 1, -1, 1, 0, -1, 1, 0, 1, 1, 1, 1, 1, 1, -1, -1, 0, 1, -1, 0, -1, 1, 1, -1, 1, 1, 1, -1, 0, 1)
+backface_collision = true
+
+[node name="BoathouseRoofSlope" type="Node3D" unique_id=1143518753]
+metadata/asset_id = "boathouse_roof_slope"
+metadata/tile_units = 32
+metadata/tile_size = 2.0
+
+[node name="Visual" type="MeshInstance3D" parent="." unique_id=848146704]
+mesh = SubResource("ArrayMesh_r0vur")
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1255866342]
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=466209413]
+shape = SubResource("ConcavePolygonShape3D_dov4m")

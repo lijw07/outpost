@@ -1,0 +1,42 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" path="res://assets/models/structures/textures/wood_atlas.png" id="1_j2ypd"]
+[ext_resource type="Shape3D" path="res://assets/models/test_library/collision/structures/pillar_16.res" id="2_e4o5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1pa5"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_j2ypd")
+texture_filter = 0
+texture_repeat = false
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lj8oj"]
+_surfaces = [{
+"aabb": AABB(-0.1875, 0, -0.1875, 0.375, 1, 0.375),
+"attribute_data": PackedByteArray("wP6/PsD/Pz+o/qc+oP8fP8D+vz6g/x8/qP6nPsD/Pz+o/qc+wP8/P5D+jz6g/x8/qP6nPqD/Hz+Q/o8+wP8/P6z/Kz+8/rs+pP8jP6T+oz6s/ys/pP6jPqT/Iz+8/rs+rP8rP7z+uz6k/yM/pP6jPqz/Kz+k/qM+pP8jP7z+uz6s/qs+wP8/P5z+mz6g/x8/rP6rPqD/Hz+c/ps+wP8/P8D+vz7A/z8/sP6vPqD/Hz/A/r8+oP8fP7D+rz7A/z8/lP6TPsD/Pz+E/oM+oP8fP5T+kz6g/x8/hP6DPsD/Pz+o/yc/uP63Pqb/JT+o/qc+qP8nP6j+pz6m/yU/uP63Pqj/Jz+4/rc+pv8lP6j+pz6o/yc/qP6nPqb/JT+4/rc+nP6bPsD/Pz+Y/pc+oP8fP5z+mz6g/x8/mP6XPsD/Pz+w/q8+wP8/P6z+qz6g/x8/sP6vPqD/Hz+s/qs+wP8/P5T+kz7A/z8/hP6DPqD/Hz+U/pM+oP8fP4T+gz7A/z8/qP8nP7j+tz6m/yU/qP6nPqj/Jz+o/qc+pv8lP7j+tz6o/yc/uP63Pqb/JT+o/qc+qP8nP6j+pz6m/yU/uP63PrD+rz7A/z8/rP6rPqD/Hz+w/q8+oP8fP6z+qz7A/z8/hP6DPsD/Pz8A/X8+oP8fP4T+gz6g/x8/AP1/PsD/Pz8="),
+"format": 34359742487,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A"),
+"material": SubResource("StandardMaterial3D_v1pa5"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("gP7/PQAAAAAAAEC+gP7/PQAAgD8AAEA+gP7/PQAAgD8AAEC+gP7/PQAAAAAAAEA+wAAAvgAAAAAAAEA+wAAAvgAAgD8AAEC+wAAAvgAAgD8AAEA+wAAAvgAAAAAAAEC+gP7/PQAAgD8AAEA+wAAAvgAAgD8AAEC+gP7/PQAAgD8AAEC+wAAAvgAAgD8AAEA+gP7/PQAAAAAAAEC+wAAAvgAAAAAAAEA+gP7/PQAAAAAAAEA+wAAAvgAAAAAAAEC+gP7/PQAAAAAAAEA+wAAAvgAAgD8AAEA+gP7/PQAAgD8AAEA+wAAAvgAAAAAAAEA+wAAAvgAAAAAAAEC+gP7/PQAAgD8AAEC+wAAAvgAAgD8AAEC+gP7/PQAAAAAAAEC+AABAvgAAAACA/v89AABAvgAAgD/AAAC+AABAvgAAgD+A/v89AABAvgAAAADAAAC+wAAAvgAAgD+A/v89AABAvgAAgD/AAAC+wAAAvgAAgD/AAAC+AABAvgAAgD+A/v89wAAAvgAAAADAAAC+AABAvgAAAACA/v89wAAAvgAAAACA/v89AABAvgAAAADAAAC+wAAAvgAAAACA/v89AABAvgAAgD+A/v89wAAAvgAAgD+A/v89AABAvgAAAACA/v89AABAvgAAAADAAAC+wAAAvgAAgD/AAAC+AABAvgAAgD/AAAC+wAAAvgAAAADAAAC+AABAPgAAAADAAAC+AABAPgAAgD+A/v89AABAPgAAgD/AAAC+AABAPgAAAACA/v89AABAPgAAgD+A/v89gP7/PQAAgD/AAAC+AABAPgAAgD/AAAC+gP7/PQAAgD+A/v89AABAPgAAAADAAAC+gP7/PQAAAACA/v89AABAPgAAAACA/v89gP7/PQAAAADAAAC+AABAPgAAAACA/v89gP7/PQAAgD+A/v89AABAPgAAgD+A/v89gP7/PQAAAACA/v89gP7/PQAAAADAAAC+AABAPgAAgD/AAAC+gP7/PQAAgD/AAAC+AABAPgAAAADAAAC+/f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v8BAP9/AID/vwEA/38AgP+/AQD/fwCA/78BAP9/AID/v/9//f/+//+//3/9//7//7//f/3//v//v/9//f/+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7//f/3//v//v/9//f/+//+//3/9//7//7//f/3//v//vwCAAQD+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/3/AID+//7//f8AgP7//v/9/wCA/v/+//3/AID+//7//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/78=")
+}]
+
+[node name="StructuresPillar16" type="Node3D" unique_id=1225303244]
+metadata/asset_id = "structures/pillar_16"
+metadata/original_scene = "res://assets/models/structures/scenes/pillar_16.tscn"
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=264588438]
+
+[node name="Model" type="Node3D" parent="Body" unique_id=1929706127]
+
+[node name="pillar_16_0" type="MeshInstance3D" parent="Body/Model" unique_id=2085453704]
+mesh = SubResource("ArrayMesh_lj8oj")
+
+[node name="MeshCollision" type="CollisionShape3D" parent="Body" unique_id=2073993526]
+shape = ExtResource("2_e4o5b")
