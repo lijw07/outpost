@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/trees/gltf/meadow_oak_stump.gltf" id="1_0nbiw"]
+[ext_resource type="Shape3D" path="res://assets/models/trees/collision/meadow_oak_stump.res" id="2_j3cef"]
+[ext_resource type="PackedScene" path="res://assets/models/trees/gltf/meadow_oak_top.gltf" id="3_ippvl"]
+[ext_resource type="Shape3D" path="res://assets/models/trees/collision/meadow_oak_top.res" id="4_8kgum"]
+
+[node name="MeadowOak" type="Node3D" unique_id=665494709]
+
+[node name="Stump" type="Node3D" parent="." unique_id=1890607293 instance=ExtResource("1_0nbiw")]
+
+[node name="Body" type="StaticBody3D" parent="Stump" unique_id=955375400]
+
+[node name="Collision" type="CollisionShape3D" parent="Stump/Body" unique_id=2061144847]
+shape = ExtResource("2_j3cef")
+
+[node name="Top" type="Node3D" parent="." unique_id=2011500665 instance=ExtResource("3_ippvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Body" type="StaticBody3D" parent="Top" unique_id=233609568]
+
+[node name="Collision" type="CollisionShape3D" parent="Top/Body" unique_id=336674814]
+shape = ExtResource("4_8kgum")

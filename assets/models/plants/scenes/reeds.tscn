@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://3se5y5v2b5sa" path="res://assets/models/plants/gltf/reeds.gltf" id="1_model"]
+
+[node name="Reeds" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

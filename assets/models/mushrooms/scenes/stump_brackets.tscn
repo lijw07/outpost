@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://bsq8iv2x3r2eq" path="res://assets/models/mushrooms/gltf/stump_brackets.gltf" id="1_model"]
+
+[node name="StumpBrackets" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

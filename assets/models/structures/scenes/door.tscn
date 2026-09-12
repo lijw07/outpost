@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/door.gltf" id="1_orwaw"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/door.res" id="2_lluyr"]
+
+[node name="Door" type="StaticBody3D" unique_id=1614093285]
+
+[node name="Model" type="Node3D" parent="." unique_id=2872158 instance=ExtResource("1_orwaw")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1352201818]
+shape = ExtResource("2_lluyr")

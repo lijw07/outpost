@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://dpvg33o5ya30d" path="res://assets/models/rocks/gltf/boulder_mossy.gltf" id="1_model"]
+
+[node name="BoulderMossy" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

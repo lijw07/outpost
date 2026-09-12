@@ -1,0 +1,286 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/world/terrain/meadow_terrain.tscn" id="1_yfq8d"]
+[ext_resource type="MeshLibrary" path="res://assets/models/shared/terrain_library.res" id="2_cakhv"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/floor.tscn" id="3_l5y8o"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/wall_door_frame.tscn" id="4_wpcmt"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/door.tscn" id="5_vawgh"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/wall_window.tscn" id="6_hy3pi"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/wall.tscn" id="7_nao4v"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/pillar.tscn" id="8_xnwj7"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/roof_slope.tscn" id="9_hrp78"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/roof_ridge.tscn" id="10_s1eig"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/wall_gable.tscn" id="11_t53bp"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/roof_slope_straw.tscn" id="12_dyckh"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/roof_ridge_straw.tscn" id="13_i0dg0"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/palisade.tscn" id="14_g5fq5"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/gate.tscn" id="15_5wajo"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/palisade_16.tscn" id="16_48o1a"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/barricade_spikes.tscn" id="17_yd2op"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/fence.tscn" id="18_yrewe"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/stairs.tscn" id="19_m1uok"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/ladder.tscn" id="20_nwbs4"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/wall_half.tscn" id="21_rtfem"]
+[ext_resource type="PackedScene" path="res://assets/models/structures/scenes/roof_corner_inner.tscn" id="22_asmoe"]
+
+[node name="StructuresTest" type="Node3D" unique_id=1742703637]
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=417281486]
+transform = Transform3D(0.81915206, -0.43938506, 0.36868784, 0, 0.64278764, 0.76604444, -0.57357645, -0.62750685, 0.5265408, 0, 0, 0)
+light_energy = 1.1
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=418113124]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 14, 16)
+projection = 1
+size = 22.5
+
+[node name="MeadowTerrain" type="GridMap" parent="." unique_id=1674061002 instance=ExtResource("1_yfq8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh_library = ExtResource("2_cakhv")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65526, 65529, 1048580, 131062, 65529, 4, 65526, 65530, 4, 131062, 65530, 4, 65526, 65531, 655364, 131062, 65531, 1048580, 65526, 65532, 655364, 131062, 65532, 1048580, 65526, 65533, 4, 65526, 65534, 655360, 65526, 65535, 1, 65526, 0, 1048578, 65526, 1, 1048576, 65526, 2, 655360, 65526, 3, 1048577, 65526, 4, 1441792, 65526, 5, 655360, 65526, 6, 1441792, 65527, 65529, 1441796, 131063, 65529, 655364, 65527, 65530, 1441796, 131063, 65530, 4, 196599, 65530, 655364, 65527, 65531, 4, 131063, 65531, 1441796, 196599, 65531, 1048580, 65527, 65532, 1441796, 131063, 65532, 655364, 65527, 65533, 1048580, 65527, 65534, 1441796, 65527, 65535, 1048576, 65527, 0, 1048578, 65527, 1, 655360, 65527, 2, 0, 65527, 3, 0, 65527, 4, 1048576, 65527, 5, 1, 65527, 6, 655360, 65528, 65529, 1441796, 131064, 65529, 4, 65528, 65530, 4, 131064, 65530, 1441796, 196600, 65530, 1441796, 65528, 65531, 1441796, 131064, 65531, 1441796, 196600, 65531, 655364, 65528, 65532, 1441796, 131064, 65532, 1441796, 65528, 65533, 655364, 65528, 65534, 4, 65528, 65535, 655360, 65528, 0, 655362, 65528, 1, 1441792, 65528, 2, 1048577, 65528, 3, 0, 65528, 4, 0, 65528, 5, 655360, 65528, 6, 1441792, 65529, 65529, 4, 65529, 65530, 1048580, 131065, 65530, 655364, 65529, 65531, 1441796, 131065, 65531, 1048580, 65529, 65532, 655364, 65529, 65533, 1441796, 65529, 65534, 655360, 65529, 65535, 1048577, 65529, 0, 1441794, 65529, 1, 1, 65529, 2, 0, 65529, 3, 1, 65529, 4, 1048576, 65529, 5, 1, 65529, 6, 1048576, 65530, 65529, 655364, 65530, 65530, 1441796, 131066, 65530, 1441796, 65530, 65531, 1048580, 65530, 65532, 4, 65530, 65533, 0, 65530, 65534, 655360, 65530, 65535, 0, 65530, 0, 1048578, 65530, 1, 1441792, 65530, 2, 1048576, 65530, 3, 655360, 65530, 4, 0, 65530, 5, 655360, 65530, 6, 1441792, 65531, 65529, 1441792, 65531, 65530, 1441792, 65531, 65531, 1441796, 65531, 65532, 655360, 65531, 65533, 655360, 65531, 65534, 1441793, 65531, 65535, 1441793, 65531, 0, 1441794, 65531, 1, 1441793, 65531, 2, 1048576, 65531, 3, 655360, 65531, 4, 0, 65531, 5, 0, 65531, 6, 1048576, 65532, 65529, 0, 65532, 65530, 1048576, 65532, 65531, 1441792, 65532, 65532, 1048576, 65532, 65533, 655360, 65532, 65534, 655360, 65532, 65535, 1441792, 65532, 0, 1048578, 65532, 1, 1048576, 65532, 2, 0, 65532, 3, 0, 65532, 4, 1048576, 65532, 5, 1441793, 65532, 6, 1441792, 65533, 65529, 1441792, 65533, 65530, 1441792, 65533, 65531, 1048576, 65533, 65532, 1441792, 65533, 65533, 655360, 65533, 65534, 1048577, 65533, 65535, 2, 65533, 0, 1048578, 65533, 1, 1441792, 65533, 2, 1048577, 65533, 3, 655360, 65533, 4, 1048576, 65533, 5, 1441792, 65533, 6, 655360, 65534, 65529, 1441792, 65534, 65530, 0, 65534, 65531, 1441792, 65534, 65532, 1048576, 65534, 65533, 1048576, 65534, 65534, 655360, 65534, 65535, 1441792, 65534, 0, 0, 65534, 1, 1048578, 65534, 2, 1441794, 65534, 3, 0, 65534, 4, 1441792, 65534, 5, 1048576, 65534, 6, 0, 65535, 65529, 1441792, 65535, 65530, 1441792, 65535, 65531, 0, 65535, 65532, 1, 65535, 65533, 1, 65535, 65534, 1048577, 65535, 65535, 1048577, 65535, 0, 655360, 65535, 1, 0, 65535, 2, 655362, 65535, 3, 1441794, 65535, 4, 1048576, 65535, 5, 1441792, 65535, 6, 1441792, 0, 65529, 655360, 0, 65530, 1441792, 0, 65531, 655360, 0, 65532, 1048576, 0, 65533, 0, 0, 65534, 0, 0, 65535, 655360, 0, 0, 1, 0, 1, 1048576, 0, 2, 0, 0, 3, 655362, 0, 4, 1441793, 0, 5, 1441792, 0, 6, 1048577, 1, 65529, 0, 1, 65530, 0, 1, 65531, 0, 1, 65532, 655360, 1, 65533, 0, 1, 65534, 655360, 1, 65535, 1, 1, 0, 1441792, 1, 1, 0, 1, 2, 0, 1, 3, 655362, 1, 4, 655360, 1, 5, 0, 1, 6, 1048576, 2, 65529, 655360, 2, 65530, 0, 2, 65531, 655361, 2, 65532, 1, 2, 65533, 1048577, 2, 65534, 0, 2, 65535, 1048576, 2, 0, 1441793, 2, 1, 1441792, 2, 2, 1441792, 2, 3, 1441794, 2, 4, 1441792, 2, 5, 655361, 2, 6, 1441793, 3, 65529, 655361, 3, 65530, 655360, 3, 65531, 0, 3, 65532, 1048576, 3, 65533, 0, 3, 65534, 0, 3, 65535, 1441792, 3, 0, 655360, 3, 1, 655360, 3, 2, 1048576, 3, 3, 2, 3, 4, 655360, 3, 5, 1048576, 3, 6, 655361, 4, 65529, 0, 4, 65530, 655360, 4, 65531, 0, 4, 65532, 655361, 4, 65533, 1441792, 4, 65534, 1048576, 4, 65535, 1441792, 4, 0, 1048576, 4, 1, 655360, 4, 2, 1441792, 4, 3, 1441794, 4, 4, 1048576, 4, 5, 1441793, 4, 6, 655360, 5, 65529, 1441792, 5, 65530, 3, 5, 65531, 655363, 5, 65532, 655363, 5, 65533, 655360, 5, 65534, 0, 5, 65535, 655361, 5, 0, 1441792, 5, 1, 0, 5, 2, 1048577, 5, 3, 1048578, 5, 4, 1048577, 5, 5, 1441792, 5, 6, 655360, 6, 65529, 1441792, 6, 65530, 3, 6, 65531, 655363, 6, 65532, 655363, 6, 65533, 3, 6, 65534, 1048577, 6, 65535, 1441792, 6, 0, 1048576, 6, 1, 1048576, 6, 2, 1441792, 6, 3, 2, 6, 4, 1048576, 6, 5, 1, 6, 6, 1048576, 7, 65529, 655363, 7, 65530, 3, 7, 65531, 3, 7, 65532, 655363, 7, 65533, 3, 7, 65534, 1441792, 7, 65535, 1048576, 7, 0, 1048576, 7, 1, 655360, 7, 2, 1048577, 7, 3, 1048578, 7, 4, 0, 7, 5, 1048576, 7, 6, 0, 8, 65529, 655363, 8, 65530, 655363, 8, 65531, 655363, 8, 65532, 655363, 8, 65533, 3, 8, 65534, 655360, 8, 65535, 1441792, 8, 0, 1441792, 8, 1, 0, 8, 2, 1048576, 8, 3, 2, 8, 4, 0, 8, 5, 655361, 8, 6, 1441792, 9, 65529, 655360, 9, 65530, 655363, 9, 65531, 3, 9, 65532, 3, 9, 65533, 1048576, 9, 65534, 0, 9, 65535, 655361, 9, 0, 0, 9, 1, 655360, 9, 2, 1441792, 9, 3, 1048578, 9, 4, 1048578, 9, 5, 1048576, 9, 6, 1048576, 131062, 65534, 1441799, 131062, 0, 8, 131062, 1, 1441797, 131062, 2, 1048583, 131062, 6, 1441798, 131063, 65535, 10, 131064, 65535, 1441797, 131065, 2, 1048581, 131065, 4, 10, 131066, 65535, 1048581, 131066, 2, 5, 131066, 6, 1441798, 131067, 65530, 1441801, 131067, 65534, 1048583, 131067, 0, 1441800, 131068, 5, 1441798, 131068, 6, 1048583, 131069, 65535, 1048584, 131069, 1, 1441797, 131070, 65531, 1048582, 131070, 65534, 1048583, 131070, 3, 5, 131071, 65529, 655366, 131071, 65534, 655366, 65536, 65530, 655367, 65536, 65531, 6, 65537, 65533, 1441798, 65537, 3, 8, 65537, 4, 5, 65538, 65531, 655367, 65538, 65532, 1048581, 65538, 1, 1048582, 65538, 2, 1048581, 65538, 3, 1048584, 65538, 6, 1441799, 65539, 65531, 1048582, 65539, 4, 1048581, 65540, 65531, 7, 65540, 65532, 655367, 65540, 65533, 1441798, 65540, 1, 655366, 65540, 2, 1441798, 65541, 65532, 1048584, 65541, 5, 1048585, 65541, 6, 6, 65542, 65529, 1048581, 65542, 65532, 1048584, 65542, 65533, 655368, 65542, 65535, 1441798, 65542, 4, 1441797, 65543, 65534, 1048583, 65543, 2, 6, 65544, 65535, 1441798, 65544, 1, 1048585, 65544, 3, 1048584, 65544, 5, 1048583, 65545, 65530, 1048584, 65545, 65532, 1441800, 65545, 4, 1441800)
+}
+
+[node name="floor_-60_-10" type="StaticBody3D" parent="." unique_id=459098450 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
+
+[node name="floor_-60_10" type="StaticBody3D" parent="." unique_id=418052413 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="floor_-40_-10" type="StaticBody3D" parent="." unique_id=2034208180 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="floor_-40_10" type="StaticBody3D" parent="." unique_id=502716495 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="wall_door_frame_-60_20" type="StaticBody3D" parent="." unique_id=1260927168 instance=ExtResource("4_wpcmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="door_-60_20" type="StaticBody3D" parent="." unique_id=1614093285 instance=ExtResource("5_vawgh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="wall_window_-40_20" type="StaticBody3D" parent="." unique_id=948960240 instance=ExtResource("6_hy3pi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="wall_-60_-20" type="StaticBody3D" parent="." unique_id=507665685 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 0, -2)
+
+[node name="wall_window_-40_-20" type="StaticBody3D" parent="." unique_id=773858570 instance=ExtResource("6_hy3pi")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 0, -2)
+
+[node name="wall_-70_-10" type="StaticBody3D" parent="." unique_id=1675027655 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, -1)
+
+[node name="wall_-30_-10" type="StaticBody3D" parent="." unique_id=512086423 instance=ExtResource("7_nao4v")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -3, 0, -1)
+
+[node name="wall_-70_10" type="StaticBody3D" parent="." unique_id=1958371013 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 0, 1)
+
+[node name="wall_-30_10" type="StaticBody3D" parent="." unique_id=940313116 instance=ExtResource("7_nao4v")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -3, 0, 1)
+
+[node name="pillar_-70_-20" type="StaticBody3D" parent="." unique_id=1890918714 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -2)
+
+[node name="pillar_-70_20" type="StaticBody3D" parent="." unique_id=1092076220 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 2)
+
+[node name="pillar_-50_-20" type="StaticBody3D" parent="." unique_id=184265249 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="pillar_-50_20" type="StaticBody3D" parent="." unique_id=2132806784 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 2)
+
+[node name="pillar_-30_-20" type="StaticBody3D" parent="." unique_id=45087766 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+
+[node name="pillar_-30_20" type="StaticBody3D" parent="." unique_id=1469439068 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="roof_slope_-60_10" type="StaticBody3D" parent="." unique_id=166230255 instance=ExtResource("9_hrp78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, 1)
+
+[node name="roof_slope_-60_-10" type="StaticBody3D" parent="." unique_id=226210134 instance=ExtResource("9_hrp78")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 2, -1)
+
+[node name="roof_ridge_-60_0" type="StaticBody3D" parent="." unique_id=774186902 instance=ExtResource("10_s1eig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 3, 0)
+
+[node name="roof_slope_-40_10" type="StaticBody3D" parent="." unique_id=66918218 instance=ExtResource("9_hrp78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 1)
+
+[node name="roof_slope_-40_-10" type="StaticBody3D" parent="." unique_id=1774701881 instance=ExtResource("9_hrp78")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 2, -1)
+
+[node name="roof_ridge_-40_0" type="StaticBody3D" parent="." unique_id=593096648 instance=ExtResource("10_s1eig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
+
+[node name="wall_gable_-70_10" type="StaticBody3D" parent="." unique_id=432779778 instance=ExtResource("11_t53bp")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -7, 2, 1)
+
+[node name="wall_gable_-70_-10" type="StaticBody3D" parent="." unique_id=1927300649 instance=ExtResource("11_t53bp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 2, -1)
+
+[node name="wall_gable_-30_10" type="StaticBody3D" parent="." unique_id=1022483392 instance=ExtResource("11_t53bp")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -3, 2, 1)
+
+[node name="wall_gable_-30_-10" type="StaticBody3D" parent="." unique_id=1683092022 instance=ExtResource("11_t53bp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 2, -1)
+
+[node name="floor_40_-10" type="StaticBody3D" parent="." unique_id=415654518 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="floor_40_10" type="StaticBody3D" parent="." unique_id=238589581 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="floor_60_-10" type="StaticBody3D" parent="." unique_id=668288096 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="floor_60_10" type="StaticBody3D" parent="." unique_id=142605437 instance=ExtResource("3_l5y8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="wall_door_frame_40_20" type="StaticBody3D" parent="." unique_id=842018614 instance=ExtResource("4_wpcmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="door_40_20" type="StaticBody3D" parent="." unique_id=1908697279 instance=ExtResource("5_vawgh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="wall_window_60_20" type="StaticBody3D" parent="." unique_id=951209915 instance=ExtResource("6_hy3pi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="wall_40_-20" type="StaticBody3D" parent="." unique_id=1645716543 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2)
+
+[node name="wall_window_60_-20" type="StaticBody3D" parent="." unique_id=1098518413 instance=ExtResource("6_hy3pi")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -2)
+
+[node name="wall_30_-10" type="StaticBody3D" parent="." unique_id=1822664032 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, -1)
+
+[node name="wall_70_-10" type="StaticBody3D" parent="." unique_id=1482840988 instance=ExtResource("7_nao4v")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 7, 0, -1)
+
+[node name="wall_30_10" type="StaticBody3D" parent="." unique_id=470241463 instance=ExtResource("7_nao4v")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 1)
+
+[node name="wall_70_10" type="StaticBody3D" parent="." unique_id=1518685514 instance=ExtResource("7_nao4v")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 7, 0, 1)
+
+[node name="pillar_30_-20" type="StaticBody3D" parent="." unique_id=1156511093 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="pillar_30_20" type="StaticBody3D" parent="." unique_id=422980785 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+
+[node name="pillar_50_-20" type="StaticBody3D" parent="." unique_id=1737676674 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
+
+[node name="pillar_50_20" type="StaticBody3D" parent="." unique_id=1331232405 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+
+[node name="pillar_70_-20" type="StaticBody3D" parent="." unique_id=1091228044 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
+
+[node name="pillar_70_20" type="StaticBody3D" parent="." unique_id=974823562 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+
+[node name="roof_slope_straw_40_10" type="StaticBody3D" parent="." unique_id=1713866559 instance=ExtResource("12_dyckh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 1)
+
+[node name="roof_slope_straw_40_-10" type="StaticBody3D" parent="." unique_id=1187417442 instance=ExtResource("12_dyckh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 2, -1)
+
+[node name="roof_ridge_straw_40_0" type="StaticBody3D" parent="." unique_id=2082682310 instance=ExtResource("13_i0dg0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 0)
+
+[node name="roof_slope_straw_60_10" type="StaticBody3D" parent="." unique_id=168171805 instance=ExtResource("12_dyckh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 1)
+
+[node name="roof_slope_straw_60_-10" type="StaticBody3D" parent="." unique_id=1197447066 instance=ExtResource("12_dyckh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 2, -1)
+
+[node name="roof_ridge_straw_60_0" type="StaticBody3D" parent="." unique_id=1957379969 instance=ExtResource("13_i0dg0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 0)
+
+[node name="wall_gable_30_10" type="StaticBody3D" parent="." unique_id=1860369964 instance=ExtResource("11_t53bp")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 3, 2, 1)
+
+[node name="wall_gable_30_-10" type="StaticBody3D" parent="." unique_id=2131112530 instance=ExtResource("11_t53bp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 2, -1)
+
+[node name="wall_gable_70_10" type="StaticBody3D" parent="." unique_id=1345514504 instance=ExtResource("11_t53bp")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 7, 2, 1)
+
+[node name="wall_gable_70_-10" type="StaticBody3D" parent="." unique_id=1519716579 instance=ExtResource("11_t53bp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 2, -1)
+
+[node name="palisade_-70_50" type="StaticBody3D" parent="." unique_id=853613055 instance=ExtResource("14_g5fq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 5)
+
+[node name="gate_-30_50" type="StaticBody3D" parent="." unique_id=2144269904 instance=ExtResource("15_5wajo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+
+[node name="palisade_10_50" type="StaticBody3D" parent="." unique_id=226712840 instance=ExtResource("14_g5fq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+
+[node name="palisade_16_35_50" type="StaticBody3D" parent="." unique_id=1012632268 instance=ExtResource("16_48o1a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 5)
+
+[node name="barricade_spikes_-60_80" type="StaticBody3D" parent="." unique_id=1559128410 instance=ExtResource("17_yd2op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8)
+
+[node name="barricade_spikes_-20_80" type="StaticBody3D" parent="." unique_id=915286236 instance=ExtResource("17_yd2op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 8)
+
+[node name="barricade_spikes_20_80" type="StaticBody3D" parent="." unique_id=1980218516 instance=ExtResource("17_yd2op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
+
+[node name="fence_60_50" type="StaticBody3D" parent="." unique_id=2010259370 instance=ExtResource("18_yrewe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
+
+[node name="fence_80_50" type="StaticBody3D" parent="." unique_id=1199614740 instance=ExtResource("18_yrewe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 5)
+
+[node name="stairs_80_10" type="StaticBody3D" parent="." unique_id=1858040826 instance=ExtResource("19_m1uok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+
+[node name="ladder_95_-10" type="StaticBody3D" parent="." unique_id=1971864166 instance=ExtResource("20_nwbs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -1)
+
+[node name="wall_half_60_10" type="StaticBody3D" parent="." unique_id=1438529706 instance=ExtResource("21_rtfem")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="pillar_-140_-40" type="StaticBody3D" parent="." unique_id=205722181 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -4)
+
+[node name="pillar_-140_-20" type="StaticBody3D" parent="." unique_id=194284773 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)
+
+[node name="pillar_-120_-40" type="StaticBody3D" parent="." unique_id=1413723067 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -4)
+
+[node name="pillar_-120_-20" type="StaticBody3D" parent="." unique_id=1861878354 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -2)
+
+[node name="pillar_-100_-40" type="StaticBody3D" parent="." unique_id=1089092408 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+
+[node name="pillar_-100_-20" type="StaticBody3D" parent="." unique_id=2102934813 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -2)
+
+[node name="pillar_-120_0" type="StaticBody3D" parent="." unique_id=1079413061 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="pillar_-100_0" type="StaticBody3D" parent="." unique_id=1006070215 instance=ExtResource("8_xnwj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="roof_slope_-130_-30" type="StaticBody3D" parent="." unique_id=1965864597 instance=ExtResource("9_hrp78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 2, -3)
+
+[node name="roof_corner_inner_-110_-30" type="StaticBody3D" parent="." unique_id=16528879 instance=ExtResource("22_asmoe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, -3)
+
+[node name="roof_slope_-110_-10" type="StaticBody3D" parent="." unique_id=1406010176 instance=ExtResource("9_hrp78")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -11, 2, -1)

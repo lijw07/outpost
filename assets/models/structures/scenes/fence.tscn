@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/fence.gltf" id="1_fd4tf"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/fence.res" id="2_uwr40"]
+
+[node name="Fence" type="StaticBody3D" unique_id=2010259370]
+
+[node name="Model" type="Node3D" parent="." unique_id=1969129935 instance=ExtResource("1_fd4tf")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1238406029]
+shape = ExtResource("2_uwr40")
