@@ -65,7 +65,6 @@ func _wire(node: Node) -> void:
 	_wire_button(node)
 	_wire_tabs(node)
 	_wire_range(node)
-	_wire_popup(node)
 
 func _wire_button(node: Node) -> void:
 	var button := node as BaseButton
@@ -94,13 +93,6 @@ func _wire_range(node: Node) -> void:
 	slider.focus_entered.connect(play_hover)
 	slider.drag_ended.connect(_on_drag_ended)
 
-func _wire_popup(node: Node) -> void:
-	var popup := node as PopupMenu
-	if popup == null or popup.id_focused.is_connected(_on_menu_focused):
-		return
-	popup.id_focused.connect(_on_menu_focused)
-	popup.index_pressed.connect(_on_menu_pressed)
-
 func _on_button_pressed(button: BaseButton) -> void:
 	var labelled := button as Button
 	if labelled != null and labelled.text.to_upper() in BACK_LABELS:
@@ -115,12 +107,6 @@ func _on_tab_selected(_tab: int) -> void:
 	play_click()
 
 func _on_drag_ended(_value_changed: bool) -> void:
-	play_click()
-
-func _on_menu_focused(_id: int) -> void:
-	play_hover()
-
-func _on_menu_pressed(_index: int) -> void:
 	play_click()
 
 func _exit_tree() -> void:

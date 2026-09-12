@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://butj5s2kigmct"]
+
+[ext_resource type="PackedScene" path="res://assets/models/trees/scenes/meadow_oak.tscn" id="1_n7av6"]
+
+[node name="meadow_oak1" unique_id=2090754860 instance=ExtResource("1_n7av6")]

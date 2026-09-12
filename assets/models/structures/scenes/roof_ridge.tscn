@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/roof_ridge.gltf" id="1_5bhii"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/roof_ridge.res" id="2_81set"]
+
+[node name="RoofRidge" type="StaticBody3D" unique_id=774186902]
+
+[node name="Model" type="Node3D" parent="." unique_id=218360342 instance=ExtResource("1_5bhii")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=851311784]
+shape = ExtResource("2_81set")

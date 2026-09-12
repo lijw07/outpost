@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/roof_corner_inner.gltf" id="1_y84yr"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/roof_corner_inner.res" id="2_v0tk7"]
+
+[node name="RoofCornerInner" type="StaticBody3D" unique_id=16528879]
+
+[node name="Model" type="Node3D" parent="." unique_id=1372631153 instance=ExtResource("1_y84yr")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=771034260]
+shape = ExtResource("2_v0tk7")

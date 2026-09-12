@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cs41a7nyov8t4" path="res://assets/models/plants/gltf/bush_berry.gltf" id="1_model"]
+
+[node name="BushBerry" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

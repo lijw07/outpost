@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cr6sebbewjfh6" path="res://assets/models/blocks/gltf/dirt_block.gltf" id="1_model"]
+
+[node name="DirtBlock" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

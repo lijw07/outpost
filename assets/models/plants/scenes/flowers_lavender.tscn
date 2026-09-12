@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://caffu1r5l7njd" path="res://assets/models/plants/gltf/flowers_lavender.gltf" id="1_model"]
+
+[node name="FlowersLavender" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

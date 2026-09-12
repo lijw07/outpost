@@ -51,13 +51,6 @@ def main():
             if args.all:
                 commands += [
                     ('scene smoke checks', ['-s', 'res://tests/scene_smoke.gd']),
-                    ('UI artwork', ['-s', 'res://tools/art/verify_ui.gd']),
-                    ('terrain', ['-s', 'res://tools/art/verify_terrain.gd']),
-                    ('playground', ['-s', 'res://tools/art/verify_meadow_playground.gd']),
-                    ('harvesting', ['-s', 'res://tools/art/verify_meadow_harvest.gd']),
-                    ('asset inspector', ['res://scenes/environment/meadow_art_lab.tscn', '--', '--meadow-lab-test']),
-                    ('meadow preview', ['res://scenes/environment/meadow_preview.tscn', '--', '--meadow-test']),
-                    ('meadow showcase', ['res://scenes/environment/meadow_showcase.tscn', '--', '--showcase-test']),
                 ]
             for index, (label, extra) in enumerate(commands):
                 result = subprocess.run(

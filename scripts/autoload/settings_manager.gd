@@ -361,12 +361,6 @@ func _apply_resolution() -> void:
 	window.size = resolution.min(usable.size)
 	window.position = usable.position + Vector2i(Vector2(usable.size - window.size) / 2.0)
 
-func _remapped_event(action: String, encoded: String) -> InputEvent:
-	var parts := encoded.split(">")
-	if parts.size() != 2 or parts[0] != _default_binding_text(action):
-		return null
-	return deserialize_event(parts[1])
-
 func _default_binding_text(action: String) -> String:
 	var events: Array = _default_events.get(action, [])
 	return serialize_event(events[0]) if not events.is_empty() else ""

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" uid="uid://s8pqi26vsxrf" path="res://assets/models/mushrooms/gltf/mushroom_toadstool.gltf" id="1_model"]
+
+[node name="MushroomToadstool" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

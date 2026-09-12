@@ -23,9 +23,6 @@ func _initialize() -> void:
 	theme.default_font_size = FONT_SIZE_BODY
 
 	_setup_button(theme, "Button")
-	_setup_button(theme, "OptionButton")
-	theme.set_icon("arrow", "OptionButton", load(ICONS + "icon_arrow_down.png"))
-	theme.set_constant("arrow_margin", "OptionButton", 12)
 
 	theme.set_stylebox("panel", "Panel", _panel_box())
 	theme.set_stylebox("panel", "PanelContainer", _panel_box())
@@ -38,7 +35,6 @@ func _initialize() -> void:
 	_setup_labels(theme)
 	_setup_label_variations(theme)
 	_setup_scrollbars(theme)
-	_setup_popup_menu(theme)
 	_setup_dropdown(theme)
 
 	var err := ResourceSaver.save(theme, THEME_PATH)
@@ -171,27 +167,6 @@ func _setup_dropdown(theme: Theme) -> void:
 	theme.set_color("font_color", "DropdownRowCurrent", GOLD)
 	theme.set_color("font_hover_color", "DropdownRowCurrent", GOLD)
 	theme.set_color("font_pressed_color", "DropdownRowCurrent", GOLD)
-
-func _setup_popup_menu(theme: Theme) -> void:
-	theme.set_stylebox("panel", "PopupMenu", _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 14, Color.WHITE, 14))
-	theme.set_stylebox("hover", "PopupMenu", _texture_box(WIDGETS + "button_square_hover.png", BUTTON_EDGE, 14, Color.WHITE, 6))
-	theme.set_stylebox("separator", "PopupMenu", StyleBoxEmpty.new())
-	theme.set_font("font", "PopupMenu", load(FONT_PATH))
-	theme.set_font_size("font_size", "PopupMenu", FONT_SIZE_BODY)
-	theme.set_color("font_color", "PopupMenu", CREAM)
-	theme.set_color("font_hover_color", "PopupMenu", GOLD)
-	theme.set_color("font_disabled_color", "PopupMenu", MUTED)
-	theme.set_color("font_separator_color", "PopupMenu", MUTED)
-	theme.set_color("font_shadow_color", "PopupMenu", INK)
-	theme.set_constant("shadow_offset_x", "PopupMenu", 3)
-	theme.set_constant("shadow_offset_y", "PopupMenu", 3)
-	theme.set_constant("v_separation", "PopupMenu", 10)
-	theme.set_constant("item_start_padding", "PopupMenu", 10)
-	theme.set_constant("item_end_padding", "PopupMenu", 10)
-	theme.set_icon("radio_checked", "PopupMenu", load(ICONS + "icon_marker.png"))
-	theme.set_icon("radio_unchecked", "PopupMenu", load(ICONS + "icon_blank.png"))
-	theme.set_icon("checked", "PopupMenu", load(ICONS + "icon_marker.png"))
-	theme.set_icon("unchecked", "PopupMenu", load(ICONS + "icon_blank.png"))
 
 func _setup_line_edit(theme: Theme) -> void:
 	theme.set_stylebox("normal", "LineEdit", _texture_box(WIDGETS + "button_square_normal.png", BUTTON_EDGE, 22))

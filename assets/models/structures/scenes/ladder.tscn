@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/ladder.gltf" id="1_085p4"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/ladder.res" id="2_35y7o"]
+
+[node name="Ladder" type="StaticBody3D" unique_id=1971864166]
+
+[node name="Model" type="Node3D" parent="." unique_id=1584617635 instance=ExtResource("1_085p4")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=680173064]
+shape = ExtResource("2_35y7o")

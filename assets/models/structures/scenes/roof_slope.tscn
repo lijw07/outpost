@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/structures/gltf/roof_slope.gltf" id="1_4508k"]
+[ext_resource type="Shape3D" path="res://assets/models/structures/collision/roof_slope.res" id="2_7e2fd"]
+
+[node name="RoofSlope" type="StaticBody3D" unique_id=166230255]
+
+[node name="Model" type="Node3D" parent="." unique_id=1648782082 instance=ExtResource("1_4508k")]
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1966854636]
+shape = ExtResource("2_7e2fd")
